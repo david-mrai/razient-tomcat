@@ -1,0 +1,15 @@
+<functions>
+	<version>1.1</version>
+	<countbreak>0</countbreak>
+	<counttotal>0</counttotal>
+	<countavg>0</countavg>
+	<countmin>0</countmin>
+	<countmax>0</countmax>
+	<countorder>0</countorder>
+	<break></break>
+	<total></total>
+	<avg></avg>
+	<min></min>
+	<max></max>
+	<order></order>
+</functions>

@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+<chart bgColor='FAFAFA' caption='Report Survey' subCaption='Results of All Surveys'  numberPrefix='' sformatNumberScale='1' sNumberPrefix='' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' pieRadius='60'>
+<!-- Data for single series chart -->
+	<set label='Survey Not Started' value='1' color='C0504D'/>
+	<set label='Survey Complete' value='0' color='63A06D'/>
+	<set label='Survey Incomplete' value='1' color='DDDD00'/>
+<!-- Data for multi-series stacked and combination chart -->
+</chart>

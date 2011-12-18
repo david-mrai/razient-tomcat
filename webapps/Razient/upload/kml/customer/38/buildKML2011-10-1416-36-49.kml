@@ -1,0 +1,2512 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
+    <Document>
+        <Style id="style0x70000">
+            <IconStyle>
+                <scale>2.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/customer.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style0x80000">
+            <IconStyle>
+                <scale>2.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/supplier.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style0x83300">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/airplane-accident.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style0x93300">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/airplane-accident-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style1x83301">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/gun.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style1x93301">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/gun-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style2x83302">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/bomb.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style2x93302">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/bomb-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style3x83303">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/explosion.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style4x83304">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/train.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style4x93304">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/train-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style5x83305">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/political.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style5x93305">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/political-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style6x83306">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/torn.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style6x93306">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/torn-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style7x83307">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/protest.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style7x93307">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/protest-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style8x83308">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/flood.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style8x93308">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/flood-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style9x83309">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/fire.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style9x93309">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/fire-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style10x83310">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/ship.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style10x93310">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/ship.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style11x83311">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/freeze.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style11x93311">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/freeze-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style12x83312">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/storm.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style12x93312">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/storm-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style13x83313">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/buildingcollapse.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style13x93313">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/buildingcollapse-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style14x83314">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/buildingfire.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style14x93314">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/buildingfire-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style15x83315">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/chemical.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style15x93315">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/chemical-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style16x83316">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/airplane-closed.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style16x93316">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/airplane-closed-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style17x83317">
+            <IconStyle>
+                <scale>5.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/earthquake.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style17x93317">
+            <IconStyle>
+                <scale>5.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/earthquake-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style18x83318">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/evacuated.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style18x93318">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/evacuated-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style19x83319">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/hazardous.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style19x93319">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/hazardous-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style20x83320">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/volcano.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style20x93320">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/volcano-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style21x83321">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/terrorism.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style21x93321">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/terrorism-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style23x83323">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/armed.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style23x93323">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/armed-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style24x83324">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/hazmat.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style24x93324">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/hazmat-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style25x83325">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/poweroutage.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style25x93325">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/poweroutage-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style26x83326">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/pirate.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style26x93326">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/pirate-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style27x83327">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/mudslide.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style27x93327">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/mudslide-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style28x83328">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/roadflooded.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style28x93328">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/roadflooded-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style29x83329">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/collision.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style29x93329">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/collision-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style30x83330">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/gasmask.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style30x93330">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/gasmask-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style31x83331">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/hurricane.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style31x93331">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/hurricane-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style32x83332">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/tsunami.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style32x93332">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/tsunami-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style33x83333">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/roadsclosed.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style33x93333">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/roadsclosed-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style34x83334">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/bodyfound.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style34x93334">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/bodyfound-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style35x83335">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/airstrike.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style35x93335">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/airstrike-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style9999x8339999">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/nosymbol.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style9999x9339999">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://www.razient.com/Razient/iconsgi/nosymbol-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Folder>
+            <name>www.kraazient.com</name>
+            <description>Maps events, incidents and other suspicious activity by kraazient</description>
+            <Placemark>
+                <name>Singapore</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>One Raffles Quay, South Tower,singapore,SINGAPORE,Singapore</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Singapore&amp;nbsp;&lt;br&gt; Address: One Raffles Quay, South Tower - singapore - SINGAPORE - Singapore&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>103.85988,1.292636</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  MRT breakdown affects 6,500 commuters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Singapore&amp;nbsp;
+One Raffles Quay, South Tower&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; MRT breakdown affects 6,500 commuters&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;Singapore&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Low&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;SINGAPORE&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Train Crash&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;singapore&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-10-14&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.channelnewsasia.com/stories/singaporelocalnews/view/1159481/1/.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; Some 6,500 commuters were affected by a train delay along the East-West MRT line on Friday evening.&#xD;
+This disrupted the westbound train service between Kallang and Bugis for 20 minutes.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style4x93304</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>103.8499802,1.2894365</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Singapore</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>One Raffles Quay, South Tower,singapore,SINGAPORE,Singapore</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Singapore&amp;nbsp;&lt;br&gt; Address: One Raffles Quay, South Tower - singapore - SINGAPORE - Singapore&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>103.85988,1.292636</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  MRT breakdown affects 6,500 commuters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Singapore&amp;nbsp;
+One Raffles Quay, South Tower&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; MRT breakdown affects 6,500 commuters&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;Singapore&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Low&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;SINGAPORE&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Train Crash&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;singapore&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-10-14&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.channelnewsasia.com/stories/singaporelocalnews/view/1159481/1/.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; Some 6,500 commuters were affected by a train delay along the East-West MRT line on Friday evening.&#xD;
+This disrupted the westbound train service between Kallang and Bugis for 20 minutes.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style4x93304</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>103.8499802,1.2894365</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Sydney</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>88 Phillip Street,sydney,New South Wales,Australia</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Sydney&amp;nbsp;&lt;br&gt; Address: 88 Phillip Street - sydney - New South Wales - Australia&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>151.21182,-33.86476</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  Australias Qantas Airways cancels, delays dozens more flights as engineers strike again</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Sydney&amp;nbsp;
+88 Phillip Street&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; Australias Qantas Airways cancels, delays dozens more flights as engineers strike again&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;Australia&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Low&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;New South Wales&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Strike&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;sydney&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-10-14&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.washingtonpost.com/lifestyle/travel/australias-qantas-airways-cancels-delays-dozens-more-flights-as-engineers-strike-again/2011/10/14/gIQAjcI2jL_story.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;Qantas Airways is canceling and delaying dozens of flights amid another round of strikes by its engineers.Australias flagship carrier says Fridays strike by the Australian Licenced Aircraft Engineers Association is forcing the airline to cancel 17 flights and delay 32 others. Around 7,600 passengers will be affected.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style7x93307</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>150.9921519,-33.9167739</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Barrington RI</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>184 County Road,barrington,Rhode Island,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Barrington RI&amp;nbsp;&lt;br&gt; Address: 184 County Road - barrington - Rhode Island - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-71.304565,41.737083</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  School Shut After Bomb Scare</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Barrington RI&amp;nbsp;
+184 County Road&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; School Shut After Bomb Scare&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Low&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Rhode Island&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Bomb Scare&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;barrington&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-10-13&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://barrington.patch.com/articles/primrose-hill-evacuated-for-bomb-threat'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; Primrose Hill Elementary School was evacuated Thursday morning, Oct. 13, after a bomb threat was called into the school around 9:43 am, reportedly by a woman.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style2x93302</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-71.3092,41.7406</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Dubai</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>Level 18, Park Place Sheikh Zayed Road,dubai,Dubai,United Arab Emirates</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Dubai&amp;nbsp;&lt;br&gt; Address: Level 18, Park Place Sheikh Zayed Road - dubai - Dubai - United Arab Emirates&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>55.31167,25.264444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  Fire at Dubai warehouse </name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Dubai&amp;nbsp;
+Level 18, Park Place Sheikh Zayed Road&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; Fire at Dubai warehouse &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United Arab Emirates&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Dubai&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Fire&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;dubai&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-10-11&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.thenational.ae/news/uae-news/fire-at-dubai-warehouse-forces-school-evacuation'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; The fire erupted in a warehouse yesterday afternoon, an official at the company said yesterday.The trading and manufacturing companys warehouse, in phase two of Dubai Investments Park, is believed to house industrial and food chemicals.No casualties were reported in the fire. The area was cordoned off yesterday, and firefighters remained at the scene this morning.&#xD;
+&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style9x93309</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>55.28,25.2522</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>London Victoria</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>119-121 Victoria Street,london,London,United Kingdom</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: London Victoria&amp;nbsp;&lt;br&gt; Address: 119-121 Victoria Street - london - London - United Kingdom&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-0.0998459,51.511986</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  Fire at wood recycling site near Heathrow Airport</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;London Victoria&amp;nbsp;
+119-121 Victoria Street&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; Fire at wood recycling site near Heathrow Airport&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United Kingdom&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;London&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Fire&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;london&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-10-04&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.bbc.co.uk/news/uk-england-london-15163079'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; Up to 75 firefighters tackled the blaze, reported at 0340 BST, at the wood recycling plant between Sipson Road and Holloway Lane, West Drayton.Harmondsworth Lane remains closed at its junction with Sipson Lane and Heathrow Primary School has been shut.&#xD;
+&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style9x93309</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-0.457718,51.4916</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>London Bond St</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>97 New Bond Street,london,London,United Kingdom</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: London Bond St&amp;nbsp;&lt;br&gt; Address: 97 New Bond Street - london - London - United Kingdom&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-0.1462054,51.513954</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  Fire at wood recycling site near Heathrow Airport</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;London Bond St&amp;nbsp;
+97 New Bond Street&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; Fire at wood recycling site near Heathrow Airport&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United Kingdom&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;London&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Fire&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;london&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-10-04&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.bbc.co.uk/news/uk-england-london-15163079'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; Up to 75 firefighters tackled the blaze, reported at 0340 BST, at the wood recycling plant between Sipson Road and Holloway Lane, West Drayton.Harmondsworth Lane remains closed at its junction with Sipson Lane and Heathrow Primary School has been shut.&#xD;
+&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style9x93309</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-0.457718,51.4916</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Atlanta</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>1170 Peachtree Street,atlanta,Georgia,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Atlanta&amp;nbsp;&lt;br&gt; Address: 1170 Peachtree Street - atlanta - Georgia - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-84.38324,33.786434</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  Power outage halts airport passenger trains</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Atlanta&amp;nbsp;
+1170 Peachtree Street&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; Power outage halts airport passenger trains&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Georgia&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Power Outage&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;atlanta&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-10-02&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.ajc.com/news/atlanta/power-outage-halts-airport-1192913.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; An early morning power outage brought trains that transport airline passengers to and from the various concourses at Hartsfield-Jackson International Airport to a halt.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style25x93325</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-84.444032,33.639975</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Chicago</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>550 West Jackson Boulevard,chicago,Illinois,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Chicago&amp;nbsp;&lt;br&gt; Address: 550 West Jackson Boulevard - chicago - Illinois - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-87.64148,41.87811</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  Loop bank robbed for third time in two months </name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Chicago&amp;nbsp;
+550 West Jackson Boulevard&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; Loop bank robbed for third time in two months &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Low&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Illinois&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Shooting&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;chicago&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-09-30&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.suntimes.com/news/crime/7963729-418/loop-bank-robbed-for-third-time-in-two-months.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; A Loop bank branch was robbed Friday morning for the third time since August.A man in his 40s wearing beige clothing entered the Chicago Community Bank branch at 52 E. Lake St. at 930 a.m. and handed a teller a threatening note that demanded money&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style1x93301</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-87.6260972,41.8857708</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Sydney</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>88 Phillip Street,sydney,New South Wales,Australia</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Sydney&amp;nbsp;&lt;br&gt; Address: 88 Phillip Street - sydney - New South Wales - Australia&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>151.21182,-33.86476</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  Man killed in shooting outside Castle Hill police station in Sydney</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Sydney&amp;nbsp;
+88 Phillip Street&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; Man killed in shooting outside Castle Hill police station in Sydney&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;Australia&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;New South Wales&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Shooting&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;sydney&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-09-29&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;1&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.heraldsun.com.au/news/more-news/fatal-shooting-outside-police-station/story-fn7x8me2-1226151825643'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; A MAN has been shot and killed outside a Sydney police station this afternoon.The shooting,took place outside Castle Hill Police station in Sydneys northwest &amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style1x93301</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>151.217,-33.8788</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Hong Kong</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>30/F AIA Central 1 Connaught Road,hong kong,HONG KONG,Hong Kong</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Hong Kong&amp;nbsp;&lt;br&gt; Address: 30/F AIA Central 1 Connaught Road - hong kong - HONG KONG - Hong Kong&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>100.0,22.2833333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : Typhoon Closes Hong Kong Stock Market </name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Hong Kong&amp;nbsp;
+30/F AIA Central 1 Connaught Road&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Typhoon Closes Hong Kong Stock Market &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;Hong Kong&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;HONG KONG&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Typhoon&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;hong kong&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-09-29&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://online.wsj.com/article/SB10001424052970204138204576599492546597306.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;Hong Kongs stock and derivatives markets were shut all of Thursday as strong winds and heavy rain from Typhoon Nesat are kept most businesses and public transport services in the city closed. &amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style6x93306</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>100.0,22.2833333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>London Victoria</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>119-121 Victoria Street,london,London,United Kingdom</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: London Victoria&amp;nbsp;&lt;br&gt; Address: 119-121 Victoria Street - london - London - United Kingdom&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-0.0998459,51.511986</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  London shooting Three teenage girls injured</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;London Victoria&amp;nbsp;
+119-121 Victoria Street&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; London shooting Three teenage girls injured&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United Kingdom&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;London&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Shooting&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;london&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-09-29&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.bbc.co.uk/news/uk-england-london-15120082'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; Three young women have been injured in a shooting in west London.The victims, aged 17, 18 and 19, were taken to hospital after the incident in John Fearon Walk, near Queens Park, just before 1915 BST on Thursday.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style1x93301</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-0.2101804,51.5403875</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>London Bond St</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>97 New Bond Street,london,London,United Kingdom</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: London Bond St&amp;nbsp;&lt;br&gt; Address: 97 New Bond Street - london - London - United Kingdom&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-0.1462054,51.513954</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  London shooting Three teenage girls injured</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;London Bond St&amp;nbsp;
+97 New Bond Street&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; London shooting Three teenage girls injured&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United Kingdom&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;London&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Shooting&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;london&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-09-29&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.bbc.co.uk/news/uk-england-london-15120082'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; Three young women have been injured in a shooting in west London.The victims, aged 17, 18 and 19, were taken to hospital after the incident in John Fearon Walk, near Queens Park, just before 1915 BST on Thursday.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style1x93301</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-0.2101804,51.5403875</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Singapore</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>One Raffles Quay, South Tower,singapore,SINGAPORE,Singapore</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Singapore&amp;nbsp;&lt;br&gt; Address: One Raffles Quay, South Tower - singapore - SINGAPORE - Singapore&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>103.85988,1.292636</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  Fire intensifies at Shells biggest refinery</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Singapore&amp;nbsp;
+One Raffles Quay, South Tower&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; Fire intensifies at Shells biggest refinery&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;Singapore&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;SINGAPORE&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Fire&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;singapore&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-09-28&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.reuters.com/article/2011/09/28/us-shell-refinery-fire-idUSTRE78R2B420110928'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;A fire has intensified at Royal Dutch Shells largest refinery, its half a million barrel per day Singapore plant, sending a plume of black smoke over the city state. The fire involves petroleum products from pipes in the tank farm at the manufacturing facility.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style9x93309</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>103.8499802,1.2939365</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Dubai</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>Level 18, Park Place Sheikh Zayed Road,dubai,Dubai,United Arab Emirates</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Dubai&amp;nbsp;&lt;br&gt; Address: Level 18, Park Place Sheikh Zayed Road - dubai - Dubai - United Arab Emirates&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>55.31167,25.264444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  Fire rages in industrial zone near Dubai port</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Dubai&amp;nbsp;
+Level 18, Park Place Sheikh Zayed Road&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; Fire rages in industrial zone near Dubai port&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United Arab Emirates&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Dubai&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Fire&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;dubai&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-09-28&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.cbsnews.com/stories/2011/09/28/ap/middleeast/main20112678.shtml'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;A major fire engulfed part of an industrial district near Dubais main seaport Wednesday.Towering flames and thick plumes of smoke poured from the warehouse at the center of the blaze near the Jebel Ali port, about 15 miles southwest of central Dubai.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style9x93309</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>55.364444,25.257278</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Atlanta</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>1170 Peachtree Street,atlanta,Georgia,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Atlanta&amp;nbsp;&lt;br&gt; Address: 1170 Peachtree Street - atlanta - Georgia - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-84.38324,33.786434</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  Shooting near PGA Tour event</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Atlanta&amp;nbsp;
+1170 Peachtree Street&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; Shooting near PGA Tour event&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Low&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Georgia&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Shooting&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;atlanta&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-09-26&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://espn.go.com/golf/story/_/id/7021335/report-state-trooper-shoots-man-tour-championship'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; A man who drove through a barricade near Atlantas East Lake Golf Club, site of the PGA Tour Championship, was shot by a Georgia state trooper while dragging another trooper along, according to the Atlanta Journal Constitution.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style1x93301</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-84.3027763,33.748021</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>London Victoria</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>119-121 Victoria Street,london,London,United Kingdom</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: London Victoria&amp;nbsp;&lt;br&gt; Address: 119-121 Victoria Street - london - London - United Kingdom&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-0.0998459,51.511986</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  Sussex rail passengers face disruption as tunnel closes</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;London Victoria&amp;nbsp;
+119-121 Victoria Street&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; Sussex rail passengers face disruption as tunnel closes&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United Kingdom&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Low&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;London&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Train Crash&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;london&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-09-23&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.bbc.co.uk/news/uk-england-sussex-15033187'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; Rail passengers face severe disruption because of emergency repairs at a tunnel on the London to Brighton line.Southern trains said the closure of the Balcombe Tunnel meant trains were not running between Haywards Heath and Three Bridges.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style4x93304</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-0.12173619999999999,51.5046524</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>London Bond St</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>97 New Bond Street,london,London,United Kingdom</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: London Bond St&amp;nbsp;&lt;br&gt; Address: 97 New Bond Street - london - London - United Kingdom&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-0.1462054,51.513954</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  Sussex rail passengers face disruption as tunnel closes</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;London Bond St&amp;nbsp;
+97 New Bond Street&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; Sussex rail passengers face disruption as tunnel closes&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United Kingdom&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Low&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;London&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Train Crash&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;london&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-09-23&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.bbc.co.uk/news/uk-england-sussex-15033187'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt; Rail passengers face severe disruption because of emergency repairs at a tunnel on the London to Brighton line.Southern trains said the closure of the Balcombe Tunnel meant trains were not running between Haywards Heath and Three Bridges.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style4x93304</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-0.12173619999999999,51.5046524</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Sydney</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>88 Phillip Street,sydney,New South Wales,Australia</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Sydney&amp;nbsp;&lt;br&gt; Address: 88 Phillip Street - sydney - New South Wales - Australia&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>151.21182,-33.86476</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : Qantas passengers spared further delays as strike grounds flights across the country </name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Sydney&amp;nbsp;
+88 Phillip Street&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Qantas passengers spared further delays as strike grounds flights across the country &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;Australia&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Low&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;New South Wales&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Strike&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;sydney&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-09-20&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.smh.com.au/travel/travel-news/qantas-passengers-spared-further-delays-as-strike-grounds-flights-across-the-country-20110920-1kieo.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;More than 6000 domestic passengers across Australia faced delays today because of a strike by more than 4000 of the airlines ground staff over pay and conditions&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style7x93307</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>151.22150000000002,-33.8788</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Chicago</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>550 West Jackson Boulevard,chicago,Illinois,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\www.razient.com\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Chicago&amp;nbsp;&lt;br&gt; Address: 550 West Jackson Boulevard - chicago - Illinois - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-87.64148,41.87811</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident :  Burning Lincoln Park Building Collapses</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Chicago&amp;nbsp;
+550 West Jackson Boulevard&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt; Burning Lincoln Park Building Collapses&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Illinois&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Fire&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;chicago&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-09-16&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href=' http://www.nbcchicago.com/news/local/129968703.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;About 100 firefighters battled a twoalarm fire Friday afternoon that struck a vacant North Side building.The blaze began at about 1 p.m. on the second floor of a three story brick building at 525 W. Armitage Ave. near a busy commercial area in Lincoln Park&#xD;
+&#xD;
+&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style9x93309</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-87.65,41.8545</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+    </Document>
+</kml>

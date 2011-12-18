@@ -1,0 +1,21 @@
+<functions>
+	<version>2.0</version>
+	<countbreak>1</countbreak>
+	<counttotal>1</counttotal>
+	<countavg>0</countavg>
+	<countmin>0</countmin>
+	<countmax>0</countmax>
+	<countorder>1</countorder>
+	<break>
+		<column id="0" type="asc" showvalues="No" >reportnewsglobalincident.country</column>
+	</break>
+	<total>
+		<column id="0">reportnewsglobalincident.cf_Allincidentsbystate1latitude7</column>
+	</total>
+	<avg></avg>
+	<min></min>
+	<max></max>
+	<order>
+		<column id="0" type="asc" >reportnewsglobalincident.state</column>
+	</order>
+</functions>

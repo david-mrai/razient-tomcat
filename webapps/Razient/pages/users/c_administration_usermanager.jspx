@@ -1,0 +1,2094 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:ice-cc="http://www.icesoft.com/icefaces-composite-comps">
+	<jsp:directive.page contentType="text/html;charset=ISO-8859-1"
+		pageEncoding="ISO-8859-1" />
+	<f:view>
+		<ice:outputDeclaration doctypeRoot="html"
+			doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN"
+			doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" />
+		<html>
+			<head>
+				<title>Index (Razient)</title>
+			</head>
+			<body>
+
+				<!-- template="#{templateBean.templateContent}"-->
+				<ui:composition
+					template="../../include/templates/pages/modeB_customer.jspx"
+					xmlns:h="http://java.sun.com/jsf/html"
+					xmlns:f="http://java.sun.com/jsf/core"
+					xmlns:c="http://java.sun.com/jstl/core"
+					xmlns:ice="http://www.icesoft.com/icefaces/component"
+					xmlns:ui="http://java.sun.com/jsf/facelets">
+
+					<!-- params for page titles-->
+					<!--<f:loadBundle basename="truckandi.view.bundle.Message" var="bundle"/>
+			        <ui:param name="pageTitle" value="#{bundle['tai_login.title']}" />-->
+					<ui:param name="pageTitle"
+						value="#{bundle['c_administration_usermanager.title']}" />
+
+					<ui:define name="header_menu_value">
+						<table cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+									<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+										onclick="rld();"
+										actionListener="#{users_MenuBarBean.actionlistener}">
+										<ice:graphicImage style="border:none;" styleClass="noborder"
+											url="./css/images/#{folderBean.folder_menu}/risk_dash_1.png"
+											onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+											onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'"
+											onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+											onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'" />
+										<f:attribute name="optioonselected" value="dh" />
+									</ice:commandLink>
+								</td>
+								<td>
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+										url="./css/images/risk_black_low.png" />
+								</td>
+								<td>
+									<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+										onclick="rld();"
+										actionListener="#{users_MenuBarBean.actionlistener}"
+										visible="#{users_MenuBarBean.visible_C_Compliance}">
+										<ice:graphicImage style="border:none;" styleClass="noborder"
+											url="./css/images/#{folderBean.folder_menu}/risk_comp_1.png"
+											onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+											onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'"
+											onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+											onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'" />
+										<f:attribute name="optioonselected" value="cp_sm" />
+									</ice:commandLink>
+								</td>
+								<td>
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+										url="./css/images/risk_black_low.png" />
+								</td>
+								<td>
+									<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+										onclick="rld();"
+										actionListener="#{users_MenuBarBean.actionlistener}"
+										visible="#{users_MenuBarBean.visible_C_GlobalIncidents}">
+										<ice:graphicImage style="border:none;" styleClass="noborder"
+											url="./css/images/#{folderBean.folder_menu}/risk_global_1.png"
+											onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+											onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'"
+											onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+											onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'" />
+										<f:attribute name="optioonselected" value="gi_al" />
+									</ice:commandLink>
+								</td>
+								<td>
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+										url="./css/images/risk_black_low.png" />
+								</td>
+								<td>
+									<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+										onclick="rld();"
+										actionListener="#{users_MenuBarBean.actionlistener}"
+										visible="#{users_MenuBarBean.visible_C_Reports}">
+										<ice:graphicImage style="border:none;" styleClass="noborder"
+											url="./css/images/#{folderBean.folder_menu}/risk_rep_1.png"
+											onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+											onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'"
+											onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+											onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'" />
+										<f:attribute name="optioonselected" value="rp_rh" />
+									</ice:commandLink>
+								</td>
+								<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Reports}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_research_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_2.png'" />
+														<f:attribute name="optioonselected" value="rs_in"/>
+												</ice:commandLink>
+								</td>
+								<td>
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+										url="./css/images/risk_black_low.png" />
+								</td>
+								<td>
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+										url="./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png"
+										visible="#{users_MenuBarBean.visible_C_Administration}" />
+								</td>
+								<td>
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+										url="./css/images/risk_black_low.png" />
+								</td>
+								<!--<td>
+									<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+										onclick="rld();"
+										actionListener="#{users_MenuBarBean.actionlistener}"
+										visible="#{users_MenuBarBean.visible_C_SuppliersView}">
+										<ice:graphicImage style="border:none;" styleClass="noborder"
+											url="./css/images/#{folderBean.folder_menu}/risk_supp_1.png"
+											onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+											onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'"
+											onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+											onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'" />
+										<f:attribute name="optioonselected" value="sv_sp" />
+									</ice:commandLink>
+								</td>
+								<td>
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+										url="./css/images/risk_black_low.png" />
+								</td>-->
+								<td>
+									<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+										onclick="rld();"
+										actionListener="#{users_MenuBarBean.actionlistener}"
+										visible="#{users_MenuBarBean.visible_C_Ratings}">
+										<ice:graphicImage style="border:none;" styleClass="noborder"
+											url="./css/images/#{folderBean.folder_menu}/risk_ratings_1.png"
+											onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+											onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'"
+											onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+											onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'" />
+										<f:attribute name="optioonselected" value="rt_vr" />
+									</ice:commandLink>
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+											url="./css/images/#{folderBean.folder_menu}/risk_ratings_3.png" />-->
+								</td>
+								<td>
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+										url="./css/images/risk_black_low.png" />
+								</td>
+								<td>
+												<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_RequestForProposal}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'" />
+														<f:attribute name="optioonselected" value="rp_ps"/>
+												</ice:commandLink>-->
+												<!--<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_3.png"/>-->
+											</td>
+								<!--<td>
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+										url="./css/images/risk_black_low.png" />
+								</td>
+								<td>
+									<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+										onclick="rld();"
+										actionListener="#{users_MenuBarBean.actionlistener}"
+										visible="#{users_MenuBarBean.visible_C_Contracts}">
+										<ice:graphicImage style="border:none;" styleClass="noborder"
+											url="./css/images/#{folderBean.folder_menu}/risk_contracts_1.png"
+											onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+											onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'"
+											onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+											onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'" />
+										<f:attribute name="optioonselected" value="ct_av" />
+									</ice:commandLink>
+								</td>-->
+							</tr>
+						</table>
+					</ui:define>
+					<ui:define name="hide-show-value">
+						<ice:form>
+					    	<div style="margin-top:3px;float: left;position: absolute;">
+						    	<ice:commandLink action="#{showhideBean.action_showhide}" onclick="rld();">
+									<ice:graphicImage style="border:none;" 
+										styleClass="noborder" url="./css/images/icons/menu_#{showhideBean.url_icon}.png"/>
+								</ice:commandLink>
+							</div>
+						</ice:form>
+					</ui:define>
+					<ui:define name="page-menu-value">
+						<ice:form>
+
+							<ice:graphicImage visible="true"  styleClass="menuPosA"
+								url="./css/images/#{folderBean.folder_menu}/risk_menu_down_usermanager.png" />
+							<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+								onclick="rld();"
+								actionListener="#{users_MenuBarBean.actionlistener}">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_#{entityTypeBundle.type_Customer}profile.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_#{entityTypeBundle.type_Customer}profile.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_#{entityTypeBundle.type_Customer}profile.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_#{entityTypeBundle.type_Customer}profile.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_#{entityTypeBundle.type_Customer}profile.png'" />
+								<f:attribute name="optioonselected" value="ad_spg" />
+							</ice:commandLink>
+							<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+								onclick="rld();"
+								actionListener="#{users_MenuBarBean.actionlistener}">
+								<ice:graphicImage visible="true" style="border:none;"
+									styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_configuration.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_configuration.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_configuration.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_configuration.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_configuration.png'" />
+								<f:attribute name="optioonselected" value="ad_cg" />
+							</ice:commandLink>-->
+							<!-- <ice:commandLink action="#{users_MenuBarBean.actionLink}"
+								onclick="rld();"
+								actionListener="#{users_MenuBarBean.actionlistener}">
+								<ice:graphicImage visible="true" style="border:none;"
+									styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_auditlog.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_auditlog.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_auditlog.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_auditlog.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_auditlog.png'" />
+								<f:attribute name="optioonselected" value="ad_al" />
+							</ice:commandLink>-->
+							<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+								onclick="rld();"
+								actionListener="#{users_MenuBarBean.actionlistener}">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_template.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_template.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_template.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_template.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_template.png'" />
+								<f:attribute name="optioonselected" value="ad_tm" />
+							</ice:commandLink>
+							
+							<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+								onclick="rld();"
+								actionListener="#{users_MenuBarBean.actionlistener}">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_configuration.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_configuration.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_configuration.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_configuration.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_configuration.png'" />
+								<f:attribute name="optioonselected" value="ad_cg" />
+							</ice:commandLink>
+							
+							<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+								onclick="rld();"
+								actionListener="#{users_MenuBarBean.actionlistener}">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_ticket.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_ticket.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_ticket.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_ticket.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_ticket.png'" />
+								<f:attribute name="optioonselected" value="ad_tk" />
+							</ice:commandLink>
+							
+							<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+								onclick="rld();"
+								actionListener="#{users_MenuBarBean.actionlistener}">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_myprofile.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_myprofile.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_myprofile.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_myprofile.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_myprofile.png'" />
+								<f:attribute name="optioonselected" value="my_prof" />
+							</ice:commandLink>
+							
+							
+							
+							<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_one.png"/>
+								
+							
+							<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+								onclick="rld();"
+								actionListener="#{users_MenuBarBean.actionlistener}">
+								<ice:graphicImage visible="true" style="border:none;"
+									styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_dataupload.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_dataupload.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_dataupload.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_dataupload.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_dataupload.png'" />
+								<f:attribute name="optioonselected" value="ad_du" />
+							</ice:commandLink>
+							-->
+						</ice:form>
+					</ui:define>
+
+					<ui:define name="page-content-value">
+
+
+						<!-- Static Tab Set -->
+						<ice:form>
+							<ice:panelGroup id="tabSetTab" styleClass="tabPanelBox panelTabSetSaleContainer">
+
+								<ice:panelTabSet
+									tabChangeListener="#{c_UserManagerBean.processTabChange}" selectedIndex="#{c_UserManagerBean.ITab}">
+
+									<ice:panelTab label="#{bundle['c_admin_usermanager.tab1']}">
+									
+										
+											
+											<ice:panelGroup id="tabSetTab" styleClass="tabPanelBox panelTabSetSaleContainer">
+						
+						  						<ice:panelTabSet tabChangeListener="#{c_UserRegisterManagerBean.processTabChange}"  selectedIndex="#{c_UserRegisterManagerBean.ITab}">
+						   
+													<ice:panelTab   label="#{bundle['c_admin_usermanager.tab11']}" >
+																			
+														<br/>
+														<ice:panelGroup style="margin-top:-3px;width:97%;overflow:auto;">
+		
+															<ice:panelGroup>
+																<ice:panelGroup>
+																	<ice:dataTable resizable="false" border="1" id="tableuseremployeecustgrid"
+																		value="#{c_UserEmployeeCustGridBean.allCrudBeans}"
+																		var="adminUserEmployeeCustBean"
+																		width="98%"
+																		rows="#{c_UserEmployeeCustGridBean.selectedDataScrollModes[c_UserEmployeeCustGridBean.selectedDataScrollMode].rows}"
+																		scrollable="#{c_UserEmployeeCustGridBean.selectedDataScrollModes[c_UserEmployeeCustGridBean.selectedDataScrollMode].scrollingEnabled}"
+																		scrollHeight="200px"
+																		style="float:center;font-color: #FFFFFF;"
+																		columnWidths="20%,1%,25%,25%,20%,9%"
+																		columnClasses="columnCenter,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnCenter"
+																		rowClasses="rowOn,rowOff" cellpadding="0"
+																		sortColumn="#{c_UserEmployeeCustGridBean.columnNameOrder}"
+																		sortAscending="#{c_UserEmployeeCustGridBean.descending}"
+																		onclick="window.location.reload()">
+						
+																		
+																		<ice:column groupOn="#{adminUserEmployeeCustBean.nameSite}" style="background-color:#F7F4F5;">
+																			<f:facet name="header">
+																				<ice:commandSortHeader id="ecustomerSiteIdCustomerSitesort" columnName="customerSiteIdCustomerSite">
+																					<ice:outputText	value="#{bundle['rz_admin_customerprofile.employee.site']}"></ice:outputText>
+																				</ice:commandSortHeader>
+																			</f:facet>
+																			<ice:outputText id="idecustomerSiteIdCustomerSite"  style="font-weight:bold;text-align:center;"
+																				value="#{adminUserEmployeeCustBean.nameSite}" />
+																		</ice:column>
+																		<ice:column style="background-color:white;">
+																			<ice:rowSelector id="selected"
+																				value="#{c_UserEmployeeCustGridBean.itemSelected}" multiple="false"
+																				selectionListener="#{c_UserEmployeeCustGridBean.rowSelectionListener}"
+																				selectionAction="#{c_UserEmployeeCustGridBean.rowSelectionAction}" /> 
+	
+																				<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/#{folderBean.folder_menu}/icons/menu_useractive.png"/>		
+																		
+																		</ice:column>
+																		<ice:column>
+																			<f:facet name="header">
+																				<ice:commandSortHeader id="eemailssort" columnName="email">
+																					<ice:outputText value="#{bundle['rz_admin_usermanager.user.login']}"></ice:outputText>
+																				</ice:commandSortHeader>
+																			</f:facet>
+																			<ice:outputText id="eemaildesc"
+																				value="#{adminUserEmployeeCustBean.email}" />
+																		</ice:column>
+																		<ice:column>
+																			<f:facet name="header">
+																				<ice:commandSortHeader id="efirstnamesort" columnName="firstName">
+																					<ice:outputText value="#{bundle['rz_admin_usermanager.user.firstname']}"></ice:outputText>
+																				</ice:commandSortHeader>
+																			</f:facet>
+																			<ice:outputText id="idefirstname"
+																					value="#{adminUserEmployeeCustBean.firstName}" />
+																		</ice:column>
+																		<ice:column>
+																			<f:facet name="header">
+																				<ice:commandSortHeader id="elastnamesort" columnName="lastName">
+																					<ice:outputText value="#{bundle['rz_admin_customerprofile.employee.lastname']}"></ice:outputText>
+																				</ice:commandSortHeader>
+																			</f:facet>
+																			<ice:outputText id="elastnamedesc"
+																				value="#{adminUserEmployeeCustBean.lastName}" />
+																		</ice:column>
+																		<ice:column style="background-color:white;">
+																			<f:facet name="header">
+																				
+																			</f:facet>
+																			<ice:graphicImage style="border:none;" styleClass="noborder"
+																				url="./css/images/#{folderBean.folder_menu}/icons/menu_down_edit.png"
+																				onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_edit.png'"
+																				onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_edit.png'"
+																			
+																			/>
+																		</ice:column>
+																	</ice:dataTable>
+																	
+																	<ice:panelGroup styleClass="clearer" />
+						
+																	<!-- PAGINATOR-->
+																	<ice:panelGroup style="float:left;width:420px;">
+																		<center>
+																			<ice:dataPaginator id="dataScroll_Employee"
+																				rendered="#{c_UserEmployeeCustGridBean.selectedDataScrollModes[c_UserEmployeeCustGridBean.selectedDataScrollMode].pagingEnabled}"
+																				for="tableuseremployeecustgrid" vertical="false" fastStep="3" paginator="true"
+																				paginatorMaxPages="10">
+																				<f:facet name="first">
+																					<ice:graphicImage id="firstpage_employee"
+																						url="./css/rime/css-images/arrow-first.gif"
+																						style="border:none;" title="first" />
+																				</f:facet>
+																				<f:facet name="last">
+																					<ice:graphicImage id="lastpage_employee"
+																						url="./css/rime/css-images/arrow-last.gif"
+																						style="border:none;" title="last" />
+																				</f:facet>
+																				<f:facet name="previous">
+																					<ice:graphicImage id="previouspage_employee"
+																						url="./css/rime/css-images/arrow-previous.gif"
+																						style="border:none;" title="previous" />
+																				</f:facet>
+																				<f:facet name="next">
+																					<ice:graphicImage id="nextpage_employee"
+																						url="./css/rime/css-images/arrow-next.gif"
+																						style="border:none;" title="next" />
+																				</f:facet>
+																				<f:facet name="fastforward">
+																					<ice:graphicImage id="fastforward_employee"
+																						url="./css/rime/css-images/arrow-ff.gif"
+																						style="border:none;" title="ff" />
+																				</f:facet>
+																				<f:facet name="fastrewind">
+																					<ice:graphicImage id="fastrewind_employee"
+																						url="./css/rime/css-images/arrow-fr.gif"
+																						style="border:none;" title="fr" />
+																				</f:facet>
+																			</ice:dataPaginator>
+																		</center>
+																	</ice:panelGroup>
+																	<table style="width:99%;margin-top:-1px;">
+																		<tr>
+																			<td align="right">
+																				<ice:commandLink action="#{c_UserEmployeeCustGridBean.createNewAction}" onclick="rld();">
+																								<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+																									url="./css/images/#{folderBean.folder_menu}/icons/menu_up_add_user.png"
+																									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_add_user.png'"
+																									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_add_user.png'"
+																									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_add_user.png'"
+																									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_add_user.png'" />
+																				</ice:commandLink>
+																			</td>
+																		</tr>
+																	</table>
+																</ice:panelGroup>
+						
+															</ice:panelGroup>
+						
+														</ice:panelGroup>
+														
+														<br/><br/>
+
+													</ice:panelTab>
+													<ice:panelTab   label="#{bundle['c_admin_usermanager.tab12']}" disabled="#{c_UserRegisterManagerBean.disabledAddUser}" >
+										             <div style="height:#{utilServiceLocatorBean.heightPanel}px;" >
+
+																	<br/>
+																	<table cellspacing="0" cellpadding="0" style="margin-top: -7px;" width="100%" >
+																		<tr  class="menubuttons">
+																			<td align="left">
+																				&amp;nbsp&amp;nbsp
+																				<ice:commandLink action="#{c_UserEmployeeCustCrudBean.addAction}"  onclick="rld();"  visible="#{c_UserEmployeeCustCrudBean.bTypeCreate}">
+																					<ice:graphicImage style="border:none;" styleClass="noborder"
+																						url="./css/images/#{folderBean.folder_menu}/icons/menu_up_save.png"
+																						onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_save.png'"
+																						onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_save.png'"
+																						
+																						/>
+																				</ice:commandLink>
+																				&amp;nbsp&amp;nbsp
+																				<ice:commandLink action="#{c_UserEmployeeCustCrudBean.updateAction}"  onclick="rld();"  visible="#{c_UserEmployeeCustCrudBean.bTypeQuery}">
+																					<ice:graphicImage style="border:none;" styleClass="noborder"
+																						url="./css/images/#{folderBean.folder_menu}/icons/menu_up_save.png"
+																						onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_save.png'"
+																						onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_save.png'"
+																						
+																						/>
+																				</ice:commandLink>
+																				&amp;nbsp&amp;nbsp
+																				<ice:commandLink action="#{c_UserEmployeeCustCrudBean.returnAction}" onclick="rld();">
+																					<ice:graphicImage style="border:none;" styleClass="noborder"
+																						url="./css/images/#{folderBean.folder_menu}/icons/menu_up_cancel.png"
+																						onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_cancel.png'"
+																						onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_cancel.png'" />
+																				</ice:commandLink>
+																			</td>
+																	</tr>
+																	<tr>
+																		<td colspan="3" class="menuline"></td>
+																	</tr>
+																</table>
+																
+																	
+																	<br/><br/>
+																	<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;">
+																		<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																			<tr>
+																				<td width="20%"  class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																						<h:outputLabel>
+																							<h:outputText value="#{bundle['rz_admin_customerprofile.employee.site']}"></h:outputText>
+																						</h:outputLabel>
+																				</td>
+																				<td align="left" class="tablelabelfieldedit_#{c_UserEmployeeCustCrudBean.stEdit_Global}" width="80%">
+																					<ice:inputText id="namedescSite" size="30" maxlength="30" 
+																							value="#{c_UserEmployeeCustCrudBean.nameSite}" partialSubmit="true"
+																							readonly="true" styleClass="tablefieldedit_disabled">
+																					</ice:inputText>
+																				 </td>
+																			</tr>
+										
+																		</table>
+																		
+																	</ice:panelGroup>
+																	
+																	<br/><br/>
+																	
+																	<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;">
+															<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																<tr>
+																	<td width="20%"  class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																		<ice:panelGroup visible="#{c_UserEmployeeCustCrudBean.bEdit_Site}"  style="margin-top:-9px;margin-left:9px;">
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_usermanager.user.login']}"></h:outputText>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																			</h:outputLabel>
+																		</ice:panelGroup>
+																		<ice:panelGroup visible="#{not c_UserEmployeeCustCrudBean.bEdit_Site}" style="margin-top:-9px;margin-left:9px;">
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_usermanager.user.employee']}"></h:outputText>
+																			</h:outputLabel>
+																		</ice:panelGroup>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_enabled" width="30%">
+																		
+																		<table>
+																		<tr>
+																			<td>
+																				<ice:inputText id="email" size="30" maxlength="30" 
+																					style="font-weight: bold;" value="#{c_UserEmployeeCustCrudBean.email}" 
+																					partialSubmit="true" readonly="true" 
+																					styleClass="tablefieldedit_createnotedit_disabled" >
+																				</ice:inputText>
+																			</td>
+																			<td>
+																				<ice:panelGroup visible="#{not c_UserEmployeeCustCrudBean.bEdit_Site}">
+																					<ice:commandLink  action="#{listEmployeeCustomerToUserPopUpBean.openPopup_csCust}" rendered="#{not listEmployeeCustomerToUserPopUpBean.visible}"  onclick="rld();" >
+																														<ice:graphicImage style="border:none;" styleClass="noborder"
+																															url="./css/images/icons/menu_up_get.png"
+																															/>
+																					</ice:commandLink>	
+																				</ice:panelGroup>
+																			</td>
+																		</tr>
+																		</table>
+																	 </td>
+																	<td  width="20%" class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_usermanager.user.role']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_#{c_UserEmployeeCustCrudBean.stEdit_Global}" width="30%">
+																		<ice:selectOneMenu id="selectedUser_profile" value="#{c_UserEmployeeCustCrudBean.selectedProfile}" styleClass="selectedOneMenukeyBold"  required="false">
+																					<f:selectItems value="#{c_UserEmployeeCustCrudBean.list_Profile}" />
+																		</ice:selectOneMenu>
+																	 </td>
+																</tr>
+															</table>
+														</ice:panelGroup>
+																	
+														<br/><br/>
+																	
+														<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;" visible="#{c_UserEmployeeCustCrudBean.bEdit_Site}"> 
+															<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																<tr>
+																	<td width="20%"  class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_supplierprofile.employee.firstname']}"></h:outputText>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_enabled" width="30%">
+																		<ice:inputText id="firtsname" size="30" maxlength="30"
+																				value="#{c_UserEmployeeCustCrudBean.firstName}" partialSubmit="true"
+																				styleClass="tablefieldedit_enabled">
+																		</ice:inputText>
+																	 </td>
+																	<td  width="20%" class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_usermanager.user.status']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_#{c_UserEmployeeCustCrudBean.stEdit_Global}" width="30%">
+																		<ice:selectOneMenu id="selectedUser_Status" value="#{c_UserEmployeeCustCrudBean.status}" styleClass="selectedOneMenukeyBold"  required="false">
+																					<f:selectItems value="#{c_UserEmployeeCustCrudBean.list_Status}" />
+																		</ice:selectOneMenu>
+																	 </td>
+																</tr>
+																<tr><td colspan="4" class="menusep_#{c_UserEmployeeCustCrudBean.stEdit_Global}"></td></tr>
+																<tr>
+																	 <td  width="20%" class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_supplierprofile.employee.lastname']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_enabled" width="30%">
+																		<ice:inputText id="lastname" size="30" maxlength="30"
+																				value="#{c_UserEmployeeCustCrudBean.lastName}" partialSubmit="true"
+																				styleClass="tablefieldedit_enabled">
+																		</ice:inputText>
+																	 </td>
+																	  <td width="20%"  class="tablelabeledit_disabled">&amp;nbsp&amp;nbsp 
+																			
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																		
+																	 </td>
+																</tr>
+																<tr><td colspan="4" class="menusep_#{c_UserEmployeeCustCrudBean.stEdit_Global}"></td></tr>
+																<tr>
+																	<td width="20%"  class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_supplierprofile.employee.phone']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_enabled" width="30%">
+																		<ice:inputText id="phone" size="30" maxlength="30"
+																				value="#{c_UserEmployeeCustCrudBean.phone}" partialSubmit="true"
+																				styleClass="tablefieldedit_enabled">
+																		</ice:inputText>
+																	 </td>
+																	<td width="20%"  class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_supplierprofile.employee.mobile']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_enabled" width="30%">
+																		<ice:inputText id="mobile" size="30" maxlength="30"
+																				value="#{c_UserEmployeeCustCrudBean.mobile}" partialSubmit="true"
+																				styleClass="tablefieldedit_enabled">
+																		</ice:inputText>
+																	 </td>
+																</tr>
+															</table>
+														</ice:panelGroup>
+														
+														<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;" visible="#{not c_UserEmployeeCustCrudBean.bEdit_Site}"> 
+															<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																<tr>
+																	<td width="20%"  class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['rz_admin_customerprofile.employee.firstname']}"></h:outputText>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																		<ice:inputText id="firtsnamequery" size="30" maxlength="30"
+																				value="#{c_UserEmployeeCustCrudBean.firstName}" partialSubmit="true"
+																				styleClass="tablefieldedit_disabled" readonly="true">
+																		</ice:inputText>
+																	 </td>
+																	<td  width="20%" class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['rz_admin_customerprofile.employee.lastname']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																		<ice:inputText id="lastnamequery" size="30" maxlength="30"
+																				value="#{c_UserEmployeeCustCrudBean.lastName}" partialSubmit="true"
+																				styleClass="tablefieldedit_disabled" readonly="true">
+																		</ice:inputText>
+																	 </td>
+																</tr>
+																<tr><td colspan="4" class="menusep_#{c_UserEmployeeCustCrudBean.stEdit_Global}"></td></tr>
+																<tr>
+																	 <td width="20%"  class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['rz_admin_customerprofile.employee.phone']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																		<ice:inputText id="phonequery" size="30" maxlength="30"
+																				value="#{c_UserEmployeeCustCrudBean.phone}" partialSubmit="true"
+																				styleClass="tablefieldedit_disabled" readonly="true">
+																		</ice:inputText>
+																	 </td>
+																	 <td width="20%"  class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['rz_admin_customerprofile.employee.mobile']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																		<ice:inputText id="mobilequery" size="30" maxlength="30"
+																				value="#{c_UserEmployeeCustCrudBean.mobile}" partialSubmit="true"
+																				styleClass="tablefieldedit_disabled" readonly="true">
+																		</ice:inputText>
+																	 </td>
+																</tr>
+															</table>
+															
+															
+															
+															
+														</ice:panelGroup>
+										             
+										             	<br/><br/>
+										             	
+										             	<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;" visible="#{c_UserEmployeeCustCrudBean.bEdit_Site}">
+																		<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																			<tr>
+																				<td width="20%"  class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																						<h:outputLabel>
+																							<h:outputText value="#{bundle['rz_pwd.newpwd']}"></h:outputText>
+																						</h:outputLabel>
+																				</td>
+																				<td align="left" class="tablelabelfieldedit_#{c_UserEmployeeCustCrudBean.stEdit_Global}" width="80%">
+																					
+																					<table>
+																						<tr>
+																							<td>
+																								<ice:inputSecret id="newPasswordcust" size="30" maxlength="30" style="font-weight: bold;" redisplay="true" readonly="true" 
+																									value="#{c_UserEmployeeCustCrudBean.newPassword}" styleClass="tablefieldedit_createnotedit_disabled" >
+																								</ice:inputSecret>
+																							</td>
+																							<td>
+																								<ice:panelGroup >
+																									<ice:commandLink  action="#{changecuserpasswordPopUpBean.openPopup}" rendered="#{not changecuserpasswordPopUpBean.visible}"  >
+																																		<ice:graphicImage style="border:none;" styleClass="noborder" 
+																																			url="./css/images/icons/menu_up_changepwd.png"
+																																			onmouseout="this.src='./css/images/icons/menu_up_changepwd.png'"
+																																			onmouseover="this.src='./css/images/icons/menu_up_changepwd.png'"
+																																			onmouseup="this.src='./css/images/icons/menu_up_changepwd.png'"
+																																			onmousedown="this.src='./css/images/icons/menu_up_changepwd.png'"
+																																		    height="30"
+																																			/>
+																									</ice:commandLink>	
+																								</ice:panelGroup>
+																							</td>
+																						</tr>
+																					</table>
+																					
+																				 </td>
+																			</tr>
+										
+																		</table>
+																		
+														</ice:panelGroup>
+
+										             </div>
+										        </ice:panelTab> 
+											</ice:panelTabSet>
+										</ice:panelGroup>
+										
+									</ice:panelTab>
+
+									<ice:panelTab label="#{entityTypeBundle.entity_of} #{bundle['c_admin_usermanager.tab2']}">
+										<div style="height:#{utilServiceLocatorBean.heightPanel}px;">
+
+
+
+											<ice:panelGroup id="subTabSetTab"
+												styleClass="tabPanelBox panelTabSetSaleContainer">
+
+												<ice:panelTabSet tabChangeListener="#{c_UMSupplierBean.processTabChange}" selectedIndex="#{c_UMSupplierBean.ITab}">
+
+
+													<ice:panelTab label="#{entityTypeBundle.entity_of} #{bundle['c_admin_usermanager.tab21']}">
+													
+														<table class="tableformstot">
+														<tr>
+															<td>
+																<table class="tableformscell" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td class="tableflabel">
+																			&amp;nbsp&amp;nbsp
+																		</td>
+																		<td class="tableflabel">
+																			<ice:commandLink action="#{c_UMSupplier_Manager_ListTableBean.findAll}" onclick="rld();">
+																				<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+																					url="./css/images/#{folderBean.folder_menu}/icons/menu_up_all.png"
+																					onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_all.png'"
+																					onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_all.png'"
+																					onmouseup="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_all.png'"
+																					onmousedown="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_all.png'" />
+																			</ice:commandLink>
+																		</td>
+																		<td class="tableflabel">
+																			&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																			&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																			&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																		</td>
+																		<td class="tableflabelbuttons" align="right">
+																			&amp;nbsp
+																		</td>
+																		<td class="tableflabel">
+																			&amp;nbsp
+																		</td>
+																		<td>
+																			&amp;nbsp
+																		</td>
+																		<td>
+																			&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																		</td>
+																		<td class="tableflabelbuttons" width="120">
+																		<h:outputLabel >
+																			<h:outputText value="#{bundle['rz_find']} #{entityTypeBundle.entity_of}"></h:outputText>
+																			</h:outputLabel>
+																		</td>
+																		<td>
+																			<ice:selectInputText rows="7" width="250"
+																					valueChangeListener="#{c_UMSupplier_Manager_ListTableBean.updateParamsList}">
+																					<f:selectItems
+																						value="#{c_UMSupplier_Manager_ListTableBean.list}" />
+																			</ice:selectInputText>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>   
+													    
+														<div class="paneTableBox"  style="height:#{utilServiceLocatorBean.heightEditableTable}px;margin-top:8px;overflow:auto;width:#{utilServiceLocatorBean.widthEditableTable}px;">
+													 		<ice:panelGroup>
+																<ice:panelGroup>
+																	<ice:dataTable resizable="false" border="1" id="tablesup" value="#{c_UMSupplier_Manager_ListTableBean.CSupplierBean}" var="customerBean"  
+																				width="95%" 
+																				rows="#{c_UMSupplier_Manager_ListTableBean.selectedDataScrollModes[c_UMSupplier_Manager_ListTableBean.selectedDataScrollMode].rows}"
+																               	scrollable="#{c_UMSupplier_Manager_ListTableBean.selectedDataScrollModes[c_UMSupplier_Manager_ListTableBean.selectedDataScrollMode].scrollingEnabled}"
+																               	scrollHeight="200px"
+																               	style="float:center;font-color: #FFFFFF;"
+																               	columnWidths="1%,29%,29%,20%,20%,25%,5%"
+																               	columnClasses="columnCenter,columnLeft,columnLeft,columnLeft,columnLeft,columnCenter"
+																                rowClasses="rowOn,rowOff"
+																               	cellpadding="0"
+																				sortColumn="#{c_UMSupplier_Manager_ListTableBean.columnNameOrder}" sortAscending="#{c_UMSupplier_Manager_ListTableBean.descending}">
+																		
+																		<ice:column >
+																			<ice:rowSelector id="selected"
+											                                 value="#{c_UMSupplier_Manager_ListTableBean.itemSelected}"
+											                                 multiple="false"         
+											                                 selectionListener="#{c_UMSupplier_Manager_ListTableBean.rowSelectionListener}"
+											                                 selectionAction="#{c_UMSupplier_Manager_ListTableBean.rowSelectionAction}"/>               
+											                                 >>		
+																		</ice:column>
+																			<ice:column>
+																			<f:facet name="header">
+																				<ice:commandSortHeader id="nameId" columnName="name"  >
+											                        				<ice:outputText value="#{bundle['rz_admin_usermanager.cust.name']}"></ice:outputText>
+											                    				</ice:commandSortHeader>
+																			</f:facet>
+																			<ice:outputText id="idname" value="#{customerBean.name}"/>
+																		</ice:column>
+																		<ice:column groupOn="#{customerBean.countryDesc}"  style="background-color:#F7F4F5;">
+																			<f:facet name="header">
+																				<ice:commandSortHeader id="countrysort" columnName="countryDesc">
+																					<ice:outputText value="#{bundle['rz_admin_usermanager.cust.country']}" ></ice:outputText>
+																				</ice:commandSortHeader>
+																			</f:facet>
+																			<ice:outputText id="countrydesc" style="font-weight:bold;text-align:center;"
+																				value="#{customerBean.countryDesc}" />
+																		</ice:column>
+																		<ice:column groupOn="#{customerBean.stateDesc}" style="background-color:#F3F4F8;">
+																			<f:facet name="header">
+																				<ice:commandSortHeader id="statesort" columnName="stateDesc">
+																					<ice:outputText value="#{bundle['rz_admin_usermanager.cust.state']}"></ice:outputText>
+																				</ice:commandSortHeader>
+																			</f:facet>
+																			<ice:outputText id="statedesc"
+																				value="#{customerBean.stateDesc}" />
+																		</ice:column>
+																		<ice:column groupOn="#{customerBean.cityDesc}" style="background-color:#F4F7F5;">
+																			<f:facet name="header">
+																				<ice:commandSortHeader id="citysort" columnName="cityDesc">
+																					<ice:outputText value="#{bundle['rz_admin_usermanager.cust.city']}"></ice:outputText>
+																				</ice:commandSortHeader>
+																			</f:facet>
+																			<ice:outputText id="citydesc"
+																				value="#{customerBean.cityDesc}" />
+																		</ice:column>
+																		<ice:column>
+																			<f:facet name="header">
+																				<ice:outputText value="#{bundle['rz_admin_usermanager.cust.website']}"></ice:outputText>
+																			</f:facet>
+																			<ice:outputText id="idwebSite" value="#{customerBean.webSite}"/>
+																		</ice:column>
+																		<ice:column style="background-color:white;">
+																			<f:facet name="header">
+																				<!--<span style="color:#F9FAF8;font-size:9px;text-align: center">&amp;nbsp#{bundle['rz_info.quantity']}: #{c_UMSupplier_Manager_ListTableBean.amount}</span>-->
+																			</f:facet>
+																			<ice:graphicImage style="border:none;text-align:center;" styleClass="noborder" 
+																				url="./css/images/#{folderBean.folder_menu}/icons/menu_down_addtbusers.png"
+																				onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_addtbusers.png'"
+																				onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_addtbusers.png'"
+																			
+																			/>
+																		</ice:column>
+		
+																		</ice:dataTable>
+														
+																		<ice:panelGroup styleClass="clearer"/>
+																		  
+												        				
+																		<!-- Set up the buttons and links for browsing through the table
+																             fastStep means No. of pages to fast forward or rewind: 3
+																             paginatorMaxPages means No. of direct links to pages: 4 -->
+																        <ice:panelGroup style="float:left;width:420px;">
+															            <center>
+															            <ice:dataPaginator id="dataScroll_5"
+															                   rendered="#{c_UMSupplier_Manager_ListTableBean.selectedDataScrollModes[c_UMSupplier_Manager_ListTableBean.selectedDataScrollMode].pagingEnabled}"
+															                   for="tablesup"
+															                   vertical="false" fastStep="3" paginator="true" paginatorMaxPages="10">
+															                <f:facet name="first">
+															                    <ice:graphicImage id="firstpage_5" url="./css/rime/css-images/arrow-first.gif" style="border:none;" title="first"/>
+															                </f:facet>
+															                <f:facet name="last">
+															                    <ice:graphicImage id="lastpage_5" url="./css/rime/css-images/arrow-last.gif" style="border:none;" title="last"/>
+															                </f:facet>
+															                <f:facet name="previous">
+															                    <ice:graphicImage id="previouspage_5" url="./css/rime/css-images/arrow-previous.gif" style="border:none;" title="previous"/>
+															                </f:facet>
+															                <f:facet name="next">
+															                    <ice:graphicImage id="nextpage_5" url="./css/rime/css-images/arrow-next.gif" style="border:none;" title="next"/>
+															                </f:facet>
+															                <f:facet name="fastforward">
+															                    <ice:graphicImage id="fastforward_5" url="./css/rime/css-images/arrow-ff.gif" style="border:none;" title="ff"/>
+															                </f:facet>
+															                <f:facet name="fastrewind">
+															                    <ice:graphicImage id="fastrewind_5" url="./css/rime/css-images/arrow-fr.gif" style="border:none;" title="fr"/>
+															                </f:facet>
+															            </ice:dataPaginator>
+															            </center>
+															        </ice:panelGroup>
+																	
+																</ice:panelGroup>
+																
+															</ice:panelGroup>
+		
+														</div> 
+
+													</ice:panelTab>
+
+													<ice:panelTab label="#{bundle['c_admin_usermanager.tab22']}" disabled="#{c_UMSupplierBean.disabledUser}">
+
+														<br/>
+																	  <ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;">
+																			<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																				<tr>
+																					<td width="20%"  class="tablelabeledit_disabled">&amp;nbsp&amp;nbsp 
+																							<h:outputLabel>
+																								<h:outputText value="#{entityTypeBundle.entity_of}"></h:outputText>
+																							</h:outputLabel>
+																					</td>
+																					<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																					
+																						<h:outputLabel>
+																								<h:outputText  value="#{c_UserEmployeeSupGridBean.nameSupplier}" styleClass="tabletexttitleinformation"></h:outputText>
+																						</h:outputLabel>
+																					 </td>
+																				</tr>
+											
+																			</table>
+																			
+														</ice:panelGroup>
+														<br/>	
+
+														<ice:panelGroup style="margin-top:-3px;width:97%;overflow:auto;">
+	
+															<ice:panelGroup>
+																<ice:panelGroup>
+																	<ice:dataTable resizable="false" border="1" id="tableuseremployeesupgrid"
+																		value="#{c_UserEmployeeSupGridBean.allCrudBeans}"
+																		var="adminUserEmployeeSupBean"
+																		width="98%"
+																		rows="#{c_UserEmployeeSupGridBean.selectedDataScrollModes[c_UserEmployeeSupGridBean.selectedDataScrollMode].rows}"
+																		scrollable="#{c_UserEmployeeSupGridBean.selectedDataScrollModes[c_UserEmployeeSupGridBean.selectedDataScrollMode].scrollingEnabled}"
+																		scrollHeight="200px"
+																		style="float:center;font-color: #FFFFFF;"
+																		columnWidths="20%,1%,25%,25%,20%,9%"
+																		columnClasses="columnCenter,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnCenter"
+																		rowClasses="rowOn,rowOff" cellpadding="0"
+																		sortColumn="#{c_UserEmployeeSupGridBean.columnNameOrder}"
+																		sortAscending="#{c_UserEmployeeSupGridBean.descending}"
+																		onclick="window.location.reload()">
+						
+																		
+																		<ice:column groupOn="#{adminUserEmployeeSupBean.nameSite}" style="background-color:#F7F4F5;">
+																			<f:facet name="header">
+																				<ice:commandSortHeader id="ecustomerSiteIdCustomerSitesort" columnName="customerSiteIdCustomerSite">
+																					<ice:outputText	value="#{bundle['rz_admin_customerprofile.employee.site']}"></ice:outputText>
+																				</ice:commandSortHeader>
+																			</f:facet>
+																			<ice:outputText id="idecustomerSiteIdCustomerSite"  style="font-weight:bold;text-align:center;"
+																				value="#{adminUserEmployeeSupBean.nameSite}" />
+																		</ice:column>
+																		<ice:column style="background-color:white;">
+																			<ice:rowSelector id="selected"
+																				value="#{c_UserEmployeeSupGridBean.itemSelected}" multiple="false"
+																				selectionListener="#{c_UserEmployeeSupGridBean.rowSelectionListener}"
+																				selectionAction="#{c_UserEmployeeSupGridBean.rowSelectionAction}" /> 
+	
+																				<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/#{folderBean.folder_menu}/icons/menu_useractive.png"/>		
+																		
+																		</ice:column>
+																		<ice:column>
+																			<f:facet name="header">
+																				<ice:commandSortHeader id="eemailssort" columnName="email">
+																					<ice:outputText value="#{bundle['rz_admin_usermanager.user.login']}"></ice:outputText>
+																				</ice:commandSortHeader>
+																			</f:facet>
+																			<ice:outputText id="eemaildesc"
+																				value="#{adminUserEmployeeSupBean.email}" />
+																		</ice:column>
+																		<ice:column>
+																			<f:facet name="header">
+																				<ice:commandSortHeader id="efirstnamesort" columnName="firstName">
+																					<ice:outputText value="#{bundle['rz_admin_usermanager.user.firstname']}"></ice:outputText>
+																				</ice:commandSortHeader>
+																			</f:facet>
+																			<ice:outputText id="idefirstname"
+																					value="#{adminUserEmployeeSupBean.firstName}" />
+																		</ice:column>
+																		<ice:column>
+																			<f:facet name="header">
+																				<ice:commandSortHeader id="elastnamesort" columnName="lastName">
+																					<ice:outputText value="#{bundle['rz_admin_customerprofile.employee.lastname']}"></ice:outputText>
+																				</ice:commandSortHeader>
+																			</f:facet>
+																			<ice:outputText id="elastnamedesc"
+																				value="#{adminUserEmployeeSupBean.lastName}" />
+																		</ice:column>
+																		<ice:column style="background-color:white;">
+																			<f:facet name="header">
+																				
+																			</f:facet>
+																			<ice:graphicImage style="border:none;" styleClass="noborder"
+																				url="./css/images/#{folderBean.folder_menu}/icons/menu_down_edit.png"
+																				onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_edit.png'"
+																				onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_edit.png'"
+																			
+																			/>
+																		</ice:column>
+																	</ice:dataTable>
+																	
+																	<ice:panelGroup styleClass="clearer" />
+						
+																	<!-- PAGINATOR-->
+																	<ice:panelGroup style="float:left;width:420px;">
+																		<center>
+																			<ice:dataPaginator id="dataScroll_Employeesup"
+																				rendered="#{c_UserEmployeeSupGridBean.selectedDataScrollModes[c_UserEmployeeSupGridBean.selectedDataScrollMode].pagingEnabled}"
+																				for="tableuseremployeesupgrid" vertical="false" fastStep="3" paginator="true"
+																				paginatorMaxPages="10">
+																				<f:facet name="first">
+																					<ice:graphicImage id="firstpage_employeesup"
+																						url="./css/rime/css-images/arrow-first.gif"
+																						style="border:none;" title="first" />
+																				</f:facet>
+																				<f:facet name="last">
+																					<ice:graphicImage id="lastpage_employeesup"
+																						url="./css/rime/css-images/arrow-last.gif"
+																						style="border:none;" title="last" />
+																				</f:facet>
+																				<f:facet name="previous">
+																					<ice:graphicImage id="previouspage_employeesup"
+																						url="./css/rime/css-images/arrow-previous.gif"
+																						style="border:none;" title="previous" />
+																				</f:facet>
+																				<f:facet name="next">
+																					<ice:graphicImage id="nextpage_employeesup"
+																						url="./css/rime/css-images/arrow-next.gif"
+																						style="border:none;" title="next" />
+																				</f:facet>
+																				<f:facet name="fastforward">
+																					<ice:graphicImage id="fastforward_employeesup"
+																						url="./css/rime/css-images/arrow-ff.gif"
+																						style="border:none;" title="ff" />
+																				</f:facet>
+																				<f:facet name="fastrewind">
+																					<ice:graphicImage id="fastrewind_employeesup"
+																						url="./css/rime/css-images/arrow-fr.gif"
+																						style="border:none;" title="fr" />
+																				</f:facet>
+																			</ice:dataPaginator>
+																		</center>
+																	</ice:panelGroup>
+																	<table style="width:99%;margin-top:-1px;">
+																		<tr>
+																			<td align="right">
+																				<ice:commandLink action="#{c_UserEmployeeSupGridBean.createNewAction}" onclick="rld();">
+																								<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+																									url="./css/images/#{folderBean.folder_menu}/icons/menu_up_add_user.png"
+																									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_add_user.png'"
+																									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_add_user.png'"
+																									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_add_user.png'"
+																									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_add_user.png'" />
+																				</ice:commandLink>
+																			</td>
+																		</tr>
+																	</table>
+																</ice:panelGroup>
+						
+															</ice:panelGroup>
+						
+														</ice:panelGroup>
+														
+														<br/><br/>
+
+													</ice:panelTab>
+													
+													
+													
+													<ice:panelTab   label="#{bundle['c_admin_usermanager.tab23']}" disabled="#{c_UMSupplierBean.disabledAddUser}" >
+										             	<div style="height:#{utilServiceLocatorBean.heightPanel}px;" >
+
+																	<br/>
+																	<table cellspacing="0" cellpadding="0" style="margin-top: -7px;" width="100%" >
+																		<tr  class="menubuttons">
+																			<td align="left">
+																				&amp;nbsp&amp;nbsp
+																				<ice:commandLink action="#{c_UserEmployeeSupCrudBean.addAction}"  onclick="rld();"  visible="#{c_UserEmployeeSupCrudBean.bTypeCreate}">
+																					<ice:graphicImage style="border:none;" styleClass="noborder"
+																						url="./css/images/#{folderBean.folder_menu}/icons/menu_up_save.png"
+																						onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_save.png'"
+																						onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_save.png'"
+																						
+																						/>
+																				</ice:commandLink>
+																				&amp;nbsp&amp;nbsp
+																				<ice:commandLink action="#{c_UserEmployeeSupCrudBean.updateAction}"  onclick="rld();"  visible="#{c_UserEmployeeSupCrudBean.bTypeQuery}">
+																					<ice:graphicImage style="border:none;" styleClass="noborder"
+																						url="./css/images/#{folderBean.folder_menu}/icons/menu_up_save.png"
+																						onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_save.png'"
+																						onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_save.png'"
+																						
+																						/>
+																				</ice:commandLink>
+																				&amp;nbsp&amp;nbsp
+																				<ice:commandLink action="#{c_UserEmployeeSupCrudBean.returnAction}" onclick="rld();">
+																					<ice:graphicImage style="border:none;" styleClass="noborder"
+																						url="./css/images/#{folderBean.folder_menu}/icons/menu_up_cancel.png"
+																						onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_cancel.png'"
+																						onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_cancel.png'" />
+																				</ice:commandLink>
+																			</td>
+																	</tr>
+																	<tr>
+																		<td colspan="3" class="menuline"></td>
+																	</tr>
+																</table>
+																
+																<br/>
+																	  <ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;">
+																			<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																				<tr>
+																					<td width="20%"  class="tablelabeledit_disabled">&amp;nbsp&amp;nbsp 
+																							<h:outputLabel>
+																								<h:outputText value="#{entityTypeBundle.entity_of}"></h:outputText>
+																							</h:outputLabel>
+																					</td>
+																					<td align="left" class="tablelabelfieldedit_disabled" width="80%">
+																						<h:outputLabel>
+																								<h:outputText  value="#{c_UserEmployeeSupGridBean.nameSupplier}" styleClass="tabletexttitleinformation"></h:outputText>
+																						</h:outputLabel>
+																					 </td>
+																				</tr>
+											
+																			</table>
+																			
+																</ice:panelGroup>
+																<br/>	
+																	<br/><br/>
+																	<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;">
+																		<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																			<tr>
+																				<td width="20%"  class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																						<h:outputLabel>
+																							<h:outputText value="#{bundle['c_admin_supplierprofile.employee.site']}"></h:outputText>
+																						</h:outputLabel>
+																				</td>
+																				<td align="left" class="tablelabelfieldedit_#{c_UserEmployeeSupCrudBean.stEdit_Global}" width="80%">
+																					<ice:selectOneMenu id="selectedSite" visible="#{not c_UserEmployeeSupCrudBean.bEdit_Site}"
+																							value="#{c_UserEmployeeSupCrudBean.idSiteSupplier}"
+																							styleClass="selectedOneMenukeyBold"
+																							valueChangeListener="#{c_UserEmployeeSupCrudBean.processValueChange}"
+																							partialSubmit="true">
+																							<f:selectItems value="#{c_UserEmployeeSupCrudBean.list_Site}" />
+																					</ice:selectOneMenu>
+																					<ice:inputText id="namedescSite" size="30" maxlength="30" visible="#{c_UserEmployeeSupCrudBean.bEdit_Site}"
+																							value="#{c_UserEmployeeSupCrudBean.nameSite}" partialSubmit="true"
+																							readonly="true" styleClass="tablefieldedit_disabled">
+																					</ice:inputText>
+																				 </td>
+																			</tr>
+										
+																		</table>
+																		
+																	</ice:panelGroup>
+																	
+																	<br/><br/>
+																	
+																	<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;">
+															<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																<tr>
+																	<td width="20%"  class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																		<ice:panelGroup visible="#{c_UserEmployeeSupCrudBean.bEdit_Site}"  style="margin-top:-9px;margin-left:9px;">
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_usermanager.user.login']}"></h:outputText>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																			</h:outputLabel>
+																		</ice:panelGroup>
+																		<ice:panelGroup visible="#{not c_UserEmployeeSupCrudBean.bEdit_Site}" style="margin-top:-9px;margin-left:9px;">
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_usermanager.user.employee']}"></h:outputText>
+																			</h:outputLabel>
+																		</ice:panelGroup>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_enabled" width="30%">
+																		
+																		<table>
+																		<tr>
+																			<td>
+																				<ice:inputText id="email" size="30" maxlength="30" 
+																					style="font-weight: bold;" value="#{c_UserEmployeeSupCrudBean.email}" 
+																					partialSubmit="true" readonly="true" 
+																					styleClass="tablefieldedit_createnotedit_disabled" >
+																				</ice:inputText>
+																			</td>
+																			<td>
+																				<ice:panelGroup visible="#{not c_UserEmployeeSupCrudBean.bEdit_Site}">
+																					<ice:commandLink  action="#{listEmployeeSupplierToUserPopUpBean.openPopup_csSup}" rendered="#{not listEmployeeSupplierToUserPopUpBean.visible}"  onclick="rld();" >
+																														<ice:graphicImage style="border:none;" styleClass="noborder"
+																															url="./css/images/icons/menu_up_get.png"
+																															/>
+																					</ice:commandLink>	
+																				</ice:panelGroup>
+																			</td>
+																		</tr>
+																		</table>
+																	 </td>
+																	<td  width="20%" class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_usermanager.user.role']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_#{c_UserEmployeeSupCrudBean.stEdit_Global}" width="30%">
+																		<ice:selectOneMenu id="selectedUser_profile" value="#{c_UserEmployeeSupCrudBean.selectedProfile}" styleClass="selectedOneMenukeyBold"  required="false">
+																					<f:selectItems value="#{c_UserEmployeeSupCrudBean.list_Profile}" />
+																		</ice:selectOneMenu>
+																	 </td>
+																</tr>
+															</table>
+														</ice:panelGroup>
+																	
+																	<br/><br/>
+																	
+														<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;" visible="#{c_UserEmployeeSupCrudBean.bEdit_Site}"> 
+															<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																<tr>
+																	<td width="20%"  class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_supplierprofile.employee.firstname']}"></h:outputText>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_enabled" width="30%">
+																		<ice:inputText id="firtsname" size="30" maxlength="30"
+																				value="#{c_UserEmployeeSupCrudBean.firstName}" partialSubmit="true"
+																				styleClass="tablefieldedit_enabled">
+																		</ice:inputText>
+																	 </td>
+																	<td  width="20%" class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_usermanager.user.status']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_#{c_UserEmployeeSupCrudBean.stEdit_Global}" width="30%">
+																		<ice:selectOneMenu id="selectedUser_Status" value="#{c_UserEmployeeSupCrudBean.status}" styleClass="selectedOneMenukeyBold"  required="false">
+																					<f:selectItems value="#{c_UserEmployeeSupCrudBean.list_Status}" />
+																		</ice:selectOneMenu>
+																	 </td>
+																</tr>
+																<tr><td colspan="4" class="menusep_#{c_UserEmployeeSupCrudBean.stEdit_Global}"></td></tr>
+																<tr>
+																	 <td  width="20%" class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_supplierprofile.employee.lastname']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_enabled" width="30%">
+																		<ice:inputText id="lastname" size="30" maxlength="30"
+																				value="#{c_UserEmployeeSupCrudBean.lastName}" partialSubmit="true"
+																				styleClass="tablefieldedit_enabled">
+																		</ice:inputText>
+																	 </td>
+																	  <td width="20%"  class="tablelabeledit_disabled">&amp;nbsp&amp;nbsp 
+																			
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																		
+																	 </td>
+																</tr>
+																<tr><td colspan="4" class="menusep_#{c_UserEmployeeSupCrudBean.stEdit_Global}"></td></tr>
+																<tr>
+																	<td width="20%"  class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_supplierprofile.employee.phone']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_enabled" width="30%">
+																		<ice:inputText id="phone" size="30" maxlength="30"
+																				value="#{c_UserEmployeeSupCrudBean.phone}" partialSubmit="true"
+																				styleClass="tablefieldedit_enabled">
+																		</ice:inputText>
+																	 </td>
+																	<td width="20%"  class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_supplierprofile.employee.mobile']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_enabled" width="30%">
+																		<ice:inputText id="mobile" size="30" maxlength="30"
+																				value="#{c_UserEmployeeSupCrudBean.mobile}" partialSubmit="true"
+																				styleClass="tablefieldedit_enabled">
+																		</ice:inputText>
+																	 </td>
+																</tr>
+															</table>
+														</ice:panelGroup>
+														
+														<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;" visible="#{not c_UserEmployeeSupCrudBean.bEdit_Site}"> 
+															<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																<tr>
+																	<td width="20%"  class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_supplierprofile.employee.firstname']}"></h:outputText>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																		<ice:inputText id="firtsnamequery" size="30" maxlength="30"
+																				value="#{c_UserEmployeeSupCrudBean.firstName}" partialSubmit="true"
+																				styleClass="tablefieldedit_disabled" readonly="true">
+																		</ice:inputText>
+																	 </td>
+																	<td  width="20%" class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_supplierprofile.employee.lastname']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																		<ice:inputText id="lastnamequery" size="30" maxlength="30"
+																				value="#{c_UserEmployeeSupCrudBean.lastName}" partialSubmit="true"
+																				styleClass="tablefieldedit_disabled" readonly="true">
+																		</ice:inputText>
+																	 </td>
+																</tr>
+																<tr><td colspan="4" class="menusep_#{c_UserEmployeeSupCrudBean.stEdit_Global}"></td></tr>
+																<tr>
+																	 <td width="20%"  class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_supplierprofile.employee.phone']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																		<ice:inputText id="phonequery" size="30" maxlength="30"
+																				value="#{c_UserEmployeeSupCrudBean.phone}" partialSubmit="true"
+																				styleClass="tablefieldedit_disabled" readonly="true">
+																		</ice:inputText>
+																	 </td>
+																	 <td width="20%"  class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																			<h:outputLabel>
+																				<h:outputText value="#{bundle['c_admin_supplierprofile.employee.mobile']}"></h:outputText>
+																			</h:outputLabel>
+																	</td>
+																	<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																		<ice:inputText id="mobilequery" size="30" maxlength="30"
+																				value="#{c_UserEmployeeSupCrudBean.mobile}" partialSubmit="true"
+																				styleClass="tablefieldedit_disabled" readonly="true">
+																		</ice:inputText>
+																	 </td>
+																</tr>
+															</table>
+															
+															
+															
+															
+														</ice:panelGroup>
+										             
+										             	<br/><br/>
+										             	
+										             	<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;" visible="#{c_UserEmployeeSupCrudBean.bEdit_Site}">
+																		<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																			<tr>
+																				<td width="20%"  class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																						<h:outputLabel>
+																							<h:outputText value="#{bundle['rz_pwd.newpwd']}"></h:outputText>
+																						</h:outputLabel>
+																				</td>
+																				<td align="left" class="tablelabelfieldedit_#{c_UserEmployeeSupCrudBean.stEdit_Global}" width="80%">
+																					
+																					<table>
+																						<tr>
+																							<td>
+																								<ice:inputSecret id="newPasswordsup" size="30" maxlength="30" style="font-weight: bold;" redisplay="true" readonly="true" 
+																									value="#{c_UserEmployeeSupCrudBean.newPassword}" styleClass="tablefieldedit_createnotedit_disabled" >
+																								</ice:inputSecret>
+																							</td>
+																							<td>
+																								<ice:panelGroup >
+																									<ice:commandLink  action="#{changesuserpasswordPopUpBean.openPopup}" rendered="#{not changesuserpasswordPopUpBean.visible}"  >
+																																		<ice:graphicImage style="border:none;" styleClass="noborder" 
+																																			url="./css/images/icons/menu_up_changepwd.png"
+																																			onmouseout="this.src='./css/images/icons/menu_up_changepwd.png'"
+																																			onmouseover="this.src='./css/images/icons/menu_up_changepwd.png'"
+																																			onmouseup="this.src='./css/images/icons/menu_up_changepwd.png'"
+																																			onmousedown="this.src='./css/images/icons/menu_up_changepwd.png'"
+																																		    height="30"
+																																			/>
+																									</ice:commandLink>	
+																								</ice:panelGroup>
+																							</td>
+																						</tr>
+																					</table>
+																					
+																				 </td>
+																			</tr>
+										
+																		</table>
+																		
+														</ice:panelGroup>
+										             
+										             
+										             </div>
+										        </ice:panelTab> 
+													
+													
+												</ice:panelTabSet>
+
+											</ice:panelGroup>
+										</div>
+									</ice:panelTab>
+									
+								</ice:panelTabSet>
+							</ice:panelGroup>
+							
+							
+					</ice:form>
+
+					<ice:form>
+						<ice:panelPopup  modal="true" visible="#{viewlogsPopUpBean.visible}" style="margin-top:-90px;width:485px;" styleClass="icePanelPopupBody icePanelPopup">
+				                <f:facet name="header">
+				                   <ice:panelGrid width="485" cellpadding="0" cellspacing="1" columns="2" styleClass="trHeader" >
+				                        <ice:outputText style="color: white;" value="#{bundle['rz_log']}"/>
+				                        <ice:commandButton image="./css/images/icons/close.png" action="#{viewlogsPopUpBean.closePopup}" title="Close this draggable popup"/>
+				                    </ice:panelGrid>
+				                </f:facet>
+				                <f:facet name="body">
+				                	<ice:panelGrid width="100%">
+				                		<table style="border:none;margin-top:-10px;float:left;">
+				                			<tr>
+				                				<td rowspan="2" valign="top"><ice:graphicImage styleClass="noborder" url="./css/images/general/log#{logger.stType}.png"/></td>
+				                				<td style="color:#3A4358;font-weight:bold;">&amp;nbsp&amp;nbsp#{logger.stType}</td>
+				                			</tr>
+				                			<tr>
+				                				<td >
+					                				 <ice:panelGrid width="100%" columns="1" cellpadding="0" border="1" style="background-color: #F4F4F4;border-color:black;" >
+									                	<table align="center">
+										                       	<tr>
+											                       <td  width="410" colspan="3" class="tableflabelmaster" >
+											                       		<div style="height:200px;overflow: auto;" >
+											                       			#{logger.stLogger}
+											                       		</div>
+											                       </td>
+											                    </tr>
+											             </table>
+								                 	</ice:panelGrid>
+				                				</td>
+				                			</tr>
+				                			<tr>
+				                				<td colspan="3" align="right">
+					                				<ice:commandLink action ="#{viewlogsPopUpBean.closePopup}">
+																<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/general/logexit.png"/>
+													</ice:commandLink>
+												</td>
+				                			</tr>
+				                		</table>
+									</ice:panelGrid>
+				                </f:facet>
+				            </ice:panelPopup>   
+				            
+				            
+				            <ice:panelPopup modal="true" visible="#{listEmployeeCustomerToUserPopUpBean.visible}" style="margin-left:0px;margin-top:-55px;position:absolute; width:650px;" styleClass="icePanelPopupBody">
+												 <f:facet name="header">
+															                    <ice:panelGrid width="650" cellpadding="0" cellspacing="1" columns="2" styleClass="trHeader" >
+															                        <ice:outputText style="color: white;" value="#{bundle['c_admin_supplierprofile_site.employees']}"/>
+															                        <ice:commandLink  action="#{listEmployeeCustomerToUserPopUpBean.closeclearPopup_cs}" >
+																							<ice:graphicImage style="border:none;" styleClass="noborder"
+																								url="./css/images/icons/close.png" />
+																							
+																					</ice:commandLink>
+															                    </ice:panelGrid>
+												</f:facet>
+															                
+									<f:facet name="body">
+									<ice:panelGrid width="100%" columns="1" cellpadding="0"  style="background-color: #F0F7FB">
+            	
+												<ice:panelGroup>
+													<ice:panelGroup>
+														<ice:dataTable resizable="false" border="1" id="tablelistemployeeusergrid"
+															value="#{rz_ListEmployeeUserGridBean.allCrudBeans}"
+															var="adminListEmployeeUserBean"
+															width="98%"
+															rows="#{rz_ListEmployeeUserGridBean.selectedDataScrollModes[rz_ListEmployeeUserGridBean.selectedDataScrollMode].rows}"
+															scrollable="#{rz_ListEmployeeUserGridBean.selectedDataScrollModes[rz_ListEmployeeUserGridBean.selectedDataScrollMode].scrollingEnabled}"
+															scrollHeight="200px"
+															style="float:center;font-color: #FFFFFF;"
+															columnWidths="1%,29%,25%,40%,5%"
+															columnClasses="columnCenter,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnCenter"
+															rowClasses="rowOn,rowOff" cellpadding="0"
+															sortColumn="#{rz_ListEmployeeUserGridBean.columnNameOrder}"
+															sortAscending="#{rz_ListEmployeeUserGridBean.descending}"
+															>
+			
+															<ice:column>
+																<ice:rowSelector id="selected"
+																	value="#{rz_ListEmployeeUserGridBean.itemSelected}" multiple="false"
+																	selectionListener="#{rz_ListEmployeeUserGridBean.rowSelectionListener}"
+																	selectionAction="#{rz_ListEmployeeUserGridBean.rowSelectionAction}" /> 
+																	>>		
+															</ice:column>
+															<ice:column>
+																<f:facet name="header">
+																	<ice:commandSortHeader id="efirstnamesort" columnName="firstName">
+																		<ice:outputText value="#{bundle['c_admin_supplierprofile.employee.firstname']}"></ice:outputText>
+																	</ice:commandSortHeader>
+																</f:facet>
+																<ice:outputText id="idefirstname" value="#{adminListEmployeeUserBean.firstName}" />
+															</ice:column>
+															<ice:column>
+																<f:facet name="header">
+																	<ice:commandSortHeader id="elastNamesort" columnName="lastName">
+																		<ice:outputText value="#{bundle['c_admin_supplierprofile.employee.lastname']}"></ice:outputText>
+																	</ice:commandSortHeader>
+																</f:facet>
+																<ice:outputText id="idelastname" value="#{adminListEmployeeUserBean.lastName}" />
+															</ice:column>
+															<ice:column>
+																<f:facet name="header">
+																		<ice:outputText value="#{bundle['c_admin_supplierprofile.employee.email']}"></ice:outputText>
+																</f:facet>
+																<ice:outputText id="eemaildesc" style="font-weight:bold;"  value="#{adminListEmployeeUserBean.email}" />
+															</ice:column>
+															<ice:column>
+																<f:facet name="header"></f:facet>
+																<ice:graphicImage style="border:none;" styleClass="noborder"
+																	url="./css/images/icons/menu_down_new_select.png"
+																	onmouseout="this.src='./css/images/icons/menu_down_new_select.png'"
+																	onmouseover="this.src='./css/images/icons/menu_up_new_select.png'"
+																/>
+															</ice:column>
+														</ice:dataTable>
+														<ice:panelGroup styleClass="clearer" />
+			
+			
+														<!-- PAGINATOR-->
+														<ice:panelGroup style="float:left;width:420px;">
+															<center>
+																<ice:dataPaginator id="dataScroll_Employee"
+																	rendered="#{rz_ListEmployeeUserGridBean.selectedDataScrollModes[rz_ListEmployeeUserGridBean.selectedDataScrollMode].pagingEnabled}"
+																	for="tablelistemployeeusergrid" vertical="false" fastStep="3" paginator="true"
+																	paginatorMaxPages="10">
+																	<f:facet name="first">
+																		<ice:graphicImage id="firstpage_employee1"
+																			url="./css/rime/css-images/arrow-first.gif"
+																			style="border:none;" title="first" />
+																	</f:facet>
+																	<f:facet name="last">
+																		<ice:graphicImage id="lastpage_employee1"
+																			url="./css/rime/css-images/arrow-last.gif"
+																			style="border:none;" title="last" />
+																	</f:facet>
+																	<f:facet name="previous">
+																		<ice:graphicImage id="previouspage_employee1"
+																			url="./css/rime/css-images/arrow-previous.gif"
+																			style="border:none;" title="previous" />
+																	</f:facet>
+																	<f:facet name="next">
+																		<ice:graphicImage id="nextpage_employee1"
+																			url="./css/rime/css-images/arrow-next.gif"
+																			style="border:none;" title="next" />
+																	</f:facet>
+																	<f:facet name="fastforward">
+																		<ice:graphicImage id="fastforward_employee1"
+																			url="./css/rime/css-images/arrow-ff.gif"
+																			style="border:none;" title="ff" />
+																	</f:facet>
+																	<f:facet name="fastrewind">
+																		<ice:graphicImage id="fastrewind_employee1"
+																			url="./css/rime/css-images/arrow-fr.gif"
+																			style="border:none;" title="fr" />
+																	</f:facet>
+																</ice:dataPaginator>
+															</center>
+														</ice:panelGroup>
+													</ice:panelGroup>
+												</ice:panelGroup>
+												
+												
+												<ice:panelGroup>
+													<span onClick="showTab('tabsnewemployee', this)" style=" cursor: pointer;font-size:12px;font-weight:bold;"><img src="./css/images/general/minus-glow.png" align="absmiddle"></img>
+									                 	<h:outputLabel>
+															&amp;nbsp<h:outputText styleClass="titleMenuClick" value="#{bundle['rz_info.newemployee']}"></h:outputText>
+														</h:outputLabel>
+													</span>
+														
+									                <table id="tabsnewemployee" style="display:none;margin-top: -3px" width="100%">
+									                	<tr>
+									                		<td>	
+									                			<br/>
+									                			<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;" > 
+										                			<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																				<tr>
+																					<td width="20%"  class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																						<h:outputLabel>
+																							<h:outputText value="#{bundle['rz_admin_usermanager.user.login']}"></h:outputText>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																						</h:outputLabel>
+																			
+																					</td>
+																					<td align="left" class="tablelabelfieldedit_#{c_UserEmployeeCustCrudBean.stEdit_Global}" width="80%">	
+																						<ice:inputText id="email" size="60" maxlength="50" 
+																							style="font-weight: bold;" value="#{c_UserEmployeeCustCrudBean.email}" 
+																							partialSubmit="true" 
+																							styleClass="tablefieldedit_enabled" >
+																						</ice:inputText>
+																					 </td>
+																				</tr>
+											
+																	</table>
+																</ice:panelGroup>
+			
+																<br/>
+																<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;" > 
+																	<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																		<tr>
+																			<td width="20%"  class="tablelabeledit_disabled">&amp;nbsp&amp;nbsp
+																					<h:outputLabel>
+																						<h:outputText value="#{bundle['rz_admin_customerprofile.employee.firstname']}"></h:outputText>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																					</h:outputLabel>
+																			</td>
+																			<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																				<ice:inputText id="firtsnamequery" size="30" maxlength="30"
+																						value="#{c_UserEmployeeCustCrudBean.firstName}" partialSubmit="true"
+																						styleClass="tablefieldedit_enabled" >
+																				</ice:inputText>
+																			 </td>
+																			<td  width="20%" class="tablelabeledit_disabled">&amp;nbsp&amp;nbsp 
+																					<h:outputLabel>
+																						<h:outputText value="#{bundle['rz_admin_customerprofile.employee.lastname']}"></h:outputText>
+																					</h:outputLabel>
+																			</td>
+																			<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																				<ice:inputText id="lastnamequery" size="30" maxlength="30"
+																						value="#{c_UserEmployeeCustCrudBean.lastName}" partialSubmit="true"
+																						styleClass="tablefieldedit_enabled" >
+																				</ice:inputText>
+																			 </td>
+																		</tr>
+																		<tr><td colspan="4" class="menusep_#{c_UserEmployeeCustCrudBean.stEdit_Global}"></td></tr>
+																		<tr>
+																			 <td width="20%"  class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																					<h:outputLabel>
+																						<h:outputText value="#{bundle['rz_admin_customerprofile.employee.phone']}"></h:outputText>
+																					</h:outputLabel>
+																			</td>
+																			<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																				<ice:inputText id="phonequery" size="30" maxlength="30"
+																						value="#{c_UserEmployeeCustCrudBean.phone}" partialSubmit="true"
+																						styleClass="tablefieldedit_enabled">
+																				</ice:inputText>
+																			 </td>
+																			 <td width="20%"  class="tablelabeledit_#{c_UserEmployeeCustCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																					<h:outputLabel>
+																						<h:outputText value="#{bundle['rz_admin_customerprofile.employee.mobile']}"></h:outputText>
+																					</h:outputLabel>
+																			</td>
+																			<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																				<ice:inputText id="mobilequery" size="30" maxlength="30"
+																						value="#{c_UserEmployeeCustCrudBean.mobile}" partialSubmit="true"
+																						styleClass="tablefieldedit_enabled" >
+																				</ice:inputText>
+																			 </td>
+																		</tr>
+																	</table>
+																</ice:panelGroup>
+																
+																<br/>
+																&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																<ice:commandLink action ="#{c_UserEmployeeCustCrudBean.selectedNewEmployee}">
+																	<ice:graphicImage style="border:none;" styleClass="noborder"
+																	url="./css/images/#{folderBean.folder_menu}/icons/menu_down_new_select_employee.png"
+																	onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_new_select_employee.png'"
+																	onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_new_select_employee.png'"
+																	/>
+																	
+																</ice:commandLink>
+																
+															</td>
+														</tr>
+													</table>
+													
+													<br/>
+													
+													
+												</ice:panelGroup>
+															                	
+											</ice:panelGrid>
+										</f:facet>		                
+								</ice:panelPopup>
+								
+								<ice:panelPopup modal="true" visible="#{listEmployeeSupplierToUserPopUpBean.visible}" style="margin-left:0px;margin-top:-55px;position:absolute; width:650px;" styleClass="icePanelPopupBody">
+												 <f:facet name="header">
+															                    <ice:panelGrid width="650" cellpadding="0" cellspacing="1" columns="2" styleClass="trHeader" >
+															                        <ice:outputText style="color: white;" value="#{bundle['c_admin_supplierprofile_site.employees']}"/>
+															                        <ice:commandLink  action="#{listEmployeeSupplierToUserPopUpBean.closeclearPopup_cs}" >
+																							<ice:graphicImage style="border:none;" styleClass="noborder"
+																								url="./css/images/icons/close.png" />
+																							
+																					</ice:commandLink>
+															                    </ice:panelGrid>
+												</f:facet>
+															                
+									<f:facet name="body">
+									<ice:panelGrid width="100%" columns="1" cellpadding="0"  style="background-color: #F0F7FB">
+            	
+												<ice:panelGroup>
+													<ice:panelGroup>
+														<ice:dataTable resizable="false" border="1" id="tablelistemployeeusersupsgrid"
+															value="#{c_ListEmployeeUserSupGridBean.allCrudBeans}"
+															var="adminListEmployeeUserSupsBean"
+															width="98%"
+															rows="#{c_ListEmployeeUserSupGridBean.selectedDataScrollModes[c_ListEmployeeUserSupGridBean.selectedDataScrollMode].rows}"
+															scrollable="#{c_ListEmployeeUserSupGridBean.selectedDataScrollModes[c_ListEmployeeUserSupGridBean.selectedDataScrollMode].scrollingEnabled}"
+															scrollHeight="200px"
+															style="float:center;font-color: #FFFFFF;"
+															columnWidths="1%,29%,25%,40%,5%"
+															columnClasses="columnCenter,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnCenter"
+															rowClasses="rowOn,rowOff" cellpadding="0"
+															sortColumn="#{c_ListEmployeeUserSupGridBean.columnNameOrder}"
+															sortAscending="#{c_ListEmployeeUserSupGridBean.descending}"
+															>
+			
+															<ice:column>
+																<ice:rowSelector id="selected"
+																	value="#{c_ListEmployeeUserSupGridBean.itemSelected}" multiple="false"
+																	selectionListener="#{c_ListEmployeeUserSupGridBean.rowSelectionListener}"
+																	selectionAction="#{c_ListEmployeeUserSupGridBean.rowSelectionAction}" /> 
+																	>>		
+															</ice:column>
+															<ice:column>
+																<f:facet name="header">
+																	<ice:commandSortHeader id="efirstnamesort" columnName="firstName">
+																		<ice:outputText value="#{bundle['c_admin_supplierprofile.employee.firstname']}"></ice:outputText>
+																	</ice:commandSortHeader>
+																</f:facet>
+																<ice:outputText id="idefirstname" value="#{adminListEmployeeUserSupsBean.firstName}" />
+															</ice:column>
+															<ice:column>
+																<f:facet name="header">
+																	<ice:commandSortHeader id="elastNamesort" columnName="lastName">
+																		<ice:outputText value="#{bundle['c_admin_supplierprofile.employee.lastname']}"></ice:outputText>
+																	</ice:commandSortHeader>
+																</f:facet>
+																<ice:outputText id="idelastname" value="#{adminListEmployeeUserSupsBean.lastName}" />
+															</ice:column>
+															<ice:column>
+																<f:facet name="header">
+																		<ice:outputText value="#{bundle['c_admin_supplierprofile.employee.email']}"></ice:outputText>
+																</f:facet>
+																<ice:outputText id="eemaildesc" style="font-weight:bold;"  value="#{adminListEmployeeUserSupsBean.email}" />
+															</ice:column>
+															<ice:column>
+																<f:facet name="header"></f:facet>
+																<ice:graphicImage style="border:none;" styleClass="noborder"
+																	url="./css/images/icons/menu_down_new_select.png"
+																	onmouseout="this.src='./css/images/icons/menu_down_new_select.png'"
+																	onmouseover="this.src='./css/images/icons/menu_up_new_select.png'"
+																/>
+															</ice:column>
+														</ice:dataTable>
+														<ice:panelGroup styleClass="clearer" />
+			
+			
+														<!-- PAGINATOR-->
+														<ice:panelGroup style="float:left;width:420px;">
+															<center>
+																<ice:dataPaginator id="dataScroll_Employeesups"
+																	rendered="#{c_ListEmployeeUserSupGridBean.selectedDataScrollModes[c_ListEmployeeUserSupGridBean.selectedDataScrollMode].pagingEnabled}"
+																	for="tablelistemployeeusersupsgrid" vertical="false" fastStep="3" paginator="true"
+																	paginatorMaxPages="10">
+																	<f:facet name="first">
+																		<ice:graphicImage id="firstpage_employeesups"
+																			url="./css/rime/css-images/arrow-first.gif"
+																			style="border:none;" title="first" />
+																	</f:facet>
+																	<f:facet name="last">
+																		<ice:graphicImage id="lastpage_employeesups"
+																			url="./css/rime/css-images/arrow-last.gif"
+																			style="border:none;" title="last" />
+																	</f:facet>
+																	<f:facet name="previous">
+																		<ice:graphicImage id="previouspage_employeesups"
+																			url="./css/rime/css-images/arrow-previous.gif"
+																			style="border:none;" title="previous" />
+																	</f:facet>
+																	<f:facet name="next">
+																		<ice:graphicImage id="nextpage_employeesups"
+																			url="./css/rime/css-images/arrow-next.gif"
+																			style="border:none;" title="next" />
+																	</f:facet>
+																	<f:facet name="fastforward">
+																		<ice:graphicImage id="fastforward_employeesups"
+																			url="./css/rime/css-images/arrow-ff.gif"
+																			style="border:none;" title="ff" />
+																	</f:facet>
+																	<f:facet name="fastrewind">
+																		<ice:graphicImage id="fastrewind_employeesups"
+																			url="./css/rime/css-images/arrow-fr.gif"
+																			style="border:none;" title="fr" />
+																	</f:facet>
+																</ice:dataPaginator>
+															</center>
+														</ice:panelGroup>
+													</ice:panelGroup>
+												</ice:panelGroup>
+												
+															     
+												<ice:panelGroup>
+													<span onClick="showTab('tabsnewemployeesup', this)" style=" cursor: pointer;font-size:12px;font-weight:bold;"><img src="./css/images/general/minus-glow.png" align="absmiddle"></img>
+									                 	<h:outputLabel>
+															&amp;nbsp<h:outputText styleClass="titleMenuClick" value="#{bundle['rz_info.newemployee']}"></h:outputText>
+														</h:outputLabel>
+													</span>
+														
+									                <table id="tabsnewemployeesup" style="display:none;margin-top: -3px" width="100%">
+									                	<tr>
+									                		<td>	
+									                			<br/>
+									                			<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;" > 
+										                			<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																				<tr>
+																					<td width="20%"  class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																						<h:outputLabel>
+																							<h:outputText value="#{bundle['rz_admin_usermanager.user.login']}"></h:outputText>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																						</h:outputLabel>
+																			
+																					</td>
+																					<td align="left" class="tablelabelfieldedit_#{c_UserEmployeeSupCrudBean.stEdit_Global}" width="80%">	
+																						<ice:inputText id="emailsup" size="60" maxlength="50" 
+																							style="font-weight: bold;" value="#{c_UserEmployeeSupCrudBean.email}" 
+																							partialSubmit="true" 
+																							styleClass="tablefieldedit_enabled" >
+																						</ice:inputText>
+																					 </td>
+																				</tr>
+																	</table>
+																</ice:panelGroup>
+			
+																<br/>
+																<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;" > 
+																	<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+																		<tr>
+																			<td width="20%"  class="tablelabeledit_disabled">&amp;nbsp&amp;nbsp
+																					<h:outputLabel>
+																						<h:outputText value="#{bundle['rz_admin_customerprofile.employee.firstname']}"></h:outputText>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																					</h:outputLabel>
+																			</td>
+																			<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																				<ice:inputText id="firtsnamequerysup" size="30" maxlength="30"
+																						value="#{c_UserEmployeeSupCrudBean.firstName}" partialSubmit="true"
+																						styleClass="tablefieldedit_enabled" >
+																				</ice:inputText>
+																			 </td>
+																			<td  width="20%" class="tablelabeledit_disabled">&amp;nbsp&amp;nbsp 
+																					<h:outputLabel>
+																						<h:outputText value="#{bundle['rz_admin_customerprofile.employee.lastname']}"></h:outputText>
+																					</h:outputLabel>
+																			</td>
+																			<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																				<ice:inputText id="lastnamequerysup" size="30" maxlength="30"
+																						value="#{c_UserEmployeeSupCrudBean.lastName}" partialSubmit="true"
+																						styleClass="tablefieldedit_enabled" >
+																				</ice:inputText>
+																			 </td>
+																		</tr>
+																		<tr><td colspan="4" class="menusep_#{c_UserEmployeeSupCrudBean.stEdit_Global}"></td></tr>
+																		<tr>
+																			 <td width="20%"  class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																					<h:outputLabel>
+																						<h:outputText value="#{bundle['rz_admin_customerprofile.employee.phone']}"></h:outputText>
+																					</h:outputLabel>
+																			</td>
+																			<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																				<ice:inputText id="phonequerysup" size="30" maxlength="30"
+																						value="#{c_UserEmployeeSupCrudBean.phone}" partialSubmit="true"
+																						styleClass="tablefieldedit_enabled">
+																				</ice:inputText>
+																			 </td>
+																			 <td width="20%"  class="tablelabeledit_#{c_UserEmployeeSupCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+																					<h:outputLabel>
+																						<h:outputText value="#{bundle['rz_admin_customerprofile.employee.mobile']}"></h:outputText>
+																					</h:outputLabel>
+																			</td>
+																			<td align="left" class="tablelabelfieldedit_disabled" width="30%">
+																				<ice:inputText id="mobilequerysup" size="30" maxlength="30"
+																						value="#{c_UserEmployeeSupCrudBean.mobile}" partialSubmit="true"
+																						styleClass="tablefieldedit_enabled" >
+																				</ice:inputText>
+																			 </td>
+																		</tr>
+																	</table>
+																</ice:panelGroup>
+																
+																<br/>
+																&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																<ice:commandLink action ="#{c_UserEmployeeSupCrudBean.selectedNewEmployee}">
+																	<ice:graphicImage style="border:none;" styleClass="noborder"
+																	url="./css/images/#{folderBean.folder_menu}/icons/menu_down_new_select_employee.png"
+																	onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_new_select_employee.png'"
+																	onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_new_select_employee.png'"
+																	/>
+																	
+																</ice:commandLink>
+																
+															</td>
+														</tr>
+													</table>
+													
+													<br/>
+													
+													
+												</ice:panelGroup>			     
+															     
+															                	
+											</ice:panelGrid>
+											
+										</f:facet>		                
+								</ice:panelPopup>
+							</ice:form>
+
+
+							<ice:form>
+				
+								<ice:panelPopup  modal="true" visible="#{changecuserpasswordPopUpBean.visible}" style="width:435px;" styleClass="icePanelPopupBody icePanelPopup">
+						                <f:facet name="header">
+						                   <ice:panelGrid width="435" cellpadding="0" cellspacing="1" columns="2" styleClass="trHeader" >
+						                        <ice:outputText style="color: white;" value="Change Password"/>
+						                        <ice:commandButton image="./css/images/icons/close.png" action="#{changecuserpasswordPopUpBean.closePopup}" title="Close this draggable popup"/>
+						                    </ice:panelGrid>
+						                </f:facet>
+						                
+						                <f:facet name="body">
+						                    <ice:panelGrid width="100%" columns="1" cellpadding="0"  style="background-color: #F0F7FB">
+							                	<table align="center">
+								                       	<tr>
+									                       <td  width="200" class="tableflabelmasterbold" ><ice:outputText style="font-weight:bold;color:#3E4F53;"  value="#{bundle['rz_pwd.user']}"/></td>
+									                       <td width="200" colspan="3">
+									                       				<ice:inputText id="userlogin" size="40" maxlength="40"
+																			value="#{c_UserEmployeeCustCrudBean.email}"
+																			readonly="true" styleClass="fieldkeymasterbgblue">
+																		</ice:inputText>
+															</td>
+									                    </tr>
+									                     <tr>
+									                       <td width="200"  class="tableflabelmasterbold"><ice:outputText  style="font-weight:bold;color:#3E4F53;" value="#{bundle['rz_pwd.newpwd']}"/></td>
+									                       <td width="200" colspan="3">
+									                       				<ice:inputSecret id="newPwd" size="20" maxlength="30"
+																			value="#{changeNewPwdBean.newCustPassword}"  styleClass="fieldkeymasterbgleft">
+																		</ice:inputSecret>
+															</td>
+									                    </tr>
+									                     <tr>
+									                       <td width="200"  class="tableflabelmasterbold"><ice:outputText  style="font-weight:bold;color:#3E4F53;" value="#{bundle['rz_pwd.repwd']}"/></td>
+									                       <td width="200" colspan="3"><ice:inputSecret styleClass="fieldkeymasterbgleft" size="20" value="#{changeNewPwdBean.reCustPassword}"/></td>
+									                    </tr>
+									                    <tr>
+									                    <td></td>
+									                    <td  colspan="2" width="350">
+									                    	<ice:commandLink actionListener ="#{changeNewPwdBean.changePassword_UserCustomerOfCustomer}">
+																<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_up_changepwd.png"/>
+															</ice:commandLink>
+														</td>
+														<td></td>
+														</tr>
+									                    <tr>
+															<td colspan="4"><ice:messages style="margin-top:-5px;color:#1D115E; font-size: 11px;" globalOnly="false" /></td>	
+									                    </tr>
+									                    </table>
+						                 	</ice:panelGrid>
+						                </f:facet>
+						                
+						            </ice:panelPopup>   
+						            
+						            
+						            <ice:panelPopup  modal="true" visible="#{changesuserpasswordPopUpBean.visible}" style="width:435px;" styleClass="icePanelPopupBody icePanelPopup">
+						                <f:facet name="header">
+						                   <ice:panelGrid width="435" cellpadding="0" cellspacing="1" columns="2" styleClass="trHeader" >
+						                        <ice:outputText style="color: white;" value="Change Password"/>
+						                        <ice:commandButton image="./css/images/icons/close.png" action="#{changesuserpasswordPopUpBean.closePopup}" title="Close this draggable popup"/>
+						                    </ice:panelGrid>
+						                </f:facet>
+						                
+						                <f:facet name="body">
+						                    <ice:panelGrid width="100%" columns="1" cellpadding="0"  style="background-color: #F0F7FB">
+							                	<table align="center">
+								                       	<tr>
+									                       <td  width="200" class="tableflabelmasterbold" ><ice:outputText style="font-weight:bold;color:#3E4F53;"  value="#{bundle['rz_pwd.user']}"/></td>
+									                       <td width="200" colspan="3">
+									                       				<ice:inputText id="suserlogin" size="40" maxlength="40"
+																			value="#{c_UserEmployeeSupCrudBean.email}"
+																			readonly="true" styleClass="fieldkeymasterbgblue">
+																		</ice:inputText>
+															</td>
+									                    </tr>
+									                     <tr>
+									                       <td width="200"  class="tableflabelmasterbold"><ice:outputText  style="font-weight:bold;color:#3E4F53;" value="#{bundle['rz_pwd.newpwd']}"/></td>
+									                       <td width="200" colspan="3">
+									                       				<ice:inputSecret id="snewPwd" size="20" maxlength="30"
+																			value="#{changeNewPwdBean.newPassword}"  styleClass="fieldkeymasterbgleft">
+																		</ice:inputSecret>
+															</td>
+									                    </tr>
+									                     <tr>
+									                       <td width="200"  class="tableflabelmasterbold"><ice:outputText  style="font-weight:bold;color:#3E4F53;" value="#{bundle['rz_pwd.repwd']}"/></td>
+									                       <td width="200" colspan="3"><ice:inputSecret styleClass="fieldkeymasterbgleft" size="20" value="#{changeNewPwdBean.rePassword}"/></td>
+									                    </tr>
+									                    <tr>
+									                    <td></td>
+									                    <td  colspan="2" width="350">
+									                    	<ice:commandLink actionListener ="#{changeNewPwdBean.changePassword_UserSupplierOfCustomer}">
+																<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_up_changepwd.png"/>
+															</ice:commandLink>
+														</td>
+														<td></td>
+														</tr>
+									                    <tr>
+															<td colspan="4"><ice:messages style="margin-top:-5px;color:#1D115E; font-size: 11px;" globalOnly="false" /></td>	
+									                    </tr>
+									                    </table>
+						                 	</ice:panelGrid>
+						                </f:facet>
+						                
+						            </ice:panelPopup>   
+						            
+						       </ice:form>
+
+
+
+
+
+					</ui:define>
+
+
+				</ui:composition>
+
+
+
+			</body>
+		</html>
+	</f:view>
+</jsp:root>

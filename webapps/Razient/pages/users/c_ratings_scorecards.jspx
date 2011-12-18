@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ice="http://www.icesoft.com/icefaces/component">
+   <jsp:directive.page contentType="text/html;charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+   <f:view>
+   		<ice:outputDeclaration 
+            doctypeRoot="html" 
+            doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN" 
+            doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" /> 
+    <html>
+       <head>
+         <title>Index (Razient)</title>
+       </head>
+       <body>
+       
+        	<!-- template="#{templateBean.templateContent}"-->
+			<ui:composition
+			        template="../../include/templates/pages/modeB_customer.jspx"
+			        xmlns:h="http://java.sun.com/jsf/html"
+			        xmlns:f="http://java.sun.com/jsf/core"
+			        xmlns:c="http://java.sun.com/jstl/core"
+			        xmlns:ice="http://www.icesoft.com/icefaces/component"
+			        xmlns:ui="http://java.sun.com/jsf/facelets" >
+			
+			  <!-- params for page titles-->
+			 		 <!--<f:loadBundle basename="truckandi.view.bundle.Message" var="bundle"/>
+			        <ui:param name="pageTitle" value="#{bundle['tai_login.title']}" />-->
+					<ui:param name="pageTitle" value="ScoreCards" />
+				
+				<ui:define name="header_menu_value">
+						<table cellspacing="0" cellpadding="0">
+										<tr>
+											<td>
+											<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_dash_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'" />
+													<f:attribute name="optioonselected" value="dh"/>
+											</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Compliance}">
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_comp_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'" />
+													<f:attribute name="optioonselected" value="cp_sm"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}"  visible="#{users_MenuBarBean.visible_C_GlobalIncidents}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_global_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'" />
+													<f:attribute name="optioonselected" value="gi_al"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_SuppliersView}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_supp_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'" />
+													<f:attribute name="optioonselected" value="sv_sp"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>																							
+													<ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/#{folderBean.folder_menu}/risk_ratings_2.png" visible="#{users_MenuBarBean.visible_C_Ratings}"/>	
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_RequestForProposal}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'" />
+														<f:attribute name="optioonselected" value="rp_ps"/>
+												</ice:commandLink>-->
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_3.png"/>
+											</td>
+											<!--<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Contracts}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_contracts_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'" />
+													<f:attribute name="optioonselected" value="ct_av"/>
+												</ice:commandLink>
+											</td>-->
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Reports}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_rep_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'" />
+														<f:attribute name="optioonselected" value="rp_ct"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Administration}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'" />
+														<f:attribute name="optioonselected" value="ad_um"/>
+												</ice:commandLink>
+											</td>
+										</tr>
+								</table>	
+				</ui:define>
+			    
+			    <ui:define name="page-menu-value">
+			    	 <ice:form>
+			    	 <ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 
+					 <ice:graphicImage visible="true" style="border:none;"
+								styleClass="noborder"
+								url="./css/images/#{folderBean.folder_menu}/risk_menu_up_vendorratings.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_vendorratings.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_vendorratings.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_vendorratings.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_vendorratings.png'" />
+								<f:attribute name="optioonselected" value="rt_vr"/>
+					</ice:commandLink>
+					<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_down_scorecard.png"/>
+						 
+					
+					 </ice:form> 	
+			    </ui:define>
+			    
+				<ui:define name="page-content-value">
+					<table width="100%" border="0" cellspacing="0" cellpadding="1" class="data">
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="2">
+                  <tr>
+                    <td valign="top"><span class="smallHeading" onClick="showTab('CS', this)" style="cursor: pointer;font-size:14px;font-weight:bold" ><img src="./css/images/general/minus-glow.png"  align="absmiddle"/>Contracts Scorecard</span></td>
+                    <td align="right" valign="top"></td>
+                  </tr>
+                  <tr id="CS">
+                    <td valign="top"><table cellspacing="0" cellpadding="5" border="1" class="tabularView" style="border: 1px #C3DFF4 solid;">
+                      <tr bgcolor="#3C7FB1" style="color:#FFF;font-size:14px">
+                          <th>Vendor</th>
+                          <th>Contract 2010</th>
+                          <th>Contract 2009</th>
+                          <th>Contract 2008</th>
+                        </tr>
+                        <tr bgcolor="#FFFFFF">
+                          <td>Rasmi Electronics Ltd</td>
+                          <td align="right">90</td>
+                          <td align="right">95</td>
+                          <td align="right">85</td>
+                        </tr>
+                        <tr class="odd" bgcolor="#EFF2FF">
+                          <td>Phillips UK</td>
+                          <td align="right">80</td>
+                          <td align="right">90</td>
+                          <td align="right">90</td>
+                        </tr>
+                        <tr bgcolor="#FFFFFF">
+                          <td>Sharp Inc</td>
+                          <td align="right">100</td>
+                          <td align="right">95</td>
+                          <td align="right">95</td>
+                        </tr>
+                      </table></td>
+                    <td width="436" align="right" valign="top"><img width="436" height="213" src="./css/images/general/ratingsScoreCard1.gif"/></td>
+                  </tr>
+                  <tr>
+                    <td valign="top"><span class="smallHeading" onClick="showTab('VS', this)" style="cursor: pointer;font-size:14px;font-weight:bold"><img src="./css/images/general/minus-glow.png"  align="absmiddle"/> Vendor    Survey</span></td>
+                    <td align="right" valign="top"></td>
+                  </tr>
+                  <tr id="VS">
+                    <td valign="top"><table border="1" cellspacing="0" cellpadding="5" class="tabularView" style="border: 1px #C3DFF4 solid;">
+                      <tr bgcolor="#3C7FB1" style="color:#FFF;font-size:14px">
+                          <th>Vendor</th>
+                          <th>Latest Survey</th>
+                          <th>Previous Survey</th>
+                          </tr>
+                        <tr bgcolor="FFF">
+                          <td>Rasmi Electronics Ltd</td>
+                          <td align="right">90</td>
+                          <td align="right">95</td>
+                          </tr>
+                        <tr class="odd" bgcolor="#EFF2FF">
+                          <td>Phillips UK</td>
+                          <td align="right">95</td>
+                          <td align="right">80</td>
+                          </tr>
+                        <tr bgcolor="#FFFFFF">
+                          <td>Sharp Inc</td>
+                          <td align="right">80</td>
+                          <td align="right">70</td>
+                          </tr>
+                      </table></td>
+                    <td align="right" valign="top"><img width="436" height="213" src="./css/images/general/ratingsScoreCard2.gif"/></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" valign="top"><span class="smallHeading" onClick="showTab('VNIC', this)" style="cursor: pointer;font-size:14px;font-weight:bold"><img src="./css/images/general/minus-glow.png"  align="absmiddle"/> Vendor NonCompliant Insurance Certification</span><br/>
+                      <table border="1" cellspacing="0" cellpadding="5" class="tabularView" style="border: 1px #C3DFF4 solid;" id="VNIC">
+                        <tr bgcolor="#3C7FB1" style="color:#FFF;font-size:14px">
+                          <th width="700">Vendor</th>
+                          <th width="300"></th>
+                        </tr>
+                        <tr bgcolor="#FFFFFF">
+                          <td>FoxConn Inc</td>
+                          <td><img width="27" height="27" src="./css/images/general/cross.jpg"/></td>
+                        </tr>
+                        <tr class="odd" bgcolor="#EFF2FF">
+                          <td>SynTech Technologies</td>
+                          <td><img width="27" height="27" src="./css/images/general/cross.jpg"/></td>
+                        </tr>
+                        <tr bgcolor="#FFFFFF">
+                          <td>China Electric Manufacturing Ltd</td>
+                          <td><img width="27" height="27" src="./css/images/general/cross.jpg"/></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                  <tr>
+                    <td valign="top" style="padding-top:5px;"><span class="smallHeading" onClick="showTab('VRS', this)" style="cursor: pointer;font-size:14px;font-weight:bold"><img src="./css/images/general/minus-glow.png"  align="absmiddle"/> Vendor Rating System</span></td>
+                    <td valign="top"></td>
+                  </tr>
+                  <tr id="VRS">
+                    <td valign="top"><table border="1" cellspacing="0" cellpadding="5" class="tabularView" style="border: 1px #C3DFF4 solid;">
+                      <tr bgcolor="#3C7FB1" style="color:#FFF;font-size:14px">
+                          <th>Vendor</th>
+                          <th>Pricing</th>
+                          <th>Compliance</th>
+                          <th>Delivery</th>
+                          <th>Service</th>
+                          <th>7 C's</th>
+                        </tr>
+                        <tr bgcolor="#FFFFFF">
+                          <td>FoxConn Inc</td>
+                          <td align="right">6.5</td>
+                          <td align="right">6.5</td>
+                          <td align="right">6</td>
+                          <td align="right">7</td>
+                          <td align="right">7.7</td>
+                        </tr>
+                        <tr class="odd" bgcolor="#EFF2FF">
+                          <td>SynTech Technologies</td>
+                          <td align="right">7</td>
+                          <td align="right">8</td>
+                          <td align="right">6.5</td>
+                          <td align="right">9</td>
+                          <td align="right">9</td>
+                        </tr>
+                        <tr class="odd" bgcolor="#FFFFFF">
+						                          <td>China Electric Manufacturing Ltd</td>
+						                          <td align="right">6</td>
+						                          <td align="right">9</td>
+						                          <td align="right">6.5</td>
+						                          <td align="right">9</td>
+						                          <td align="right">9</td>
+                        </tr>
+                      </table></td>
+                    <td width="436" align="right" valign="top"><img width="436" height="213" src="./css/images/general/ratingsScoreCard3.gif"/></td>
+                  </tr>
+                </table>
+                  <br/>
+                </td>
+              </tr>
+            </table>
+               
+               
+				</ui:define>
+				
+
+			</ui:composition>
+
+	
+
+       </body>
+    </html>
+   </f:view>
+</jsp:root>

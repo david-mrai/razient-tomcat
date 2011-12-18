@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<jsp:root version="1.2"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ice="http://www.icesoft.com/icefaces/component">
+   <jsp:directive.page contentType="text/html;charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+   <f:view>
+   		<ice:outputDeclaration 
+            doctypeRoot="html" 
+            doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN" 
+            doctypeSystem="http://www.w3.o./html4/loose.dtd" /> 
+    <html>
+       <head>
+         <title>(Razient) Header Top</title>
+       </head>
+       <body style="background-color: #6A747A;">      
+        <div>
+   			<div class="header_container">
+   				<div class="header_content_#{utilServiceLocatorBean.dimension_header}">
+        		<div>
+               	<ice:form>               		
+		               		<!-- main menu declaration  -->
+						<ice:panelGroup styleClass="componentBoxHeader menuBarTopContainer">
+						
+						<!-- INIT : Title -->
+						<span>
+							
+						<div style="mmargin-left:10%;margin-top:0px;">
+						
+							<ice:graphicImage style="border:none;"  styleClass="noborder"
+											url		="./css/images/button/plus-glow.png"/>
+											&amp;nbsp
+							 
+							 <span class="titlecontent" style="color:white; ">#{bundle['rz_admin_login']}  #{bundle['rz_razient']} </span>
+							 &amp;nbsp&amp;nbsp-&amp;nbsp&amp;nbsp
+							 <!--  <span class="titlecontent" style="color:white;">#{bundle['rz_login.user']} </span>-->
+							 <span class="titlecontent" style="color:white;">[ #{loginSystemBean.userLogin} ]</span>
+						 
+						 </div>
+						 
+							 <br/>
+							<ice:graphicImage style="border:none;"  styleClass="noborder"
+										url		="./css/images/risk_black_medium.png"/>
+										
+							<ice:commandLink action="#{loginSystemBean.loginLogout}" >										
+								<ice:graphicImage style="border:none;"  styleClass="noborder"
+										url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_logout.png" 
+									onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_logout.png'"
+									onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_logout.png'"
+									onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_logout.png'"
+									onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_logout.png'" />
+							</ice:commandLink>
+							
+						</span>
+						
+						
+						 
+
+						<!-- INIT : Title -->
+						</ice:panelGroup>
+		
+			
+				</ice:form>
+               		</div>
+      			</div>
+    		</div>
+		</div>
+
+       </body>
+    </html>
+   </f:view>
+</jsp:root>

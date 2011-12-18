@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ice="http://www.icesoft.com/icefaces/component">
+   <jsp:directive.page contentType="text/html;charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+   <f:view>
+   		<ice:outputDeclaration 
+            doctypeRoot="html" 
+            doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN" 
+            doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" /> 
+    <html>
+       <head>
+         <title>Index (Razient)</title>
+       </head>
+       <body>
+       
+        	<!-- template="#{templateBean.templateContent}"-->
+			<ui:composition
+			        template="../../include/templates/pages/modeB_customer.jspx"
+			        xmlns:h="http://java.sun.com/jsf/html"
+			        xmlns:f="http://java.sun.com/jsf/core"
+			        xmlns:c="http://java.sun.com/jstl/core"
+			        xmlns:ice="http://www.icesoft.com/icefaces/component"
+			        xmlns:ui="http://java.sun.com/jsf/facelets" >
+			
+			  <!-- params for page titles-->
+			 		 <!--<f:loadBundle basename="truckandi.view.bundle.Message" var="bundle"/>
+			        <ui:param name="pageTitle" value="#{bundle['tai_login.title']}" />-->
+					<ui:param name="pageTitle" value="Bid Review" />
+				
+				<ui:define name="header_menu_value">
+						<table cellspacing="0" cellpadding="0">
+										<tr>
+											<td>
+											<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_dash_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'" />
+													<f:attribute name="optioonselected" value="dh"/>
+											</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Compliance}">
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_comp_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'" />
+													<f:attribute name="optioonselected" value="cp_sm"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}"  visible="#{users_MenuBarBean.visible_C_GlobalIncidents}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_global_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'" />
+													<f:attribute name="optioonselected" value="gi_al"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_SuppliersView}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_supp_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'" />
+													<f:attribute name="optioonselected" value="sv_sp"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Ratings}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_ratings_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'" />
+														<f:attribute name="optioonselected" value="rt_vr"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>																							
+													<ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/#{folderBean.folder_menu}/risk_request_2.png" visible="#{users_MenuBarBean.visible_C_RequestForProposal}"/>
+														
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Contracts}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_contracts_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'" />
+													<f:attribute name="optioonselected" value="ct_av"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Reports}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_rep_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'" />
+														<f:attribute name="optioonselected" value="rp_ct"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Administration}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'" />
+														<f:attribute name="optioonselected" value="ad_um"/>
+												</ice:commandLink>
+											</td>
+										</tr>
+								</table>	
+				</ui:define>
+			    
+			    <ui:define name="page-menu-value">
+			    	 <ice:form>
+			    	 
+			    	 <ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 	<ice:graphicImage visible="true" style="border:none;"
+								styleClass="noborder"
+								url="./css/images/#{folderBean.folder_menu}/risk_menu_up_proposal.png" 
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_proposal.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_proposal.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_proposal.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_proposal.png'" />
+							<f:attribute name="optioonselected" value="rp_ps"/>
+					</ice:commandLink>
+					 <ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_down_bidreview.png"/>
+									
+					  	
+					    
+					 </ice:form> 	
+			    </ui:define>
+			    
+				<ui:define name="page-content-value">
+					<table  width="100%" border="0" cellspacing="0" cellpadding="1" class="data">
+              <tr>
+                <td><table border="1" cellspacing="0" cellpadding="5" class="tabularView" style="border: 1px #C3DFF4 solid;">
+                  <tr>
+                    <th align="left" bgcolor="#3C7FB1" style="color:#FFFFFF" width="500">Company:</th>
+                    <td width="54%" bgcolor="#FFFFFF">Apple</td>
+                    <td width="24%" bgcolor="#FFFFFF"></td>
+                  </tr>
+                  <tr>
+                    <th align="left" bgcolor="#3C7FB1" style="color:#FFFFFF">Proposal ID</th>
+                    <td bgcolor="#FFFFFF">112233</td>
+                    <td bgcolor="#FFFFFF"></td>
+                  </tr>
+                  <tr>
+                    <th align="left" bgcolor="#3C7FB1" style="color:#FFFFFF">Proposal Date</th>
+                    <td bgcolor="#FFFFFF">7/30/2010</td>
+                    <td bgcolor="#FFFFFF"></td>
+                  </tr>
+                  <tr>
+                    <th align="left" bgcolor="#3C7FB1" style="color:#FFFFFF">Proposal Description</th>
+                    <td bgcolor="#FFFFFF">Bid    to manufacture new IPOD</td>
+                    <td bgcolor="#FFFFFF"></td>
+                  </tr>
+                  <tr>
+                    <th align="left" bgcolor="#3C7FB1" style="color:#FFFFFF">Bidder Requirements</th>
+                    <td bgcolor="#FFFFFF">Requirements    of companies bidding on proposal</td>
+                    <td bgcolor="#FFFFFF">Review - Data Correct?</td>
+                  </tr>
+                  <tr>
+                    <th rowspan="3" bgcolor="#3C7FB1" style="color:#FFFFFF"></th>
+                    <td bgcolor="#FFFFFF">Upload Insurance    Certificate <img src="./css/images/general/save.png" width="22" height="20" align="absmiddle"/></td>
+                    <td bgcolor="#FFFFFF">Yes</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Provide    References</td>
+                    <td bgcolor="#FFFFFF">No</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Upload    Certification <img src="./css/images/general/save.png" width="22" height="20" align="absmiddle"/></td>
+                    <td bgcolor="#FFFFFF">No</td>
+                  </tr>
+                </table>
+                  <br/>
+                <strong style="font-size:17px">RFP: Bid    to manufacture IPOD</strong><br/>
+                <span class="smallHeading" onClick="showTab('vendorBidding', this)" style="cursor: pointer"><img src="./css/images/general/minus-glow.png" align="absmiddle"/> Vendor Bidding: FoxConn Inc</span>
+                <table border="1" width="100%" cellpadding="5" cellspacing="0" class="tabularView" style="border: 1px #C3DFF4 solid;display:none" id="vendorBidding">
+                  <tr>
+                    <th bgcolor="#3C7FB1" style="color:#FFFFFF">Sections    and Points allowed</th>
+                    <th bgcolor="#3C7FB1" style="color:#FFFFFF">Answers</th>
+                    <th bgcolor="#3C7FB1" style="color:#FFFFFF">Reviewer 1 (points)</th>
+                    <th bgcolor="#3C7FB1" style="color:#FFFFFF">Reviewer2</th>
+                    <th bgcolor="#3C7FB1" style="color:#FFFFFF">Reviewer 3</th>
+                    <th bgcolor="#3C7FB1" style="color:#FFFFFF">Reviewer 4</th>
+                    <th bgcolor="#3C7FB1" style="color:#FFFFFF">Average</th>
+                    <th bgcolor="#3C7FB1" style="color:#FFFFFF">General Comment Field</th>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Section    1: Company Background and Experience (20 points)</td>
+                    <td></td>
+                    <td align="right">18</td>
+                    <td align="right">20</td>
+                    <td align="right">18</td>
+                    <td align="right">18</td>
+                    <td align="right">17.5</td>
+                    <td align="right">Notes</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Question 1</td>
+                    <td>We have been in business for 20 years</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                   </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Question 2</td>
+                    <td>We have done work for IBM, Oracle, Nike, Nokia and Boeing. Contact information will be provided</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Section 2: Design Structure (10 points)</td>
+                    <td></td>
+                    <td align="right">10</td>
+                    <td align="right">7</td>
+                    <td align="right">8</td>
+                    <td align="right">8</td>
+                    <td align="right">8.0</td>
+                    <td align="right">Notes</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Question 3</td>
+                    <td>We have been certified for ISO9001 in 2000</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Question 4</td>
+                    <td>We use the waterfall model and any other model you need.</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Section 3: Graphical Interface Elements (20    points)</td>
+                    <td></td>
+                    <td align="right">19</td>
+                    <td align="right">18</td>
+                    <td align="right">15</td>
+                    <td align="right">17</td>
+                    <td align="right">18</td>
+                    <td align="right">Notes</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Question 5</td>
+                    <td>We design on Ruby and code firmware as necessary</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Question 6</td>
+                    <td>We will provide updates every month.</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Section 4: Experience of Vendor (20 points)</td>
+                    <td></td>
+                    <td align="right">19</td>
+                    <td align="right">18</td>
+                    <td align="right">15</td>
+                    <td align="right">18</td>
+                    <td align="right">17.3</td>
+                    <td align="right">Notes</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Question 7</td>
+                    <td>We have working software development, manufacturing, hi tech and automotive.</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Question 8</td>
+                    <td>We have developed switched, routers, radios.</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Section 5: Price (30 points)</td>
+                    <td></td>
+                    <td align="right">27</td>
+                    <td align="right">28</td>
+                    <td align="right">17</td>
+                    <td align="right">15</td>
+					<td align="right">21.8</td>
+                    <td align="right">Notes</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Question 9</td>
+                    <td>We will develop parts at $8 per part with 15% maintenance fees </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+			        <td></td>
+                    <td></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Question 10</td>
+                    <td>We will deliver by Q2 2011 </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                  <td></td>
+                    <td></td>
+                    <td align="right"><strong>88</strong></td>
+                    <td align="right"><strong>88</strong></td>
+                    <td align="right"><strong>75</strong></td>
+                    <td align="right"><strong>88</strong></td>
+					<td align="right"><strong>80.5</strong></td>
+					<td align="right"><strong>Notes</strong></td>
+					</tr>
+                </table>
+                <div style="height:10px;"></div>
+                <span class="smallHeading" onClick="showTab('vendorBidding1', this)" style="cursor: pointer"><img src="./css/images/general/minus-glow.png" align="absmiddle"/> Vendor Bidding: China Electric Co</span><br/>
+                <table border="1" width="100%" cellpadding="5" cellspacing="0" class="tabularView" style="border: 1px #C3DFF4 solid;display:none" id="vendorBidding1">
+                  <tr bgcolor="#3C7FB1" style="color:#FFFFFF">
+                    <th>Sections    and Points allowed</th>
+                    <th>Answers</th>
+                    <th>Reviewer 1 (points)</th>
+                    <th>Reviewer2</th>
+                    <th>Reviewer 3</th>
+                    <th>Reviewer 4</th>
+					<th>Average</th>
+                    <th>Comments</th>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Section    1: Company Background and Experience (20 points)</td>
+                    <td></td>
+                    <td align="right">20</td>
+                    <td align="right">10</td>
+                    <td align="right">11</td>
+                    <td align="right">10</td>
+                    <td align="right">11</td>
+                    <td align="right">Notes</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Question 1:Provide a history or projects in the industry and the skill required to deliver the projects </td>
+                    <td>We have been in business for 10 years</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Question 2:Provide a list of 5 references that can be contacted.</td>
+                    <td>We have done work for IBM, Microsoft, Nike, Motorola and BMW. Contact information will be provided</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Section 2: Design Structure (10 points)</td>
+                    <td></td>
+                    <td align="right">5</td>
+                    <td align="right">7</td>
+                    <td align="right">8</td>
+                    <td align="right">2</td>
+					<td align="right">5.5</td>
+                    <td align="right">Notes</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Question 3:Provide a list of certification in the industry including ISO 9001 certification.</td>
+                    <td>We have been certified for ISO9001 in 2002</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Question 4:What manufacturing QA process is used?</td>
+                    <td>We use the waterfall model</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Section 3: Graphical Interface Elements (20    points)</td>
+                    <td></td>
+                    <td align="right">5</td>
+                    <td align="right">10</td>
+                    <td align="right">11</td>
+                    <td align="right">5</td>
+					<td align="right">7.8</td>
+                    <td align="right">Notes</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Question 5:What coding elements are used?</td>
+                    <td>We design on Ruby and code firmware as necessary</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Question 6:What is the update schedule for the interface</td>
+                    <td>We will provide updates every quarter</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Section 4: Experience of Vendor (20 points)</td>
+                    <td></td>
+                    <td align="right">5</td>
+                    <td align="right">18</td>
+                    <td align="right">15</td>
+                    <td align="right">15</td>
+					<td align="right">13.3</td>
+                    <td align="right">Notes</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Question 7:Provide a list of capabilities in this industry.</td>
+                    <td>We have working software development, manufacturing, hi tech and automotive.</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Question 8:Provide parts that have been previously developed</td>
+                    <td>We have developed switched, routers, radios.</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Section 5: Price (30 points)</td>
+                    <td></td>
+                    <td align="right">22</td>
+                    <td align="right">10</td>
+                    <td align="right">17</td>
+                    <td align="right">15</td>
+					<td align="right">16.0</td>
+                    <td align="right">Notes</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Question 9:Provide pricing and maintenance schedule</td>
+                    <td>We will develop parts at $10 per part with 10% maintenance fees</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Question 10:Provide Delivery Schedule</td>
+                    <td>We will deliver by Q1 2011</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+					<td></td>
+                    <td></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td></td>
+                    <td></td>
+                    <td align="right"><strong>57</strong></td>
+                    <td align="right"><strong>55</strong></td>
+                    <td align="right"><strong>62</strong></td>
+                    <td align="right"><strong>57</strong></td>
+					<td align="right"><strong>55</strong></td>
+                    <td align="right"><strong>Notes</strong></td>
+                  </tr>
+                </table>
+                <br/><strong style="font-size:17px">Results</strong><br/>
+                <span class="smallHeading" onClick="showTab('ipod', this)" style="cursor: pointer"><img src="./css/images/general/minus-glow.png" align="absmiddle"/> RFP: Bid    to manufacture IPOD</span><br/>
+                <table border="1" width="100%" cellpadding="5" cellspacing="0" class="tabularView" style="border: 1px #C3DFF4 solid;display:none" id="ipod">
+                  <tr bgcolor="#3C7FB1" style="color:#FFFFFF">
+                    <th>Vendor</th>
+                    <th>Scores Total    Average</th>
+                    <th>Select Winner</th>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>FoxConn Inc</td>
+                    <td align="right">80.5</td>
+                    <td>Select</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>China Electric Co</td>
+                    <td align="right">54.5</td>
+                    <td>Select</td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table>
+				</ui:define>
+				
+
+			</ui:composition>
+
+	
+
+       </body>
+    </html>
+   </f:view>
+</jsp:root>

@@ -1,0 +1,21 @@
+<functions>
+	<version>2.0</version>
+	<countbreak>3</countbreak>
+	<counttotal>0</counttotal>
+	<countavg>1</countavg>
+	<countmin>0</countmin>
+	<countmax>0</countmax>
+	<countorder>0</countorder>
+	<break>
+		<column id="0" type="asc" showvalues="No" >vw_cussur_secque.surveyname</column>
+		<column id="1" type="asc" showvalues="No" >vw_cussur_secque.sectionname</column>
+		<column id="2" type="asc" showvalues="No" >vw_cussur_secque.question</column>
+	</break>
+	<total></total>
+	<avg>
+		<column id="0">vw_cussur_secque.cf_SQLAnsweredSurveyXCustomerCASEWHENssralevelMarginalISNULLTHEN0ELSEssralevelMarginalENDASlevelMarginal6</column>
+	</avg>
+	<min></min>
+	<max></max>
+	<order></order>
+</functions>

@@ -1,0 +1,32 @@
+Australia1;1 Point Street, Fremantle WA 6160;Perth;Western Australia;;Australia;1
+Australia2;275 Swanston Street, Melbourne VIC 3000;Melboune;Victoria;;Australia;1
+Australia3;45-47 Darlinghurst Road, NSW 2011;Sydney;New South Wales;;Australia;1
+Canada1;1530 Albion Road;Toronto;Ontario;;Canada;1
+Chile1;Calle Sta Amalia, 1763, La Florida;Santiago;Region Metropolitana;;Chile;1
+China1;3号 Haidian Street;Beijing;Beijing;;China;1
+France1;1 Rue du Commerce 75015;Paris;Ile-de-France;;France;1
+India1;Kalamboli, Navi Mumbai, Maharashtra 410218;Mumbai;Maharashtra;;India;1
+Indonesia1;1 Jl. Sultan Agung, 12850;Jakarta;Jawa Barat;;Indonesia;1
+Netherlands1;Coolsingel 44 3011 AD ;Rotterdam;Zuid-Holland;;Netherlands;1
+Philippines1;Binondo, Juan Luna;Manila;Manila;;Philippines;1
+Poland1;Podwale Grodzkie 1;Gdansk;Pomorskie;;Poland;1
+Russia1;Ленинский просп., д. 111/2, Москва, Россия 119421;Moscow;Moscow City;;Russia;1
+Saudi Arabia1;Salah Ad Din Al Ayyubi Rd, Ad Dubbat;Riyad;Ar Riyad;;Saudi Arabia;1
+South Africa1;150 Commissioner Street, Johannesburg 2107;Johannesburg;Gauteng;;South Africa;1
+Spain1;C/ GRAN VÍA, 52 28013;Madrid;madrid;;Spain;1
+Turkey1;Cumhurıyet Mh. 34520;Istanbul;istanbul;;Turkey;1
+UK1;157 Colindeep Lane;London;london;;United Kingdom;1
+United Arab Emirates1;Hamdan Street ;Abu Dhabi;Abu Dhabi;;United Arab Emirates;1
+United States1;1000 Commerce Street, Dallas, TX;Dallas;Texas;75202;United States;1
+United States2;PR-115, Aguada 00602;San Juan;Puerto Rico;;United States;1
+United States3;1421 Nasa Rd, Houston;Houston;Texas;77004;United States;1
+United States4;(281) 480-9733 ;Los Angeles;California;90021;United States;1
+United States5;9710 Rea Road;Charlotte;North Carolina;28277;United States;1
+LABEL;TYPE;LENGTH;NULLS
+label1.label  = NAME;type1.type    = VARCHAR;length1.length  = 150;null1.null = no
+label2.label  = ADDRESS;type2.type    = VARCHAR;length2.length  = 150;null2.null = no
+label3.label  = CITYDESC;type3.type    = VARCHAR;length3.length  = 150;null3.null = no
+label4.label  = STATEDESc;type4.type    = VARCHAR;length4.length  = 150;null4.null = no
+label5.label  = ZIPCODE;type5.type    = VARCHAR;length5.length  = 45;null5.null = yes
+label6.label  = COUNTRYDESC;type6.type    = VARCHAR;length6.length  = 150;null6.null = no
+label7.label  = LOCATIONCRITICALITY;type7.type    = VARCHAR;length7.length  = 45;null7.null = yes

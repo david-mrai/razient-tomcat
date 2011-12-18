@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+   by MCM Software Solution Inc. v1.0.0
+   Copyright (c) 2002 MCM Software Solution Inc.
+   All Rights Reserved.
+   XslPager.xsl Ver. 2S
+-->
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:template name="XSLPager">
+    <xsl:param name="cant"/>
+    <xsl:param name="count"/>
+    <xsl:param name="page"/>
+    <xsl:param name="xbrfname"/>
+    <xsl:param name="xslname"/>
+    <xsl:variable name="ant">
+      <xsl:value-of select="$page - 1"/>
+    </xsl:variable>
+    <xsl:variable name="sig">
+      <xsl:value-of select="$page + 1"/>
+    </xsl:variable>
+    <!-- Inicio Variables para calcular total de paginas -->
+     <xsl:variable name="Pages" select="$count div $cant" />
+     <xsl:variable name="DecPages" select="$Pages mod 1" />
+     <xsl:variable name="IntPages" select="$Pages - $DecPages" />
+     <xsl:variable name="NumPages">
+       <xsl:choose>
+         <xsl:when test="$DecPages = 0.0 ">
+           <xsl:value-of select="$IntPages"/>
+         </xsl:when>
+         <xsl:otherwise>
+           <xsl:value-of select="$IntPages + 1"/>
+         </xsl:otherwise>
+       </xsl:choose>
+     </xsl:variable>
+    <!-- Fin Variables para calcular total de paginas -->
+    <xsl:choose>
+      <xsl:when test="$NumPages&gt;1">
+        <center>Paginas</center>
+        <!-- PAGINA INICIAL -->
+         <xsl:if test="($page = 1)">
+           Inicial<xsl:text>	</xsl:text>
+         </xsl:if>
+         <xsl:if test="($page != 1)">
+           <a href="/{$NameApp}/LogicServerAppServlet?sourceXBRF={$xbrfname}&amp;Page=1&amp;Function=XSLPager&amp;NameXSL={$xslname}">
+             Inicial
+           </a><xsl:text>	</xsl:text>
+         </xsl:if>
+         <xsl:call-template name="allPages">
+           <xsl:with-param name="cant">
+             <xsl:value-of select="$cant"/>
+           </xsl:with-param>
+           <xsl:with-param name="count">
+             <xsl:value-of select="$count"/>
+           </xsl:with-param>
+           <xsl:with-param name="page">
+             <xsl:value-of select="$page"/>
+           </xsl:with-param>
+           <xsl:with-param name="xbrfname">
+             <xsl:value-of select="$xbrfname"/>
+           </xsl:with-param>
+           <xsl:with-param name="xslname">
+             <xsl:value-of select="$xslname"/>
+           </xsl:with-param>
+           <xsl:with-param name="actual"><xsl:value-of select="$page - 5"/></xsl:with-param>
+           <xsl:with-param name="numPages">
+             <xsl:value-of select="$NumPages"/>
+           </xsl:with-param>
+         </xsl:call-template>
+        <!-- PAGINA FINAL -->
+         <xsl:if test="($page = $NumPages)">
+           Final<xsl:text>	</xsl:text>
+         </xsl:if>
+         <xsl:if test="($page != $NumPages)">
+           <a href="/{$NameApp}/LogicServerAppServlet?sourceXBRF={$xbrfname}&amp;Page={$NumPages}&amp;Function=XSLPager&amp;NameXSL={$xslname}">
+             Final
+           </a><xsl:text>	</xsl:text>
+         </xsl:if>
+      </xsl:when>
+    </xsl:choose>	
+  </xsl:template>
+
+  <xsl:template name="allPages">
+    <xsl:param name="cant"/>
+    <xsl:param name="count"/>
+    <xsl:param name="page"/>
+    <xsl:param name="xbrfname"/>
+    <xsl:param name="xslname"/>
+    <xsl:param name="actual"/>
+    <xsl:param name="numPages"/>
+    <xsl:if test="($actual&lt;=$page + 5)and($actual &lt;= $numPages)">
+      <xsl:if test="($actual &gt; 0)and($actual != $page)">
+        <a href="/{$NameApp}/LogicServerAppServlet?sourceXBRF={$xbrfname}&amp;Page={$actual}&amp;Function=XSLPager&amp;NameXSL={$xslname}">
+          <xsl:value-of select="$actual"/>
+        </a><xsl:text>	</xsl:text>
+      </xsl:if>
+      <xsl:if test="($actual = $page)">
+        <xsl:value-of select="$actual"/><xsl:text>	</xsl:text>
+      </xsl:if>
+      <xsl:call-template name="allPages">
+        <xsl:with-param name="cant">
+          <xsl:value-of select="$cant"/>
+        </xsl:with-param>
+        <xsl:with-param name="count">
+          <xsl:value-of select="$count"/>
+        </xsl:with-param>
+        <xsl:with-param name="page">
+          <xsl:value-of select="$page"/>
+        </xsl:with-param>
+        <xsl:with-param name="xbrfname">
+          <xsl:value-of select="$xbrfname"/>
+        </xsl:with-param>
+        <xsl:with-param name="xslname">
+          <xsl:value-of select="$xslname"/>
+        </xsl:with-param>
+        <xsl:with-param name="actual">
+          <xsl:value-of select="$actual + 1"/>
+        </xsl:with-param>
+        <xsl:with-param name="numPages">
+          <xsl:value-of select="$numPages"/>
+        </xsl:with-param>
+      </xsl:call-template>
+    </xsl:if>
+  </xsl:template>
+
+</xsl:stylesheet>

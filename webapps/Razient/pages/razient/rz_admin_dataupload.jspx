@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:ice-cc="http://www.icesoft.com/icefaces-composite-comps">
+	<jsp:directive.page contentType="text/html;charset=ISO-8859-1"
+		pageEncoding="ISO-8859-1" />
+	<f:view>
+		<ice:outputDeclaration doctypeRoot="html"
+			doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN"
+			doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" />
+		<html>
+			<head>
+				<title>Index (Razient)</title>
+			</head>
+			<body>
+
+				<!-- template="#{templateBean.templateContent}"-->
+				<ui:composition
+					template="../../include/templates/pages/modeA_rz.jspx"
+					xmlns:h="http://java.sun.com/jsf/html"
+					xmlns:f="http://java.sun.com/jsf/core"
+					xmlns:c="http://java.sun.com/jstl/core"
+					xmlns:ice="http://www.icesoft.com/icefaces/component"
+					xmlns:ui="http://java.sun.com/jsf/facelets">
+
+					<ui:param name="pageTitle"
+						value="#{bundle['rz_admin_usermanager.dataupload.title']}" />
+
+					<ui:define name="header-menu-value">
+						<table cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+
+
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+										url="./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.valueIconAdmin}.png"
+										onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.enabledAdmin}.png'"
+										onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.disabledAdmin}.png'"
+										onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.enabledAdmin}.png'"
+										onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.disabledAdmin}.png'" />
+
+								</td>
+								<td>
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+										url="./css/images/risk_black_low.png" />
+								</td>
+								<td>
+									<ice:commandLink action="#{rz_MenuBarBean.getIconCompliance}"
+										onclick="rld();"
+										actionListener="#{rz_MenuBarBean.actionlistener}">
+										<ice:graphicImage style="border:none;" styleClass="noborder"
+											url="./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.valueIconCompliance}.png"
+											onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.enabledCompliance}.png'"
+											onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.disabledCompliance}.png'"
+											onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.enabledCompliance}.png'"
+											onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.disabledCompliance}.png'" />
+										<f:attribute name="optioonselected" value="admin_dataupload" />
+									</ice:commandLink>
+								</td>
+
+							</tr>
+						</table>
+
+					</ui:define>
+					<ui:define name="hide-show-value">
+						<ice:form>
+					    	<div style="margin-top:3px;float: left;position: absolute;">
+						    	<ice:commandLink action="#{showhideBean.action_showhide}" onclick="rld();">
+									<ice:graphicImage style="border:none;" 
+										styleClass="noborder" url="./css/images/icons/menu_#{showhideBean.url_icon}.png"/>
+								</ice:commandLink>
+							</div>
+						</ice:form>
+					</ui:define>
+					<ui:define name="page-menu-value">
+						<ice:form>
+							<ice:commandLink
+								action="#{nav_DataUploadKmlBean.actionMenu_UserManager}"
+								onclick="rld();">
+								<ice:graphicImage visible="true"  styleClass="menuPosA"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_usermanager.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_usermanager.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_usermanager.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_usermanager.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_usermanager.png'" />
+							</ice:commandLink>
+							<ice:commandLink
+								action="#{nav_DataUploadKmlBean.actionMenu_CustomerProfileGrid}"
+								onclick="rld();">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_customerprofile.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_customerprofile.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_customerprofile.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_customerprofile.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_customerprofile.png'" />
+							</ice:commandLink>
+							<ice:commandLink
+								action="#{nav_DataUploadKmlBean.actionMenu_Template}"
+								onclick="rld();">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_template.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_template.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_template.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_template.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_template.png'" />
+							</ice:commandLink>
+							<ice:graphicImage visible="true" styleClass="menuPosB"
+								url="./css/images/#{folderBean.folder_menu}/risk_menu_down_dataupload.png" />
+							<ice:commandLink
+								action="#{nav_DataUploadKmlBean.actionMenu_AuditLog}"
+								onclick="rld();">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_auditlog.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_auditlog.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_auditlog.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_auditlog.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_auditlog.png'" />
+							</ice:commandLink>
+							
+							<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_one.png"/>
+						</ice:form>
+					</ui:define>
+
+					<ui:define name="page-content-value">
+
+						<h:form>
+						
+						<table cellspacing="0" cellpadding="0" style="margin-top: -7px;" width="100%" >
+								<tr  class="menubuttons">
+									<td align="left">
+										&amp;nbsp&amp;nbsp
+										<ice:graphicImage style="border:none;" styleClass="noborder"
+												url="./css/images/#{folderBean.folder_menu}/icons/menu_up_loadkml.png"/>
+										
+										&amp;nbsp&amp;nbsp
+										<ice:commandLink action="#{nav_DataUploadKmlBean.actionMenu_DataUploadKml_to_DataUploadData}"  onclick="rld();">
+											<ice:graphicImage style="border:none;" styleClass="noborder"
+												url="./css/images/#{folderBean.folder_menu}/icons/menu_down_loaddata.png"
+												onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_loaddata.png'"
+												onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_loaddata.png'"
+												/>
+										</ice:commandLink>
+										&amp;nbsp&amp;nbsp
+										<ice:commandLink action="#{nav_DataUploadKmlBean.actionMenu_DataUploadKml_to_DataUploadSurveyData}"  onclick="rld();">
+											<ice:graphicImage style="border:none;" styleClass="noborder"
+												url="./css/images/#{folderBean.folder_menu}/icons/menu_down_loadsurvey.png"
+												onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_loadsurvey.png'"
+												onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_loadsurvey.png'"
+												/>
+										</ice:commandLink>
+										
+									</td>
+									<td>
+										&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+										&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+										&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+									</td>
+							</tr>
+							<tr>
+								<td colspan="2" class="menuline"></td>
+							</tr>
+						</table>
+						</h:form>
+
+						<br/>
+						<ice:form>
+							<ice:panelGroup id="icePanelUpLoad"
+								style="height:#{utilServiceLocatorBean.heightPanelDataupload}px;width:850px;overflow:auto;">
+								<div>
+									<table class="tableformsdataupload" style="margin-top: 0px;" cellspacing="0" cellpadding="0">
+										<tr class="trHeader" align="center">
+											<td>
+												<h:outputLabel>
+													<h:outputText
+														value="#{bundle['rz_admin_usermanager.dataupload.fileKML']}"></h:outputText>
+												</h:outputLabel>
+											</td>
+										</tr>
+										<tr class="trrow1">
+											<td align="left" colspan="4">
+												<br />
+												<ice:inputFile id="isObjKML" width="450"
+													uploadDirectory="./upload/kml/"
+													progressListener="#{if_ControllerBean.fileUploadProgressKML}"
+													actionListener="#{if_ControllerBean.uploadKMLFile}"
+													fileNamePattern=".+\.kml" submitOnUpload="" />
+											</td>
+										</tr>
+										<tr class="trrow2">
+											<td colspan="2" align="center">
+												<ice:outputProgress
+													value="#{if_ControllerBean.fileProgressKML}"
+													styleClass="uploadProgressBar" />
+											</td>
+										</tr>
+										<tr class="trrow1">
+											<td class="tableffield">
+												<ice:outputText id="isNameKML"
+													value="#{if_ControllerBean.componentStatus}"
+													styleClass="titledatauploadmessage"/>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</ice:panelGroup>
+
+							<ice:panelGroup styleClass="titleUploadFileBox" style="height:45px;width:400px;">
+								<ice:dataTable width="99%"
+									value="#{if_ControllerBean.fileKML}" var="file">
+									<ice:column>
+										<f:facet name="header">
+											<ice:outputLabel style="font-weight:bold;color:white"
+												value="#{bundle['rz_admin_usermanager.dataupload.name']}" />
+										</f:facet>
+										<ice:outputText style="font-weight:bold;color:#3E4F53;" value="#{file.fileInfo.fileName}" />
+									</ice:column>
+									<ice:column>
+										<f:facet name="header">
+											<ice:outputText
+												value="#{bundle['rz_admin_usermanager.dataupload.content']}" />
+										</f:facet>
+										<ice:outputText value="#{file.fileInfo.contentType}" />
+									</ice:column>
+								</ice:dataTable>
+							</ice:panelGroup>
+
+							<ice:panelGroup styleClass="customerProfileBox"
+								style="height:#{utilServiceLocatorBean.heightPanelKmlTbDataupload}px;width:#{utilServiceLocatorBean.widthPanelDataupload}px;overflow:auto;">
+
+								<ice:outputText
+									value="#{bundle['rz_admin_usermanager.dataupload.label']}"
+									styleClass="titledatauploadmessage" title="Text" />
+
+								<ice:dataTable resizable="false" border="1" id="tablestdgi"
+									value="#{rz_CPDU_GlobalIncidentBean.allCrudBeans}"
+									var="stdGIBean" width="95%"
+									rows="#{rz_CPDU_GlobalIncidentBean.selectedDataScrollModes[rz_CPDU_GlobalIncidentBean.selectedDataScrollMode].rows}"
+									scrollable="#{rz_CPDU_GlobalIncidentBean.selectedDataScrollModes[rz_CPDU_GlobalIncidentBean.selectedDataScrollMode].scrollingEnabled}"
+									style="float:left;margin-left:2px" columnWidths="1%,4%,18%,5%,18%,13%,13%,9%,9%"
+									columnClasses="columnCenter,columnCenter,columnLeft,columnLeft,columnCenter"
+									rowClasses="rowOn,rowOff" cellpadding="0"
+									sortColumn="#{rz_CPDU_GlobalIncidentBean.columnNameOrder}" sortAscending="#{rz_CPDU_GlobalIncidentBean.descending}">
+									<ice:column>
+										<f:facet name="header">
+										</f:facet>>>
+									</ice:column>
+									<ice:column>
+										<f:facet name="header">
+											<ice:outputText
+												value="#{bundle['rz_admin_usermanager.globalincident.idGI']}"></ice:outputText>
+										</f:facet>
+										<ice:outputLabel>
+											<h:outputText styleClass="titleTextKml" value="#{stdGIBean.idrazienGlobalIncident}"></h:outputText>
+										</ice:outputLabel>
+
+									</ice:column>
+									<ice:column>
+										<f:facet name="header">
+											<ice:commandSortHeader id="gicountryId" columnName="country"  >
+												<ice:outputText value="#{bundle['rz_admin_usermanager.globalincident.country']}"></ice:outputText>
+											</ice:commandSortHeader>
+										</f:facet>
+										<h:outputText styleClass="titleTextKml" value="#{stdGIBean.country}"></h:outputText>
+									</ice:column>
+									<ice:column>
+										<f:facet name="header">
+											<ice:outputText
+												value="#{bundle['rz_admin_usermanager.globalincident.state']}"></ice:outputText>
+										</f:facet>
+										<h:outputText styleClass="titleTextKml"
+												value="#{stdGIBean.state}"></h:outputText>
+									</ice:column>
+									<ice:column>
+										<f:facet name="header">
+											<ice:outputText
+												value="#{bundle['rz_admin_usermanager.globalincident.city']}"></ice:outputText>
+										</f:facet>
+										<h:outputText styleClass="titleTextKml"
+												value="#{stdGIBean.city}"></h:outputText>
+									</ice:column>
+									<ice:column>
+										<f:facet name="header">
+											<ice:outputText
+												value="#{bundle['rz_admin_usermanager.globalincident.latitude']}"></ice:outputText>
+										</f:facet>
+										<h:outputText styleClass="titleTextKml"
+												value="#{stdGIBean.latitude}"></h:outputText>
+									</ice:column>
+									<ice:column>
+										<f:facet name="header">
+											<ice:outputText
+												value="#{bundle['rz_admin_usermanager.globalincident.longitude']}"></ice:outputText>
+										</f:facet>
+										<h:outputText styleClass="titleTextKml"
+												value="#{stdGIBean.longitude}"></h:outputText>
+									</ice:column>
+									<ice:column>
+										<f:facet name="header">
+											<ice:outputText
+												value="#{bundle['rz_admin_usermanager.globalincident.datePosted']}"></ice:outputText>
+										</f:facet>
+										<h:outputText styleClass="titleTextKml"
+												value="#{stdGIBean.datePosted}"></h:outputText>
+									</ice:column>
+									<ice:column>
+										<f:facet name="header">
+											<ice:outputText
+												value="#{bundle['rz_admin_usermanager.globalincident.timePosted']}"></ice:outputText>
+										</f:facet>
+										<h:outputText styleClass="titleTextKml" value="#{stdGIBean.timePosted}"></h:outputText>
+									</ice:column>
+								</ice:dataTable>
+								<br />
+								<br />
+								<ice:panelGroup style="float:left;width:420px;">
+									<center>
+										<ice:dataPaginator id="dataScroll_std"
+											rendered="#{rz_CPDU_GlobalIncidentBean.selectedDataScrollModes[rz_Compliance_SM_STDManager_ListRowBean.selectedDataScrollMode].pagingEnabled}"
+											for="tablestdgi" vertical="false" fastStep="3" paginator="true"
+											paginatorMaxPages="10">
+											<f:facet name="first">
+												<ice:graphicImage id="firstpage_1"
+													url="./css/rime/css-images/arrow-first.gif"
+													style="border:none;" title="first" />
+											</f:facet>
+											<f:facet name="last">
+												<ice:graphicImage id="lastpage_1"
+													url="./css/rime/css-images/arrow-last.gif"
+													style="border:none;" title="last" />
+											</f:facet>
+											<f:facet name="previous">
+												<ice:graphicImage id="previouspage_1"
+													url="./css/rime/css-images/arrow-previous.gif"
+													style="border:none;" title="previous" />
+											</f:facet>
+											<f:facet name="next">
+												<ice:graphicImage id="nextpage_1"
+													url="./css/rime/css-images/arrow-next.gif"
+													style="border:none;" title="next" />
+											</f:facet>
+											<f:facet name="fastforward">
+												<ice:graphicImage id="fastforward_1"
+													url="./css/rime/css-images/arrow-ff.gif"
+													style="border:none;" title="ff" />
+											</f:facet>
+											<f:facet name="fastrewind">
+												<ice:graphicImage id="fastrewind_1"
+													url="./css/rime/css-images/arrow-fr.gif"
+													style="border:none;" title="fr" />
+											</f:facet>
+										</ice:dataPaginator>
+									</center>
+								</ice:panelGroup>
+
+							</ice:panelGroup>
+							
+						</ice:form>
+					</ui:define>
+				</ui:composition>
+			</body>
+		</html>
+	</f:view>
+</jsp:root>

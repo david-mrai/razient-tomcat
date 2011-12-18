@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<jsp:root version="1.2"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ice="http://www.icesoft.com/icefaces/component"
+   >
+
+   <jsp:directive.page contentType="text/html;charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+   <f:view>
+   		<ice:outputDeclaration 
+            doctypeRoot="html" 
+            doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN" 
+            doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" /> 
+             
+    <html>
+       <head>
+         <title>Index (Razient)</title>
+       </head>
+       <body>
+       
+        	<!-- template="#{templateBean.templateContent}"-->
+			<ui:composition
+			        template="../../include/templates/pages/modeB_customer.jspx"
+			        xmlns:h="http://java.sun.com/jsf/html"
+			        xmlns:f="http://java.sun.com/jsf/core"
+			        xmlns:c="http://java.sun.com/jstl/core"
+			        xmlns:ice="http://www.icesoft.com/icefaces/component"
+			        xmlns:ui="http://java.sun.com/jsf/facelets">
+			
+			  <!-- params for page titles-->
+			 		 <!--<f:loadBundle basename="truckandi.view.bundle.Message" var="bundle"/>
+			        <ui:param name="pageTitle" value="#{bundle['tai_login.title']}" />-->
+					<ui:param name="pageTitle" value="#{bundle['c_globalincidents_reports.title']}" />
+				
+				<ui:define name="header_menu_value">
+						<table cellspacing="0" cellpadding="0">
+										<tr>
+											<td>
+											<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_dash_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'" />
+													<f:attribute name="optioonselected" value="dh"/>
+											</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Compliance}">
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_comp_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'" />
+													<f:attribute name="optioonselected" value="cp_sm"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/#{folderBean.folder_menu}/risk_global_2.png" visible="#{users_MenuBarBean.visible_C_GlobalIncidents}"/>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Reports}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_rep_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'" />
+														<f:attribute name="optioonselected" value="rp_rh"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Reports}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_research_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_2.png'" />
+														<f:attribute name="optioonselected" value="rs_in"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Administration}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'" />
+														<f:attribute name="optioonselected" value="ad_um"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<!--<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_SuppliersView}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_supp_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'" />
+														<f:attribute name="optioonselected" value="sv_sp"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											--><td>
+												<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Ratings}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_ratings_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'" />
+														<f:attribute name="optioonselected" value="rt_vr"/>
+												</ice:commandLink>
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_ratings_3.png"/>-->
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_RequestForProposal}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'" />
+														<f:attribute name="optioonselected" value="rp_ps"/>
+												</ice:commandLink>-->
+												<!--<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_3.png"/>
+												-->
+											</td>
+											<!--<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Contracts}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_contracts_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'" />
+													<f:attribute name="optioonselected" value="ct_av"/>
+												</ice:commandLink>
+											</td>-->
+										</tr>
+								</table>	
+				</ui:define>
+			    
+			    <ui:define name="page-menu-value">
+			    	 <ice:form>
+			    	 
+			    	 <ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 
+						 <ice:graphicImage visible="true"  styleClass="menuPosA"
+								url="./css/images/#{folderBean.folder_menu}/risk_menu_up_alerts.png" 
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_alerts.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_alerts.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_alerts.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_alerts.png'" />
+						<f:attribute name="optioonselected" value="gi_al"/>
+					</ice:commandLink>
+									
+					<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 	<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_miles.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_miles.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_miles.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_miles.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_miles.png'" />
+						<f:attribute name="optioonselected" value="gi_ml"/>
+					</ice:commandLink>				
+					
+					<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_down_query.png" />
+									
+					<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+								onclick="rld();"
+								actionListener="#{users_MenuBarBean.actionlistener}">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_tickettracking.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_tickettracking.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_tickettracking.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_tickettracking.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_tickettracking.png'" />
+								<f:attribute name="optioonselected" value="gi_tt" />
+					</ice:commandLink>	
+					
+					
+							
+					  <ice:graphicImage visible="true"  styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_one.png"/>
+									
+					 </ice:form> 	
+			    </ui:define>
+			    
+				<ui:define name="page-content-value">
+						<ice:form>
+						
+						<ice:panelGrid width="100%" columns="1" cellpadding="0"  style="align:center;background-color: #F0F7FB; border-color: #294D80">
+							<table cellspacing="0" cellpadding="0" style="margin-top: -7px;" width="100%">
+								<tr>
+									<td>
+										<h:outputLabel>
+											<h:outputText styleClass="titleMiles" value="#{bundle['c_globalincidents_alerts.map.title']}"/>
+										</h:outputLabel>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+									</td>
+								</tr>								
+								<tr>
+                                  <td bgcolor="#ffffff">
+                                  <ice:panelGroup >
+	                                	<style type="text/css">
+	                                		.dhGmpMapTd div.gmap {width:  #{utilServiceLocatorBean.widthPanelMapQueryGincidents}px; height: 500px}
+											.dhGmpMapTd {visibility: block}
+	                                 	</style>
+	                                 	<ice:panelGroup >
+									        <ice:gMap id="qrgimap"  rendered="true" styleClass="dhGmpMapTd" latitude="#{query_GmapBean.latitude}" longitude="#{query_GmapBean.longitude}" zoomLevel="7">														        	
+									        	<ice:gMapGeoXml  url="#{bundle['url_upload']}#{bundle['url_kml']}#{bundle['url_customer']}#{query_GmapBean.idCustomer}/#{query_GmapBean.nameKml}"/>
+									        	<ice:gMapControl id="largectrl" name="GLargeMapControl" rendered="#{query_GmapBean.showControls}"/>
+									            <ice:gMapControl id="scalectrl" name="GScaleControl" rendered="#{query_GmapBean.showControls}"/>
+									            <ice:gMapControl id="typectrl" name="GMapTypeControl" rendered="#{query_GmapBean.showControls}"/>
+											</ice:gMap>
+										</ice:panelGroup>
+									</ice:panelGroup>											
+                                   </td>
+                                   <td>
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   </td>
+                               	</tr>
+							</table>
+						</ice:panelGrid>
+						<ice:panelGroup id="tabSetTabGrid" styleClass="tabPanelBox panelTabSetSaleContainer">
+						  	 <ice:panelTabSet id="tabsetcpgrid" tabChangeListener="#{query_GridBean.processTabChange}" selectedIndex="#{query_GridBean.iTab}">
+						  	 	<ice:panelTab  id="tabsearch" label="#{bundle['c_globalincidents_reports.search.tab1']} #{entityTypeBundle.entity_of}" >
+						  	 		<div style="height:75px;" >
+						  	 			<br/>
+							  	 		<table cellpadding="0" cellspacing="0" style="margin-top:0px;">
+							  	 			<tr>
+							  	 					<td>
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>
+													<td>
+								  	 					<ice:commandLink action="#{query_GridBean.find_All_Action}"  onclick="rld();">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/#{folderBean.folder_menu}/icons/menu_up_all.png"
+																onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_all.png'"
+																onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_all.png'"
+																
+																/>
+														</ice:commandLink>
+													</td>							  	 					
+													<td>
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>
+							  	 					<td class="tableflabelbuttons">
+															<h:outputLabel>
+																<h:outputText value="#{bundle['c_globalincidents_reports.search.tab1.label']} #{entityTypeBundle.entity_of}"></h:outputText>
+															</h:outputLabel>
+													</td>
+													<td>
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>
+													<td>
+														<ice:selectInputText style="margin-top:-10px;" rows="7" width="250" valueChangeListener="#{query_GridBean.updateParamsList}" id="selectSupp" autocomplete="yes" immediate="true">
+															<f:selectItems value="#{query_GridBean.list}"/>
+														</ice:selectInputText>
+													</td>
+							  	 					<td></td>
+							  	 			</tr>			  	 		
+							  	 		</table>
+						  	 		</div>
+						  	 	</ice:panelTab>
+
+								<ice:panelTab  id="tabsearch" label="#{bundle['c_globalincidents_reports.search.tab2']}" >
+						  	 		<div style="height:75px;" >
+						  	 			<br/>
+							  	 		<table cellpadding="0" cellspacing="0" style="margin-top:0px;">
+							  	 			<tr>
+							  	 					<td>
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>
+													<td>
+								  	 					<ice:commandLink action="#{query_GridBean.find_All_Action}"  onclick="rld();">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/#{folderBean.folder_menu}/icons/menu_up_all.png"
+																onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_all.png'"
+																onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_all.png'"
+																
+																/>
+														</ice:commandLink>
+													</td>							  	 					
+													<td>
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>
+							  	 					<td class="tableflabelbuttons">
+															<h:outputLabel>
+																<h:outputText value="#{bundle['c_globalincidents_reports.search.tab2.label']}"></h:outputText>
+															</h:outputLabel>
+													</td>
+													<td>
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>
+													<td class="tableffieldleft" colspan="3">
+														<ice:selectOneMenu value="#{query_GridBean.riskLevel}"
+															id="selectedRiskLevel" styleClass="selectedOneMasterCountry"
+															valueChangeListener="#{query_GridBean.processValueChangeRL}"
+															partialSubmit="true">
+															<f:selectItem itemLabel="#{bundle['c_globalincidents_reports.select_level']}"
+																itemValue="0" />
+															<f:selectItems
+																value="#{query_GridBean.list_RiskLevel}"
+																id="country" />
+														</ice:selectOneMenu>
+													</td>
+							  	 					<td></td>
+							  	 			</tr>			  	 		
+							  	 		</table>
+						  	 		</div>
+						  	 	</ice:panelTab>
+					        
+					        	<ice:panelTab  id="tabtable" label="#{bundle['c_globalincidents_reports.search.tab3']}" >
+					        		<div style="height:75px;" >
+						  	 			<br/>
+							  	 		<table cellpadding="0" cellspacing="0" style="margin-top:0px;">
+							  	 			<tr>
+							  	 					<td>
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>
+							  	 					<td class="tableflabelmasterbold">
+														<h:outputLabel>
+															<h:outputText
+																value="#{bundle['rz_admin_usermanager.cust.country']}"></h:outputText>
+														</h:outputLabel>&amp;nbsp&amp;nbsp
+													</td>
+													<td class="tableffieldleft" colspan="3">
+														<ice:selectOneMenu value="#{query_GridBean.country}"
+															id="selectedCountry" styleClass="selectedOneMasterCountry"
+															valueChangeListener="#{query_GridBean.processValueChange}"
+															partialSubmit="true">
+															<f:selectItem itemLabel="#{bundle['rz_select_country']}"
+																itemValue="0" />
+															<f:selectItems
+																value="#{applicationBean.countrySelectedItems}"
+																id="country" />
+														</ice:selectOneMenu>
+													</td>
+													<td>
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>
+													<td class="tableflabelmasterbold">
+														<h:outputLabel>
+															<h:outputText
+																value="#{bundle['rz_admin_usermanager.cust.state']}"></h:outputText>
+														</h:outputLabel>&amp;nbsp&amp;nbsp
+													</td>
+													<td class="tableffieldleft">
+														<ice:selectOneMenu value="#{query_GridBean.state}"
+															id="selectedState" styleClass="selectedOneMasterState"
+															valueChangeListener="#{query_GridBean.processValueChange}"
+															partialSubmit="true">
+															<f:selectItem itemLabel="#{bundle['rz_select_state']}" itemValue="0" />
+															<f:selectItems value="#{query_GridBean.list_State}" id="state" />
+														</ice:selectOneMenu>
+													</td>
+													<td>
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>
+													<td class="tableflabelmasterbold">
+														<h:outputLabel>
+															<h:outputText
+																value="#{bundle['rz_admin_usermanager.cust.city']}"></h:outputText>
+														</h:outputLabel>&amp;nbsp&amp;nbsp
+													</td>
+													<td class="tableffieldleft">
+														<ice:selectOneMenu value="#{query_GridBean.city}"
+															id="selectedCity" styleClass="selectedOneMasterState"
+															valueChangeListener="#{query_GridBean.processValueChange}"
+															partialSubmit="true">
+															<f:selectItem itemLabel="#{bundle['rz_select_city']}"
+																itemValue="0" />
+															<f:selectItems value="#{query_GridBean.list_City}"
+																id="city" />
+														</ice:selectOneMenu>
+													</td>
+													<td>
+													&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>
+								  	 				<td>
+								  	 					<ice:commandLink action="#{query_GridBean.find_x_Items_Action}"  onclick="rld();">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/#{folderBean.folder_menu}/icons/menu_up_search.png"
+																onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_search.png'"
+																onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_search.png'"
+																
+																/>
+														</ice:commandLink>
+													</td>
+								  	 				<td>&amp;nbsp</td>
+							  	 			</tr>
+							  	 			</table>
+							  	 			<br/>
+							  	 			<table cellpadding="0" cellspacing="0" style="margin-top:0px;">
+							  	 			<tr>
+							  	 				
+							  	 			</tr>						  	 		
+							  	 			</table>
+						  	 		</div>
+						    	</ice:panelTab>
+						    	
+						    	<ice:panelTab  id="tabdatesearch" label="#{bundle['c_globalincidents_reports.search.tab4']}" >
+						  	 		<div style="height:75px;" >
+						  	 			<br/>
+							  	 		<table cellpadding="0" cellspacing="0" style="margin-top:0px;">
+							  	 			<tr>
+							  	 					<td class="tableflabelbuttons">
+															<h:outputLabel>
+																<h:outputText value="#{bundle['c_globalincidents_reports.search.tab4.label.from']}"></h:outputText>
+															</h:outputLabel>
+													</td>
+													<td>
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>
+													<td class="tableffieldleft" colspan="3">
+														<ice:selectInputDate id="fromDate" renderMonthAsDropdown="true" renderYearAsDropdown="true" required="true"  
+																value="#{query_GridBean.dtFromDate}" title="from Date"
+																renderAsPopup="true" styleClass="fieldsimpledates" >
+																<f:convertDateTime pattern="#{bundle['rz_calendar.format.a']}" timeZone="default"/>
+														</ice:selectInputDate>
+													</td>
+													<td>
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp;&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp;&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>													
+							  	 					<td class="tableflabelbuttons">
+															<h:outputLabel>
+																<h:outputText value="#{bundle['c_globalincidents_reports.search.tab4.label.to']}"></h:outputText>
+															</h:outputLabel>
+													</td>
+													<td>
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>
+													<td class="tableffieldleft" colspan="3">
+														<ice:selectInputDate id="toDate" renderMonthAsDropdown="true" renderYearAsDropdown="true" required="true"  
+																value="#{query_GridBean.dtToDate}" title="to Date"
+																renderAsPopup="true" styleClass="fieldsimpledates" >
+																<f:convertDateTime pattern="#{bundle['rz_calendar.format.a']}" timeZone="default"/>
+														</ice:selectInputDate>
+													</td>													
+													<td>
+														&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													</td>													
+								  	 				<td>
+								  	 					<ice:commandLink action="#{query_GridBean.find_x_Items_Action_Date}"  onclick="rld();">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/#{folderBean.folder_menu}/icons/menu_up_search.png"
+																onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_search.png'"
+																onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_search.png'"
+																
+																/>
+														</ice:commandLink>
+													</td>							  	 					
+							  	 			</tr>			  	 		
+							  	 		</table>
+						  	 		</div>
+						  	 	</ice:panelTab>
+						    	
+						    	
+						    	
+							</ice:panelTabSet>  
+						</ice:panelGroup>
+
+						</ice:form>
+						
+						<h:form>
+							<br/><br/><br/><br/><br/><br/><br/><br/>
+
+							<ice:panelGroup styleClass="customerProfileBox"
+								style="height:#{utilServiceLocatorBean.heightPanelCustomerProfileGrid+150}px;width:97%;overflow:auto;">
+
+									<!-- PAGINATOR-->
+											<ice:panelGroup style="float:left;width:420px;">
+												<center>
+													<ice:dataPaginator
+														id="dataScroll_tableGirn2z"
+														rendered="#{query_GridBean.selectedDataScrollModes[query_GridBean.selectedDataScrollMode].pagingEnabled}"
+														for="tableGirn" vertical="false"
+														fastStep="3" paginator="true"
+														paginatorMaxPages="10">
+														<f:facet name="first">
+															<ice:graphicImage id="firstpage_2z"
+																url="./css/rime/css-images/arrow-first.gif"
+																style="border:none;" title="first" />
+														</f:facet>
+														<f:facet name="last">
+															<ice:graphicImage id="lastpage_2z"
+																url="./css/rime/css-images/arrow-last.gif"
+																style="border:none;" title="last" />
+														</f:facet>
+														<f:facet name="previous">
+															<ice:graphicImage id="previouspage_2z"
+																url="./css/rime/css-images/arrow-previous.gif"
+																style="border:none;" title="previous" />
+														</f:facet>
+														<f:facet name="next">
+															<ice:graphicImage id="nextpage_2z"
+																url="./css/rime/css-images/arrow-next.gif"
+																style="border:none;" title="next" />
+														</f:facet>
+														<f:facet name="fastforward">
+															<ice:graphicImage id="fastforward_2z"
+																url="./css/rime/css-images/arrow-ff.gif"
+																style="border:none;" title="ff" />
+														</f:facet>
+														<f:facet name="fastrewind">
+															<ice:graphicImage id="fastrewind_2z"
+																url="./css/rime/css-images/arrow-fr.gif"
+																style="border:none;" title="fr" />
+														</f:facet>
+													</ice:dataPaginator>
+												</center>
+											</ice:panelGroup>
+									
+									<ice:panelGroup>
+										<ice:panelGroup>
+											<ice:dataTable resizable="false"
+												border="1" id="tableGirn"
+												value="#{query_GridBean.allCrudBeans}"
+												var="dGirnBean" width="95%"
+												rows="#{query_GridBean.selectedDataScrollModes[query_GridBean.selectedDataScrollMode].rows}"
+												scrollable="#{query_GridBean.selectedDataScrollModes[query_GridBean.selectedDataScrollMode].scrollingEnabled}"
+												style="float:left;margin-left:2px"
+												columnWidths="4%,22%,13%,13%,13%,12%,1%,11%,11%"
+												columnClasses="columnCenter,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft"
+												rowClasses="rowOn,rowOff"
+												cellpadding="0"
+												sortColumn="#{query_GridBean.columnNameOrder}"
+												sortAscending="#{query_GridBean.descending}">
+												<ice:column>
+													<f:facet name="header">
+															<span style="color: #F9FAF8; font-size: 9px; text-align: center">&amp;nbsp#{bundle['c_dh.map']}
+															</span>
+													</f:facet>
+													<!--<ice:rowSelector id="selected"
+														value="#{query_GridBean.itemSelected}"
+														multiple="false"
+														selectionListener="#{query_GridBean.rowSelectionListener}"
+														selectionAction="#{query_GridBean.rowSelectionAction}" />               
+                      														<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_site_#{dGirnBean.siteType}.png"
+															onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_site_#{dGirnBean.siteType}.png'"
+															onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_site_#{dGirnBean.siteType}.png'"	
+															/>-->
+													<ice:commandLink
+																				action="#{query_GridBean.rowSelectionAction}"
+																				visible="true" onclick="rld();"
+																				actionListener="#{query_GridBean.rowSelectionListener}">
+                           														<ice:graphicImage style="border:none;"  styleClass="noborder"
+																					url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_site_#{dGirnBean.siteType}.png"
+																					onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_site_#{dGirnBean.siteType}.png'"
+																					onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_site_#{dGirnBean.siteType}.png'"	
+																					/>
+																				<f:attribute name="idSelected"
+																					value="#{dGirnBean.idrazienGlobalIncident}" />
+													</ice:commandLink>		
+												</ice:column>
+												<!-- 
+												<ice:column style="text-align:center;">
+													<f:facet name="header">
+														<ice:outputText id="dSupp"
+															value="#{bundle['c_dh.SupplierId']}"></ice:outputText>
+													</f:facet>
+													<ice:outputLabel>
+														<h:outputText
+															styleClass="titleTextFileUpload"
+															value="#{dGirnBean.idSupplier}"></h:outputText>
+													</ice:outputLabel>
+												</ice:column>
+												 -->
+												<ice:column>
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_dh.SupplierName']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="dName"
+														value="#{dGirnBean.name}"
+														style="color: #808080; font-style: normal"></h:outputText>
+												</ice:column>
+												<ice:column groupOn="#{dGirnBean.city}" style="background-color:#F4F7F5;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_dh.SupplierCity']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="dCity"
+														styleClass="titleTextFileUpload"
+														value="#{dGirnBean.city}"></h:outputText>
+												</ice:column>
+												<ice:column groupOn="#{dGirnBean.state}" style="background-color:#F3F4F8;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_dh.SupplierState']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="dState"
+														styleClass="titleTextKml"
+														value="#{dGirnBean.state}"></h:outputText>
+												</ice:column>
+												<ice:column groupOn="#{dGirnBean.country}" style="background-color:#F7F4F5;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_dh.SupplierCountry']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="dCountry"
+														styleClass="titleTextKml"
+														value="#{dGirnBean.country}"></h:outputText>
+												</ice:column>
+												<ice:column>
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_dh.GIType']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="dType"
+														styleClass="titleTextKml"
+														value="#{dGirnBean.type}"></h:outputText>
+												</ice:column>
+												<ice:column>
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_dh.GIImg']}"></ice:outputText>
+													</f:facet>																																								
+														<ice:commandLink action="#{query_GridBean.viewIncidentPopUpAction}" actionListener="#{query_GridBean.rowSelectionListener}">
+																					<ice:graphicImage style="border:none;"  styleClass="noborder"
+																							url="#{dGirnBean.imagetype}" height="25" width="25"/>
+																					<f:attribute name="idSelected"
+																					value="#{dGirnBean.idrazienGlobalIncident}" />																						
+														</ice:commandLink>																				
+												</ice:column>
+												<!-- 
+												<ice:column>
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_dh.SupplierPartService']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="dDescription" styleClass="titleTextKml"
+														value="#{dGirnBean.description}"></h:outputText>
+												</ice:column>
+												 -->
+												<ice:column style="text-align:center;">
+													<f:facet name="header">
+														<ice:commandSortHeader id="duSeverity"
+															columnName="riskLevel">
+															<ice:outputText
+																value="#{bundle['c_dh.GISeverity']}"></ice:outputText>
+														</ice:commandSortHeader>
+													</f:facet>
+													<h:outputText id="dSeverity"
+														styleClass="titleTextKml"
+														value="#{dGirnBean.riskLevel}"></h:outputText>
+												</ice:column>
+												<ice:column style="text-align:center;">
+													<f:facet name="header">
+														<ice:commandSortHeader id="duPosted"
+															columnName="posted">
+															<ice:outputText
+																value="#{bundle['c_dh.GIDatePosted']}"></ice:outputText>
+														</ice:commandSortHeader>
+													</f:facet>
+													<h:outputText id="dPosted"
+														styleClass="titleTextKml"
+														value="#{dGirnBean.dateNews}"></h:outputText>
+												</ice:column>
+											</ice:dataTable>
+											<ice:panelGroup styleClass="clearer" />
+
+
+											<!-- PAGINATOR-->
+											<ice:panelGroup style="float:left;width:420px;">
+												<center>
+													<ice:dataPaginator
+														id="dataScroll_tableGirn"
+														rendered="#{query_GridBean.selectedDataScrollModes[query_GridBean.selectedDataScrollMode].pagingEnabled}"
+														for="tableGirn" vertical="false"
+														fastStep="3" paginator="true"
+														paginatorMaxPages="10">
+														<f:facet name="first">
+															<ice:graphicImage id="firstpage_1"
+																url="./css/rime/css-images/arrow-first.gif"
+																style="border:none;" title="first" />
+														</f:facet>
+														<f:facet name="last">
+															<ice:graphicImage id="lastpage_1"
+																url="./css/rime/css-images/arrow-last.gif"
+																style="border:none;" title="last" />
+														</f:facet>
+														<f:facet name="previous">
+															<ice:graphicImage id="previouspage_1"
+																url="./css/rime/css-images/arrow-previous.gif"
+																style="border:none;" title="previous" />
+														</f:facet>
+														<f:facet name="next">
+															<ice:graphicImage id="nextpage_1"
+																url="./css/rime/css-images/arrow-next.gif"
+																style="border:none;" title="next" />
+														</f:facet>
+														<f:facet name="fastforward">
+															<ice:graphicImage id="fastforward_1"
+																url="./css/rime/css-images/arrow-ff.gif"
+																style="border:none;" title="ff" />
+														</f:facet>
+														<f:facet name="fastrewind">
+															<ice:graphicImage id="fastrewind_1"
+																url="./css/rime/css-images/arrow-fr.gif"
+																style="border:none;" title="fr" />
+														</f:facet>
+													</ice:dataPaginator>
+												</center>
+											</ice:panelGroup>
+
+										</ice:panelGroup>
+
+									</ice:panelGroup>
+
+							</ice:panelGroup>
+
+						</h:form>
+						
+						<ice:form>
+							
+										<ice:panelPopup  autoPosition="200,100" autoCentre="true" modal="true" visible="#{viewIncidentTypePopUpBean.visible}" style="width:700px;" styleClass="icePanelPopupBody icePanelPopup">
+							                <f:facet name="header">
+							                   <ice:panelGrid width="100%" cellpadding="0" cellspacing="0" columns="2" styleClass="trHeader" >
+							                        <ice:outputText style="color: white;" value="#{bundle['c_dh.hazardousincidents']}"/>
+							                        <ice:commandButton image="./css/images/icons/close.png" action="#{viewIncidentTypePopUpBean.closePopup}" title="Close this draggable popup"/>
+							                    </ice:panelGrid>
+							                </f:facet>
+							                
+							                <f:facet name="body">
+							                    <ice:panelGrid width="100%" columns="2" cellpadding="0"  style="background-color: #FFFFFF">
+
+							              			<table style='text-align: left;  height: 240px;' width="100%" border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'>
+													<tr style='font-weight: bold;'>
+														<td style='height: 78px; width: 184px;' ><span style='font-weight: normal;'> <img src='#{viewIncidentGmapBean.imageUrl}' height="80" width="80"/></span></td>
+														<td colspan='3' rowspan='1' style='height: 78px; width: 291px;font-size: 15px;font-variant: small-caps;' >#{bundle['rz_popup.map_incident']}: #{viewIncidentGmapBean.type} <br/><br/>#{bundle['rz_popup.map_locate']}: #{viewIncidentGmapBean.city}</td>
+													</tr>
+													<tr>
+														<td style='height: 0px; width: 184px; text-align: left;' valign='undefined'><span style='font-weight: bold;'>#{bundle['rz_popup.map_incidentsummary']}</span></td>
+													<td colspan='3' rowspan='1' style='height: 0px; width: 291px;' >#{viewIncidentGmapBean.title}</td>
+													</tr>	
+													<tr>	
+													<td style='width: 184px; height: 26px; font-weight: bold;' >#{bundle['rz_popup.map_country']}</td>
+													<td style='width: 292px; height: 26px;' >#{viewIncidentGmapBean.country}</td>
+													<td style='height: 26px; width: 184px; font-weight: bold;' >#{bundle['rz_popup.map_severity']}</td>
+													<td style='height: 26px; width: 291px;' >#{viewIncidentGmapBean.riskLevel}</td>
+													</tr>	
+													<tr>	
+													<td style='width: 184px; height: 30px; font-weight: bold;' >#{bundle['rz_popup.map_state']}</td>
+													<td style='width: 292px; height: 30px;' >#{viewIncidentGmapBean.state}</td>
+													<td style='height: 30px; width: 184px; font-weight: bold;' >#{bundle['rz_popup.map_incidenttype']}</td>
+													<td style='height: 30px; width: 291px;' >#{viewIncidentGmapBean.type}</td>
+													</tr>
+													<tr>
+													<td style='width: 184px; height: 24px; font-weight: bold;' >#{bundle['rz_popup.map_city']}</td>
+													<td style='width: 292px; height: 24px;' >#{viewIncidentGmapBean.city}</td>
+													<td style='height: 24px; width: 184px; font-weight: bold;' >#{bundle['rz_popup.map_date']}</td>
+													<td style='height: 24px; width: 291px;' >#{viewIncidentGmapBean.dateNews}</td>
+													</tr>
+													<tr>
+													<td style='width: 184px; height: 26px; font-weight: bold;' >#{bundle['rz_popup.map_deaths']}</td>
+													<td style='width: 292px; height: 26px;' >#{viewIncidentGmapBean.deads}</td>
+													<td style='height: 26px; width: 184px; font-weight: bold;' >#{bundle['rz_popup.map_url']}</td>
+													<td style='height: 26px; width: 80px; font-weight: bold;' >&amp;nbsp&amp;nbsp<a href="#{viewIncidentGmapBean.url}"  target="_blank" style="color: #8C2635; font-variant: small-caps;font-size: 15px;">#{bundle['rz_popup.map_link']}</a></td>
+													</tr>
+													<tr>
+													<td style='overflow:hidden; width:80px; height: 90px; font-weight: bold;' >#{bundle['rz_popup.map_description']}</td>
+													<td colspan='3' rowspan='1' style='height: 90px; width: 291px;' ><TEXTAREA style="border:0; font-weight: normal; background-color: #FBFBFD; font-family:Times New Roman,Helvetica,sans-serif; font-size: 1.25em;" cols="90" rows="4" wrap="true" name="text" value="">#{viewIncidentGmapBean.description}</TEXTAREA></td>
+													</tr>
+												</table>
+							                 	</ice:panelGrid>
+							                 	
+							                </f:facet>
+							                
+							            </ice:panelPopup>   
+							            
+							       </ice:form>
+							       
+				</ui:define>
+				
+
+			</ui:composition>
+
+	
+
+       </body>
+    </html>
+   </f:view>
+</jsp:root>

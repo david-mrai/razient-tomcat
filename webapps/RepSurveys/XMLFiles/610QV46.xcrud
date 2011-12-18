@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Document_CRUD>
+    <Nomenclature>610QV46</Nomenclature>
+    <FrameSize>136</FrameSize>
+    <PageStyle>
+        <Background>
+            <Color>#FFFFFF</Color>
+        </Background>
+        <Screen_Title></Screen_Title>
+        <Title>
+            <Label>TITLE</Label>
+            <Size>3</Size>
+            <Color>#000000</Color>
+            <Face>Arial</Face>
+            <Style>bold</Style>
+            <Align>Center</Align>
+        </Title>
+        <Columns>2</Columns>
+        <SubmitButton visible="yes" location="under" align="Center">
+            <Label>Ok</Label>
+        </SubmitButton>
+        <ResetButton visible="yes" location="under" align="Center">
+            <Label>Cancel</Label>
+        </ResetButton>
+        <locale>
+            <language>en</language>
+            <country>US</country>
+            <dateFormat>MM-dd-yyyy</dateFormat>
+            <timeFormat>hh:mm:ss</timeFormat>
+        </locale>
+    </PageStyle>
+    <XSQLData>
+        <ComponentNames>
+            <ApplicationName>RepSurveys</ApplicationName>
+            <XBRFSource>61061058brf</XBRFSource>
+            <Function>XBRFResolver</Function>
+            <XSLName>610QV46</XSLName>
+            <JSPName>MCM610QV46DE610SC47</JSPName>
+            <BODYName>610QV46</BODYName>
+            <BeanName>beanTable610LT1</BeanName>
+        </ComponentNames>
+        <Connection>
+            <NameCx>cxRaz</NameCx>
+            <DataBaseId>5</DataBaseId>
+        </Connection>
+        <Data>
+            <Name>610SQL51</Name>
+            <Sentence>SELECT vw_cussur_secque.idcustomerSurveys,vw_cussur_secque.customer_idCustomer,vw_cussur_secque.surveyname,vw_cussur_secque.sectionname,vw_cussur_secque.question,supplier.idSupplier,supplier.name,CASE WHEN (`suppliersurveyresponseanswers`.dateAnswered IS NULL) THEN &apos;Not Answered&apos; ELSE `suppliersurveyresponseanswers`.dateAnswered END AS dateAnswered,CASE WHEN (`suppliersurveyresponseanswers`.levelMarginal IS NULL) THEN 0 ELSE `suppliersurveyresponseanswers`.levelMarginal END AS levelMarginal FROM razient.vw_cussur_secque AS vw_cussur_secque,razient.customersurveyasignsupp AS customersurveyasignsupp,razient.supplier AS supplier,razient.suppliersurveyresponseanswers AS suppliersurveyresponseanswers WHERE (supplier.idSupplier=suppliersurveyresponseanswers.supplier_idSupplier) AND (vw_cussur_secque.customer_idCustomer=customersurveyasignsupp.idCustomer) AND (vw_cussur_secque.idcustomerSurveys=customersurveyasignsupp.idSurvey) AND (customersurveyasignsupp.idSupplier=supplier.idSupplier) AND(suppliersurveyresponseanswers.customerQuestionsSurveys_idcustomerQuestionSurveys *=  vw_cussur_secque.idcustomerQuestionSurveys) AND (vw_cussur_secque.idcustomerSurveys=@idSurvey) AND(vw_cussur_secque.customer_idCustomer=@cxRaz__razient__customersurveys__idcustomerSurveys) AND(supplier.idSupplier=@idSupplier)</Sentence>
+            <Out_Fields>
+                <Out_Field>
+                    <Code>1</Code>
+                    <TableName>vw_cussur_secque</TableName>
+                    <Name>idcustomerSurveys</Name>
+                    <Value></Value>
+                    <KeyName>vw_cussur_secque.idcustomerSurveys</KeyName>
+                    <VariableName>@idSurvey</VariableName>
+                    <FillFunction>idSupplier</FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>long</Type>
+                    <Label>Survey</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>10</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Select"  align="Right"  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color="#000000"  bgcolor="#000000"  size="1"  maxlength=""  readonly=""  disabled="false"  jsrs="yes"  font="Arial"  fontstyle="0"  fontsize="2" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "IS" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>2</Code>
+                    <TableName>supplier</TableName>
+                    <Name>idSupplier</Name>
+                    <Value></Value>
+                    <KeyName>supplier.idSupplier</KeyName>
+                    <VariableName>@idSupplier</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>long</Type>
+                    <Label>Supplier</Label>
+                    <Primary_Key>YES</Primary_Key>
+                    <Precision>10</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Select"  align="Right"  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color="#000000"  bgcolor="#000000"  size="1"  maxlength=""  readonly=""  disabled="false"  jsrs="yes"  font="Arial"  fontstyle="0"  fontsize="2" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "IS" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>3</Code>
+                    <TableName>vw_cussur_secque</TableName>
+                    <Name>customer_idCustomer</Name>
+                    <Value></Value>
+                    <KeyName>vw_cussur_secque.customer_idCustomer</KeyName>
+                    <VariableName>@cxRaz__razient__customersurveys__idcustomerSurveys</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>long</Type>
+                    <Label>customer_idCustomer</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>10</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>Yes</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName>cxRaz__razient__customersurveys__idcustomerSurveys</SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align=""  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="10"  maxlength=""  readonly=""  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+            </Out_Fields>
+        </Data>
+            <LookUpFields>
+            </LookUpFields>
+            <JsrsFields>
+                <JsrsField>
+                    <TableName>vw_cussur_secque</TableName>
+                    <Name>@idSurvey</Name>
+                    <KeyName>vw_cussur_secque.idcustomerSurveys</KeyName>
+                    <XBrf>61061055brf</XBrf>
+                    <FillFunction>idSupplier</FillFunction>
+                </JsrsField>
+            </JsrsFields>
+            <JsrsDropBoxes>
+                <JsrsDropBox>
+                    <TableName>supplier</TableName>
+                    <Name>idSupplier</Name>
+                    <KeyName>supplier.idSupplier</KeyName>
+                    <XBrf>61061057brf</XBrf>
+                    <ComboName>@idSupplier</ComboName>
+                    <FillFunction></FillFunction>
+                    <BRFvars>
+                        <BRFvar>
+                            <Order>1</Order>
+                            <Name>@idSurvey</Name>
+                            <BRFCombo>@idSurvey</BRFCombo>
+                        </BRFvar>
+                    </BRFvars>
+                </JsrsDropBox>
+            </JsrsDropBoxes>
+    </XSQLData>
+</Document_CRUD>

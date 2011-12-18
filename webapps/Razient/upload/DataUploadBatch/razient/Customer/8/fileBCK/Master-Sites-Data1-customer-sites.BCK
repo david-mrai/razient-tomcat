@@ -1,0 +1,46 @@
+Telx-Arizona;120 East Van Buren Street;Phoenix;az;85004;USA;High
+The Main Exchange;365 Main St.;San Francisco;ca;94103;USA;High
+Coresite-Market Post Tower;55 S. Market St.;San Jose;ca;95113;USA;High
+Coresite-One Wilshire Bldg.;624 S. Grand Ave., 8th Flr.;Los Angeles;ca;90017;USA;High
+Equinix-Los Angeles;600 W. 7th St., 6th Flr.;Los Angeles;ca;90017;USA;High
+Equinix-San Jose;11 Great Oaks Blvd.;San Jose;ca;95119;USA;High
+TelX;200 Paul Ave.;San Francisco;ca;94110;USA;High
+Switch and Data-PAIX Bldg.;529 Bryant St.;Palo Alto;ca;94301;USA;High
+Telehouse-England;Docklands North 14 Coriander Ave. ;London;London;E14 2A;United Kingdom;High
+FLORIDA;421 Church Street;Jacksonville;FL;32202;USA;High
+Host.net-Boca;3500 NW Boca Raton Blvd;Boca Raton;FL;33431;USA;High
+Host.net-FLL;3250 West Commercial Blvd;Fort Lauderdale;FL;33309;USA;High
+Miami Data Vault;100 NE 80th Ter., 1st/3rd Flrs.;Miami;FL;33138;USA;High
+Switch and Data;36 NE Second Ave.;Miami;Fl;33132;USA;High
+Switch and Data-Metro Mall;1 NE 1st St.;Miami;Fl;33132;USA;High
+NAP of the Americas;50 NE 9th St., 2nd Flr.;Miami;Fl;33132;USA;High
+JT Communications-Georgia;55 Marietta St. NW, 5th/8th Flrs.;Atlanta;ga;30303;USA;High
+Switch and Data-Atlanta;56 Marietta St. NW, 5th/6th Flrs.;Atlanta;ga;30303;USA;High
+Telx-Atlanta;56 Marietta St. NW, 2nd/4th Flrs.;Atlanta;ha;30303;USA;High
+Ancotel-Germany;Kleyerstrasse 90;Frankfurt;frankfurt;60326;Germany;High
+Equinix-Illinois;350 E. Cermak Rd., 5th Flr.;Chicago;Il;60616;USA;High
+Lifeline Data Centers-Indiana;733 W. Henry Street, 2nd Flr.;Indianapolis;IN;46225;USA;High
+Nevada NAP;2475 Arden Ave.;Las Vegas;NV;89104;USA;High
+Equinix-New Jersey;165 Halsey St., 8th Flr;Newark;NJ;7102;USA;High
+Switch and Data-NewYork;111 8th Ave., Ste. 734;New York;NY;10011;USA;High
+Telx-New York;60 Hudson St., 9th Flr.;New York;NY;10013;USA;High
+Cincinnati Bell-Ohio;209 W. 7th St.;Cincinnati;OH;45202;USA;High
+Citynet-Zayo Bldg.;251 Neilston St.;Columbus;OH;43219;USA;High
+Switch and Data-Allegheny Center Mall;100 S. Commons, Ste. 126;Pittsburgh;PA;15212;USA;High
+IRIS-Tennessee;211 Commerce St., Ste. 610;Nashville;Tn;37201;USA;High
+Switch and Data-Suntrust Bldg;147 Fourth Ave., 8th Flr.;Nashville;Tn;37219;USA;High
+XO Communications;101 Molloy St.;Nashville;Tn;37201;USA;High
+Equinix-Texas;1950 N. Stemmons Fwy., Ste. 1034;Dallas;TX;75207;USA;High
+TelecityGroup-Netherlands;Kuiperberweg 13;Amsterdam;Amsterdam;1101 AE;Netherlands;High
+Switch and Data-Toronto;151 Front St., Ste. 514;Toronto;Ontario;M5j 2N1;Canada;High
+Equinix-Virginia;21715 Filigree Ct., Bldg. F;Ashburn;VA;20147;USA;High
+Washington-Westin Bldg.;2001 Sixth Ave., 12th Flr., Ste. 1200;Seattle;wA;98121;USA;High
+5Nines Data-Network222;222 W. Washington Ave., Ste 360;Madison;WI;53703;USA;High
+LABEL;TYPE;LENGTH;NULLS
+label1.label  = NAME;type1.type    = VARCHAR;length1.length  = 150;null1.null = no
+label2.label  = ADDRESS;type2.type    = VARCHAR;length2.length  = 150;null2.null = no
+label3.label  = CITYDESC;type3.type    = VARCHAR;length3.length  = 150;null3.null = no
+label4.label  = STATEDESc;type4.type    = VARCHAR;length4.length  = 150;null4.null = no
+label5.label  = ZIPCODE;type5.type    = VARCHAR;length5.length  = 45;null5.null = yes
+label6.label  = COUNTRYDESC;type6.type    = VARCHAR;length6.length  = 150;null6.null = no
+label7.label  = LOCATIONCRITICALITY;type7.type    = VARCHAR;length7.length  = 45;null7.null = yes

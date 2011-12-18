@@ -1,0 +1,33 @@
+G-Argentina;Costa Rica 5546 Oficina 305 C1053ABH;Buenos Aires;Distrito Federal;;Argentina;
+G-Australia;439-441 Kent St;Sydney,;new south wales;2000;Australia;
+G-Austria;Liniengasse 2a;Vienna;wien;1060;Austria;
+G-Canada;;Calgary;Alberta;;Canada;
+G-Chile;Calle Abdon Somoza;Santiago;Region Metropolitana;;Chile;
+G-Colombia;Calle 85 No. 14-48 Piso 4;Bogotá;Cundinamarca;;Colombia;
+G-Usa;600 W Chicago Ave Ste 620;Chicago;ILLINOIS;60654;Usa;
+G-Finland;Fredrikinkatu 34 B 20;Helsinki;Western Finland;00100 ;Finland;
+G-Germany;Rosenstraße 17;Berlin;Berlin;10178;Germany;
+G-Italy;Corso Buenos Aires 54;Milano;Lombardia;20124;Italy
+G-Japan;Shibuya First Tower 5F 1-2-20 Higashi Shibuya-ku;Tokyo;Tokyo;150-0011;Japan
+G-Malaysia;No. 13, Lorong Tanjong 5/4B Bukit Gasing;Petaling Jaya;Kuala lumpur;46000;Malaysia
+G-Mexico;Homero 418, piso 12;Col. Chapultepec;Zacatecas;11570;Mexico
+G-New Zealand;Level 22, Dla Phillips Fox Tower, 209 Queen Street;Auckland;Auckland;;New Zealand
+G-Norway;Sandakerveien 118,  Oslo Norway;Oslo ;Oslo;484;Norway
+G-Phillipine;Unit 1-D La Fuerza Plaza 1 Compound,2241 Don Chino Roces Avenue;Makati City;Metro Manila;1235;Phillipine
+G-Poland;Ul. Jasna 15;Warsaw;Warsaw;;Poland
+G-Romania;Strada Johannes Kepler, Nr:31, Sector 2;Bucharest;bucuresti;;Romania
+G-Russia;Alexandra Solzhenitsyna street 23a;Moscow;Moscow city;;Russia
+G-Singapore;1 Maritime Square, Harbourfront Centre #10-24/25;Singapore;Singapore;;Singapore
+G-South Africa;12 Loop Street,;Cape town;Western Cape;8001;South Africa
+G-Spain;C/ Génova, 17, 7;Madrid;Madrid;28004;Spain
+G-Switzerland;Heinrichstrasse 267;Zurich;zurich;8002;Switzerland
+G-Uruguay;Avenida Benito Blanco 780,;Montevideo;Montevideo;;Uruguay
+G-United Arab Emirates;Dubai Media City, Building Number 07, ;Dubai;Dubai;;United Arab Emirates
+LABEL;TYPE;LENGTH;NULLS
+label1.label  = NAME;type1.type    = VARCHAR;length1.length  = 150;null1.null = no
+label2.label  = ADDRESS;type2.type    = VARCHAR;length2.length  = 150;null2.null = no
+label3.label  = CITYDESC;type3.type    = VARCHAR;length3.length  = 150;null3.null = no
+label4.label  = STATEDESc;type4.type    = VARCHAR;length4.length  = 150;null4.null = no
+label5.label  = ZIPCODE;type5.type    = VARCHAR;length5.length  = 45;null5.null = yes
+label6.label  = COUNTRYDESC;type6.type    = VARCHAR;length6.length  = 150;null6.null = no
+label7.label  = LOCATIONCRITICALITY;type7.type    = VARCHAR;length7.length  = 45;null7.null = yes

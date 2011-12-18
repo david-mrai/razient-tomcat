@@ -1,0 +1,79 @@
+/** Here you can define the page style **/
+body {
+	background-color: #FFFFFF;	
+}
+/** Here you can define the presentation style of a single text **/
+p {font-weight: mediun;
+     font-style: plain;
+     font-size: 14pt;
+     font-family: Bookman Old Style;
+     color: #000066;
+     text-align: Center;
+}
+/**  Here you can define the presentation style of the table 
+     th: Table title (Default) 
+     .header has priority over th 
+**/
+  td  
+      th {font-weight: mediun;
+          font-style: plain;
+          font-size: 10pt;
+          font-family: Verdana;
+          background-color: #FFFFFF; 
+          color: #000000; 
+		 }
+      td {font-weight: mediun;
+          font-style: plain;
+          font-size: 10pt;
+          font-family: Verdana;
+          color: #000000; 
+		 }
+
+/** Here you can define the presentation style of the title **/
+.headTitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #000099;
+	text-decoration: none;
+	text-align: center;
+
+}
+/**  Here you can define the style of the help condition **/
+.helpCondition {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: capitalize;
+	text-decoration: none;
+}
+/**  Here you can define the home link style**/
+.indexLink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: capitalize;
+	text-decoration: underline;
+}
+table {
+	background-color: #FFFFFF;
+	border: none;
+}
+.errorMessage {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: capitalize;
+	color: #006666;
+	text-decoration: blink;
+	text-align: center;
+}

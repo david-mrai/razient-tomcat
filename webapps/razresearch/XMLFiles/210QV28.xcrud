@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Document_CRUD>
+    <Nomenclature>210QV28</Nomenclature>
+    <FrameSize>182</FrameSize>
+    <PageStyle>
+        <Background>
+            <Color>#FFFFFF</Color>
+        </Background>
+        <Screen_Title></Screen_Title>
+        <Title>
+            <Label>All Incidents By State</Label>
+            <Size>3</Size>
+            <Color>#000000</Color>
+            <Face>Arial</Face>
+            <Style>bold</Style>
+            <Align>Center</Align>
+        </Title>
+        <Columns>2</Columns>
+        <SubmitButton visible="yes" location="under" align="Center">
+            <Label>Ok</Label>
+        </SubmitButton>
+        <ResetButton visible="yes" location="under" align="Center">
+            <Label>Cancel</Label>
+        </ResetButton>
+        <locale>
+            <language>en</language>
+            <country>US</country>
+            <dateFormat>MM-dd-yyyy</dateFormat>
+            <timeFormat>hh:mm:ss</timeFormat>
+        </locale>
+    </PageStyle>
+    <XSQLData>
+        <ComponentNames>
+            <ApplicationName>razresearch</ApplicationName>
+            <XBRFSource>21021039brf</XBRFSource>
+            <Function>XBRFResolver</Function>
+            <XSLName>210QV28</XSLName>
+            <JSPName>MCM210QV28DE210SC28</JSPName>
+            <BODYName>210QV28</BODYName>
+            <BeanName></BeanName>
+        </ComponentNames>
+        <Connection>
+            <NameCx>globalincidents</NameCx>
+            <DataBaseId>5</DataBaseId>
+        </Connection>
+        <Data>
+            <Name>210SQL32</Name>
+            <Sentence>SELECT reportnewsglobalincident.country,reportnewsglobalincident.state,reportnewsglobalincident.city,reportnewsglobalincident.type,reportnewsglobalincident.latitude + COUNT( reportnewsglobalincident.type) -  reportnewsglobalincident.latitude FROM razient.reportnewsglobalincident AS reportnewsglobalincident WHERE (reportnewsglobalincident.country=@country) AND (reportnewsglobalincident.state=@state) AND(reportnewsglobalincident.dateNews&gt;=@fromdate) AND(reportnewsglobalincident.dateNews&lt;=@todate) AND(reportnewsglobalincident.type=@type) GROUP BY reportnewsglobalincident.state,reportnewsglobalincident.city ORDER BY reportnewsglobalincident.state ASC,reportnewsglobalincident.city ASC</Sentence>
+            <Out_Fields>
+                <Out_Field>
+                    <Code>1</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>country</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.country</KeyName>
+                    <VariableName>@country</VariableName>
+                    <FillFunction>state</FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>Country</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>300</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Select"  align="Center"  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color="#000000"  bgcolor="#000000"  size="1"  maxlength=""  readonly=""  disabled="false"  jsrs="yes"  font="Arial"  fontstyle="0"  fontsize="2" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "IS" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>2</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>dateNews</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.dateNews</KeyName>
+                    <VariableName>@fromdate</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>java.sql.Date</Type>
+                    <Label>dateNews</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>10</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>Yes</WriteInSession>
+                    <SessionVariableName>globalincidents__razient__reportnewsglobalincident__dateNews__fromdate</SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align="Center"  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color="#000000"  bgcolor="#000000"  size="10"  maxlength=""  readonly="yes"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="2" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>3</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>state</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.state</KeyName>
+                    <VariableName>@state</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>State</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>300</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Select"  align="Center"  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color="#000000"  bgcolor="#000000"  size="1"  maxlength=""  readonly=""  disabled="false"  jsrs="yes"  font="Arial"  fontstyle="0"  fontsize="2" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "IS" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>4</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>dateNews</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.dateNews</KeyName>
+                    <VariableName>@todate</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>java.sql.Date</Type>
+                    <Label>dateNews</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>10</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>Yes</WriteInSession>
+                    <SessionVariableName>globalincidents__razient__reportnewsglobalincident__dateNews__todate</SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align="Center"  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color="#000000"  bgcolor="#000000"  size="10"  maxlength=""  readonly="yes"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="2" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>5</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>type</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.type</KeyName>
+                    <VariableName>@type</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>true</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>Type</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>400</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Select"  align="Center"  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color="#000000"  bgcolor="#000000"  size="1"  maxlength=""  readonly=""  disabled="false"  jsrs="yes"  font="Arial"  fontstyle="0"  fontsize="2" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "IS" validate_fx = "false" obligatory = "false" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+            </Out_Fields>
+        </Data>
+            <LookUpFields>
+                <LookUpField>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>dateNews</Name>
+                    <KeyName>reportnewsglobalincident.dateNews</KeyName>
+                    <VariableName>fromdate</VariableName>
+                    <Label>dateNews</Label>
+                    <LookUpType>LookUpCalendar</LookUpType>
+                    <ReadOnly>yes</ReadOnly>
+                    <LookUpId>210QV28fromdate</LookUpId>
+                    <JavaScriptFile>js/210QV28fromdate.js</JavaScriptFile>
+                </LookUpField>
+                <LookUpField>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>dateNews</Name>
+                    <KeyName>reportnewsglobalincident.dateNews</KeyName>
+                    <VariableName>todate</VariableName>
+                    <Label>dateNews</Label>
+                    <LookUpType>LookUpCalendar</LookUpType>
+                    <ReadOnly>yes</ReadOnly>
+                    <LookUpId>210QV28todate</LookUpId>
+                    <JavaScriptFile>js/210QV28todate.js</JavaScriptFile>
+                </LookUpField>
+            </LookUpFields>
+            <JsrsFields>
+                <JsrsField>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>@country</Name>
+                    <KeyName>reportnewsglobalincident.country</KeyName>
+                    <XBrf>21021025brf</XBrf>
+                    <FillFunction>state</FillFunction>
+                </JsrsField>
+                <JsrsField>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>@type</Name>
+                    <KeyName>reportnewsglobalincident.type</KeyName>
+                    <XBrf>21021028brf</XBrf>
+                    <FillFunction></FillFunction>
+                </JsrsField>
+            </JsrsFields>
+            <JsrsDropBoxes>
+                <JsrsDropBox>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>state</Name>
+                    <KeyName>reportnewsglobalincident.state</KeyName>
+                    <XBrf>21021026brf</XBrf>
+                    <ComboName>@state</ComboName>
+                    <FillFunction></FillFunction>
+                    <BRFvars>
+                        <BRFvar>
+                            <Order>1</Order>
+                            <Name>@country</Name>
+                            <BRFCombo>@country</BRFCombo>
+                        </BRFvar>
+                    </BRFvars>
+                </JsrsDropBox>
+            </JsrsDropBoxes>
+    </XSQLData>
+</Document_CRUD>

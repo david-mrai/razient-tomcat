@@ -1,0 +1,73 @@
+<span xmlns:ice="http://www.icesoft.com/icefaces/component" xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jstl/core" xmlns:f="http://java.sun.com/jsf/core" >
+	
+	<param name="question" value="#{value}"/>
+		
+		
+		<tr class="trrowSurvey">
+											<td>&amp;nbsp</td>
+											<td >
+												<h:outputLabel >
+													<h:outputText value="#{question.name}"></h:outputText>
+												</h:outputLabel>
+											</td>
+											<td style="border-left: #C3DFF4 1px solid;">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+											<td style="font-weight:normal;">
+												<h:outputLabel>
+													<h:outputText value="#{question.label}"></h:outputText>
+												</h:outputLabel>
+											</td>
+											<td style="border-left: #C3DFF4 1px solid;">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+											<td align="center">
+												 <c:if test="${question.isQuestion == 'T'}">
+													  <c:if test="${question.razientQuestionTypeIdrazientQuestionType == 2}">
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_radio.png"/>
+													 </c:if>
+													  <c:if test="${question.razientQuestionTypeIdrazientQuestionType == 5}">
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_check.png"/>
+													 </c:if>
+													 <c:if test="${question.razientQuestionTypeIdrazientQuestionType == 3}">
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_text.png"/>
+													 </c:if>
+													 <c:if test="${question.razientQuestionTypeIdrazientQuestionType == 4}">
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_fileupload.png"/>
+													 </c:if>
+													 <c:if test="${question.razientQuestionTypeIdrazientQuestionType == 7}">
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_radio.png"/>
+														&amp;nbsp&amp;nbsp
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_fileupload.png"/>
+													 </c:if>
+													 <c:if test="${question.razientQuestionTypeIdrazientQuestionType == 8}">
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_text.png"/>
+														&amp;nbsp&amp;nbsp
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_fileupload.png"/>
+													 </c:if>
+													 <c:if test="${question.razientQuestionTypeIdrazientQuestionType == 9}">
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_check.png"/>
+														&amp;nbsp&amp;nbsp
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_fileupload.png"/>
+													 </c:if>
+													 <c:if test="${question.razientQuestionTypeIdrazientQuestionType == 10}">
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_date.png"/>
+													 </c:if>
+													 <c:if test="${question.razientQuestionTypeIdrazientQuestionType == 11}">
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_date.png"/>
+														&amp;nbsp&amp;nbsp
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_fileupload.png"/>
+													 </c:if>
+												</c:if>
+												<c:if test="${question.isQuestion == 'F'}">
+													<h:outputLabel >
+														<h:outputText value="#{bundle['rz_admin_surveymanager.questions.level']}"></h:outputText>
+													</h:outputLabel>
+												</c:if>
+											</td>
+											<td style="border-right: #C3DFF4 1px solid;">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+											<td style="font-size:10px;">
+												<h:outputLabel value="#{question.answerLabels}"></h:outputLabel>
+											</td>
+											<td>&amp;nbsp</td>
+		</tr>
+		
+		
+</span>
+	

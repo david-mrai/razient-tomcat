@@ -1,0 +1,33 @@
+/** Here you can define the presentation style of the fields forms **/
+
+input{
+      font-size: 10px; 
+}
+
+select{
+      font-size: 10px; 
+}
+                 
+   	
+/**  Here you can define the presentation style of the table 
+     Table title (Default) 
+**/
+
+.frmtable{	
+	background-color: #FAFCFC; 
+	color: #000000;
+	border: 1px solid #FAFCFC; 
+	border-collapse: collapse; 
+}
+
+/**  Here you can define the presentation style of the table 
+     Table value (Default) : TD
+**/
+
+.frmtdvalue {
+      border: 1px solid #E1E3E8; 
+	background-color: #F5F7F8; 
+	padding-left: 4px; 
+}
+
+

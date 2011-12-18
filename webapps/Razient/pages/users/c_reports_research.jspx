@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ice="http://www.icesoft.com/icefaces/component">
+   <jsp:directive.page contentType="text/html;charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+   <f:view>
+   		<ice:outputDeclaration 
+            doctypeRoot="html" 
+            doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN" 
+            doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" /> 
+    <html>
+       <head>
+         	<title>Index (Razient)</title>
+         	<meta content="no-cache" http-equiv="Cache-Control" />
+        	<meta content="no-cache" http-equiv="Pragma" />
+       </head>
+       <body>
+       
+        	<!-- template="#{templateBean.templateContent}"-->
+			<ui:composition
+			        template="../../include/templates/pages/modeB_customer.jspx"
+			        xmlns:h="http://java.sun.com/jsf/html"
+			        xmlns:f="http://java.sun.com/jsf/core"
+			        xmlns:c="http://java.sun.com/jstl/core"
+			        xmlns:ice="http://www.icesoft.com/icefaces/component"
+			        xmlns:ui="http://java.sun.com/jsf/facelets" >
+			
+			  <!-- params for page titles-->
+			 		 <!--<f:loadBundle basename="truckandi.view.bundle.Message" var="bundle"/>
+			        <ui:param name="pageTitle" value="#{bundle['tai_login.title']}" />-->
+					<ui:param name="pageTitle" value="#{bundle['c_dh.hazardousincidents']}" />
+				
+				<ui:define name="header_menu_value">
+						<table cellspacing="0" cellpadding="0">
+										<tr>
+											<td>
+											<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_dash_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'" />
+													<f:attribute name="optioonselected" value="dh"/>
+											</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Compliance}">
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_comp_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'" />
+													<f:attribute name="optioonselected" value="cp_sm"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}"  visible="#{users_MenuBarBean.visible_C_GlobalIncidents}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_global_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'" />
+													<f:attribute name="optioonselected" value="gi_al"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>																							
+													<ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/#{folderBean.folder_menu}/risk_rep_2.png"  visible="#{users_MenuBarBean.visible_C_Reports}"/>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Reports}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_research_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_2.png'" />
+														<f:attribute name="optioonselected" value="rs_in"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Administration}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'" />
+														<f:attribute name="optioonselected" value="ad_um"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<!--<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_SuppliersView}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_supp_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'" />
+														<f:attribute name="optioonselected" value="sv_sp"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											--><td>
+												<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Ratings}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_ratings_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'" />
+														<f:attribute name="optioonselected" value="rt_vr"/>
+												</ice:commandLink>
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_ratings_3.png"/>-->
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_RequestForProposal}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'" />
+														<f:attribute name="optioonselected" value="rp_ps"/>
+												</ice:commandLink>-->
+												<!--<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_3.png"/>-->
+											</td>
+											<!--<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Contracts}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_contracts_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'" />
+													<f:attribute name="optioonselected" value="ct_av"/>
+												</ice:commandLink>
+											</td>-->
+										</tr>
+								</table>	
+				</ui:define>
+			    
+			    <ui:define name="page-menu-value">
+			    	 <ice:form>
+			    	 
+			    	 <ice:graphicImage visible="true"  styleClass="menuPosA"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_down_globalincidents.png" />
+									
+					<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 	<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_contracts.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_contracts.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_contracts.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_contracts.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_contracts.png'" />
+						<f:attribute name="optioonselected" value="rp_ct"/>
+					</ice:commandLink>
+					<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 	<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_summary.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_summary.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_summary.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_summary.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_summary.png'" />
+						<f:attribute name="optioonselected" value="rp_sm"/>
+					</ice:commandLink>
+					 <!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 	<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_vendorratings.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_vendorratings.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_vendorratings.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_vendorratings.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_vendorratings.png'" />
+						<f:attribute name="optioonselected" value="rp_vr"/>
+					</ice:commandLink>
+					<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+						<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_vulnerabilities.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_vulnerabilities.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_vulnerabilities.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_vulnerabilities.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_vulnerabilities.png'" />
+						<f:attribute name="optioonselected" value="rp_vn"/>
+					</ice:commandLink>	-->
+				<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">					
+						<ice:graphicImage visible="true"  styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_by#{entityTypeBundle.type_Customer}.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_by#{entityTypeBundle.type_Customer}.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_by#{entityTypeBundle.type_Customer}.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_by#{entityTypeBundle.type_Customer}.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_by#{entityTypeBundle.type_Customer}.png'" />
+						<f:attribute name="optioonselected" value="rp_be"/>
+					</ice:commandLink>
+					<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">					
+						<ice:graphicImage visible="true"  styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_byall#{entityTypeBundle.type_Customer}.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_byall#{entityTypeBundle.type_Customer}.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_byall#{entityTypeBundle.type_Customer}.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_byall#{entityTypeBundle.type_Customer}.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_byall#{entityTypeBundle.type_Customer}.png'" />
+						<f:attribute name="optioonselected" value="rp_ba"/>
+					</ice:commandLink>
+					    <ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_one.png"/>
+								
+					 </ice:form> 	
+			    </ui:define>
+			    
+				<ui:define name="page-content-value">
+
+
+				<table class="data" width="100%" border="0" cellpadding="1" cellspacing="0" style="margin-left:-10px;margin-top:0px;font-family: Arial,Verdana,  Helvetica, sans-serif;">
+	              <tbody>
+	                <tr>
+	                  <td valign="top">
+	                  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+	                    <tbody>
+						<tr>
+	                        <td bgcolor="#e1e6e8" valign="top">
+	                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+	                          <tbody>
+	                            <tr>
+	                              <td style="padding: 3px 8px 8px;">
+	                              <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+	                                <tbody>
+	                                  <tr>
+	                                    <td rowspan="2" style="background-repeat: repeat-x;" background="./css/images/general/dashcontent_header.png"  bgcolor="#ffffff"  valign="top">
+	                                    
+                                    
+					<ice:form>
+                                <table id="tab0" style="display:block;" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                  <tbody>
+                                    <tr>
+                                      
+                                      <td style="border-right: 1px solid rgb(239, 239, 239);" valign="top">
+                                       <table width="100%" border="0" cellpadding="5" cellspacing="0">
+                                        <tbody>
+                                          <tr>
+                                            <td height="41" valign="top"><strong>#{bundle['c_reports_research.title1']}</strong></td>
+                                          </tr>
+                                          <tr>
+                                            <td bgcolor="#ffffff">
+                                              <br/>
+                                              <table class="tabularmetricsNewView"  style="border-left: 1px solid rgb(217, 217, 217);" width="100%" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                  <tr >
+													<td align="center" class="trrowtitle" colspan="1">
+															<h:outputLabel>
+																<h:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_reports_research.graph1.dateFrom']} : "></h:outputText>
+															</h:outputLabel>
+													</td>
+													<td class="tableffieldleft" colspan="1">
+														<ice:selectInputDate id="fromDate" renderMonthAsDropdown="true" renderYearAsDropdown="true" required="true"  
+																value="#{metricsBarsRiskLevelIncidentChartBean.dFrom}" title="from Date"
+																renderAsPopup="true" styleClass="fieldsimpledates" >
+																<f:convertDateTime pattern="#{bundle['rz_calendar.format.a']}" timeZone="default"/>
+														</ice:selectInputDate>
+													</td>
+													<td align="center" class="trrowtitle" colspan="1">
+															<h:outputLabel>
+																<h:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_reports_research.graph1.dateTo']} : "></h:outputText>
+															</h:outputLabel>
+													</td>
+													<td class="tableffieldleft" colspan="1">
+														<ice:selectInputDate id="toDate" renderMonthAsDropdown="true" renderYearAsDropdown="true" required="true"  
+																value="#{metricsBarsRiskLevelIncidentChartBean.dTo}" title="from To"
+																renderAsPopup="true" styleClass="fieldsimpledates" >
+																<f:convertDateTime pattern="#{bundle['rz_calendar.format.a']}" timeZone="default"/>
+														</ice:selectInputDate>
+													</td>
+								  	 				<td align="center" colspan="2">
+								  	 					<ice:commandLink action="#{metricsBarsRiskLevelIncidentChartBean.find_x_Items_Action_Date}"  onclick="rld();">
+															<ice:graphicImage height="25;" width="25;" styleClass="noborder" 
+																url="./css/images/#{folderBean.folder_menu}/icons/menu_up_graphsurvey.png"
+																onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_graphsurvey.png'"
+																onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_graphsurvey.png'"
+																
+																/>
+														</ice:commandLink>
+													</td>													
+												  </tr>
+
+                                                 </tbody>
+                                         		</table>
+                                         		<br/>
+                                         	<table class="tabularmetricsNewView"  style="border-left: 1px solid rgb(217, 217, 217);" width="100%" cellpadding="0" cellspacing="0">
+                                               <tbody>
+                                                 <tr >
+                                                   <td  align="left" class="trrowtitle" width="45%"><ice:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_reports_research.graph1.ir']}" /></td>
+                                                   <td  align="center" class="odd"   width="45%">
+                                                   		<ice:outputText styleClass="titleLabelDhMetrics"  value="#{bundle['c_reports_research.graph1.previous']} #{metricsBarsRiskLevelIncidentChartBean.sPeriod}  #{bundle['c_reports_research.graph1.hours']}" />
+												</td>
+                                                 </tr>
+                                                 <tr >
+                                                   <td  align="left" class="trrowtitle" width="45%"><ice:outputLabel styleClass="titleLabelDhMetricsvalue" >#{entityTypeBundle.entity_ofs} #{bundle['c_reports_research.graph1.supp.impac50']}</ice:outputLabel></td>
+                                                   <td  align="center" class="odd"   width="45%">
+                                                   		<ice:outputText styleClass="titleLabelDhMetrics"  value="#{metricsBarsRiskLevelIncidentChartBean.supp50mils}" />
+												</td>
+                                                 </tr>
+                                                 <tr >
+                                                   <td  align="left" class="trrowtitle" width="45%"><ice:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_reports_research.graph1.critical']}" /></td>
+                                                   <td  align="center" class="trrowcriticalrisk"   width="45%">
+                                                   		<ice:outputText styleClass="titleLabelDhMetricsvalue"  value="#{metricsBarsRiskLevelIncidentChartBean.critical}" />
+												</td>
+                                                 </tr>
+                                                 <tr >
+                                                   <td  align="left" class="trrowtitle" width="45%"><ice:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_reports_research.graph1.high']}" /></td>
+                                                   <td  align="center" class="trrowhighrisk"   width="45%">
+                                                   		<ice:outputText styleClass="titleLabelDhMetricsvalue"  value="#{metricsBarsRiskLevelIncidentChartBean.high}" />
+												</td>
+                                                 </tr>
+                                                 <tr >
+                                                   <td  align="left" class="trrowtitle" width="45%"><ice:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_reports_research.graph1.medium']}" /></td>
+                                                   <td  align="center" class="trrowmediumrisk"   width="45%">
+                                                   		<ice:outputText styleClass="titleLabelDhMetricsvalue"  value="#{metricsBarsRiskLevelIncidentChartBean.medium}" />
+													</td>
+                                                 </tr>
+												 <tr >
+                                                   <td  align="left" class="trrowtitle" width="45%"><ice:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_reports_research.graph1.low']}" /></td>
+                                                   <td  align="center" class="trrowlowrisk"   width="45%">
+                                                   		<ice:outputText styleClass="titleLabelDhMetricsvalue"  value="#{metricsBarsRiskLevelIncidentChartBean.low}" />
+													</td>
+                                                 </tr>                                                 
+                                               </tbody>
+                                             </table>
+                                              <br/>
+                                             <ice:panelGroup >
+												<ice:panelGrid>
+													<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+														width="430" height="320" id="levelmarginal"
+														codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0″">
+														<param name="movie" value="fusioncharts/Column3D.swf" />
+														<param name="FlashVars"
+															value="&amp;dataURL=./fusioncharts/customer/#{metricsBarsRiskLevelIncidentChartBean.idCustomer}/dh/risklevel_supplier#{metricsBarsRiskLevelIncidentChartBean.sPeriod}.xml&amp;noCache=#{metricsBarsRiskLevelIncidentChartBean.sCache}" />
+														<param name="quality" value="high" />
+														<embed src="./fusioncharts/Column3D.swf"
+															flashVars="&amp;dataURL=./fusioncharts/customer/#{metricsBarsRiskLevelIncidentChartBean.idCustomer}/dh/risklevel_supplier#{metricsBarsRiskLevelIncidentChartBean.sPeriod}.xml&amp;noCache=#{metricsBarsRiskLevelIncidentChartBean.sCache}"
+															quality="high" width="430" height="320" name="levelmarginal"
+															type="application/x-shockwave-flash"
+															pluginspage="http://www.macromedia.com/go/getflashplayer" />
+													</object>
+												</ice:panelGrid>
+											</ice:panelGroup>
+                                        </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      </td>
+                                      <td style="border-right: 1px solid rgb(239, 239, 239);" valign="top">
+                                      <table width="100%" border="0" cellpadding="5" cellspacing="0">
+                                        <tbody>
+                                          <tr>
+                                            <td height="41"><strong>#{entityTypeBundle.entity_ofs} #{bundle['c_reports_research.title2']}</strong></td>
+                                          </tr>
+                                          <tr>
+                                            <td bgcolor="#ffffff">
+                                            <br/>
+                                           	<table class="tabulartableView"  style="border-left: 1px solid rgb(217, 217, 217);" width="100%" cellpadding="0" cellspacing="0">
+                                               <tbody>
+                                                 <tr>
+                                                 <td>
+                                                   <ice:panelGroup id="icePanelRR">
+													<div>
+														<ice:dataTable resizable="false"
+															border="0" id="tableRRGirn"
+															value="#{researchGridBean.allCrudBeans}"
+															var="dRRBean" width="100%"
+															rows="#{researchGridBean.selectedDataScrollModes[researchGridBean.selectedDataScrollMode].rows}"
+															scrollable="#{researchGridBean.selectedDataScrollModes[researchGridBeanselectedDataScrollMode].scrollingEnabled}"
+															style="float:left;margin-left:2px"
+															columnWidths="50%,20%,20%"
+															columnClasses="columnLeft,columnLeft,columnRight"
+															rowClasses="rowOn,rowOff"
+															cellpadding="0">
+															<ice:column>
+																<f:facet name="header">
+																	<ice:outputText 
+																		value="#{bundle['c_reports_research.graph2.it']}"></ice:outputText>
+																</f:facet>
+																<h:outputText id="incidenttype"
+																	value="#{dRRBean.incident}"
+																	style="color: #424242; font-style: normal; font-size: 10px;"></h:outputText>
+															</ice:column>
+															<ice:column>
+																<f:facet name="header">
+																	<ice:outputText 
+																		value="#{bundle['c_reports_research.graph2.rl']}"></ice:outputText>
+																</f:facet>
+																<h:outputText id="risklevel"
+																	value="#{dRRBean.severityLevel}"
+																	style="color: #808080; font-style: normal; font-size: 10px;"></h:outputText>
+															</ice:column>
+															<ice:column style="text-align:center;">
+																<f:facet name="header">
+																	<ice:outputText 
+																		value="#{entityTypeBundle.entity_ofs} #{bundle['c_reports_research.graph2.supp']}"></ice:outputText>
+																</f:facet>
+																<h:outputText id="numberimpacted"
+																	style="color: #808080; font-style: normal; font-size: 10px;"
+																	value="#{dRRBean.numberofincidents}"></h:outputText>
+															</ice:column>
+														</ice:dataTable>
+													</div>
+													</ice:panelGroup>
+                                               	</td>
+                                                </tr>
+                                                </tbody>
+                                                </table>
+                                                <table>
+                                                <tbody>
+												<tr>
+													<td>
+														<ice:panelGroup
+															style="float:center;width:500px;">
+															<div>
+																<center>
+																	<ice:dataPaginator
+																		id="dataScroll_tableRRGirn"
+																		rendered="#{researchGridBean.selectedDataScrollModes[researchGridBean.selectedDataScrollMode].pagingEnabled}"
+																		for="tableRRGirn" vertical="false"
+																		fastStep="3" paginator="true"
+																		paginatorMaxPages="5">
+																		<f:facet name="first">
+																			<ice:graphicImage id="firstpage_1"
+																				url="./css/rime/css-images/arrow-first.gif"
+																				style="border:none;" title="first" />
+																		</f:facet>
+																		<f:facet name="last">
+																			<ice:graphicImage id="lastpage_1"
+																				url="./css/rime/css-images/arrow-last.gif"
+																				style="border:none;" title="last" />
+																		</f:facet>
+																		<f:facet name="previous">
+																			<ice:graphicImage id="previouspage_1"
+																				url="./css/rime/css-images/arrow-previous.gif"
+																				style="border:none;" title="previous" />
+																		</f:facet>
+																		<f:facet name="next">
+																			<ice:graphicImage id="nextpage_1"
+																				url="./css/rime/css-images/arrow-next.gif"
+																				style="border:none;" title="next" />
+																		</f:facet>
+																		<f:facet name="fastforward">
+																			<ice:graphicImage id="fastforward_1"
+																				url="./css/rime/css-images/arrow-ff.gif"
+																				style="border:none;" title="ff" />
+																		</f:facet>
+																		<f:facet name="fastrewind">
+																			<ice:graphicImage id="fastrewind_1"
+																				url="./css/rime/css-images/arrow-fr.gif"
+																				style="border:none;" title="fr" />
+																		</f:facet>
+																	</ice:dataPaginator>
+																</center>
+															</div>
+														</ice:panelGroup>
+													</td>
+												</tr>                                                
+                                               </tbody>
+                                             </table>
+                                             <br/>
+			                                     <ice:panelGroup >
+														<ice:panelGrid>
+															<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+																width="460" height="320" id="Pie2Did"
+																codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0″">
+																<param name="movie" value="fusioncharts/Pie2D.swf" />
+																<param name="FlashVars"
+																	value="&amp;dataURL=./fusioncharts/customer/#{metricsBarsRiskLevelIncidentChartBean.idCustomer}/dh/risklevel_supp_impacted.xml&amp;" />
+																<param name="quality" value="high" />
+																<embed src="./fusioncharts/Pie2D.swf"
+																	flashVars="&amp;dataURL=./fusioncharts/customer/#{metricsBarsRiskLevelIncidentChartBean.idCustomer}/dh/risklevel_supp_impacted.xml&amp;"
+																	quality="high" width="460" height="320" name="Pie2D"
+																	type="application/x-shockwave-flash"
+																	pluginspage="http://www.macromedia.com/go/getflashplayer" />
+															</object>
+														</ice:panelGrid>
+												</ice:panelGroup>
+                                           </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      </td>
+                                      
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                
+                                </ice:form>
+                                
+                                </td>
+		                        </tr>
+		
+		                       </tbody>
+		                      </table>
+		                      <br/>
+		                      <br/>
+		                       </td>
+		                   	</tr>
+		                   </tbody>
+		                        </table>
+		                        </td>
+		                      </tr>
+		                    </tbody>
+		                  </table>
+                  		</td>
+                      </tr>
+					 </tbody>
+                  </table>
+
+				</ui:define>
+			</ui:composition>
+       </body>
+    </html>
+   </f:view>
+</jsp:root>

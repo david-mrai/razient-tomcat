@@ -1,0 +1,76 @@
+<?xml version='1.0'?>
+<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Report Survey' subCaption='Risk Assessment-Executive-User'  numberPrefix='' formatNumber='1' decimals='0' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' palette='4' >
+<!-- Data for single series chart -->
+	<set label='Survey Not Started' value='11' color='C0504D'   	link='newchart-xml-1-nonstarted'	/>
+	<set label='Survey Complete' value='1' color='63A06D'		link='newchart-xml-2-complete' 	/>
+	<set label='Survey Incomplete' value='3' color='DDDD00'	link='newchart-xml-3-incomplete'	/>
+<!-- Data for multi-series stacked and combination chart -->
+    <linkeddata id='1-nonStarted'>
+		<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Suppliers' subCaption=''  numberPrefix='' formatNumber='1' decimals='0' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' palette='1' >
+			<set label='611 Bayview-BB' value='1' />
+	<set label='612 Bayview-MW' value='2' />
+	<set label='620 Bayview-JF' value='3' />
+	<set label='623 Bayview-JH' value='4' />
+	<set label='625 Bayview-RO' value='5' />
+	<set label='626 Bayview-BE' value='6' />
+	<set label='627 Bayview-DE' value='7' />
+	<set label='628 Bayview-WS' value='8' />
+	<set label='630 Bayview-SB' value='9' />
+	<set label='631 Bayview-DB' value='10' />
+	<set label='632 Bayview-KF' value='11' />
+
+    <styles>
+       <definition>
+           <style name='myLabelsFont' type='font' font='Arial' size='12' color='666666' bold='0' underline='0'/>
+            <style name='myShadow' type='Shadow' color='999999' angle='45'/>
+       </definition>
+        <application>
+            <apply toObject='DataLabels' styles='myLabelsFont,myShadow' />
+        </application>
+     </styles>
+	</chart>
+	</linkeddata>
+
+    <linkeddata id='2-complete'>
+		<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Suppliers' subCaption=''  numberPrefix='' formatNumber='1' decimals='0' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' palette='1' >
+			<set label='624 Bayview-JD' value='1' />
+
+    <styles>
+       <definition>
+           <style name='myLabelsFont' type='font' font='Arial' size='12' color='666666' bold='0' underline='0'/>
+            <style name='myShadow' type='Shadow' color='999999' angle='45'/>
+       </definition>
+        <application>
+            <apply toObject='DataLabels' styles='myLabelsFont,myShadow' />
+        </application>
+     </styles>
+	</chart>
+	</linkeddata>
+
+    <linkeddata id='3-incomplete'>
+		<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Suppliers' subCaption=''  numberPrefix='' formatNumber='1' decimals='0' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' palette='1' >
+			<set label='621 Bayview-TW' value='1' />
+	<set label='622 Bayview-MS' value='2' />
+	<set label='633 Bayview-BR' value='3' />
+
+    <styles>
+       <definition>
+           <style name='myLabelsFont' type='font' font='Arial' size='12' color='666666' bold='0' underline='0'/>
+            <style name='myShadow' type='Shadow' color='999999' angle='45'/>
+       </definition>
+        <application>
+            <apply toObject='DataLabels' styles='myLabelsFont,myShadow' />
+        </application>
+     </styles>
+	</chart>
+	</linkeddata>
+
+    <styles>
+       <definition>
+           <style name='myLabelsFont' type='font' font='Arial' size='12' color='666666' bold='0' underline='0'/>
+       </definition>
+        <application>
+            <apply toObject='DataLabels' styles='myLabelsFont,myShadow' />
+        </application>
+     </styles>
+</chart>

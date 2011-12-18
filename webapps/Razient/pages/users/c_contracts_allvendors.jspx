@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ice="http://www.icesoft.com/icefaces/component">
+   <jsp:directive.page contentType="text/html;charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+   <f:view>
+   		<ice:outputDeclaration 
+            doctypeRoot="html" 
+            doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN" 
+            doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" /> 
+    <html>
+       <head>
+         <title>Index (Razient)</title>
+       </head>
+       <body>
+       
+        	<!-- template="#{templateBean.templateContent}"-->
+			<ui:composition
+			        template="../../include/templates/pages/modeB_customer.jspx"
+			        xmlns:h="http://java.sun.com/jsf/html"
+			        xmlns:f="http://java.sun.com/jsf/core"
+			        xmlns:c="http://java.sun.com/jstl/core"
+			        xmlns:ice="http://www.icesoft.com/icefaces/component"
+			        xmlns:ui="http://java.sun.com/jsf/facelets" >
+			
+			  <!-- params for page titles-->
+			 		 <!--<f:loadBundle basename="truckandi.view.bundle.Message" var="bundle"/>
+			        <ui:param name="pageTitle" value="#{bundle['tai_login.title']}" />-->
+					<ui:param name="pageTitle" value="#{bundle['c_contracts_allvendors.title']}" />
+				
+				<ui:define name="header_menu_value">
+						<table cellspacing="0" cellpadding="0">
+										<tr>
+											<td>
+											<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_dash_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'" />
+													<f:attribute name="optioonselected" value="dh"/>
+											</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Compliance}">
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_comp_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'" />
+													<f:attribute name="optioonselected" value="cp_sm"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}"  visible="#{users_MenuBarBean.visible_C_GlobalIncidents}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_global_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'" />
+													<f:attribute name="optioonselected" value="gi_al"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_SuppliersView}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_supp_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'" />
+													<f:attribute name="optioonselected" value="sv_sp"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Ratings}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_ratings_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'" />
+														<f:attribute name="optioonselected" value="rt_vr"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_RequestForProposal}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'" />
+														<f:attribute name="optioonselected" value="rp_ps"/>
+												</ice:commandLink>-->
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_3.png"/>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>																							
+													<ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/#{folderBean.folder_menu}/risk_contracts_2.png"  visible="#{users_MenuBarBean.visible_C_Contracts}"/>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Reports}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_rep_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'" />
+														<f:attribute name="optioonselected" value="rp_ct"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Administration}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'" />
+														<f:attribute name="optioonselected" value="ad_um"/>
+												</ice:commandLink>
+											</td>
+										</tr>
+								</table>	
+				</ui:define>
+			    
+			    <ui:define name="page-menu-value">
+			    	 <ice:form>
+			    	 
+					 <ice:graphicImage visible="true" style="border:none;"
+								styleClass="noborder"
+								url="./css/images/#{folderBean.folder_menu}/risk_menu_down_allvendors.png" />
+					<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 	<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_contractmanager.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_contractmanager.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_contractmanager.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_contractmanager.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_contractmanager.png'" />
+								<f:attribute name="optioonselected" value="ct_cm"/>
+					</ice:commandLink>	
+					  	
+					    
+					 </ice:form> 	
+			    </ui:define>
+			    
+				<ui:define name="page-content-value">
+				<span class="style7">Review outstanding contracts for all vendors and show ratings of contracts    that can be rated for all vendors</span>
+					 <br/>
+					 <br/>
+					 <table border="1" cellpadding="5" cellspacing="0" class="tabularView" align="left" style="border:#EFF2FF 3px ">
+			              <tr bgcolor="#3C7FB1" style="color:#FFFFFF">
+				              <th class="bdrLeft" align="left">List of contracts up for renewal <img src="../images/sortDown.png" width="11" height="7" /></th>
+				              <th>Contract Name <img src="./css/images/general/sortDown.png" width="11" height="7" /></th>
+				              <th align="left">Renewal Date <img src="./css/images/general/sortDown.png" width="11" height="7" /></th>
+				              <th width="180" align="left">Notes</th>
+				              <th align="left">Contract Fee</th>
+				              <th align="left">Email Request to Vendor</th>
+				              <th align="left">Prior Year Performance rating</th>
+				              <th align="left">Prior Year Contract</th>
+				              <th class="bdrRight" align="left">Auto Renews</th>
+			              </tr>
+			              <tr align="left" bgcolor="#FFFFFF">
+				              <td>FoxConn Inc</td>
+				              <td>Annual    Maintenance Contract</td>
+				              <td align="right">8/1/2010</td>
+				              <td>Send    email when a contract is up for renewal in next 30 days</td>
+				              <td>$2,000.00</td>
+				              <td align="center"><img  src="./css/images/general/mail.png" /></td>
+				              <td align="left">100%</td>
+				              <td align="center"><img src="./css/images/general/save.png" /></td>
+				              <td>Yes</td>
+			              </tr>
+				          <tr align="left" bgcolor="#FFFFFF">
+				              <td>SynTech Technologies</td>
+				              <td>Insurance    Verification</td>
+				              <td align="right">8/2/2010</td>
+				              <td>Send    email when a contract is up for renewal in next 30 days</td>
+				              <td>$10,000 </td>
+				              <td align="center"><img  src="./css/images/general/mail.png" /></td>
+				              <td align="left">N/a</td>
+				              <td align="center"><img src="./css/images/general/save.png" /></td>
+				              <td>No</td>
+				         </tr>
+			             <tr align="left" bgcolor="#FFFFFF">
+				              <td>China Electric Manufacturing Ltd</td>
+				              <td>Contact</td>
+				              <td align="right">8/30/2010</td>
+				              <td>Send    email when a contract is up for renewal in next 30 days</td>
+				              <td>$50,000.00</td>
+				              <td align="center"><img  src="./css/images/general/mail.png" /></td>
+				              <td align="left">90%</td>
+				              <td align="center"><img src="./css/images/general/save.png" /></td>
+				              <td>Yes</td>
+			            </tr>
+			            <tr align="left" bgcolor="#FFFFFF">
+							 <td>Rasmi Electronics Ltd</td>
+							 <td>Insurance</td>
+							 <td align="right">8/30/2010</td>
+							 <td>Send    email when a contract is up for renewal in next 30 days</td>
+							 <td>$10,000.00</td>
+						     <td align="center"><img  src="./css/images/general/mail.png" /></td>
+						     <td align="left">80%</td>
+						     <td align="center"><img src="./css/images/general/save.png" /></td>
+						     <td>Yes</td>
+			            </tr>
+			            <tr align="left" bgcolor="#FFFFFF">
+							<td>Phillips UK</td>
+							<td>Contact</td>
+							<td align="right">8/30/2010</td>
+							<td>Send    email when a contract is up for renewal in next 30 days</td>
+							<td>$90,000.00</td>
+						    <td align="center"><img  src="./css/images/general/mail.png" /></td>
+							<td align="left">90%</td>
+							<td align="center"><img src="./css/images/general/save.png" /></td>
+							<td>Yes</td>
+			            </tr>
+			            <tr align="left" bgcolor="#FFFFFF">
+							<td>Sharp Electronics</td>
+							<td>ISO Certification</td>
+							<td align="right">8/30/2010</td>
+							<td>Send    email when a contract is up for renewal in next 30 days</td>
+							<td>$30,000.00</td>
+							<td align="center"><img  src="./css/images/general/mail.png" /></td>
+							<td align="left">90%</td>
+							<td align="center"><img src="./css/images/general/save.png" /></td>
+							<td>Yes</td>
+			            </tr>
+						<tr align="left" bgcolor="#FFFFFF">
+							<td>Matsui LTD</td>
+							<td>ISO Certification</td>
+							<td align="right">8/30/2010</td>
+							<td>Send    email when a contract is up for renewal in next 30 days</td>
+							<td>$340,000.00</td>
+						    <td align="center"><img  src="./css/images/general/mail.png" /></td>
+							<td align="left">90%</td>
+							<td align="center"><img src="./css/images/general/save.png" /></td>
+							<td>Yes</td>
+			            </tr>
+			            <tr align="left" bgcolor="#FFFFFF">
+							<td>Acme Company</td>
+							<td>Support Contract</td>
+							<td align="right">8/30/2010</td>
+							<td>Send    email when a contract is up for renewal in next 30 days</td>
+							<td>$70,000.00</td>
+							<td align="center"><img  src="./css/images/general/mail.png" /></td>
+							<td align="left">90%</td>
+							<td align="center"><img src="./css/images/general/save.png" /></td>
+							<td>Yes</td>
+			            </tr>
+
+          </table>
+				</ui:define>
+				
+
+			</ui:composition>
+
+	
+
+       </body>
+    </html>
+   </f:view>
+</jsp:root>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ice="http://www.icesoft.com/icefaces/component">
+   <jsp:directive.page contentType="text/html;charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+   <f:view>
+   		<ice:outputDeclaration 
+            doctypeRoot="html" 
+            doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN" 
+            doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" /> 
+    <html>
+       <head>
+         <title>Index (Razient)</title>
+       </head>
+       <body>
+       
+        	<!-- template="#{templateBean.templateContent}"-->
+			<ui:composition
+			        template="../../include/templates/pages/modeB_customer.jspx"
+			        xmlns:h="http://java.sun.com/jsf/html"
+			        xmlns:f="http://java.sun.com/jsf/core"
+			        xmlns:c="http://java.sun.com/jstl/core"
+			        xmlns:ice="http://www.icesoft.com/icefaces/component"
+			        xmlns:ui="http://java.sun.com/jsf/facelets" >
+			
+			  <!-- params for page titles-->
+			 		 <!--<f:loadBundle basename="truckandi.view.bundle.Message" var="bundle"/>
+			        <ui:param name="pageTitle" value="#{bundle['tai_login.title']}" />-->
+					<ui:param name="pageTitle" value="#{bundle['c_ratings_vendorratings.title']}" />
+				
+				<ui:define name="header_menu_value">
+						<table cellspacing="0" cellpadding="0">
+										<tr>
+											<td>
+											<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_dash_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'" />
+													<f:attribute name="optioonselected" value="dh"/>
+											</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Compliance}">
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_comp_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'" />
+													<f:attribute name="optioonselected" value="cp_sm"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}"  visible="#{users_MenuBarBean.visible_C_GlobalIncidents}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_global_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'" />
+													<f:attribute name="optioonselected" value="gi_al"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_SuppliersView}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_supp_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'" />
+													<f:attribute name="optioonselected" value="sv_sp"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>																							
+													<ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/#{folderBean.folder_menu}/risk_ratings_2.png" visible="#{users_MenuBarBean.visible_C_Ratings}"/>	
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_RequestForProposal}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'" />
+														<f:attribute name="optioonselected" value="rp_ps"/>
+												</ice:commandLink>-->
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_3.png"/>
+											</td>
+											<!--<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Contracts}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_contracts_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'" />
+													<f:attribute name="optioonselected" value="ct_av"/>
+												</ice:commandLink>
+											</td>-->
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Reports}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_rep_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'" />
+														<f:attribute name="optioonselected" value="rp_ct"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Administration}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'" />
+														<f:attribute name="optioonselected" value="ad_um"/>
+												</ice:commandLink>
+											</td>
+										</tr>
+								</table>	
+				</ui:define>
+			    
+			    <ui:define name="page-menu-value">
+			    	 <ice:form>
+			    	 
+					 <ice:graphicImage visible="true" style="border:none;"
+								styleClass="noborder"
+								url="./css/images/#{folderBean.folder_menu}/risk_menu_down_vendorratings.png" />
+					 <ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 
+					 	<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_scorecard.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_scorecard.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_scorecard.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_scorecard.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_scorecard.png'" />
+							<f:attribute name="optioonselected" value="rt_sc"/>
+					</ice:commandLink>		
+					
+					 </ice:form> 	
+			    </ui:define>
+			    
+				<ui:define name="page-content-value">
+					<table border="" cellspacing="0" cellpadding="5" class="tabularView" style="border: 1px #C3DFF4 solid; width:600" >
+	                  <tr>
+	                    <th align="left" bgcolor="#3C7FB1" width="150" style="color:white;" height="23">Customer</th>
+	                    <td bgcolor="#FFFFFF" width="300">Cisco</td>
+	                    <th align="left" bgcolor="#3C7FB1" width="150" style="color:white;">Reviewer</th>
+	                    <td bgcolor="#FFFFFF" width="300">John Smith</td>
+	                  </tr>
+	                  <tr>
+	                    <th align="left" bgcolor="#3C7FB1" width="100" style="color:white;">Vendor</th>
+	                    <td bgcolor="#FFFFFF"><select name="select" id="select">
+	                        <option selected="selected">Matsui LTD</option>
+	                        <option>Sharp Electronics</option>
+	                        <option>FoxConn Inc</option>
+	                        <option>Gartner Inc</option>
+	                        <option>Sachi Inc</option>
+	                      </select></td>
+	                    <th align="left" bgcolor="#3C7FB1" width="100" style="color:white;">Date Reviewed</th>
+	                    <td bgcolor="#FFFFFF">10/01/2010</td>
+	                  </tr>
+                	</table>
+                	<br/>
+                	<table border="" cellspacing="0" cellpadding="5" class="tabularView" style="border: 1px #C3DFF4 solid;font-size: 15px">
+                  <tr>
+                    <td colspan="2" bgcolor="#FFFFFF"></td>
+                    <td colspan="2" width="400" bgcolor="#FFFFFF"><strong>Historical Reviews</strong></td>
+                    </tr>
+                  <tr>
+                    <th align="left" width="400" bgcolor="#3C7FB1" style="color:#FFFFFF;font-weigth:bold;">Vendor Rating</th>
+                    <th width="200" align="left" bgcolor="#3C7FB1" style="color:#FFFFFF;font-weigth:bold;"><strong>Rating 1-10</strong></th>
+                    <th bgcolor="#3C7FB1" style="color:#FFFFFF;font-weigth:bold;">Q1 2009</th>
+                    <th bgcolor="#3C7FB1" style="color:#FFFFFF;font-weigth:bold;">Q1 2010</th>
+                  </tr>
+                  <tr bgcolor="#FFFFCC">
+                    <td colspan="4" align="left"><strong>Pricing</strong></td>
+                    </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Competitive    Pricing</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">6</td>
+                    <td align="right" bgcolor="#FFFFFF">5</td>
+                  </tr>
+                  <tr class="odd">
+                    <td bgcolor="#EFF2FF">Price    Stability</td>
+                    <td align="left" bgcolor="#EFF2FF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#EFF2FF">6</td>
+                    <td align="right" bgcolor="#EFF2FF">6</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Price    Accuracy</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">6</td>
+                    <td align="right" bgcolor="#FFFFFF">4</td>
+                  </tr>
+                  <tr class="odd">
+                    <td bgcolor="#EFF2FF">Advance    Notice of Price Change</td>
+                    <td align="left" bgcolor="#EFF2FF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#EFF2FF">8</td>
+                    <td align="right" bgcolor="#EFF2FF">5</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Sensitivity    to Costs</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">9</td>
+                    <td align="right" bgcolor="#FFFFFF">9</td>
+                  </tr>
+                  <tr class="odd">
+                    <td bgcolor="#EFF2FF">Accuracy of    Billing</td>
+                    <td align="left" bgcolor="#EFF2FF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#EFF2FF">7</td>
+                    <td align="right" bgcolor="#EFF2FF">7</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td align="right" bgcolor="#EADFBF"><strong></strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>6</strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" align="left" bgcolor="#FFFFCC"><strong>Compliance</strong></td>
+                    </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Compliance    with purchase order</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">7</td>
+                    <td align="right" bgcolor="#FFFFFF">8</td>
+                  </tr>
+                  <tr class="odd">
+                    <td bgcolor="#EFF2FF">Conformity to    Specifications</td>
+                    <td align="left" bgcolor="#EFF2FF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#EFF2FF">8</td>
+                    <td align="right" bgcolor="#EFF2FF">7</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Reliability</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">8</td>
+                    <td align="right" bgcolor="#FFFFFF">9</td>
+                  </tr>
+                  <tr class="odd">
+                    <td bgcolor="#EFF2FF">Durability</td>
+                    <td align="left" bgcolor="#EFF2FF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#EFF2FF">8</td>
+                    <td align="right" bgcolor="#EFF2FF">8</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Support</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">6</td>
+                    <td align="right" bgcolor="#FFFFFF">8</td>
+                  </tr>
+                  <tr class="odd">
+                    <td bgcolor="#EFF2FF">Warranty</td>
+                    <td align="right" bgcolor="#EFF2FF">nbsp&amp;</td>
+                    <td align="right" bgcolor="#EFF2FF">4</td>
+                    <td align="right" bgcolor="#EFF2FF">4</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td align="right" bgcolor="#EADFBF"><strong></strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>6.8</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.3</strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" align="left" bgcolor="#FFFFCC"><strong>Delivery</strong></td>
+                    </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Product    Development Innovation</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">4</td>
+                    <td align="right" bgcolor="#FFFFFF">9</td>
+                  </tr>
+                  <tr class="odd">
+                    <td bgcolor="#EFF2FF">On time    Delivery</td>
+                    <td align="left" bgcolor="#EFF2FF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#EFF2FF">8</td>
+                    <td align="right" bgcolor="#EFF2FF">8</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Correct    Quantity</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">8</td>
+                    <td align="right" bgcolor="#FFFFFF">9</td>
+                  </tr>
+                  <tr class="odd">
+                    <td bgcolor="#EFF2FF">Documentation</td>
+                    <td align="left" bgcolor="#EFF2FF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#EFF2FF">8</td>
+                    <td align="right" bgcolor="#EFF2FF">7</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Emergency    Delivery</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">8</td>
+                    <td align="right" bgcolor="#FFFFFF">8</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td align="right" bgcolor="#EADFBF"><strong></strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.2</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>8.2</strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" align="left" bgcolor="#FFFFCC"><strong>Service</strong></td>
+                    </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Vendor    Representation Communications</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">8</td>
+                    <td align="right" bgcolor="#FFFFFF">8</td>
+                  </tr>
+                  <tr class="odd">
+                    <td bgcolor="#EFF2FF">Emergency    Support</td>
+                    <td align="left" bgcolor="#EFF2FF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#EFF2FF">8</td>
+                    <td align="right" bgcolor="#EFF2FF">8</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Problem    Resolution</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">9</td>
+                    <td align="right" bgcolor="#FFFFFF">8</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td align="right" bgcolor="#EADFBF"><strong></strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>8.3</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>8</strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" bgcolor="#FFFFCC"><strong>7 C's Ratings</strong></td>
+                    </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Competency</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">8</td>
+                    <td align="right" bgcolor="#FFFFFF">8</td>
+                  </tr>
+                  <tr class="odd">
+                    <td bgcolor="#EFF2FF">Capacity</td>
+                    <td align="left" bgcolor="#EFF2FF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#EFF2FF">6</td>
+                    <td align="right" bgcolor="#EFF2FF">6</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Commitment</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">6</td>
+                    <td align="right" bgcolor="#FFFFFF">6</td>
+                  </tr>
+                  <tr class="odd">
+                    <td bgcolor="#EFF2FF">Control</td>
+                    <td align="left" bgcolor="#EFF2FF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#EFF2FF">6</td>
+                    <td align="right" bgcolor="#EFF2FF">6</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Cash Resource</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">6</td>
+                    <td align="right" bgcolor="#FFFFFF">5</td>
+                  </tr>
+                  <tr bgcolor="#FFFFCC" class="odd">
+                    <td bgcolor="#EFF2FF">Cost</td>
+                    <td align="left" bgcolor="#EFF2FF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#EFF2FF">6</td>
+                    <td align="right" bgcolor="#EFF2FF">9</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF">Consistency</td>
+                    <td align="left" bgcolor="#FFFFFF"> <input name="textfield" type="text" size="30" /></td>
+                    <td align="right" bgcolor="#FFFFFF">9</td>
+                    <td align="right" bgcolor="#FFFFFF">9</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFCC" class="smallHeading">Cumulative    Total</td>
+                    <td align="right" bgcolor="#EADFBF"><strong></strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>6.7</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.0</strong></td>
+                  </tr>
+                </table>
+                <br/>
+                <table width="100%" border="0" cellspacing="0" cellpadding="10" class="tabularView">
+                  <tr>
+                    <td align="center"> <div align="center"><img src="./css/images/general/submit.png" width="71" height="25"/></div></td>
+                  </tr>
+                </table>
+				</ui:define>
+				
+
+			</ui:composition>
+
+	
+
+       </body>
+    </html>
+   </f:view>
+</jsp:root>

@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Document_CRUD>
+    <Nomenclature>110IN6</Nomenclature>
+    <TypeLogin>TB</TypeLogin>
+    <PageStyle>
+        <Background>
+            <Color>#FFFFFF</Color>
+        </Background>
+        <Screen_Title> </Screen_Title>
+        <Title>
+            <Label>Add New Incident</Label>
+            <Size>3</Size>
+            <Color>#000000</Color>
+            <Face>Arial</Face>
+            <Style>Bold</Style>
+            <Align>Center</Align>
+        </Title>
+        <SubmitButton>
+            <Label>Submit</Label>
+        </SubmitButton>
+        <ResetButton>
+            <Label>Reset</Label>
+        </ResetButton>
+        <locale>
+            <language>en</language>
+            <country>US</country>
+            <dateFormat>yyyy-MM-dd</dateFormat>
+            <timeFormat>hh:mm:ss</timeFormat>
+        </locale>
+    </PageStyle>
+    <XSQLData>
+        <ComponentNames>
+            <ApplicationName>globalincidents</ApplicationName>
+            <BeanName>bean110IN6</BeanName>
+            <ServletName>servlet110IN6</ServletName>
+            <JSPName>MCMjsp110IN6</JSPName>
+        </ComponentNames>
+        <Connection>
+            <NameCx>cx1</NameCx>
+            <DataBaseId>5</DataBaseId>
+        </Connection>
+        <Data>
+            <Name>110SQL37</Name>
+            <Sentence>INSERT INTO razient.reportnewsglobalincident(userPosted, newssource, title, url, description, country, state, city, address, type, riskLevel, numberkilled, dateNews, datePosted, timePosted) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)</Sentence>
+            <Out_Fields>
+                <Out_Field>
+                    <Code>1</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>userPosted</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.userPosted</KeyName>
+                    <VariableName>userPosted</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>true</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>User Posted</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>300</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>Yes</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName>cx1__razient__reportnewsusers__user</SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align=""  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="100"  maxlength=""  readonly="yes"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "false" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>2</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>newssource</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.newssource</KeyName>
+                    <VariableName>newssource</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>true</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>Source</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>300</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Select"  align=""  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="1"  maxlength=""  readonly=""  disabled="false"  jsrs="yes"  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "IS" validate_fx = "false" obligatory = "false" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>3</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>title</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.title</KeyName>
+                    <VariableName>title</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>Title</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>300</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Textarea"  align=""  rows ="2"  cols ="63"  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="300"  maxlength=""  readonly="false"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>4</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>url</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.url</KeyName>
+                    <VariableName>url</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>URL</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>300</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Textarea"  align=""  rows ="2"  cols ="63"  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="300"  maxlength=""  readonly="false"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>5</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>description</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.description</KeyName>
+                    <VariableName>description</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>Description</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>65535</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Textarea"  align=""  rows ="4"  cols ="63"  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="65535"  maxlength=""  readonly="false"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>6</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>country</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.country</KeyName>
+                    <VariableName>country</VariableName>
+                    <FillFunction>state</FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>Country</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>300</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Select"  align=""  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="1"  maxlength=""  readonly=""  disabled="false"  jsrs="yes"  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "IS" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>7</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>state</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.state</KeyName>
+                    <VariableName>state</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>State</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>300</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Select"  align=""  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="1"  maxlength=""  readonly=""  disabled="false"  jsrs="yes"  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "IS" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>8</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>city</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.city</KeyName>
+                    <VariableName>city</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>true</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>City</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>300</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align=""  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="100"  maxlength=""  readonly="false"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "false" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>9</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>address</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.address</KeyName>
+                    <VariableName>address</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>true</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>Address</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>300</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align=""  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="300"  maxlength=""  readonly="false"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "false" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>10</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>type</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.type</KeyName>
+                    <VariableName>type</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>Incident Type</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>400</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Select"  align=""  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="1"  maxlength=""  readonly=""  disabled="false"  jsrs="yes"  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "IS" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>11</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>riskLevel</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.riskLevel</KeyName>
+                    <VariableName>riskLevel</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>Risk Level</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>400</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Select"  align=""  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="400"  maxlength=""  readonly=""  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                                <Value id = "0" value = ""   selected = "yes" >------------------------- </Value>
+                                 <Value id = "1" value = "Critical"   selected = "no" >Critical </Value>
+                                 <Value id = "2" value = "High"   selected = "no" >High </Value>
+                                 <Value id = "3" value = "Medium"   selected = "no" >Medium </Value>
+                                 <Value id = "4" value = "Low"   selected = "no" >Low </Value>
+                             </Values> 
+                        </StaticValues>
+                        <format input_type = "IS" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>12</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>numberkilled</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.numberkilled</KeyName>
+                    <VariableName>numberkilled</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>true</Nullable>
+                    <Type>long</Type>
+                    <Label>Number Killed</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>10</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align=""  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="10"  maxlength=""  readonly="false"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TI" validate_fx = "true" obligatory = "false" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>13</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>dateNews</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.dateNews</KeyName>
+                    <VariableName>dateNews</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>true</Nullable>
+                    <Type>java.sql.Date</Type>
+                    <Label>News Date</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>10</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align=""  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="10"  maxlength=""  readonly="yes"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "false" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>14</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>datePosted</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.datePosted</KeyName>
+                    <VariableName>datePosted</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>true</Nullable>
+                    <Type>java.sql.Date</Type>
+                    <Label>Date Posted</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>10</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align=""  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="10"  maxlength=""  readonly="yes"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "false" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>15</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>timePosted</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.timePosted</KeyName>
+                    <VariableName>timePosted</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>true</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>Time Posted</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>100</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align=""  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color=""  bgcolor="#FFFFFF"  size="100"  maxlength=""  readonly="false"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="10" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "false" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+            </Out_Fields>
+        </Data>
+        <LookUpFields>
+                <LookUpField>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>dateNews</Name>
+                    <KeyName>reportnewsglobalincident.dateNews</KeyName>
+                    <VariableName>dateNews</VariableName>
+                    <Label>News Date</Label>
+                    <LookUpType>LookUpCalendar</LookUpType>
+                    <ReadOnly>yes</ReadOnly>
+                    <LookUpId>110IN6dateNews</LookUpId>
+                    <JavaScriptFile>js/110IN6dateNews.js</JavaScriptFile>
+                </LookUpField>
+                <LookUpField>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>datePosted</Name>
+                    <KeyName>reportnewsglobalincident.datePosted</KeyName>
+                    <VariableName>datePosted</VariableName>
+                    <Label>Date Posted</Label>
+                    <LookUpType>LookUpCalendar</LookUpType>
+                    <ReadOnly>yes</ReadOnly>
+                    <LookUpId>110IN6datePosted</LookUpId>
+                    <JavaScriptFile>js/110IN6datePosted.js</JavaScriptFile>
+                </LookUpField>
+        </LookUpFields>
+        <JsrsFields>
+                <JsrsField>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>newssource</Name>
+                    <KeyName>reportnewsglobalincident.newssource</KeyName>
+                    <XBrf>1101109brf</XBrf>
+                    <FillFunction></FillFunction>
+                </JsrsField>
+                <JsrsField>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>country</Name>
+                    <KeyName>reportnewsglobalincident.country</KeyName>
+                    <XBrf>1101104brf</XBrf>
+                    <FillFunction>state</FillFunction>
+                </JsrsField>
+                <JsrsField>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>type</Name>
+                    <KeyName>reportnewsglobalincident.type</KeyName>
+                    <XBrf>1101101brf</XBrf>
+                    <FillFunction></FillFunction>
+                </JsrsField>
+        </JsrsFields>
+        <JsrsDropBoxes>
+                <JsrsDropBox>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>state</Name>
+                    <KeyName>reportnewsglobalincident.state</KeyName>
+                    <XBrf>1101108brf</XBrf>
+                    <ComboName>state</ComboName>
+                    <FillFunction></FillFunction>
+                    <BRFvars>
+                        <BRFvar>
+                            <Order>1</Order>
+                            <Name>@country</Name>
+                            <BRFCombo>country</BRFCombo>
+                        </BRFvar>
+                    </BRFvars>
+                </JsrsDropBox>
+        </JsrsDropBoxes>
+	</XSQLData>
+	</Document_CRUD>

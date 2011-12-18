@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ice="http://www.icesoft.com/icefaces/component">
+   <jsp:directive.page contentType="text/html;charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+   <f:view>
+   		<ice:outputDeclaration 
+            doctypeRoot="html" 
+            doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN" 
+            doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" /> 
+    <html>
+       <head>
+         <title>Index (Razient)</title>
+       </head>
+       <body>
+       
+        	<!-- template="#{templateBean.templateContent}"-->
+			<ui:composition
+			        template="../../include/templates/pages/modeB_customer.jspx"
+			        xmlns:h="http://java.sun.com/jsf/html"
+			        xmlns:f="http://java.sun.com/jsf/core"
+			        xmlns:c="http://java.sun.com/jstl/core"
+			        xmlns:ice="http://www.icesoft.com/icefaces/component"
+			        xmlns:ui="http://java.sun.com/jsf/facelets" >
+			
+			  <!-- params for page titles-->
+			 		 <!--<f:loadBundle basename="truckandi.view.bundle.Message" var="bundle"/>
+			        <ui:param name="pageTitle" value="#{bundle['tai_login.title']}" />-->
+					<ui:param name="pageTitle" value="#{bundle['c_ratings_vendorratings.title']}" />
+				
+				<ui:define name="header_menu_value">
+						<table cellspacing="0" cellpadding="0">
+										<tr>
+											<td>
+											<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_dash_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'" />
+													<f:attribute name="optioonselected" value="dh"/>
+											</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Compliance}">
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_comp_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'" />
+													<f:attribute name="optioonselected" value="cp_sm"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}"  visible="#{users_MenuBarBean.visible_C_GlobalIncidents}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_global_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'" />
+													<f:attribute name="optioonselected" value="gi_al"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<!--<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_SuppliersView}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_supp_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'" />
+														<f:attribute name="optioonselected" value="sv_sp"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											--><td>
+												<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Ratings}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_ratings_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'" />
+														<f:attribute name="optioonselected" value="rt_vr"/>
+												</ice:commandLink>
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_ratings_3.png"/>-->
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_RequestForProposal}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'" />
+														<f:attribute name="optioonselected" value="rp_ps"/>
+												</ice:commandLink>-->
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_3.png"/>
+											</td>
+											<!--<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Contracts}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_contracts_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'" />
+													<f:attribute name="optioonselected" value="ct_av"/>
+												</ice:commandLink>
+											</td>-->
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>																							
+													<ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/#{folderBean.folder_menu}/risk_rep_2.png"  visible="#{users_MenuBarBean.visible_C_Reports}"/>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Administration}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'" />
+														<f:attribute name="optioonselected" value="ad_um"/>
+												</ice:commandLink>
+											</td>
+										</tr>
+								</table>	
+				</ui:define>
+			    
+			    <ui:define name="page-menu-value">
+			    	 <ice:form>
+			    	 
+					 <ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 	<ice:graphicImage visible="true"  styleClass="menuPosA"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_contracts.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_contracts.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_contracts.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_contracts.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_contracts.png'" />
+						<f:attribute name="optioonselected" value="rp_ct"/>
+					</ice:commandLink>
+						<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_down_vendorratings.png"/>
+						
+					<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+						<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_vulnerabilities.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_vulnerabilities.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_vulnerabilities.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_vulnerabilities.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_vulnerabilities.png'" />
+						<f:attribute name="optioonselected" value="rp_vn"/>
+					</ice:commandLink>	
+					<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">					
+						<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_research.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_research.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_research.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_research.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_research.png'" />
+						<f:attribute name="optioonselected" value="rp_rh"/>
+					</ice:commandLink>
+									
+					  <ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_one.png"/>
+					    
+					 </ice:form> 	
+			    </ui:define>
+			    
+				<ui:define name="page-content-value">
+				<table width="100%" border="0" cellspacing="0" cellpadding="1" class="data">
+              <tr>
+                <td> <table width="100%" border="1"  cellspacing="0" cellpadding="5" class="tabularView" style="border: 1px #C3DFF4 solid;">
+                  <tr bgcolor="#3C7FB1" style="color:#FFFFFF">
+                    <th>Vendor</th>
+                    <th>Pricing</th>
+                    <th>Compliance</th>
+                    <th>Delivery</th>
+                    <th>Service</th>
+                    <th>7 C's</th>
+                  </tr>
+                  <tr bgcolor="white">
+                    <td><select name="select" id="select">
+                      <option selected="selected">FoxConn Inc</option>
+                      <option>SynTech Technologies</option>
+                      <option>China Electric Manufacturing Ltd</option>
+                      <option>Phillips UK</option>
+                    </select></td>
+                    <td align="right">6.5</td>
+                    <td align="right">6.5</td>
+                    <td align="right">6</td>
+                    <td align="right">7</td>
+                    <td align="right">7.7</td>
+                  </tr>
+                </table>
+                  <br/>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                    <tr>
+                      <td align="right"><img src="./css/images/general/print.png" width="21" height="21"/><img src="./css/images/general/pdf.png" width="21" height="21"/><img src="./css/images/general/excel.png" width="21" height="21"/></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="1" cellspacing="0" cellpadding="5" class="tabularView" style="border: 1px #C3DFF4 solid;">
+                    <tr bgcolor="#3C7FB1" style="color:#FFFFFF">
+                      <th>Vendor</th>
+                      <th>Pricing</th>
+                      <th>Compliance</th>
+                      <th>Delivery</th>
+                      <th>Service</th>
+                      <th>7 C's</th>
+                    </tr>
+                    <tr bgcolor="white">
+                      <td>FoxConn Inc</td>
+                      <td align="right">6.5</td>
+                      <td align="right">6.5</td>
+                      <td align="right">6</td>
+                      <td align="right">7</td>
+                      <td align="right">7.7</td>
+                    </tr>
+                    <tr class="odd" bgcolor="#EFF2FF">
+                    <td>SynTech Technologies</td>
+                      <td align="right">7</td>
+                      <td align="right">8</td>
+                      <td align="right">6.5</td>
+                      <td align="right">9</td>
+                      <td align="right">9</td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                      <td>China Electric Manufacturing Ltd</td>
+                      <td align="right">6</td>
+                      <td align="right">8</td>
+                      <td align="right">9</td>
+                      <td align="right">8</td>
+                      <td align="right">7</td>
+                    </tr>
+                  </table>
+                  <br/>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                    <tr>
+                      <td align="right"><img src="./css/images/general/print.png" width="21" height="21"/><img src="./css/images/general/pdf.png" width="21" height="21"/><img src="./css/images/general/excel.png" width="21" height="21"/></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="1" cellspacing="0" cellpadding="5" class="tabularView" style="border: 1px #C3DFF4 solid;">
+                    <tr bgcolor="#3C7FB1" style="color:#FFFFFF">
+                      <th>Vendor</th>
+                      <th>Pricing</th>
+                      <th>Compliance</th>
+                      <th>Delivery</th>
+                      <th>Service</th>
+                      <th>7 C's</th>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                      <td>FoxConn Inc</td>
+                      <td align="right">6.5</td>
+                      <td align="right">6.5</td>
+                      <td align="right">6</td>
+                      <td align="right">7</td>
+                      <td align="right">7.7</td>
+                    </tr>
+                    <tr class="odd" bgcolor="#EFF2FF">
+                      <td>SynTech Technologies</td>
+                      <td align="right">7</td>
+                      <td align="right">8</td>
+                      <td align="right">6.5</td>
+                      <td align="right">9</td>
+                      <td align="right">9</td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                      <td>China Electric Manufacturing Ltd</td>
+                      <td align="right">6</td>
+                      <td align="right">8</td>
+                      <td align="right">9</td>
+                      <td align="right">8</td>
+                      <td align="right">7</td>
+                    </tr>
+                  </table>
+                  <br/>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                    <tr>
+                      <td><span class="smallHeading" onClick="showTab('DVR', this)" style="cursor: pointer"><img src="./css/images/general/minus-glow.png"  align="absmiddle"/> Vendor Metrics</span></td>
+                      <td align="right"><img src="./css/images/general/print.png" width="21" height="21"/><img src="./css/images/general/pdf.png" width="21" height="21"/><img src="./css/images/general/excel.png" width="21" height="21"/></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="1" cellspacing="0" cellpadding="5" class="tabularView" style="border: 1px #C3DFF4 solid;display:none" id="DVR">
+                    <tr bgcolor="#3C7FB1" style="color:#FFFFFF">
+                    <th>Vendor</th>
+                    <th>Matsui Ltd</th>
+                    <th>Sharp Electronics</th>
+                    <th>FoxConn Inc</th>
+                    <th>Phillips UK</th>
+                    <th>China Electric Mnf Ltd</th>
+                  </tr>
+                  <tr bgcolor="#3C7FB1" style="color:#FFFFFF">
+                    <th>Vendor    Rating</th>
+                    <th>Rating 1-10</th>
+                    <th>Rating 1-10</th>
+                    <th>Rating 1-10</th>
+                    <th>Rating 1-10</th>
+                    <th>Rating 1-10</th>
+                  </tr>
+                  <tr>
+                    <td colspan="6" align="left" bgcolor="#FFC"><strong>Pricing</strong></td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Competitive    Pricing</td>
+                    <td align="right">5.0</td>
+                    <td align="right">6.0</td>
+                    <td align="right">5.0</td>
+                    <td align="right">5.0</td>
+                    <td align="right">8.0</td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Price    Stability</td>
+                    <td align="right">5.0</td>
+                    <td align="right">5.0</td>
+                    <td align="right">6.0</td>
+                    <td align="right">5.0</td>
+                    <td align="right">8.0</td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Price    Accuracy</td>
+                    <td align="right">7.0</td>
+                    <td align="right">6.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">8.0</td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Advance    Notice of Price Change</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">5.0</td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Sensitivity    to Costs</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">9.0</td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Accuracy of    Billing</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">7.0</td>
+                    </tr>
+                  <tr>
+                    <td></td>
+                    <td align="center" bgcolor="#EADFBF"><strong>6.5</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.0</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>6.0</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.2</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.5</strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="6" align="left" bgcolor="#FFC"><strong>Compliance</strong></td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Compliance    with purchase order</td>
+                    <td align="right">8.0</td>
+                    <td align="right">9.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">9.0</td>
+                    <td align="right">9.0</td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Conformity to    Specifications</td>
+                    <td align="right">8.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">4.0</td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Reliability</td>
+                    <td align="right">8.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">5.0</td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Durability</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">6.0</td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Support</td>
+                    <td align="right">6.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">6.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">8.0</td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Warranty</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">6.0</td>
+                    </tr>
+                  <tr>
+                    <td></td>
+                    <td align="center" bgcolor="#EADFBF"><strong>7.0</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.3</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.3</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.3</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.3</strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="6" align="left" bgcolor="#FFC"><strong>Delivery</strong></td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Product    Development Innovation</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">6.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                   </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>On time    Delivery</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">6.0</td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Correct    Quantity</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Documentation</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">6.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">7.0</td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Emergency    Delivery</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    </tr>
+                  <tr>
+                    <td></td>
+                    <td align="center" bgcolor="#EADFBF"><strong>8.0</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.6</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>6.8</strong></td>
+                    <td align="center" bgcolor="#EADFBF"><strong>8.0</strong></td>
+                    <td align="center" bgcolor="#EADFBF"><strong>8.0</strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="6" align="left" bgcolor="#FFC"><strong>Service</strong></td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Vendor    Representation Communications</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                   </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Emergency    Support</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Problem    Resolution</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">7.0</td>
+                    </tr>
+                  <tr>
+                    <td></td>
+                    <td align="center" bgcolor="#EADFBF"><strong>7.0</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.3</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.2</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.2</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.5</strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="6" bgcolor="#FFC"><strong>7 C's Ratings</strong></td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Competency</td>
+                    <td align="right">8.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Capacity</td>
+                    <td align="right">9.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">9.0</td>
+                    <td align="right">7.0</td>
+                    <td align="right">7.0</td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Commitment</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Control</td>
+                    <td align="right">9.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">9.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">9.0</td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Cash Resource</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Cost</td>
+                    <td align="right">9.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">9.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Consistency</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    <td align="right">8.0</td>
+                    </tr>
+                  <tr>
+                    <td class="smallHeading">Cumulative    Total</td>
+                    <td align="center" bgcolor="#EADFBF"><strong>9.0</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.8</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>8.5</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>7.8</strong></td>
+                    <td align="right" bgcolor="#EADFBF"><strong>8.8</strong></td>
+                    </tr>
+                </table></td>
+              </tr>
+            </table>
+				</ui:define>
+				
+
+			</ui:composition>
+
+	
+
+       </body>
+    </html>
+   </f:view>
+</jsp:root>

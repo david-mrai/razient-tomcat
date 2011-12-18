@@ -1,0 +1,52 @@
+<span xmlns:ice="http://www.icesoft.com/icefaces/component" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:c="http://java.sun.com/jstl/core" xmlns:ft="http://www.mcmsoftware.com">
+	
+	<param name="builtsectionview" value="#{value}"/>
+	
+	<table class="tablebuiltsection" width="#{utilServiceLocatorBean.widthAllQuestions}px" border="0">
+		<tr>
+			<td align="left" colspan="2"><h:outputLabel>
+					<h:outputText styleClass="titlebuiltsections" value="#{builtsectionview.name}"></h:outputText>
+				</h:outputLabel>
+			</td>
+		</tr>
+		<c:if test="${builtsurveyview.title != null}">
+			<c:if test="${builtsurveyview.title != ''}">
+				<tr >
+					<td align="left" colspan="2"><h:outputLabel>
+							<h:outputText styleClass="titlebuiltsectionstitle" value="#{builtsectionview.title}"></h:outputText>
+						</h:outputLabel>
+					</td>
+				</tr>
+			</c:if>
+		</c:if>
+		<tr>
+			<td width="60%" align="justify" ><h:outputLabel>
+					<h:outputText styleClass="titlebuiltsectionsdescription" value="#{builtsectionview.description}"></h:outputText>
+				</h:outputLabel>
+			</td>
+			<td width="40%"></td>
+			
+		</tr>
+		<tr>
+			<td  align="left" colspan="2">
+				<ice:graphicImage url		="./css/images/icons/menu_section_line.png" />
+			</td>
+		</tr>
+		<tr>
+			<td  align="left" colspan="2">
+				<br/>
+			</td>
+		</tr>
+	</table>
+	
+	  
+	<ice:panelGroup >
+				<div xmlns:ft="http://www.mcmsoftware.com">
+						<c:forEach var="builtquestionsview" items="#{builtQuestionsViewManager.list_questions}">
+				             		<ft:builtquestionsview value="#{builtquestionsview}"/>
+				         </c:forEach>
+				</div> 
+	</ice:panelGroup>
+	
+</span>
+	

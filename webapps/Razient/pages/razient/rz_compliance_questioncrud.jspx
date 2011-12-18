@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:ice-cc="http://www.icesoft.com/icefaces-composite-comps">
+	<jsp:directive.page contentType="text/html;charset=ISO-8859-1"
+		pageEncoding="ISO-8859-1" />
+	<f:view>
+		<ice:outputDeclaration doctypeRoot="html"
+			doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN"
+			doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" />
+		<html>
+			<head>
+				<title>Index (Razient)</title>
+			</head>
+			<body>
+
+				<!-- template="#{templateBean.templateContent}"-->
+				<ui:composition
+					template="../../include/templates/pages/modeA_rz.jspx"
+					xmlns:h="http://java.sun.com/jsf/html"
+					xmlns:f="http://java.sun.com/jsf/core"
+					xmlns:c="http://java.sun.com/jstl/core"
+					xmlns:ice="http://www.icesoft.com/icefaces/component"
+					xmlns:ice-cc="http://www.icesoft.com/icefaces-composite-comps"
+					xmlns:ui="http://java.sun.com/jsf/facelets">
+
+					<!-- params for page titles-->
+					<ui:param name="pageTitle"
+						value="#{rz_Compliance_SM_ListTableBean.titlePage}" />
+
+					<ui:define name="header-menu-value">
+						<table cellspacing="0" cellpadding="0">
+								<tr>
+									<td>
+										
+										<ice:commandLink action="#{rz_MenuBarBean.getIconAdmin}" actionListener="#{rz_MenuBarBean.actionlistener}"   onclick="rld();">
+												<ice:graphicImage style="border:none;"
+																	styleClass="noborder"
+																	url="./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.valueIconAdmin}.png"
+																	onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.enabledAdmin}.png'"
+																	onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.disabledAdmin}.png'"
+																	onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.enabledAdmin}.png'"
+																	onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.disabledAdmin}.png'" />
+												<f:attribute name="optioonselected" value="comp_questioncrud"/>
+										</ice:commandLink>
+									</td>
+									<td>
+												<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/risk_black_low.png" />
+									</td>
+									<td>
+										<ice:graphicImage style="border:none;"
+																	styleClass="noborder"
+																	url="./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.valueIconCompliance}.png"
+																	onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.enabledCompliance}.png'"
+																	onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.disabledCompliance}.png'"
+																	onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.enabledCompliance}.png'"
+																	onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.disabledCompliance}.png'" />
+												
+									</td>
+	
+								</tr>
+							</table>			
+
+					</ui:define>
+					<ui:define name="page-menu-value">
+						<ice:form>
+
+							<ice:graphicImage visible="true" styleClass="menuPosA"
+								url="./css/images/#{folderBean.folder_menu}/risk_menu_down_surveymanager.png" />
+							<!--<ice:graphicImage visible="true" style="border:none;"
+								styleClass="noborder"
+								url="./css/images/#{folderBean.folder_menu}/risk_menu_down_standardsmanager.png" />
+							<ice:commandLink action="#{rz_SurveyManagerBean.actionMenu_StandardsManager}" onclick="rld();">
+								<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_standardsmanager.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_standardsmanager.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_standardsmanager.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_standardsmanager.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_standardsmanager.png'" />
+							</ice:commandLink>-->
+							<ice:commandLink action="#{rz_SurveyManagerBean.actionMenu_QuestionCrud_to_SurveyReview}" onclick="rld();">
+								<ice:graphicImage visible="true"  styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_surveyview.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveyview.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_surveyview.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveyrview.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_surveyview.png'" />
+							</ice:commandLink>
+							<!--<ice:commandLink action="#{rz_SurveyManagerBean.actionMenu_SurveyDistribution}" onclick="rld();">
+								<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_surveydistribution.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveydistribution.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_surveydistribution.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveydistribution.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_surveydistribution.png'" />
+							</ice:commandLink>-->
+							
+							<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_one.png"/>
+						</ice:form>
+					</ui:define>
+
+					<ui:define name="page-content-value">
+
+						<table class="data" width="100%" border="0" cellpadding="1" cellspacing="0" style="margin-left:0px;margin-top:0px;font-family: Arial,Verdana,  Helvetica, sans-serif;">
+			              <tbody>
+			                <tr>
+			                  <td valign="top">
+			                  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+			                    <tbody>
+			                      <tr>
+			                        <td height="17">
+			                        <table border="0" cellpadding="0" cellspacing="0">
+			                          <tbody>
+			                            <tr>
+			                              <td></td>
+			                              <td>
+			                              	<ice:form >
+			                             		 <ice:commandLink action="#{rz_ComplianceQuestionManager.toSurveyGridBean}" >
+			                             		 	<img src="./css/images/#{folderBean.folder_menu}/surveyTab0.png" id="tab0_view"  onClick="javascript:window.location.reload();" style="cursor: pointer;"  border="0"/>				
+												</ice:commandLink>
+											</ice:form>
+			                              </td>
+			                              <td style="border-bottom: 1px solid rgb(192, 200, 204);"></td>
+			                              <td>
+			                              	<ice:form >
+				                              	<ice:commandLink action="#{rz_ComplianceQuestionManager.toSurveyManagerBean}" >
+				                              		<img src="./css/images/#{folderBean.folder_menu}/surveyTab1.png" id="tab1_view"  onClick="javascript:window.location.reload();" style="cursor: pointer;"  border="0"/>				
+												</ice:commandLink>
+											</ice:form>
+										  </td>
+										  <td style="border-bottom: 1px solid rgb(192, 200, 204);"></td>
+			                              <td>
+			                              	<ice:form >
+				                              	<ice:commandLink action="#{rz_ComplianceQuestionManager.toSectionManagerBean}" >
+					                            	<img src="./css/images/#{folderBean.folder_menu}/surveyTab2.png" id="tab2_view" onClick="javascript:window.location.reload();" style="cursor: pointer;"  border="0"/>
+					                            </ice:commandLink>	
+				                            </ice:form>			
+										  </td>
+										  <td style="border-bottom: 1px solid rgb(192, 200, 204);"></td>
+			                              <td>
+			                             	<img src="./css/images/#{folderBean.folder_menu}/surveyTab3-3.png" id="tab3_view" style="cursor: pointer;" border="0"/>				
+										  </td>
+			                            </tr>
+			                          </tbody>
+			                        </table>
+			                        </td>
+			                      </tr>
+			                      <tr>
+			                        <td bgcolor="#e1e6e8" valign="top">
+			                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+			                          <tbody>
+			                            <tr>
+			                              <td style="padding: 3px 8px 8px;">
+			                              <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+			                                <tbody>
+			                                  <tr>
+			                                    <td rowspan="2" style="background-repeat: repeat-x;" background="./css/images/general/dashcontent_header.png"  bgcolor="#ffffff"  valign="top">
+			                                    
+<!-- SURVEYS TAB0-->   
+				       							<ice:form>                          
+					                                    <table id="tab0" style="display: block;" width="700px" border="0" cellpadding="0" cellspacing="0">
+					                                      <tbody>
+					                                        <tr>
+					                                        	<td width="11" height="41" valign="top"><img src="./css/images/general/dashcontent_left_top.png" width="11" height="41"/></td>
+					                                            <td style="border-right: 1px solid rgb(239, 239, 239);" valign="top">
+						                                          
+						                                          <table width="100%" border="0" cellpadding="5" cellspacing="0">
+						                                           <tbody>
+						                                              <tr>
+						                                                <td height="41" >
+						                                                	<table border="0" cellspacing="0" cellpadding="0" width="95%" style="margin-left:-2px;margin-top:-2px;">
+
+																						<tr>
+																							<td >&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																								<ice:commandLink action="#{rz_ComplianceQuestionManager.insertAction}" onclick="rld();" visible="#{rz_ComplianceQuestionManager.visibleCrud}">
+																														<ice:graphicImage style="border:none;" styleClass="noborder"
+																															url="./css/images/#{folderBean.folder_menu}/icons/menu_up_save_question.png"
+																															onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_save_question.png'"
+																															onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_save_question.png'"
+																															onmouseup="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_save_question.png'"
+																															onmousedown="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_save_question.png'"
+																															/>
+																														
+																								  </ice:commandLink>	
+																								 <ice:commandLink action="#{rz_ComplianceQuestionManager.updateAction}" onclick="rld();" visible="#{not rz_ComplianceQuestionManager.visibleCrud}">
+																														<ice:graphicImage style="border:none;" styleClass="noborder"
+																															url="./css/images/#{folderBean.folder_menu}/icons/menu_up_update_question.png"
+																															onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_update_question.png'"
+																															onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_update_question.png'"
+																															onmouseup="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_update_question.png'"
+																															onmousedown="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_update_question.png'"
+																															/>
+																														
+																								  </ice:commandLink>	
+																								  <ice:commandLink action="#{rz_ComplianceQuestionManager.deleteAction}" panelConfirmation="confirmdeleteQuestion" onclick="rld();" visible="#{not rz_ComplianceQuestionManager.visibleCrud}">
+																														<ice:graphicImage style="border:none;" styleClass="noborder"
+																															url="./css/images/#{folderBean.folder_menu}/icons/menu_up_delete_question.png"
+																															onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_delete_question.png'"
+																															onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_delete_question.png'"
+																															onmouseup="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_delete_question.png'"
+																															onmousedown="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_delete_question.png'"
+																															/>
+																														
+																								  </ice:commandLink>
+																								  <ice:panelConfirmation id="confirmdeleteQuestion"   styleClass="cnfQuestion"
+																									  acceptLabel="#{bundle['ice_confirmation.ok']}"  
+																									  cancelLabel="#{bundle['ice_confirmation.cancel']}"  
+																									  message="#{bundle['ice_confirmation.delete.message']} [#{rz_ComplianceQuestionManager.nameRzSurveys}}] [#{rz_ComplianceQuestionManager.nameRzSections}] [#{rz_ComplianceQuestionManager.name}]"  
+																									  title="#{bundle['ice_confirmation.delete.title']}"  
+																									  draggable="false"  
+																									 />
+																								&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																								
+																							</td>
+																						</tr>
+
+																			</table>
+																				
+						                                                </td>
+						                                              </tr>
+				                                        			  <tr>
+						                                                <td >
+						                                                <div class="paneTableBoxs"  style="height:100%;margin-top:1px;margin-left: -8px;overflow:auto;width:#{utilServiceLocatorBean.widthAllTable-220}px;">
+										
+									                                        	<table width="95%" style="margin-top: 0px;margin-left: 10px;" cellspacing="0" cellpadding="0" border="0">
+																					<tr  class="trHeader">
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td  align="center" colspan="8">
+																							<h:outputLabel>
+																								<h:outputText value="#{bundle['rz_admin_surveymanager.survey.info']} : #{rz_ComplianceQuestionManager.nameRzSurveys}"></h:outputText>
+																							</h:outputLabel>
+																						</td>									
+																					</tr>
+																					<tr  class="trSubHeader">
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td  align="center" colspan="8">
+																							<h:outputLabel>
+																								<h:outputText value="#{bundle['rz_admin_surveymanager.sections.info']} : #{rz_ComplianceQuestionManager.nameRzSections}"></h:outputText>
+																							</h:outputLabel>
+																						</td>									
+																					</tr>
+																				</table>
+																				<br/>
+																				<table width="95%"  style="margin-top: 0px;margin-left: 8px;border:1px solid #C3DFF4;" cellspacing="0" cellpadding="0" border="0">
+																					<tr class="trrow1">
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td class="tableflabelmasterbold">
+																							<h:outputLabel>
+																								<h:outputText
+																									value="#{bundle['rz_admin_surveymanager.questions.name']}"></h:outputText>
+																							</h:outputLabel>
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td class="tableffieldleft" align="left">
+																							<ice:inputText id="namequest" size="30" maxlength="32"
+																								value="#{rz_ComplianceQuestionManager.name}" partialSubmit="true"
+																								readonly="false" styleClass="fieldkeymasterbg">
+																							</ice:inputText>
+																						</td>
+																						
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td class="tableflabelmasterbold">
+																							<h:outputLabel>
+																								<h:outputText
+																									value="#{bundle['rz_admin_surveymanager.questions.position']}"></h:outputText>
+																							</h:outputLabel>
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td class="tableffield" align="left">
+																							<ice:inputText id="positionquest" size="20" maxlength="30"
+																								value="#{rz_ComplianceQuestionManager.position}" partialSubmit="true"
+																								readonly="true" styleClass="fieldkeymasterbgwhite">
+																							</ice:inputText>
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						
+																					</tr>
+																					<tr class="trrow2">
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td class="tableflabelmasterbold">
+																							<h:outputLabel>
+																								<h:outputText
+																									value="#{bundle['rz_admin_surveymanager.questions.isquestions']}"></h:outputText>
+																							</h:outputLabel>
+																							&amp;nbsp
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td colspan="6" align="left">
+																							<ice:selectOneRadio value="#{rz_ComplianceQuestionManager.isQuestion}" valueChangeListener="#{rz_ComplianceQuestionManager.processValueChange}" id="isQuestionType" styleClass="selectedOneRadioSimplekeyCenter" immediate="true" partialSubmit="true">
+																								<f:selectItems value="#{rz_ComplianceQuestionManager.listIsQuestion}"  />
+																							 </ice:selectOneRadio>
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																					</tr>
+																					<tr class="trrow2">
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td colspan="8"  align="center"> 
+																							<ice:panelGrid visible="#{rz_ComplianceQuestionManager.visibleTypeText}">
+																								<span class="tableflabelmasterbold" align="left">
+																										<h:outputLabel>
+																											<h:outputText
+																												value="#{bundle['rz_admin_surveymanager.questions.label']}"></h:outputText>
+																										</h:outputLabel>
+																									
+																								</span>
+																								<ice:inputTextarea id="labelquest"
+																									   cols="96" rows="8"
+																			                           maxlength="480"
+																			                           value="#{rz_ComplianceQuestionManager.label}"
+																			                           partialSubmit="true"
+																			                           styleClass="fieldsimple">
+																		                        </ice:inputTextarea>
+																		                        <span class="tableflabelmasterbold" align="left">
+																										<h:outputLabel>
+																											<h:outputText
+																												value="#{bundle['rz_admin_surveymanager.questions.supporting']}"></h:outputText>
+																										</h:outputLabel>
+																									
+																								</span>
+																								<ice:inputTextarea id="supportingquest"
+																									   cols="96" rows="5"
+																			                           maxlength="480"
+																			                           value="#{rz_ComplianceQuestionManager.supportingInformation}"
+																			                           partialSubmit="true"
+																			                           styleClass="fieldsimple">
+																		                        </ice:inputTextarea>
+																							</ice:panelGrid>
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																					</tr>	
+																					<tr class="trrow1">
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td colspan="8" align="center">
+																						
+																							<ice:panelGrid visible="#{not rz_ComplianceQuestionManager.visibleQuestion}">
+																								<span class="tableflabelmasterbold">
+																									<h:outputLabel>
+																										<h:outputText value="#{bundle['rz_admin_surveymanager.questions.information']}"></h:outputText>
+																									</h:outputLabel>
+																								</span>
+																								<ice:inputTextarea id="labelinformationquest"
+																									   cols="96" rows="14"
+																			                           maxlength="480"
+																			                           value="#{rz_ComplianceQuestionManager.labelinfo}"
+																			                           partialSubmit="true"
+																			                           styleClass="fieldsimple">
+																		                        </ice:inputTextarea>
+																							
+																							</ice:panelGrid>
+																							<ice:panelGrid visible="#{rz_ComplianceQuestionManager.visibleQuestion}">
+																								<ice:selectManyCheckbox id="CriteriaSelectManyCheckbox" value="#{rz_ComplianceQuestionManager.checkboxValue}" valueChangeListener="#{rz_ComplianceQuestionManager.processValueChange}" binding="#{rz_ComplianceQuestionManager.selectCheckBox}"  partialSubmit="true" layout="spread">
+																						                <f:selectItems value="#{rz_ComplianceQuestionManager.checkboxList}"/>
+																								</ice:selectManyCheckbox>
+																								<table border ="0" width="100%">
+																									<tr>
+																										<td colspan="2" align="center">
+																											
+																											 <ice:checkbox for="CriteriaSelectManyCheckbox" index="0"/>
+																											</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										
+																										<td colspan="2" align="center">
+																											 <ice:checkbox for="CriteriaSelectManyCheckbox" index="1"/>
+																										</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										
+																										<td colspan="2" align="center">
+																											 <ice:checkbox for="CriteriaSelectManyCheckbox" index="2"/>
+																										</td>
+																										
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										 	
+																										<td colspan="2" align="center">
+																											 <ice:checkbox for="CriteriaSelectManyCheckbox" index="3"/>
+																										</td>
+																										
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										 	
+																										<td colspan="2" align="center">
+																											 <ice:checkbox for="CriteriaSelectManyCheckbox" index="4"/>
+																										</td>
+																									</tr>
+																									<tr>
+																										<td class="tableflabelmasterbold" align="left">
+																											<ice:outputLabel>
+																														<h:outputText value="#{bundle['rz_buttons.textfield']}"></h:outputText>
+																											</ice:outputLabel>
+																										</td>
+																										<td align="center"><ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_text.png"/></td>
+																										
+																										<td class="tableflabelmasterbold" align="left">
+																											<ice:outputLabel>
+																														<h:outputText value="#{bundle['rz_buttons.radio']}"></h:outputText>
+																											</ice:outputLabel>
+																										</td>
+																										<td align="center"><ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_radio.png"/></td>
+																										
+																										<td class="tableflabelmasterbold" align="left">
+																											<ice:outputLabel>
+																														<h:outputText value="#{bundle['rz_buttons.check']}"></h:outputText>
+																											</ice:outputLabel>
+																										</td>
+																										<td align="center"><ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_check.png"/></td>
+												
+																										<td class="tableflabelmasterbold" align="left">
+																											<ice:outputLabel>
+																														<h:outputText value="#{bundle['rz_buttons.fileupload']}"></h:outputText>
+																											</ice:outputLabel>
+																										</td>
+																										<td align="center"><ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_fileupload.png"/></td>
+																										
+																										<td class="tableflabelmasterbold" align="left">
+																											<ice:outputLabel>
+																														<h:outputText value="#{bundle['rz_buttons.date']}"></h:outputText>
+																											</ice:outputLabel>
+																										</td>
+																										<td align="center"><ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_form_date.png"/></td>
+												
+																									</tr>
+																								</table>
+																							</ice:panelGrid>
+																							
+																							
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																					</tr>
+																					<tr class="trrow2">
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td class="tableflabelmasterbold">
+																							<ice:panelGrid visible="#{rz_ComplianceQuestionManager.visibleFileupload}">
+																								<h:outputLabel >
+																									<h:outputText value="#{bundle['rz_admin_surveymanager.questions.isupload']}"/>
+																								</h:outputLabel>
+																							</ice:panelGrid>
+																							
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td colspan="6" align="left">
+																							<ice:selectOneRadio value="#{rz_ComplianceQuestionManager.isFileupload}" valueChangeListener="#{rz_ComplianceQuestionManager.processValueChange}" id="isFileuploadType" styleClass="selectedOneRadioSimplekeyCenter" immediate="true" partialSubmit="true" visible="#{rz_ComplianceQuestionManager.visibleFileupload}">
+																								<f:selectItems value="#{rz_ComplianceQuestionManager.listIsFileupload}"/>
+																							 </ice:selectOneRadio>
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																					</tr>
+																					<tr class="trrow1">
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td class="tableflabelmasterbold">
+																							<ice:panelGrid visible="#{rz_ComplianceQuestionManager.visibleAnswer}">
+																								<h:outputLabel>
+																									<h:outputText
+																										value="#{bundle['rz_admin_surveymanager.questions.answerLabels']}"></h:outputText>
+																								</h:outputLabel>
+																							</ice:panelGrid>
+																							&amp;nbsp
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td colspan="6" align="left">
+																							<ice:panelGrid visible="#{rz_ComplianceQuestionManager.visibleAnswer}">
+																							<ice:panelGrid visible="#{rz_ComplianceQuestionManager.visibleTypeCheck}">
+																								
+																								<table cellspacing="0" cellpadding="0" border="0" style="padding:3px;" align="left">
+																							        <tr style="vertical-align: top;">
+																							            <td><ice:selectManyListbox value="#{rz_ComplianceQuestionManager.selectedItemsRadioButton}"
+																							                                      style="width:380px;height:50;">
+																							                <f:selectItems value="#{rz_ComplianceQuestionManager.listRadioButton}"/>
+																							            </ice:selectManyListbox></td>
+																							            <td>
+																							            	<ice:commandLink actionListener="#{rz_ComplianceQuestionManager.remove}">
+																																		<ice:graphicImage style="border:none;" styleClass="noborder"
+																																			url="./css/images/icons/menu_up_remove.png"
+																																			onmouseout="this.src='./css/images/icons/menu_up_remove.png'"
+																																			onmouseover="this.src='./css/images/icons/menu_up_remove.png'"
+																																			onmouseup="this.src='./css/images/icons/menu_up_remove.png'"
+																																			onmousedown="this.src='./css/images/icons/menu_up_remove.png'"
+																																			/>
+																																</ice:commandLink>	
+																							            </td>
+																							        </tr>
+																							        <tr>
+																							            <td><ice:inputText value="#{rz_ComplianceQuestionManager.newItemRadioButton}"
+																							                               style="width:370px;"
+																							                               actionListener="#{rz_ComplianceQuestionManager.addNewItem}"/></td>
+																							            <td>
+																							                                   
+																							                                   <ice:commandLink actionListener="#{rz_ComplianceQuestionManager.addNewItem}">
+																																		<ice:graphicImage style="border:none;" styleClass="noborder"
+																																			url="./css/images/icons/menu_up_add.png"
+																																			onmouseout="this.src='./css/images/icons/menu_up_add.png'"
+																																			onmouseover="this.src='./css/images/icons/menu_up_add.png'"
+																																			onmouseup="this.src='./css/images/icons/menu_up_add.png'"
+																																			onmousedown="this.src='./css/images/icons/menu_up_add.png'"
+																																			/>
+																																</ice:commandLink>	
+																							                                   
+																							           </td>
+																							        </tr>
+																							    </table>
+																								
+																								
+																							</ice:panelGrid>	
+																							
+																							<ice:panelGrid visible="#{rz_ComplianceQuestionManager.visibleTypeRadio}">
+																									<table border="0">
+																										<tr>
+																											<td>
+																												<ice:inputText id="radiolabelA" size="50" maxlength="32"
+																													value="#{rz_ComplianceQuestionManager.labelRadioA}" partialSubmit="true"
+																													readonly="false" styleClass="fieldsimple">
+																												</ice:inputText>
+																											</td>
+																											<td>?</td>
+																										</tr>
+																										<tr>
+																											<td>
+																												<ice:inputText id="radiolabelB" size="50" maxlength="32"
+																													value="#{rz_ComplianceQuestionManager.labelRadioB}" partialSubmit="true"
+																													readonly="false" styleClass="fieldsimple" >
+																												</ice:inputText>
+																											</td>
+																											<td>?</td>
+																										</tr>
+																									</table>
+																							</ice:panelGrid>
+																							</ice:panelGrid>
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																					</tr>							
+																					<tr class="trrow2">
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td class="tableflabelmasterbold">
+																							<ice:panelGrid  visible="#{rz_ComplianceQuestionManager.visibleTypeText}">
+																								<h:outputLabel >
+																									<h:outputText value="#{bundle['rz_admin_surveymanager.questions.isrequiredcomment']}"/>
+																								</h:outputLabel>
+																							</ice:panelGrid>
+																							
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td colspan="6" align="left">
+																							<ice:selectOneRadio value="#{rz_ComplianceQuestionManager.isRequiredComment}" valueChangeListener="#{rz_ComplianceQuestionManager.processValueChange}"  binding="#{rz_ComplianceQuestionManager.selectRadioComment}" id="isRequiredCommentType" styleClass="selectedOneRadioSimplekeyCenter" immediate="true" partialSubmit="true" visible="#{rz_ComplianceQuestionManager.visibleTypeText}" >
+																								<f:selectItems value="#{rz_ComplianceQuestionManager.listIsRequiredComment}"/>
+																							 </ice:selectOneRadio>
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																					</tr>
+																			</table>
+																					<br/>
+																			<table width="95%"  style="margin-top: 0px;margin-left: 8px;border:1px solid #C3DFF4;" cellspacing="0" cellpadding="0" border="0">
+																					<tr class="trrow1">
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td class="tableflabelmasterbold">
+																							<ice:panelGrid  visible="#{rz_ComplianceQuestionManager.visibleTypeText}">
+																								<h:outputLabel >
+																									<h:outputText value="#{bundle['rz_admin_surveymanager.questions.israteable']}"/>
+																								</h:outputLabel>
+																							</ice:panelGrid>
+																							
+																						</td>
+																						<td align="left">
+																							<ice:selectOneRadio value="#{rz_ComplianceQuestionManager.isRateable}" valueChangeListener="#{rz_ComplianceQuestionManager.processValueChange}" id="isRateableType" styleClass="selectedOneRadioSimplekeyCenter" immediate="true" partialSubmit="true" visible="#{rz_ComplianceQuestionManager.visibleTypeText}" >
+																								<f:selectItems value="#{rz_ComplianceQuestionManager.listIsRateable}"/>
+																							 </ice:selectOneRadio>
+																						</td>
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td class="tableflabelmasterbold">
+																							<ice:panelGrid  visible="#{rz_ComplianceQuestionManager.visibleTypeText}">
+																								<h:outputLabel >
+																									<h:outputText value="#{bundle['rz_admin_surveymanager.questions.isrequiredfollowup']}"/>
+																								</h:outputLabel>
+																							</ice:panelGrid>
+																							
+																						</td>
+																						<td align="left">
+																							<ice:selectOneRadio value="#{rz_ComplianceQuestionManager.isRequiredFollowup}" valueChangeListener="#{rz_ComplianceQuestionManager.processValueChange}" binding="#{rz_ComplianceQuestionManager.selectRadioRequiredFollowup}" id="isRequiredFollowupType" styleClass="selectedOneRadioSimplekeyCenter" immediate="true" partialSubmit="true" visible="#{rz_ComplianceQuestionManager.visibleTypeText}" >
+																								<f:selectItems value="#{rz_ComplianceQuestionManager.listIsRequiredFollowup}"/>
+																							 </ice:selectOneRadio>
+																							 
+																						</td>
+																						<td>
+																							&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																							&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																							&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																							&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																							&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																							&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																							&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																						</td>
+																					</tr>
+																			</table>
+																			
+																					<br/>
+																					
+																			<table width="95%"  style="margin-top: 0px;margin-left: 8px;border:1px solid #C3DFF4;" cellspacing="0" cellpadding="0" border="0">
+																				<tr class="trrow1">
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td>
+																						
+																						<ice:panelGrid visible="#{rz_ComplianceQuestionManager.visibleMarginal}">
+																								<ice:selectManyCheckbox id="CriteriaSelectManyCheckboxLevelMarginal" value="#{rz_ComplianceQuestionManager.checkboxLevelMarginalValue}" valueChangeListener="#{rz_ComplianceQuestionManager.processValueChange}" binding="#{rz_ComplianceQuestionManager.selectCheckBoxLevelMarginal}"  partialSubmit="true" layout="spread">
+																						                <f:selectItems value="#{rz_ComplianceQuestionManager.checkboxLevelMarginalList}"/>
+																								</ice:selectManyCheckbox>
+																								<table border ="0" align="center">
+																									<tr>
+																										<td>&amp;nbsp</td>
+																										<td colspan="1" class="tableflabelmasterbold" align="center">
+																											<ice:panelGrid >
+																												<h:outputLabel >
+																													<h:outputText value="#{bundle['rz_admin_surveymanager.questions.levelmarginal']}"/>
+																												</h:outputLabel>
+																											</ice:panelGrid>
+																										</td>
+																										<td colspan="7" align="center" style="background-color: #9C7367;color:white;font-weight: bold"><h:outputText value="#{bundle['rz_marginal.notimplemented']}"/>
+																										</td>
+																										
+																										<td colspan="7" align="center" style="background-color: #DDDD00;color:white;font-weight: bold"><h:outputText value="#{bundle['rz_marginal.marginal']}"/>
+																										</td>
+											
+																										<td colspan="7" align="center" style="background-color: #4F82BE;color:white;font-weight: bold"><h:outputText value="#{bundle['rz_marginal.average']}"/>
+																										</td>
+											
+																										<td colspan="10" align="center" style="background-color: #79888A;color:white;font-weight: bold"><h:outputText value="#{bundle['rz_marginal.aboveaverage']}"/>
+																										</td>
+																										
+																										<td colspan="6" align="center" style="background-color: #63A06D;color:white;font-weight: bold;font-size: 12px;"><h:outputText value="#{bundle['rz_marginal.bestpractice']}"/>
+																										</td>
+																									</tr>
+																									<tr>
+																										<td>
+																											&amp;nbsp
+																										</td>
+																										<td class="tableflabelmasterbold" align="center">
+																											&amp;nbsp
+																										</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td colspan="2" align="center">
+																											<!-- <ice:checkbox for="CriteriaSelectManyCheckboxLevelMarginal" index="0"/><div style="font-weight: bold;">1</div>-->
+																										</td>
+																										
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										
+																										<td colspan="2" align="center">
+																											<!-- <ice:checkbox for="CriteriaSelectManyCheckboxLevelMarginal" index="1"/><div style="font-weight: bold;">2</div>-->
+																										</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td colspan="2" align="center">
+																											<!-- <ice:checkbox for="CriteriaSelectManyCheckboxLevelMarginal" index="2"/><div style="font-weight: bold;">3</div>-->
+																										</td>
+																										
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td colspan="2" align="center">
+																											 <!--<ice:checkbox for="CriteriaSelectManyCheckboxLevelMarginal" index="3"/><div style="font-weight: bold;">4</div>-->
+																										</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td colspan="2" align="center">
+																											<!-- <ice:checkbox for="CriteriaSelectManyCheckboxLevelMarginal" index="4"/><div style="font-weight: bold;">5</div>-->
+																										</td>
+																										
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td colspan="2" align="center">
+																											<!-- <ice:checkbox for="CriteriaSelectManyCheckboxLevelMarginal" index="5"/><div style="font-weight: bold;">6</div>-->
+																										</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td colspan="2" align="center">
+																											<!-- <ice:checkbox for="CriteriaSelectManyCheckboxLevelMarginal" index="6"/><div style="font-weight: bold;">7</div>-->
+																										</td>
+																										
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td colspan="2" align="center">
+																											<!-- <ice:checkbox for="CriteriaSelectManyCheckboxLevelMarginal" index="7"/><div style="font-weight: bold;">8</div>-->
+																										</td>
+																										
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td colspan="2" align="center">
+																											<!-- <ice:checkbox for="CriteriaSelectManyCheckboxLevelMarginal" index="8"/><div style="font-weight: bold;">9</div>-->
+																										</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td colspan="2" align="center">
+																											<!-- <ice:checkbox for="CriteriaSelectManyCheckboxLevelMarginal" index="9"/><div style="font-weight: bold;">10</div>-->
+																										</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																									</tr>
+																									
+																								</table>
+																							</ice:panelGrid>
+																						
+																						</td>
+																				</tr>
+																			</table>
+																			
+																			<br/>
+																					
+																			<table width="95%"  style="margin-top: 0px;margin-left: 8px;border:1px solid #C3DFF4;" cellspacing="0" cellpadding="0" border="0">
+																				<tr class="trrow1">
+																						<td>
+																							&amp;nbsp
+																						</td>
+																						<td>
+																						
+																						<ice:panelGrid visible="#{rz_ComplianceQuestionManager.visibleQuestion}">
+																								<ice:selectManyCheckbox id="CriteriaSelectManyCheckboxLevelImportance" value="#{rz_ComplianceQuestionManager.checkboxLevelImportanceValue}" valueChangeListener="#{rz_ComplianceQuestionManager.processValueChange}" binding="#{rz_ComplianceQuestionManager.selectCheckBoxLevelImportance}"  partialSubmit="true" layout="spread">
+																						                <f:selectItems value="#{rz_ComplianceQuestionManager.checkboxLevelImportanceList}"/>
+																								</ice:selectManyCheckbox>
+																								<table border ="0" align="center">
+																									<tr>
+																										<td>
+																											&amp;nbsp
+																										</td>
+																										<td class="tableflabelmasterbold" align="center">
+																											<ice:panelGrid >
+																												<h:outputLabel >
+																													<h:outputText value="#{bundle['rz_admin_surveymanager.questions.levelimportance']}"/>
+																												</h:outputLabel>
+																											</ice:panelGrid>
+																											
+																										</td>
+																										<td rowspan="2" align="center">
+																										&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																										</td>
+																										<td colspan="2" align="center">
+																											 <ice:checkbox for="CriteriaSelectManyCheckboxLevelImportance" index="0"/><div style="font-weight: bold;">#{bundle['rz_importance.high']}</div>
+																										</td>
+																										
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										
+																										<td colspan="2" align="center">
+																											 <ice:checkbox for="CriteriaSelectManyCheckboxLevelImportance" index="1"/><div style="font-weight: bold;">#{bundle['rz_importance.medium']}</div>
+																										</td>
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td colspan="2" align="center">
+																											 <ice:checkbox for="CriteriaSelectManyCheckboxLevelImportance" index="2"/><div style="font-weight: bold;">#{bundle['rz_importance.low']}</div>
+																										</td>
+																										
+																										<td rowspan="2" align="center">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																										<td colspan="2" align="center">
+																											 <ice:checkbox for="CriteriaSelectManyCheckboxLevelImportance" index="3"/><div style="font-weight: bold;">#{bundle['rz_importance.not']}</div>
+																										</td>
+																										
+																									</tr>
+																									
+																								</table>
+																							</ice:panelGrid>
+																						
+																						</td>
+																				</tr>
+																			</table>
+																					
+																			
+																			</div>
+																		</td>
+						                                                </tr>
+						                                                <tr>
+						                                                <td>
+						                                                	<div class="paneTableBoxs"  style="height:#{utilServiceLocatorBean.heightAllTable}px;margin-top:1px;margin-left:-8px;overflow:auto;width:#{utilServiceLocatorBean.widthAllTable-220}px;">
+																			
+						                                                		
+						                                                		
+						                                                	
+																			</div>
+						                                                </td>
+						                                                
+						                                                </tr>
+						                                                
+					                                          		</tbody>
+					                                          		</table>
+						                                          
+						                                          
+					                                          	</td>
+					                                          		
+					                                    	 </tr>
+					                                    	 
+					                                    	
+					                                    	 
+	                                      					</tbody>
+	                                    				</table>
+                                    			</ice:form>
+			                                    
+			                                    <ice:form>
+				                                    <table id="tab1" style="display: none;" width="100%" border="0" cellpadding="0" cellspacing="0">
+				                                      <tbody>
+				                                        <tr>
+				                                        <td width="11" height="41" valign="top"><img src="./css/images/general/dashcontent_left_top.png" width="11" height="41"/></td>
+				                                        <td style="border-right: 1px solid rgb(239, 239, 239);" valign="top">
+				                                        	
+				                                        	
+				                                        </td>
+                                    					</tr>
+	                                      			  </tbody>
+	                                    			</table>
+                                    			</ice:form>
+			                                    
+			                                    <ice:form>
+				                                    <table id="tab2" style="display: none;" width="100%" border="0" cellpadding="0" cellspacing="0">
+				                                      <tbody>
+				                                        <tr>
+				                                        <td width="11" height="41" valign="top"><img src="./css/images/general/dashcontent_left_top.png" width="11" height="41"/></td>
+                                    					</tr>
+	                                      			  </tbody>
+	                                    			</table>
+                                    			</ice:form>
+                                    			
+                                    			<ice:form>
+				                                    <table id="tab3" style="display: none;" width="100%" border="0" cellpadding="0" cellspacing="0">
+				                                      <tbody>
+				                                        <tr>
+				                                        <td width="11" height="41" valign="top"><img src="./css/images/general/dashcontent_left_top.png" width="11" height="41"/></td>
+                                    					</tr>
+	                                      			  </tbody>
+	                                    			</table>
+                                    			</ice:form>
+                                    			
+	                                     		</td>
+	                                     		
+	                                  		  </tr>
+	
+	                                		</tbody>
+	                              		 </table>
+	                              		<br/>
+	                              		<br/>
+	                             		 </td>
+	                             		 
+	                           		 </tr>
+	                         		 </tbody>
+	                       			</table>
+	                        		</td>
+	                      		  </tr>
+	                    		</tbody>
+	                  		</table>
+	                  		</td>
+	                  		
+	                  		<td valign="top">
+							  	<ice:form>
+							  		<table width="125px" style="margin-left:0px;border:1px solid #C3DFF4;" cellspacing="0" cellpadding="0" border="0">
+							  			<tr  class="trSubHeader"><td align="center">#{bundle['rz_admin_surveymanager.questions.title']}</td></tr>
+							  			<tr>
+							  				<td valign="top" align="center"  class="tdSubHeader">
+														&amp;nbsp&amp;nbsp
+														<ice:commandLink action="#{rz_ComplianceSectionManager.loadPositionAction}" onclick="rld();" >
+																<ice:graphicImage style="border:none;" styleClass="noborder"
+																							url="./css/images/icons/menu_up_save.png"
+																							onmouseout="this.src='./css/images/icons/menu_up_save.png'"
+																							onmouseover="this.src='./css/images/icons/menu_up_save.png'"
+																							onmouseup="this.src='./css/images/icons/menu_up_save.png'"
+																							onmousedown="this.src='./css/images/icons/menu_up_save.png'"
+																							/>
+														</ice:commandLink>
+												
+														
+														<ice:outputLabel value="#{bundle['rz_admin_surveymanager.questions.posquestions']}" ></ice:outputLabel>																
+											</td>
+										</tr>
+										<tr>
+											<td  class="tdcolumninfo" valign="top"><br/>
+														<ice:panelGroup style="float:left;margin-top:0px;margin-left:2px;">
+												            <ice:panelPositioned id="positionq" var="questionpos"
+												                                 value="#{rz_ComplianceSectionManager.positions}"
+												                                 styleClass="positionPanelContainer"
+												                                 listener="#{rz_ComplianceSectionManager.changed}"
+												                                 constraint="vertical">
+												                <ice:panelGroup style="cursor:move;" styleClass="container">
+												                    <ice:panelGroup styleClass="moveLabel"
+												                                    style="border: 4px red">
+												                        <ice:outputText id="nameq"   style="color:#334F4E" value="#{questionpos.name}"/>
+												                    </ice:panelGroup>
+												                </ice:panelGroup>
+												            </ice:panelPositioned>
+												        </ice:panelGroup>
+													</td>
+												</tr>
+										</table>
+							  	
+							  	</ice:form>
+							  </td>
+	                  		
+	                  		
+	                		</tr>
+	              		</tbody>
+	            	</table>
+	            	
+	            	<ice:form>
+							<ice:panelPopup modal="true"
+								visible="#{viewlogsPopUpBean.visible}"
+								style="margin-top:-90px;width:485px;"
+								styleClass="icePanelPopupBody icePanelPopup">
+								<f:facet name="header">
+									<ice:panelGrid width="485" cellpadding="0" cellspacing="1"
+										columns="2" styleClass="trHeader">
+										<ice:outputText style="color: white;"
+											value="#{bundle['rz_log']}" />
+										<ice:commandButton image="./css/images/icons/close.png"
+											action="#{viewlogsPopUpBean.closePopup}"
+											title="Close this draggable popup" />
+									</ice:panelGrid>
+								</f:facet>
+								<f:facet name="body">
+									<ice:panelGrid width="100%">
+										<table style="border: none; margin-top: -10px; float: left;">
+											<tr>
+												<td rowspan="2" valign="top">
+													<ice:graphicImage styleClass="noborder"
+														url="./css/images/general/log#{logger.stType}.png" />
+												</td>
+												<td style="color: #3A4358; font-weight: bold;">
+													&amp;nbsp&amp;nbsp#{logger.stType}
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<ice:panelGrid width="100%" columns="1" cellpadding="0"
+														border="1"
+														style="background-color: #F4F4F4;border-color:black;">
+														<table align="center">
+															<tr>
+																<td width="410" colspan="3" class="tableflabelmaster">
+																	<div style="height: 200px; overflow: auto;">
+																		#{logger.stLogger}
+																	</div>
+																</td>
+															</tr>
+														</table>
+													</ice:panelGrid>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3" align="right">
+													<ice:commandLink action="#{viewlogsPopUpBean.closePopup}">
+														<ice:graphicImage style="border:none;"
+															styleClass="noborder"
+															url="./css/images/general/logexit.png" />
+													</ice:commandLink>
+												</td>
+											</tr>
+										</table>
+									</ice:panelGrid>
+								</f:facet>
+							</ice:panelPopup>
+	            	</ice:form>
+					<p>
+					</p>	
+                                    
+
+					</ui:define>
+
+
+				</ui:composition>
+
+
+
+
+			</body>
+		</html>
+	</f:view>
+</jsp:root>

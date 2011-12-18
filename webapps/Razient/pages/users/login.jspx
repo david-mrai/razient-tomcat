@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ice="http://www.icesoft.com/icefaces/component">
+   <jsp:directive.page contentType="text/html;charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+   <f:view>
+   		<ice:outputDeclaration 
+            doctypeRoot="html" 
+            doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN" 
+            doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" /> 
+    <html>
+       <head>
+         <title>Index (Razient)</title>
+       </head>
+       <body>
+       
+        	<!-- template="#{templateBean.templateContent}"-->
+			<ui:composition
+			        template="../../include/templates/pages/modeA_form.jspx"
+			        xmlns:h="http://java.sun.com/jsf/html"
+			        xmlns:f="http://java.sun.com/jsf/core"
+			        xmlns:c="http://java.sun.com/jstl/core"
+			        xmlns:ice="http://www.icesoft.com/icefaces/component"
+			        xmlns:ui="http://java.sun.com/jsf/facelets" >
+			
+			  <!-- params for page titles-->
+			 		 <!--<f:loadBundle basename="truckandi.view.bundle.Message" var="bundle"/>
+			        <ui:param name="pageTitle" value="#{bundle['tai_login.title']}" />-->
+					<ui:param name="pageTitle" value="Login" />
+			    
+			    <ui:define name="page-menu-value">
+			    	 <ice:form>
+					 <br/>
+					 <ice:graphicImage visible="true" style="border:none;"  styleClass="noborder"
+										url		="css/images/login/login_menu_up_aboutus.png" 
+									onmouseout	="this.src='css/images/login/login_menu_up_aboutus.png'"
+									onmouseover	="this.src='css/images/login/login_menu_over_aboutus.png'"
+									onmouseup	="this.src='css/images/login/login_menu_up_aboutus.png'"
+									onmousedown	="this.src='css/images/login/login_menu_down_aboutus.png'" />
+					 <br/>				
+					 <ice:graphicImage visible="true" style="border:none;"  styleClass="noborder"
+										url		="css/images/risk_black_tall.png"/>
+					 <br/>				
+					 <ice:graphicImage visible="true" style="border:none;"  styleClass="noborder"
+										url		="css/images/login/login_menu_up_products.png" 
+									onmouseout	="this.src='css/images/login/login_menu_up_products.png'"
+									onmouseover	="this.src='css/images/login/login_menu_over_products.png'"
+									onmouseup	="this.src='css/images/login/login_menu_up_products.png'"
+									onmousedown	="this.src='css/images/login/login_menu_down_products.png'" />
+					 <br/>
+					 
+					 </ice:form> 	
+			    </ui:define>
+			    
+				<ui:define name="page-content-value">
+
+					<!--<f:loadBundle basename="usaco.view.bundle.Message" var="bundle"/>-->
+					<h:form id="frm" >
+					<div>
+					<ice:inputHidden id="dimensionwidth" value="#{utilServiceLocatorBean.dimension_width}" immediate="true"/>
+					<ice:inputHidden id="dimensionheight" value="#{utilServiceLocatorBean.dimension_height}" immediate="true"/>
+					
+					
+					<ice:panelGroup styleClass="loginBox panelLoginContainer" >
+							<div style="color: #FFFFFF;margin-left:76px;font-variant:small-caps; margin-top:3px;font-weight: bold;font-size: 17px;font-family: Tahoma;" >
+								#{bundle['rz_login.user.title']}
+							</div>
+							<ice:panelGrid columns="1">
+				         			<table class="tableformslogin" >
+											<tr>
+												<td class="tableflabellogin">
+													&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													<h:outputLabel >
+													<h:outputText styleClass="titleLabelLogin" value="#{bundle['rz_login.user']}"></h:outputText>
+													</h:outputLabel>
+												</td>
+												<td class="tableffield">
+													<ice:inputText id="Username"
+							                            size="50"
+							                           maxlength="60"
+							                           value="#{loginUsersBean.userLogin}"
+							                           partialSubmit="true"
+							                           styleClass="fieldsimplelogin"
+							                           >
+							            			</ice:inputText>
+							            		</td>					
+											</tr>
+											<tr>
+												<td class="tableflabellogin">
+													&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													<h:outputLabel >
+													<h:outputText styleClass="titleLabelLogin" value="#{bundle['rz_login.password']}"></h:outputText>
+													</h:outputLabel>
+												</td>
+												<td class="tableffield">
+													<ice:inputSecret id="Password"
+							                            size="50"
+							                           maxlength="30"
+							                           value="#{loginUsersBean.userPassword}"
+							                           partialSubmit="true"
+							                           onkeydown="submitOnEnter(event);" 
+							                           styleClass="fieldsimplelogin" 
+							                        >
+							            			</ice:inputSecret>
+							            		</td>
+											</tr>
+											<tr>
+												<td class="tableflabel">
+												</td>
+												<td>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+													<ice:commandLink action="#{loginUsersBean.loginAction}" onclick="dimension(this.form);">
+														<ice:graphicImage style="border:none;"
+																url		="css/images/#{folderBean.folder_login}/login_submit_up.png" 
+															onmouseout	="this.src='css/images/#{folderBean.folder_login}/login_submit_up.png'"
+															onmouseover	="this.src='css/images/#{folderBean.folder_login}/login_submit_over.png'"
+															onmouseup	="this.src='css/images/#{folderBean.folder_login}/login_submit_up.png'"
+															onmousedown	="this.src='css/images/#{folderBean.folder_login}/login_submit_down.png'" />
+													</ice:commandLink>
+													<ice:commandButton action="#{loginUsersBean.loginAction}" onclick="dimension(this.form);"  visible="false">
+													</ice:commandButton>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<table style="margin-top:-5px;">
+														<tr>
+															<td>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																<ice:commandLink action="#{forgotpasswordPopUpBean.openPopup}" onclick="dimension(this.form);">
+																	<ice:graphicImage style="border:none;"
+																			url		="css/images/login/forgot_up.png" 
+																		onmouseout	="this.src='css/images/login/forgot_up.png'"
+																		onmouseover	="this.src='css/images/login/forgot_down.png'"
+																		onmouseup	="this.src='css/images/login/forgot_up.png'"
+																		onmousedown	="this.src='css/images/login/forgot_down.png'" />
+																	&amp;nbsp
+																	<h:outputLabel styleClass="titleLabelforgot">
+																	#{bundle['rz_pwd_forgot']}</h:outputLabel>
+																	
+																</ice:commandLink>
+																
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+		        				</ice:panelGrid>
+		        				
+		        				
+							</ice:panelGroup>
+							</div>
+							<div>						
+							<ice:panelGroup styleClass="loginMessageBox panelLoginContainer"  visible="#{loginUsersBean.visibleError}">
+									<ice:panelGrid style="width: 390px" >
+						         			<table class="tableformsmessageerror" >
+													<tr>
+									            		<td>
+									            			<ice:graphicImage style="border:none;" url		="css/images/icons/messagelog.png" />
+									            			&amp;nbsp&amp;nbsp
+															<h:outputLabel styleClass="titleLabelMessageLog">
+																#{loginUsersBean.logerror}
+															</h:outputLabel>
+															
+														</td>
+													</tr>
+												</table>
+				        				</ice:panelGrid>
+							</ice:panelGroup>
+									
+					</div>
+					</h:form>
+					
+					<ice:form>
+				
+					<ice:panelPopup  modal="true" visible="#{forgotpasswordPopUpBean.visible}" style="width:575px;" styleClass="icePanelPopupBody icePanelPopup">
+				                <f:facet name="header">
+				                   <ice:panelGrid width="575" cellpadding="0" cellspacing="1" columns="2" styleClass="trHeader" >
+				                        <ice:outputText style="color: white;" value="#{bundle['rz_pwd_forgot']}"/>
+				                        <ice:commandButton image="./css/images/icons/close.png" action="#{forgotpasswordPopUpBean.closePopup}" title="Close this draggable popup"/>
+				                    </ice:panelGrid>
+				                </f:facet>
+				                
+				                <f:facet name="body">
+				                    <ice:panelGrid width="100%" columns="1" cellpadding="0"  style="background-color: #F0F7FB">
+					                	<table align="center" >
+						                       	<tr>
+							                       <td  width="590" colspan="4" class="tableflabelmasterbold">
+							                       		<ice:outputText style="font-weight:bold;color:#3E4F53;font-variant:small-caps;font-size:14px;"  value="#{bundle['rz_forgot.title']}"/>
+							                       		<br/><br/>
+							                       		<ice:outputText style="font-weight:normal;color:#3E4F53;font-size:12px;"  value="#{bundle['rz_forgot.info']}"/>
+							                       		
+							                       	</td>
+							                       
+							                    </tr>
+							                    <tr>
+							                       <td  class="tableflabelmasterbold" ><ice:outputText  style="font-weight:bold;color:#3E4F53;" value="#{bundle['rz_forgot.email']}"/></td>
+							                       <td colspan="3" align="left">
+							                       				<br/>
+							                       				<ice:inputText id="mailaddress" size="50" maxlength="80"
+																	value="#{forgotPwdUsersBean.userLogin}"
+																	styleClass="fieldkeymasterbgleft">
+																</ice:inputText>
+																
+													</td>
+							                    </tr>
+							                    <tr>
+							                    <td  colspan="4" align="center">
+							                    	<ice:commandLink actionListener ="#{forgotPwdUsersBean.sendMail}">
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_up_changepwd.png"/>
+													</ice:commandLink>
+												</td>
+												</tr>
+							                    <tr>
+													<td colspan="4">
+													<ice:outputText style="font-weight:normal;color:#1D115E;font-size: 11px;"  value="#{forgotPwdUsersBean.logerror}"/>
+													</td>	
+							                    </tr>
+							                    </table>
+				                 	</ice:panelGrid>
+				                </f:facet>
+				                
+				            </ice:panelPopup>   
+				            
+				       </ice:form>
+
+				</ui:define>
+				
+				<ui:define name="page-information-value">
+				<!--<h:form id="frmx" >
+					<div style="width:90%; margin-left:0px;margin-top:0px;" >
+									
+									
+							<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+							<td>&amp;nbsp&amp;nbsp</td>
+							<td>
+								<div id="tab1focus" class="tab tabfocus" style="display:block;font-weight: bold;">
+								#{bundle['rz_login.tab1.title']}</div>
+								<div id="tab1ready" class="tab tabhold" style="display:none;">
+								<span onclick="ManageTabPanelDisplay('tab1focus','tab2ready','tab3ready','content1')">#{bundle['rz_login.tab1.title']}</span>
+								</div>
+							</td>
+							<td>&amp;nbsp</td>
+							<td>
+								<div id="tab2focus" class="tab tabfocus" style="display:none;font-weight: bold;">
+								#{bundle['rz_login.tab2.title']}
+								</div>
+								<div id="tab2ready" class="tab tabhold" style="display:block;">
+								<span onclick="ManageTabPanelDisplay('tab1ready','tab2focus','tab3ready','content2')">#{bundle['rz_login.tab2.title']}</span>
+								</div>
+							</td>
+							<td>&amp;nbsp</td>
+							<td>
+								<div id="tab3focus" class="tab tabfocus" style="display:none;font-weight: bold;">
+								#{bundle['rz_login.tab3.title']}
+								</div>
+								<div id="tab3ready" class="tab tabhold" style="display:block;">
+								<span onclick="ManageTabPanelDisplay('tab1ready','tab2ready','tab3focus','content3')">#{bundle['rz_login.tab3.title']}</span>
+								</div>
+							</td>
+							<td>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+							</tr>
+							<tr>
+								<td colspan="7">
+								<div id="content1" class="tabcontent" style="display:block;width: 95%;">
+								<p style="margin-top:0px">
+								<strong>#{bundle['rz_login.tab1.name']}</strong>
+								#{bundle['rz_login.tab1.info1']}								
+								<br/><br/>
+								#{bundle['rz_login.tab1.info2']}
+								</p>
+								</div>
+								<div id="content2" class="tabcontent" style="display:none;width: 94%;">
+								<p style="margin-top:0px">
+								<strong>#{bundle['rz_login.tab2.name']}</strong>
+								#{bundle['rz_login.tab2.info1']}								
+								<br/><br/>
+								#{bundle['rz_login.tab2.info2']}
+								</p>
+								</div>
+								<div id="content3" class="tabcontent" style="display:none;width: 94%;">
+								<p style="margin-top:0px">
+								<strong>#{bundle['rz_login.tab3.name']}</strong>
+								#{bundle['rz_login.tab3.info1']}								
+								<br/><br/>
+								#{bundle['rz_login.tab3.info2']}
+								</p>
+								</div>
+								
+								</td>
+							</tr>
+							</table>	
+									
+									
+									
+					</div>
+				</h:form>-->
+				
+				
+				</ui:define>
+
+			</ui:composition>
+
+	
+
+       </body>
+    </html>
+   </f:view>
+</jsp:root>

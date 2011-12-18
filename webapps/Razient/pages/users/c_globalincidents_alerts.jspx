@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<jsp:root version="1.2"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ice="http://www.icesoft.com/icefaces/component"
+   >
+
+   <jsp:directive.page contentType="text/html;charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+   <f:view>
+   		<ice:outputDeclaration 
+            doctypeRoot="html" 
+            doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN" 
+            doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" /> 
+             
+    <html>
+       <head>
+         <title>Index (Razient)</title>
+       </head>
+       <body>
+       
+        	<!-- template="#{templateBean.templateContent}"-->
+			<ui:composition
+			        template="../../include/templates/pages/modeB_customer.jspx"
+			        xmlns:h="http://java.sun.com/jsf/html"
+			        xmlns:f="http://java.sun.com/jsf/core"
+			        xmlns:c="http://java.sun.com/jstl/core"
+			        xmlns:ice="http://www.icesoft.com/icefaces/component"
+			        xmlns:ui="http://java.sun.com/jsf/facelets">
+			
+			  <!-- params for page titles-->
+			 		 <!--<f:loadBundle basename="truckandi.view.bundle.Message" var="bundle"/>
+			        <ui:param name="pageTitle" value="#{bundle['tai_login.title']}" />-->
+					<ui:param name="pageTitle" value="#{bundle['c_globalincidents_alerts.title']}" />
+				
+				<ui:define name="header_menu_value">
+						<table cellspacing="0" cellpadding="0">
+										<tr>
+											<td>
+											<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_dash_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'" />
+													<f:attribute name="optioonselected" value="dh"/>
+											</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Compliance}">
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+														url		="./css/images/#{folderBean.folder_menu}/risk_comp_1.png" 
+													onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'"
+													onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_1.png'"
+													onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_2.png'" />
+													<f:attribute name="optioonselected" value="cp_sm"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/#{folderBean.folder_menu}/risk_global_2.png" visible="#{users_MenuBarBean.visible_C_GlobalIncidents}"/>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Reports}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_rep_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'" />
+														<f:attribute name="optioonselected" value="rp_rh"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Reports}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_research_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_research_2.png'" />
+														<f:attribute name="optioonselected" value="rs_in"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Administration}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_cust_2.png'" />
+														<f:attribute name="optioonselected" value="ad_um"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<!--<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_SuppliersView}">												
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_supp_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_supp_2.png'" />
+														<f:attribute name="optioonselected" value="sv_sp"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											--><td>
+												<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Ratings}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_ratings_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_ratings_2.png'" />
+														<f:attribute name="optioonselected" value="rt_vr"/>
+												</ice:commandLink>
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_ratings_3.png"/>-->
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<!--<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_RequestForProposal}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'" />
+														<f:attribute name="optioonselected" value="rp_ps"/>
+												</ice:commandLink>
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_3.png"/>
+											</td>-->
+											<!--<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_C_Contracts}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_contracts_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_contracts_2.png'" />
+													<f:attribute name="optioonselected" value="ct_av"/>
+												</ice:commandLink>
+											</td>-->
+										</tr>
+								</table>	
+				</ui:define>
+			    
+			    <ui:define name="page-menu-value">
+			    	 <ice:form>
+			    	 
+					 <ice:graphicImage visible="true" styleClass="menuPosA"
+								url="./css/images/#{folderBean.folder_menu}/risk_menu_down_alerts.png" />
+								
+					<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 	<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_miles.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_miles.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_miles.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_miles.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_miles.png'" />
+						<f:attribute name="optioonselected" value="gi_ml"/>
+					</ice:commandLink>
+					
+					<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 	<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_query.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_query.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_query.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_query.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_query.png'" />
+						<f:attribute name="optioonselected" value="gi_qr"/>
+					</ice:commandLink>	
+					
+					<ice:commandLink action="#{users_MenuBarBean.actionLink}"
+								onclick="rld();"
+								actionListener="#{users_MenuBarBean.actionlistener}">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_tickettracking.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_tickettracking.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_tickettracking.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_tickettracking.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_tickettracking.png'" />
+								<f:attribute name="optioonselected" value="gi_tt" />
+					</ice:commandLink>			
+
+					<ice:graphicImage visible="true"  styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_one.png"/>
+									
+					 </ice:form> 	
+			    </ui:define>
+			    
+				<ui:define name="page-content-value">
+				
+				
+				
+				
+				<ice:form>
+				
+				
+					<ice:panelGrid width="100%" columns="1" cellpadding="0"  style="align:center;background-color: #F0F7FB; border-color: #294D80">
+							<table cellspacing="0" cellpadding="0" style="margin-top: -7px;" width="100%">							
+								<tr>
+                                  <td bgcolor="#ffffff">
+                                  <ice:panelGroup  >
+	                                	<style type="text/css">
+	                                		.dhGmpMapTd div.gmap {width:  #{utilServiceLocatorBean.widthPanelMapQueryGincidents-20}px; height: 500px}
+											.dhGmpMapTd {visibility: block}
+	                                 	</style>
+	                                 	
+	                                 	
+	                                 	<ice:panelGroup visible="#{c_TabAlertViewBean.visibleMap_AB}">
+									        <ice:gMap id="qrgimapA"  rendered="true" styleClass="dhGmpMapTd" latitude="#{c_AlertViewVendor_GridBean.latitude}" longitude="#{c_AlertViewVendor_GridBean.longitude}" zoomLevel="7">														        	
+									      	 	<ice:gMapGeoXml  url="#{bundle['url_upload']}#{bundle['url_kml']}#{bundle['url_customer']}#{c_AlertViewVendor_GridBean.idCustomer}/#{c_AlertViewVendor_GridBean.nameKml}"/> 
+									        	<ice:gMapControl id="largectrl" name="GLargeMapControl" rendered="#{c_AlertViewVendor_GridBean.showControls}"/>
+									            <ice:gMapControl id="scalectrl" name="GScaleControl" rendered="#{c_AlertViewVendor_GridBean.showControls}"/>
+									            <ice:gMapControl id="typectrl" name="GMapTypeControl" rendered="#{c_AlertViewVendor_GridBean.showControls}"/>
+											</ice:gMap>
+										</ice:panelGroup>
+										
+										
+										<ice:panelGroup visible="#{not c_TabAlertViewBean.visibleMap_AB}">
+									        <ice:gMap id="qrgimapB"  rendered="true" styleClass="dhGmpMapTd" latitude="#{c_AlertViewIncident_GridBean.latitude}" longitude="#{c_AlertViewIncident_GridBean.longitude}" zoomLevel="7">														        	
+									        	<ice:gMapGeoXml  url="#{bundle['url_upload']}#{bundle['url_kml']}#{bundle['url_customer']}#{c_AlertViewIncident_GridBean.idCustomer}/#{c_AlertViewIncident_GridBean.nameKml}"/> 
+									        	<ice:gMapControl id="largectrl" name="GLargeMapControl" rendered="#{c_AlertViewIncident_GridBean.showControls}"/>
+									            <ice:gMapControl id="scalectrl" name="GScaleControl" rendered="#{c_AlertViewIncident_GridBean.showControls}"/>
+									            <ice:gMapControl id="typectrl" name="GMapTypeControl" rendered="#{c_AlertViewIncident_GridBean.showControls}"/>
+											</ice:gMap>
+										</ice:panelGroup>
+										
+									</ice:panelGroup>											
+                                   </td>
+                                   <td>
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+                                   </td>
+                               	</tr>
+							</table>
+						</ice:panelGrid>
+							
+							
+					<ice:panelGroup id="tabSetTab" styleClass="tabPanelBox panelTabSetSaleContainer">
+
+						<ice:panelTabSet tabChangeListener="#{c_TabAlertViewBean.processTabChange}" selectedIndex="#{c_TabAlertViewBean.ITab}">
+
+							<ice:panelTab label="#{entityTypeBundle.entity_of} #{bundle['c_admin_configuration.alerts.tab1']}">
+									
+
+							<ice:panelGroup styleClass="customerProfileBox"
+								style="height:#{utilServiceLocatorBean.heightPanelCustomerProfileGrid+150}px;width:97%;overflow:auto;">
+
+									<!-- PAGINATOR-->
+											<ice:panelGroup style="float:left;width:420px;">
+												<center>
+													<ice:dataPaginator
+														id="dataScroll_alertviewvendor"
+														rendered="#{c_AlertViewVendor_GridBean.selectedDataScrollModes[c_AlertViewVendor_GridBean.selectedDataScrollMode].pagingEnabled}"
+														for="tableAvgb" vertical="false"
+														fastStep="3" paginator="true"
+														paginatorMaxPages="10">
+														<f:facet name="first">
+															<ice:graphicImage id="firstpage_2z"
+																url="./css/rime/css-images/arrow-first.gif"
+																style="border:none;" title="first" />
+														</f:facet>
+														<f:facet name="last">
+															<ice:graphicImage id="lastpage_2z"
+																url="./css/rime/css-images/arrow-last.gif"
+																style="border:none;" title="last" />
+														</f:facet>
+														<f:facet name="previous">
+															<ice:graphicImage id="previouspage_2z"
+																url="./css/rime/css-images/arrow-previous.gif"
+																style="border:none;" title="previous" />
+														</f:facet>
+														<f:facet name="next">
+															<ice:graphicImage id="nextpage_2z"
+																url="./css/rime/css-images/arrow-next.gif"
+																style="border:none;" title="next" />
+														</f:facet>
+														<f:facet name="fastforward">
+															<ice:graphicImage id="fastforward_2z"
+																url="./css/rime/css-images/arrow-ff.gif"
+																style="border:none;" title="ff" />
+														</f:facet>
+														<f:facet name="fastrewind">
+															<ice:graphicImage id="fastrewind_2z"
+																url="./css/rime/css-images/arrow-fr.gif"
+																style="border:none;" title="fr" />
+														</f:facet>
+													</ice:dataPaginator>
+												</center>
+											</ice:panelGroup>
+									
+									<ice:panelGroup>
+										<ice:panelGroup>
+											<ice:dataTable resizable="false"
+												border="1" id="tableAvgb"
+												value="#{c_AlertViewVendor_GridBean.allCrudBeans}"
+												var="dGirnBean" width="95%"
+												rows="#{c_AlertViewVendor_GridBean.selectedDataScrollModes[c_AlertViewVendor_GridBean.selectedDataScrollMode].rows}"
+												scrollable="#{c_AlertViewVendor_GridBean.selectedDataScrollModes[c_AlertViewVendor_GridBean.selectedDataScrollMode].scrollingEnabled}"
+												style="float:left;margin-left:2px"
+												columnWidths="4%,15%,12%,12%,10%,14%,10%,10%,7%,4%"
+												columnClasses="columnCenter,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft"
+												rowClasses="rowOn,rowOff"
+												cellpadding="0"
+												sortColumn="#{c_AlertViewVendor_GridBean.columnNameOrder}"
+												sortAscending="#{c_AlertViewVendor_GridBean.descending}">
+												<ice:column groupOn="#{dGirnBean.ctnameAlert}">
+													<f:facet name="header">
+															<span style="color: #F9FAF8; font-size: 9px; text-align: center">&amp;nbsp#{bundle['c_dh.map']}
+															</span>
+													</f:facet>
+													<!--<ice:rowSelector id="selected"
+														value="#{query_GridBean.itemSelected}"
+														multiple="false"
+														selectionListener="#{query_GridBean.rowSelectionListener}"
+														selectionAction="#{query_GridBean.rowSelectionAction}" />               
+                      														<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_site_#{dGirnBean.siteType}.png"
+															onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_site_#{dGirnBean.siteType}.png'"
+															onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_site_#{dGirnBean.siteType}.png'"	
+															/>-->
+													<ice:commandLink
+																				action="#{c_AlertViewVendor_GridBean.rowSelectionAction}"
+																				visible="true" onclick="rld();"
+																				actionListener="#{c_AlertViewVendor_GridBean.rowSelectionListener}">
+                           														<ice:graphicImage style="border:none;"  styleClass="noborder"
+																					url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_site_SS.png"
+																					onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_site_SS.png'"
+																					onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_site_SS.png'"	
+																					/>
+																				<f:attribute name="idSelectedIncVendor"
+																					value="#{dGirnBean.ciidrazienGlobalIncident}" />
+													</ice:commandLink>		
+												</ice:column>
+												<ice:column groupOn="#{dGirnBean.nameciidSupplier}" style="background-color:#F3F4F8;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{entityTypeBundle.entity_of}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="d1supply"
+														styleClass="titleTextKml"
+														value="#{dGirnBean.nameciidSupplier}"></h:outputText>
+													&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp	
+												</ice:column>
+												<ice:column groupOn="#{dGirnBean.nameciidSiteSupplier}" style="background-color:#F7F4F5;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_admin_configuration.alerts.site']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="d1Sitex"
+														styleClass="titleTextKml"
+														value="#{dGirnBean.nameciidSiteSupplier}"></h:outputText>
+												</ice:column>
+												<ice:column groupOn="#{dGirnBean.ctnameAlert}" style="background-color:#F4F7F5;vertical-align:top;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_admin_configuration.alerts.name']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="dName"
+														value="#{dGirnBean.ctnameAlert}"
+														styleClass="titleTextKml"></h:outputText>
+												</ice:column>
+												
+												<ice:column groupOn="#{dGirnBean.ctdescriptionAlert}"  style="vertical-align:top;">
+													<f:facet name="header">
+														<ice:outputText 
+															value="#{bundle['c_admin_configuration.alerts.description']}"></ice:outputText>
+													</f:facet>
+													<ice:inputTextarea id="iddescriptions"
+																		   cols="30" rows="2" maxlength="450"
+												                           value="#{dGirnBean.ctdescriptionAlert}"
+												                           readonly="false" styleClass="fieldtextareahighreadonly">
+												                         </ice:inputTextarea>
+												</ice:column>
+												
+												<ice:column  groupOn="#{dGirnBean.nameFrecuency}"  style="vertical-align:top;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_admin_configuration.alerts.frecuency']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="dCriticality"
+														styleClass="titleTextKml"
+														value="#{dGirnBean.nameFrecuency}"></h:outputText>
+												</ice:column>
+												
+												<ice:column style="background-color:#F7F4F5;text-align: left;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_admin_configuration.alerts.datetimeactivation']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="dDateAct"
+														styleClass="titleTextKml"
+														value="#{dGirnBean.csdatetimeStatus}"></h:outputText>
+												</ice:column>
+												
+												<ice:column>
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['rz_admin_usermanager.globalincident.type']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="dType"
+														styleClass="titleTextKml"
+														value="#{dGirnBean.rntype}"></h:outputText>
+												</ice:column>
+												
+												<ice:column>
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['rz_admin_usermanager.globalincident.title']}"></ice:outputText>
+													</f:facet>
+													<ice:inputTextarea id="idtitle"
+																		   cols="30" rows="2" maxlength="450"
+												                           value="#{dGirnBean.rntitle}"
+												                           readonly="false" styleClass="fieldtextareahighreadonly">
+												                         </ice:inputTextarea>
+												</ice:column>
+												
+												<ice:column groupOn="#{dGirnBean.rncity}" style="background-color:#F4F7F5;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['rz_admin_usermanager.globalincident.city']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="d1City"
+														styleClass="titleTextKml"
+														value="#{dGirnBean.rncity}"></h:outputText>
+												</ice:column>
+											<!--  	<ice:column groupOn="#{dGirnBean.rnstate}" style="background-color:#F3F4F8;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['rz_admin_usermanager.globalincident.state']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="d1State"
+														styleClass="titleTextKml"
+														value="#{dGirnBean.rnstate}"></h:outputText>
+												</ice:column>
+												<ice:column groupOn="#{dGirnBean.rncountry}" style="background-color:#F7F4F5;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['rz_admin_usermanager.globalincident.country']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="d1Country"
+														styleClass="titleTextKml"
+														value="#{dGirnBean.rncountry}"></h:outputText>
+												</ice:column>-->
+												
+												
+												<ice:column>
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_dh.GIImg']}"></ice:outputText>
+													</f:facet>																																								
+														<ice:commandLink action="#{c_AlertViewVendor_GridBean.viewIncidentPopUpAction}" actionListener="#{c_AlertViewVendor_GridBean.rowSelectionListener}">
+																					<ice:graphicImage style="border:none;"  styleClass="noborder"
+																							url="#{dGirnBean.imagetype}" height="25" width="25"/>
+																					<f:attribute name="idSelectedIncVendor"
+																					value="#{dGirnBean.ciidrazienGlobalIncident}" />																						
+														</ice:commandLink>	
+																																
+												</ice:column>
+											</ice:dataTable>
+											<ice:panelGroup styleClass="clearer" />
+
+
+											<!-- PAGINATOR-->
+											<ice:panelGroup style="float:left;width:420px;">
+												<center>
+													<ice:dataPaginator
+														id="dataScroll_alertviewvendor"
+														rendered="#{c_AlertViewVendor_GridBean.selectedDataScrollModes[c_AlertViewVendor_GridBean.selectedDataScrollMode].pagingEnabled}"
+														for="tableAvgb" vertical="false"
+														fastStep="3" paginator="true"
+														paginatorMaxPages="10">
+														<f:facet name="first">
+															<ice:graphicImage id="firstpage_1"
+																url="./css/rime/css-images/arrow-first.gif"
+																style="border:none;" title="first" />
+														</f:facet>
+														<f:facet name="last">
+															<ice:graphicImage id="lastpage_1"
+																url="./css/rime/css-images/arrow-last.gif"
+																style="border:none;" title="last" />
+														</f:facet>
+														<f:facet name="previous">
+															<ice:graphicImage id="previouspage_1"
+																url="./css/rime/css-images/arrow-previous.gif"
+																style="border:none;" title="previous" />
+														</f:facet>
+														<f:facet name="next">
+															<ice:graphicImage id="nextpage_1"
+																url="./css/rime/css-images/arrow-next.gif"
+																style="border:none;" title="next" />
+														</f:facet>
+														<f:facet name="fastforward">
+															<ice:graphicImage id="fastforward_1"
+																url="./css/rime/css-images/arrow-ff.gif"
+																style="border:none;" title="ff" />
+														</f:facet>
+														<f:facet name="fastrewind">
+															<ice:graphicImage id="fastrewind_1"
+																url="./css/rime/css-images/arrow-fr.gif"
+																style="border:none;" title="fr" />
+														</f:facet>
+													</ice:dataPaginator>
+												</center>
+											</ice:panelGroup>
+
+										</ice:panelGroup>
+
+									</ice:panelGroup>
+
+							</ice:panelGroup>
+							
+						</ice:panelTab>
+						
+						
+						
+
+						<ice:panelTab label="#{bundle['c_admin_configuration.alerts.tab2']}">
+						
+						
+						<ice:panelGroup styleClass="customerProfileBox"
+								style="height:#{utilServiceLocatorBean.heightPanelCustomerProfileGrid+150}px;width:97%;overflow:auto;">
+
+									<!-- PAGINATOR-->
+											<ice:panelGroup style="float:left;width:420px;">
+												<center>
+													<ice:dataPaginator
+														id="dataScroll_alertviewincient"
+														rendered="#{c_AlertViewIncident_GridBean.selectedDataScrollModes[c_AlertViewIncident_GridBean.selectedDataScrollMode].pagingEnabled}"
+														for="tableAvgii" vertical="false"
+														fastStep="3" paginator="true"
+														paginatorMaxPages="10">
+														<f:facet name="first">
+															<ice:graphicImage id="firstpage_2z"
+																url="./css/rime/css-images/arrow-first.gif"
+																style="border:none;" title="first" />
+														</f:facet>
+														<f:facet name="last">
+															<ice:graphicImage id="lastpage_2z"
+																url="./css/rime/css-images/arrow-last.gif"
+																style="border:none;" title="last" />
+														</f:facet>
+														<f:facet name="previous">
+															<ice:graphicImage id="previouspage_2z"
+																url="./css/rime/css-images/arrow-previous.gif"
+																style="border:none;" title="previous" />
+														</f:facet>
+														<f:facet name="next">
+															<ice:graphicImage id="nextpage_2z"
+																url="./css/rime/css-images/arrow-next.gif"
+																style="border:none;" title="next" />
+														</f:facet>
+														<f:facet name="fastforward">
+															<ice:graphicImage id="fastforward_2z"
+																url="./css/rime/css-images/arrow-ff.gif"
+																style="border:none;" title="ff" />
+														</f:facet>
+														<f:facet name="fastrewind">
+															<ice:graphicImage id="fastrewind_2z"
+																url="./css/rime/css-images/arrow-fr.gif"
+																style="border:none;" title="fr" />
+														</f:facet>
+													</ice:dataPaginator>
+												</center>
+											</ice:panelGroup>
+									
+									<ice:panelGroup>
+										<ice:panelGroup>
+											<ice:dataTable resizable="false"
+												border="1" id="tableAvgii"
+												value="#{c_AlertViewIncident_GridBean.allCrudBeans}"
+												var="dGirnIncBean" width="95%"
+												rows="#{c_AlertViewIncident_GridBean.selectedDataScrollModes[c_AlertViewIncident_GridBean.selectedDataScrollMode].rows}"
+												scrollable="#{c_AlertViewIncident_GridBean.selectedDataScrollModes[c_AlertViewIncident_GridBean.selectedDataScrollMode].scrollingEnabled}"
+												style="float:left;margin-left:2px"
+												columnWidths="4%,12%,12%,12%,10%,14%,10%,10%,10%,4%"
+												columnClasses="columnCenter,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft,columnLeft"
+												rowClasses="rowOn,rowOff"
+												cellpadding="0"
+												sortColumn="#{c_AlertViewIncident_GridBean.columnNameOrder}"
+												sortAscending="#{c_AlertViewIncident_GridBean.descending}">
+												<ice:column >
+													<f:facet name="header">
+															<span style="color: #F9FAF8; font-size: 9px; text-align: center">&amp;nbsp#{bundle['c_dh.map']}
+															</span>
+													</f:facet>
+													<!--<ice:rowSelector id="selected"
+														value="#{query_GridBean.itemSelected}"
+														multiple="false"
+														selectionListener="#{query_GridBean.rowSelectionListener}"
+														selectionAction="#{query_GridBean.rowSelectionAction}" />               
+                      														<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_site_#{dGirnIncBean.siteType}.png"
+															onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_site_#{dGirnIncBean.siteType}.png'"
+															onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_site_#{dGirnIncBean.siteType}.png'"	
+															/>-->
+													<ice:commandLink
+																				action="#{c_AlertViewIncident_GridBean.rowSelectionAction}"
+																				visible="true" onclick="rld();"
+																				actionListener="#{c_AlertViewIncident_GridBean.rowSelectionListener}">
+                           														<ice:graphicImage style="border:none;"  styleClass="noborder"
+																					url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_site_SS.png"
+																					onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_site_SS.png'"
+																					onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_site_SS.png'"	
+																					/>
+																				<f:attribute name="idSelectedIncident"
+																					value="#{dGirnIncBean.ciidrazienGlobalIncident}" />
+													</ice:commandLink>		
+												</ice:column>
+												<ice:column  style="background-color:#F4F7F5;vertical-align:top;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_admin_configuration.alerts.name']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="diName"
+														value="#{dGirnIncBean.ctnameAlert}"
+														styleClass="titleTextKml"></h:outputText>
+												</ice:column>
+												
+												<ice:column   style="vertical-align:top;">
+													<f:facet name="header">
+														<ice:outputText 
+															value="#{bundle['c_admin_configuration.alerts.description']}"></ice:outputText>
+													</f:facet>
+													<ice:inputTextarea id="ididescriptions"
+																		   cols="26" rows="2" maxlength="450"
+												                           value="#{dGirnIncBean.ctdescriptionAlert}"
+												                           readonly="false" styleClass="fieldtextareahighreadonly">
+												                         </ice:inputTextarea>
+												</ice:column>
+												
+												<ice:column    style="vertical-align:top;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_admin_configuration.alerts.frecuency']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="diCriticality"
+														styleClass="titleTextKml"
+														value="#{dGirnIncBean.nameFrecuency}"></h:outputText>
+												</ice:column>
+												
+												<ice:column style="background-color:#F7F4F5;text-align: left;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_admin_configuration.alerts.datetimeactivation']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="diDateAct"
+														styleClass="titleTextKml"
+														value="#{dGirnIncBean.csdatetimeStatus}"></h:outputText>
+												</ice:column>
+												
+												<ice:column>
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['rz_admin_usermanager.globalincident.type']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="diType"
+														styleClass="titleTextKml"
+														value="#{dGirnIncBean.rntype}"></h:outputText>
+												</ice:column>
+												
+												<ice:column>
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['rz_admin_usermanager.globalincident.title']}"></ice:outputText>
+													</f:facet>
+													<ice:inputTextarea id="idititle"
+																		   cols="26" rows="2" maxlength="450"
+												                           value="#{dGirnIncBean.rntitle}"
+												                           readonly="false" styleClass="fieldtextareahighreadonly">
+												                         </ice:inputTextarea>
+												</ice:column>
+												
+												<ice:column groupOn="#{dGirnIncBean.rncity}" style="background-color:#F4F7F5;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['rz_admin_usermanager.globalincident.city']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="d1iCity"
+														styleClass="titleTextKml"
+														value="#{dGirnIncBean.rncity}"></h:outputText>
+												</ice:column>
+												<ice:column groupOn="#{dGirnIncBean.rnstate}" style="background-color:#F3F4F8;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['rz_admin_usermanager.globalincident.state']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="d1iState"
+														styleClass="titleTextKml"
+														value="#{dGirnIncBean.rnstate}"></h:outputText>
+												</ice:column>
+												<ice:column groupOn="#{dGirnIncBean.rncountry}" style="background-color:#F7F4F5;">
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['rz_admin_usermanager.globalincident.country']}"></ice:outputText>
+													</f:facet>
+													<h:outputText id="d1iCountry"
+														styleClass="titleTextKml"
+														value="#{dGirnIncBean.rncountry}"></h:outputText>
+												</ice:column>
+												
+												
+												<ice:column>
+													<f:facet name="header">
+														<ice:outputText
+															value="#{bundle['c_dh.GIImg']}"></ice:outputText>
+													</f:facet>																																								
+														<ice:commandLink action="#{c_AlertViewIncident_GridBean.viewIncidentPopUpAction}" actionListener="#{c_AlertViewIncident_GridBean.rowSelectionListener}">
+																					<ice:graphicImage style="border:none;"  styleClass="noborder"
+																							url="#{dGirnIncBean.imagetype}" height="25" width="25"/>
+																					<f:attribute name="idSelectedIncident"
+																					value="#{dGirnIncBean.ciidrazienGlobalIncident}" />																						
+														</ice:commandLink>																				
+												</ice:column>
+											</ice:dataTable>
+											<ice:panelGroup styleClass="clearer" />
+
+
+											<!-- PAGINATOR-->
+											<ice:panelGroup style="float:left;width:420px;">
+												<center>
+													<ice:dataPaginator
+														id="dataScroll_alertviewincient"
+														rendered="#{c_AlertViewIncident_GridBean.selectedDataScrollModes[c_AlertViewIncident_GridBean.selectedDataScrollMode].pagingEnabled}"
+														for="tableAvgii" vertical="false"
+														fastStep="3" paginator="true"
+														paginatorMaxPages="10">
+														<f:facet name="first">
+															<ice:graphicImage id="firstpage_1"
+																url="./css/rime/css-images/arrow-first.gif"
+																style="border:none;" title="first" />
+														</f:facet>
+														<f:facet name="last">
+															<ice:graphicImage id="lastpage_1"
+																url="./css/rime/css-images/arrow-last.gif"
+																style="border:none;" title="last" />
+														</f:facet>
+														<f:facet name="previous">
+															<ice:graphicImage id="previouspage_1"
+																url="./css/rime/css-images/arrow-previous.gif"
+																style="border:none;" title="previous" />
+														</f:facet>
+														<f:facet name="next">
+															<ice:graphicImage id="nextpage_1"
+																url="./css/rime/css-images/arrow-next.gif"
+																style="border:none;" title="next" />
+														</f:facet>
+														<f:facet name="fastforward">
+															<ice:graphicImage id="fastforward_1"
+																url="./css/rime/css-images/arrow-ff.gif"
+																style="border:none;" title="ff" />
+														</f:facet>
+														<f:facet name="fastrewind">
+															<ice:graphicImage id="fastrewind_1"
+																url="./css/rime/css-images/arrow-fr.gif"
+																style="border:none;" title="fr" />
+														</f:facet>
+													</ice:dataPaginator>
+												</center>
+											</ice:panelGroup>
+
+										</ice:panelGroup>
+
+									</ice:panelGroup>
+
+							</ice:panelGroup>
+							
+						
+						</ice:panelTab>
+									
+									
+						</ice:panelTabSet>
+					  </ice:panelGroup>
+									
+
+					</ice:form>
+					
+					<ice:form>
+							
+										<ice:panelPopup  autoPosition="200,100" autoCentre="true" modal="true" visible="#{viewAlertVendorPopUpBean.visible}" style="width:700px;" styleClass="icePanelPopupBody icePanelPopup">
+							                <f:facet name="header">
+							                   <ice:panelGrid width="100%" cellpadding="0" cellspacing="0" columns="2" styleClass="trHeader" >
+							                        <ice:outputText style="color: white;" value="#{bundle['c_dh.hazardousincidents']}"/>
+							                        <ice:commandButton image="./css/images/icons/close.png" action="#{viewAlertVendorPopUpBean.closePopup}" title="Close this draggable popup"/>
+							                    </ice:panelGrid>
+							                </f:facet>
+							                
+							                <f:facet name="body">
+							                    <ice:panelGrid width="100%" columns="2" cellpadding="0"  style="background-color: #FFFFFF">
+
+							              			<table style='text-align: left;  height: 240px;' width="100%" border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'>
+													<tr style='font-weight: bold;'>
+														<td style='height: 78px; width: 184px;' ><span style='font-weight: normal;'> <img src='#{c_AlertViewVendor_GridBean.imageUrl}' height="80" width="80"/></span></td>
+														<td colspan='3' rowspan='1' style='height: 78px; width: 291px;font-size: 15px;font-variant: small-caps;' >#{bundle['rz_popup.map_incident']}: #{c_AlertViewVendor_GridBean.rntype} <br/><br/>#{bundle['rz_popup.map_locate']}: #{c_AlertViewVendor_GridBean.rncity}</td>
+													</tr>
+													<tr>
+														<td style='height: 0px; width: 184px; text-align: left;' valign='undefined'><span style='font-weight: bold;'>#{bundle['rz_popup.map_incidentsummary']}</span></td>
+													<td colspan='3' rowspan='1' style='height: 0px; width: 291px;' >#{c_AlertViewVendor_GridBean.rntitle}</td>
+													</tr>	
+													<tr>	
+													<td style='width: 184px; height: 26px; font-weight: bold;' >#{bundle['rz_popup.map_country']}</td>
+													<td style='width: 292px; height: 26px;' >#{c_AlertViewVendor_GridBean.rncountry}</td>
+													<td style='height: 26px; width: 184px; font-weight: bold;' >#{bundle['rz_popup.map_severity']}</td>
+													<td style='height: 26px; width: 291px;' >#{c_AlertViewVendor_GridBean.rnriskLevel}</td>
+													</tr>	
+													<tr>	
+													<td style='width: 184px; height: 30px; font-weight: bold;' >#{bundle['rz_popup.map_state']}</td>
+													<td style='width: 292px; height: 30px;' >#{c_AlertViewVendor_GridBean.rnstate}</td>
+													<td style='height: 30px; width: 184px; font-weight: bold;' >#{bundle['rz_popup.map_incidenttype']}</td>
+													<td style='height: 30px; width: 291px;' >#{c_AlertViewVendor_GridBean.rntype}</td>
+													</tr>
+													<tr>
+													<td style='width: 184px; height: 24px; font-weight: bold;' >#{bundle['rz_popup.map_city']}</td>
+													<td style='width: 292px; height: 24px;' >#{c_AlertViewVendor_GridBean.rncity}</td>
+													<td style='height: 24px; width: 184px; font-weight: bold;' >#{bundle['rz_popup.map_date']}</td>
+													<td style='height: 24px; width: 291px;' >#{c_AlertViewVendor_GridBean.rnnumberkilled}</td>
+													</tr>
+													<tr>
+													<td style='width: 184px; height: 26px; font-weight: bold;' >#{bundle['rz_popup.map_deaths']}</td>
+													<td style='width: 292px; height: 26px;' >#{c_AlertViewVendor_GridBean.rnnumberkilled}</td>
+													<td style='height: 26px; width: 184px; font-weight: bold;' >#{bundle['rz_popup.map_url']}</td>
+													<td style='height: 26px; width: 80px; font-weight: bold;' >&amp;nbsp&amp;nbsp<a href="#{c_AlertViewVendor_GridBean.rnurl}"  target="_blank" style="color: #8C2635; font-variant: small-caps;font-size: 15px;">#{bundle['rz_popup.map_link']}</a></td>
+													</tr>
+													<tr>
+													<td style='overflow:hidden; width:80px; height: 90px; font-weight: bold;' >#{bundle['rz_popup.map_description']}</td>
+													<td colspan='3' rowspan='1' style='height: 90px; width: 291px;' ><TEXTAREA style="border:0; font-weight: normal; background-color: #FBFBFD; font-family:Times New Roman,Helvetica,sans-serif; font-size: 1.25em;" cols="90" rows="4" wrap="true" name="text" value="">#{c_AlertViewVendor_GridBean.rndescriptions}</TEXTAREA></td>
+													</tr>
+												</table>
+							                 	</ice:panelGrid>
+							                 	
+							                </f:facet>
+							                
+							            </ice:panelPopup>   
+							            
+							       </ice:form>
+							       
+					<ice:form>
+							
+										<ice:panelPopup  autoPosition="200,100" autoCentre="true" modal="true" visible="#{viewAlertIncidentPopUpBean.visible}" style="width:700px;" styleClass="icePanelPopupBody icePanelPopup">
+							                <f:facet name="header">
+							                   <ice:panelGrid width="100%" cellpadding="0" cellspacing="0" columns="2" styleClass="trHeader" >
+							                        <ice:outputText style="color: white;" value="#{bundle['c_dh.hazardousincidents']}"/>
+							                        <ice:commandButton image="./css/images/icons/close.png" action="#{viewAlertIncidentPopUpBean.closePopup}" title="Close this draggable popup"/>
+							                    </ice:panelGrid>
+							                </f:facet>
+							                
+							                <f:facet name="body">
+							                    <ice:panelGrid width="100%" columns="2" cellpadding="0"  style="background-color: #FFFFFF">
+
+							              			<table style='text-align: left;  height: 240px;' width="100%" border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'>
+													<tr style='font-weight: bold;'>
+														<td style='height: 78px; width: 184px;' ><span style='font-weight: normal;'> <img src='#{c_AlertViewIncident_GridBean.imageUrl}' height="80" width="80"/></span></td>
+														<td colspan='3' rowspan='1' style='height: 78px; width: 291px;font-size: 15px;font-variant: small-caps;' >#{bundle['rz_popup.map_incident']}: #{c_AlertViewIncident_GridBean.rntype} <br/><br/>#{bundle['rz_popup.map_locate']}: #{c_AlertViewIncident_GridBean.rncity}</td>
+													</tr>
+													<tr>
+														<td style='height: 0px; width: 184px; text-align: left;' valign='undefined'><span style='font-weight: bold;'>#{bundle['rz_popup.map_incidentsummary']}</span></td>
+													<td colspan='3' rowspan='1' style='height: 0px; width: 291px;' >#{c_AlertViewIncident_GridBean.rntitle}</td>
+													</tr>	
+													<tr>	
+													<td style='width: 184px; height: 26px; font-weight: bold;' >#{bundle['rz_popup.map_country']}</td>
+													<td style='width: 292px; height: 26px;' >#{c_AlertViewIncident_GridBean.rncountry}</td>
+													<td style='height: 26px; width: 184px; font-weight: bold;' >#{bundle['rz_popup.map_severity']}</td>
+													<td style='height: 26px; width: 291px;' >#{c_AlertViewIncident_GridBean.rnriskLevel}</td>
+													</tr>	
+													<tr>	
+													<td style='width: 184px; height: 30px; font-weight: bold;' >#{bundle['rz_popup.map_state']}</td>
+													<td style='width: 292px; height: 30px;' >#{c_AlertViewIncident_GridBean.rnstate}</td>
+													<td style='height: 30px; width: 184px; font-weight: bold;' >#{bundle['rz_popup.map_incidenttype']}</td>
+													<td style='height: 30px; width: 291px;' >#{c_AlertViewIncident_GridBean.rntype}</td>
+													</tr>
+													<tr>
+													<td style='width: 184px; height: 24px; font-weight: bold;' >#{bundle['rz_popup.map_city']}</td>
+													<td style='width: 292px; height: 24px;' >#{c_AlertViewIncident_GridBean.rncity}</td>
+													<td style='height: 24px; width: 184px; font-weight: bold;' >#{bundle['rz_popup.map_date']}</td>
+													<td style='height: 24px; width: 291px;' >#{c_AlertViewIncident_GridBean.rnnumberkilled}</td>
+													</tr>
+													<tr>
+													<td style='width: 184px; height: 26px; font-weight: bold;' >#{bundle['rz_popup.map_deaths']}</td>
+													<td style='width: 292px; height: 26px;' >#{c_AlertViewIncident_GridBean.rnnumberkilled}</td>
+													<td style='height: 26px; width: 184px; font-weight: bold;' >#{bundle['rz_popup.map_url']}</td>
+													<td style='height: 26px; width: 80px; font-weight: bold;' >&amp;nbsp&amp;nbsp<a href="#{c_AlertViewIncident_GridBean.rnurl}"  target="_blank" style="color: #8C2635; font-variant: small-caps;font-size: 15px;">#{bundle['rz_popup.map_link']}</a></td>
+													</tr>
+													<tr>
+													<td style='overflow:hidden; width:80px; height: 90px; font-weight: bold;' >#{bundle['rz_popup.map_description']}</td>
+													<td colspan='3' rowspan='1' style='height: 90px; width: 291px;' ><TEXTAREA style="border:0; font-weight: normal; background-color: #FBFBFD; font-family:Times New Roman,Helvetica,sans-serif; font-size: 1.25em;" cols="90" rows="4" wrap="true" name="text" value="">#{c_AlertViewIncident_GridBean.rndescriptions}</TEXTAREA></td>
+													</tr>
+												</table>
+							                 	</ice:panelGrid>
+							                 	
+							                </f:facet>
+							                
+							            </ice:panelPopup>   
+							            
+							       </ice:form>
+					
+				</ui:define>
+				
+
+			</ui:composition>
+
+	
+
+       </body>
+    </html>
+   </f:view>
+</jsp:root>

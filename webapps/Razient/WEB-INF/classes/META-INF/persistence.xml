@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+    
+	<persistence-unit name="RazientPU"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>rz.model.businessobject.Razientquestioncriticality</class>
+		<class>rz.model.businessobject.Customercategoryquestion</class>
+		<class>rz.model.businessobject.Contactsupplier</class>
+		<class>rz.model.businessobject.Role</class>
+		<class>rz.model.businessobject.Customersuppliers</class>
+		<class>rz.model.businessobject.Razientglobalincident</class>
+		<class>rz.model.businessobject.Razientmasterfileglobalincident</class>
+		<class>rz.model.businessobject.Razientquestionssurveys</class>
+		<class>rz.model.businessobject.Suppliersurveyresponseanswers</class>
+		<class>rz.model.businessobject.Supplierresponsessurveys</class>
+		<class>rz.model.businessobject.ResponseAnswers</class>
+		<class>rz.model.businessobject.User</class>
+		<class>rz.model.businessobject.Supplier</class>
+		<class>rz.model.businessobject.Razientstandardmanager</class>
+		<class>rz.model.businessobject.Razientsuppliertype</class>
+		<class>rz.model.businessobject.Supplierpartservices</class>
+		<class>rz.model.businessobject.Sitecustomer</class>
+		<class>rz.model.businessobject.Customerstandardquestion</class>
+		<class>rz.model.businessobject.Customerstandardmanager</class>
+		<class>rz.model.businessobject.Razientcategoryquestion</class>
+		<class>rz.model.businessobject.Razientuser</class>
+		<class>rz.model.businessobject.Razientmenuoption</class>
+		<class>rz.model.businessobject.Sitesupplier</class>
+		<class>rz.model.businessobject.Razientalerttype</class>
+		<class>rz.model.businessobject.Razientprofile</class>
+		<class>rz.model.businessobject.Menuoption</class>
+		<class>rz.model.businessobject.Razientindustrylist</class>
+		<class>rz.model.businessobject.Razientsubindustrylist</class>
+		<class>rz.model.businessobject.Razientsectionssurveys</class>
+		<class>rz.model.businessobject.Contactcustomer</class>
+		<class>rz.model.businessobject.Razientsurveystatus</class>
+		<class>rz.model.businessobject.Customersectionssurveys</class>
+		<class>rz.model.businessobject.Profile</class>
+		<class>rz.model.businessobject.Razientsurveys</class>
+		<class>rz.model.businessobject.Razientsystem</class>
+		<class>rz.model.businessobject.Customersurveys</class>
+		<class>rz.model.businessobject.Razientquestiontype</class>
+		<class>rz.model.businessobject.Razientstandardquestion</class>
+		<class>rz.model.businessobject.Customer</class>
+		<class>rz.model.businessobject.Customerquestionssurveys</class>
+		<class>rz.model.businessobject.Razientrole</class>
+		<class>rz.model.businessobject.RazientroleId</class>
+		<class>rz.model.businessobject.RazientmenuoptionId</class>
+		<class>rz.model.businessobject.CustomersuppliersId</class>
+		<class>rz.model.businessobject.MenuoptionId</class>
+		<class>rz.model.businessobject.State</class>
+		<class>rz.model.businessobject.Zipcodes</class>
+		<class>rz.model.businessobject.Country</class>
+		<class>rz.model.businessobject.Razienttemplatemail</class>
+		<class>rz.model.businessobject.Customertemplatemail</class>
+		<class>rz.model.businessobject.Suppliercertificate</class>
+		<class>rz.model.businessobject.Supplierawards</class>	
+		<class>rz.model.businessobject.Customersurveyasignsupp</class>
+		<class>rz.model.businessobject.CustomersurveyasignsuppId</class>
+		<class>rz.model.businessobject.City</class>
+		<class>rz.model.businessobject.Auditlog</class>
+		<class>rz.model.businessobject.Employeesupplier</class>
+		<class>rz.model.businessobject.Employeecustomer</class>
+		<class>rz.model.businessobject.Siccodes</class>
+		<class>rz.model.businessobject.Naicscodes</class>
+		<class>rz.model.businessobject.Customerdocuments</class>
+		<class>rz.model.businessobject.Razientfileupload</class>
+		<class>rz.model.businessobject.BatchJobExecutionContext</class>
+		<class>rz.model.businessobject.BatchJobInstance</class>
+		<class>rz.model.businessobject.TmpEmployeecustomer</class>
+		<class>rz.model.businessobject.TmpEmployeesupplier</class>
+		<class>rz.model.businessobject.BatchJobSeq</class>
+		<class>rz.model.businessobject.BatchStepExecutionContext</class>
+		<class>rz.model.businessobject.BatchJobParams</class>
+		<class>rz.model.businessobject.TmpCustomer</class>
+		<class>rz.model.businessobject.TmpSitecustomer</class>
+		<class>rz.model.businessobject.TmpSitesupplier</class>
+		<class>rz.model.businessobject.BatchJobExecution</class>
+		<class>rz.model.businessobject.BatchStepExecutionSeq</class>
+		<class>rz.model.businessobject.BatchJobExecutionSeq</class>
+		<class>rz.model.businessobject.TmpSupplier</class>
+		<class>rz.model.businessobject.BatchStepExecution</class>
+		<class>rz.model.businessobject.BatchJobParamsId</class>	
+		<class>rz.model.businessobject.Reportnewsglobalincident</class>	
+		<class>rz.model.businessobject.VwRbiscss</class>
+		<class>rz.model.businessobject.VwRbiscssId</class>
+		<class>rz.model.businessobject.VwRbiss</class>
+		<class>rz.model.businessobject.VwRbissId</class>
+		<class>rz.model.businessobject.VwIncidenttype</class>
+		<class>rz.model.businessobject.VwSuppIncidenttype</class>
+		<class>rz.model.businessobject.VwSupp50milsincidents</class>
+		<class>rz.model.businessobject.VwSupp50milsincidentsId</class>
+		<class>rz.model.businessobject.VwSuppIncidenttypeId</class>
+		<class>rz.model.businessobject.VwIncidenttypeId</class>
+		<class>rz.model.businessobject.TmpSurvey</class>
+		<class>rz.model.businessobject.Razientrisklevel</class>
+		<class>rz.model.businessobject.Razientfrecuency</class>
+		<class>rz.model.businessobject.Customeralerttype</class>
+		<class>rz.model.businessobject.Reportnewsincidenttype</class>
+		<class>rz.model.businessobject.Customeralertstatus</class>
+		<class>rz.model.businessobject.Customeralertincidents</class>
+		<class>rz.model.businessobject.Customertickettype</class>
+		<class>rz.model.businessobject.Customerticketstatus</class>
+		<class>rz.model.businessobject.Customerticketincidents</class>
+		<class>rz.model.businessobject.MobileDevice</class>
+		<class>rz.model.businessobject.MobileUser</class>
+		<class>rz.model.businessobject.VwIncidentSiteMiles</class>
+		<class>rz.model.businessobject.VwIncidentSiteMilesId</class>
+		<class>rz.model.businessobject.Customerticketsteps</class>
+		<properties>
+			<property name="hibernate.connection.driver_class"
+				value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.url"
+				value="jdbc:mysql://192.168.4.67:3306/razient?autoReconnect=true" />
+			<property name="hibernate.connection.username"
+				value="root" />
+			<property name="hibernate.connection.password"
+				value="dev-Raz!ent" />
+        	<property name="testOnBorrow" value="true"/>
+        	<property name="validationQuery" value="SELECT 1"/>
+		</properties>
+	</persistence-unit>
+
+</persistence>

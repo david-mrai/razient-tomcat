@@ -1,0 +1,26 @@
+<span xmlns:ice="http://www.icesoft.com/icefaces/component" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:c="http://java.sun.com/jstl/core" xmlns:ft="http://www.mcmsoftware.com">
+	
+	<param name="survey" value="#{value}"/>
+	
+	<ice:panelCollapsible  actionListener="#{componentRzSurveyManager.actionlistenerSurvey}" id="s_#{survey.id}">
+		<f:facet name="header">
+			<ice:outputText value="#{survey.name} : #{survey.title}"></ice:outputText>
+		</f:facet>
+		
+			<ice:outputText value="#{survey.description}" style="color:#444741;"></ice:outputText>
+			
+			<ice:panelGroup styleClass="pnlClpsblWrapper panelSurveyCollapsible">
+						<div >
+						 <c:forEach var="section" items="#{survey.list_sections}">
+	             			 <ft:section value="#{section}"/>
+	         			 </c:forEach>
+						</div> 
+			</ice:panelGroup>
+		
+		
+		
+		
+	</ice:panelCollapsible>
+	
+</span>
+	

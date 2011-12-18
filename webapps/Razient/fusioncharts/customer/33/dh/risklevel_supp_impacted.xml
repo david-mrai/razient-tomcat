@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Suppliers Impacted		' subCaption=''  numberPrefix='' formatNumber='1' decimals='0' formatNumberScale='0' sNumberPrefix='' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN'  bgAlpha='10' showBorder='1'  borderColor='EFEFEF' palette='4'  maxColWidth = '50' >
+<!-- Data for single series chart -->
+	<set label='Incident type ..' value='0' />
+<!-- Data for multi-series stacked and combination chart -->
+</chart>

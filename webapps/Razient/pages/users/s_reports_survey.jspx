@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ice="http://www.icesoft.com/icefaces/component">
+   <jsp:directive.page contentType="text/html;charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+   <f:view>
+   		<ice:outputDeclaration 
+            doctypeRoot="html" 
+            doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN" 
+            doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" /> 
+    <html>
+       <head>
+         <title>Index (Razient)</title>
+       </head>
+       <body>
+       
+        	<!-- template="#{templateBean.templateContent}"-->
+			<ui:composition
+			        template="../../include/templates/pages/modeB_supplier.jspx"
+			        xmlns:h="http://java.sun.com/jsf/html"
+			        xmlns:f="http://java.sun.com/jsf/core"
+			        xmlns:c="http://java.sun.com/jstl/core"
+			        xmlns:ice="http://www.icesoft.com/icefaces/component"
+			        xmlns:ui="http://java.sun.com/jsf/facelets" >
+			
+			  <!-- params for page titles-->
+			 		 <!--<f:loadBundle basename="truckandi.view.bundle.Message" var="bundle"/>
+			        <ui:param name="pageTitle" value="#{bundle['tai_login.title']}" />-->
+					<ui:param name="pageTitle" value="#{bundle['s_reports_surveys.title']}" />
+				
+				<ui:define name="header_menu_value">
+						<table cellspacing="0" cellpadding="0">
+										<tr>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">		
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_dash_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'" />
+														<f:attribute name="optioonselected" value="dh"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_S_Survey}">																																				
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_survey_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_survey_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_survey_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_survey_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_survey_2.png'" />
+													<f:attribute name="optioonselected" value="sv_sv"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_S_GlobalIncidents}">																																				
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_global_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'" />
+													<f:attribute name="optioonselected" value="gi_al"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<!--<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_S_RequestForProposal}">																																				
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'" />
+														<f:attribute name="optioonselected" value="rp_op"/>
+												</ice:commandLink>
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_3.png" />
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											-->
+											<td>																																		
+												<ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/#{folderBean.folder_menu}/risk_rep_2.png"  visible="#{users_MenuBarBean.visible_S_Reports}"/>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_S_Administration}">																								
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_admin_supp_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_supp_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_supp_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_supp_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_supp_2.png'" />
+														<f:attribute name="optioonselected" value="ad_um"/>
+												</ice:commandLink>
+											</td>
+										</tr>
+									</table>			
+				</ui:define>
+			    
+			    <ui:define name="page-menu-value">
+			    	 <ice:form>
+					 
+					 <ice:graphicImage visible="true"  styleClass="menuPosA"
+										url		="./css/images/#{folderBean.folder_menu}/risk_menu_down_survey.png"/>
+					<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 	<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_proposal.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_proposal.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_proposal.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_proposal.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_proposal.png'" />
+						<f:attribute name="optioonselected" value="rp_pp"/>
+					</ice:commandLink>	
+					<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">				
+					 	<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_globalincidents.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_globalincidents.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_globalincidents.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_globalincidents.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_globalincidents.png'" />
+						<f:attribute name="optioonselected" value="rp_gi"/>
+					</ice:commandLink>-->
+					
+					<ice:graphicImage visible="true"  styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_one.png"/>
+									
+					 </ice:form> 	
+			    </ui:define>
+			    
+				<ui:define name="page-content-value">
+					
+					<table class="data" width="100%" border="0" cellpadding="1" cellspacing="0" style="margin-left:0px;margin-top:0px;font-family: Arial,Verdana,  Helvetica, sans-serif;">
+              <tbody>
+                <tr>
+                  <td valign="top">
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+					<tr>
+                        <td bgcolor="#e1e6e8" valign="top">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td style="padding: 3px 8px 8px;">
+                              <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                  <tr>
+                                    <td rowspan="2" style="background-repeat: repeat-x;" background="./css/images/general/dashcontent_header.png"  bgcolor="#ffffff"  valign="top">
+                                    
+                                    
+					
+								<ice:form>
+                                    <table id="tab0" style="display: block" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                      <tbody>
+                                        <tr>
+                                        <td width="11" height="41" valign="top"><img src="./css/images/general/dashcontent_left_top.png" width="11" height="41"/></td>
+                                    
+                                          <td style="border-right: 1px solid rgb(239, 239, 239);" valign="top">
+                                          <table width="100%" border="0" cellpadding="5" cellspacing="0">
+                                            <tbody>
+                                              <tr>
+                                                <td height="41"><strong>#{bundle['c_dh_metrics.allsurveys.title']}</strong></td>
+                                              </tr>
+                                              <tr>
+                                                <td align="center" bgcolor="#ffffff">
+                                                
+                                                 	<table class="tabularmetricsNewView"  style="border-left: 1px solid rgb(217, 217, 217);" width="100%" cellpadding="0" cellspacing="0">
+	                                                  <tbody>
+	                                                    <tr >
+	                                                      <td  align="left" class="odd" width="70%">
+	                                                      		<ice:selectOneMenu value="#{metricsQuestionsSurveyChartBean.idsurvey}" 
+																		id="selectedSurvey" styleClass="selectedOneMasterSurvey"
+																		partialSubmit="true" >
+																		<f:selectItem itemLabel="#{bundle['rz_select_survey']}" itemValue="0" />
+																		<f:selectItems value="#{metricsQuestionsSurveyChartBean.list_Surveys}" id="survey" />
+																</ice:selectOneMenu>
+	                                                      </td>
+	                                                      <td  align="center" class="odd"   width="30%">
+	                                                      		<ice:commandLink action="#{metricsQuestionsSurveyChartBean.loadSurveys_Supplier}">
+																	<ice:graphicImage style="border:none;" styleClass="noborder"
+																		url="./css/images/#{folderBean.folder_menu}/icons/menu_up_graphsurvey.png"
+																		onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_graphsurvey.png'"
+																		onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_graphsurvey.png'"
+																		onmouseup="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_graphsurvey.png'"
+																		onmousedown="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_graphsurvey.png'"
+																		 />
+														   		</ice:commandLink>
+															</td>
+	                                                    </tr>
+	                                                  </tbody>
+	                                                </table>
+	                                                <br/>
+                                                
+												   
+                                                	<table class="tabularmetricsNewView"  style="border-left: 1px solid rgb(217, 217, 217);" width="100%" cellpadding="0" cellspacing="0">
+	                                                  <tbody>
+	                                                    <tr >
+	                                                    
+	                                                      <td  align="left" class="trrowtitle" width="35%"><ice:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_dh_metrics.survey.name']}" /></td>
+	                                                      <td  align="center" class="odd"   width="55%">
+	                                                      		<ice:outputText styleClass="titleLabelDhMetrics"  value="#{metricsQuestionsSurveyChartBean.nameSurvey}" />
+															</td>
+	                                                    </tr>
+	                                                    <tr >
+	                                                      <td  align="left" class="trrowtitle" width="35%"><ice:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_dh_metrics.survey.total']}" /></td>
+	                                                      <td  align="center" class="odd"   width="55%">
+	                                                      		<ice:outputText styleClass="titleLabelDhMetrics"  value="#{metricsQuestionsSurveyChartBean.totalQuestion}" />
+															</td>
+	                                                    </tr>
+	                                                    <tr >
+	                                                      <td  align="left" class="trrowtitle" width="35%"><ice:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_dh_metrics.survey.dtdist']}" /></td>
+	                                                      <td  align="center" class="odd"   width="55%">
+	                                                      		<ice:outputText styleClass="titleLabelDhMetrics"  value="#{metricsQuestionsSurveyChartBean.dtDistribution}" />
+															</td>
+	                                                    </tr>
+	                                                    <tr >
+	                                                      <td  align="left" class="trrowtitle" width="35%"><ice:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_dh_metrics.survey.dtclose']}" /></td>
+	                                                      <td  align="center" class="odd"   width="55%">
+	                                                      		<ice:outputText styleClass="titleLabelDhMetrics"  value="#{metricsQuestionsSurveyChartBean.dtClose}" />
+															</td>
+	                                                    </tr>
+	                                                    <tr >
+	                                                      <td  align="left" class="trrowtitle" width="35%"><ice:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_dh_metrics.survey.status']}" /></td>
+	                                                      <td  align="center" class="odd"   width="55%">
+	                                                      		<ice:outputText styleClass="titleLabelDhMetrics"  value="#{metricsQuestionsSurveyChartBean.status}" />
+															</td>
+	                                                    </tr>
+	                                                  </tbody>
+	                                                </table><br/>
+                                                	<table class="tabularmetricsNewView"  style="border-left: 1px solid rgb(217, 217, 217);" width="100%" cellpadding="0" cellspacing="0">
+	                                                  <tbody>
+	                                                    <tr >
+	                                                      <td  align="left" class="trrowtitle" width="35%"><ice:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_dh_metrics.questioncomplete']}" /></td>
+	                                                      <td  align="center" class="trrowcomplete"   width="55%">
+	                                                      		<ice:outputText styleClass="titleLabelDhMetricsvalue"  value="#{metricsQuestionsSurveyChartBean.completed}" />
+															</td>
+	                                                    </tr>
+	                                                    <tr >
+	                                                      <td  align="left" class="trrowtitle" width="35%"><ice:outputText styleClass="titleLabelDhMetricsvalue" value="#{bundle['c_dh_metrics.questionincomplete']}" /></td>
+	                                                      <td  align="center" class="trrownotstarted"   width="55%">
+	                                                      		<ice:outputText styleClass="titleLabelDhMetricsvalue"  value="#{metricsQuestionsSurveyChartBean.incompleted}" />
+															</td>
+	                                                    </tr>
+	                                                  </tbody>
+	                                                </table>
+	                                                
+	                                                <br/>
+													
+													 <ice:panelGroup >
+
+														 <div id='chartContainer' style="width: 330px; margin: 0 auto" >Charts will load here. Please wait...</div>
+														
+															<script type="text/javascript">
+															FusionCharts.printManager.enabled(true);
+														    var myChart = new FusionCharts( "./fusioncharts/Column3D.swf", "myChartId", "330", "280", "0", "1" );
+														    myChart.setXMLUrl( "./fusioncharts/supplier/#{metricsQuestionsSurveyChartBean.idSupplier}/dh/only_questionssurvey#{metricsQuestionsSurveyChartBean.sValue}.xml" );
+														    myChart.render( "chartContainer" );
+														    
+														    FusionCharts("myChartId").configureLink (
+															  {
+															    swfUrl : "./fusioncharts/SSGrid.swf",
+															    overlayButton:
+															    {    
+															      message: "close",
+															      fontColor : "880000",
+															      bgColor:"FFEEEE",
+															      borderColor: "660000"
+															    }
+															  }, 0 );
+															  
+															  FusionCharts("myChartId").configureLink (
+															  {
+															    swfUrl : "./fusioncharts/Line.swf",
+															    overlayButton:
+															    {    
+															      message: "close",
+															      fontColor : "880000",
+															      bgColor:"FFEEEE",
+															      borderColor: "660000"
+															    }
+															  }, 1 );
+															  
+			
+														  </script>
+													   
+													</ice:panelGroup>
+                                                
+                                                
+                                                
+                                                 </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          </td>
+                                          
+                                          
+                                          <td style="border-right: 1px solid rgb(239, 239, 239);" align="center"  valign="top">
+                                          <table width="100%" border="0" cellpadding="5" cellspacing="0">
+                                            <tbody>
+                                              <tr>
+                                                <td height="41"><strong>Survey Results Summary x Survey</strong></td>
+                                              </tr>
+                                              <tr>
+                                                <td align="center" bgcolor="#ffffff">
+                                                
+                                                <table class="tabularmetricsNewView"  style="border-left: 1px solid rgb(217, 217, 217);" width="100%" cellpadding="0" cellspacing="0">
+                                                  <tbody>
+                                                    <tr >
+                                                      <td align="left"><ice:outputText styleClass="titleLabelDhMetrics" value="#{bundle['c_dh_metrics.surveynotstarted']}" /></td>
+                                                      <td class="trrownotstarted" align="center">
+                                                      		<ice:outputText styleClass="titleLabelDhMetricsvalue" value="#{metricsAllSurveysChartBean.nonStarted}" />  
+														</td>
+                                                    </tr>
+                                                    <tr >
+                                                      <td  class="odd" align="left"><ice:outputText styleClass="titleLabelDhMetrics" value="#{bundle['c_dh_metrics.surveycomplete']}" /></td>
+                                                      <td class="trrowcomplete" align="center">
+                                                      		<ice:outputText styleClass="titleLabelDhMetricsvalue"  value="#{metricsAllSurveysChartBean.completed}" />
+                                                      </td>
+                                                    </tr>
+                                                    <tr >
+                                                      <td align="left"><ice:outputText styleClass="titleLabelDhMetrics" value="#{bundle['c_dh_metrics.surveyincomplete']}" /></td>
+                                                      <td  class="trrowincomplete" align="center">
+                                                      		<ice:outputText styleClass="titleLabelDhMetricsvalue"  value="#{metricsAllSurveysChartBean.incompleted}" />
+                                                      </td>
+                                                    </tr>
+                                                    <tr >
+                                                      <td align="left"><ice:outputText styleClass="titleLabelDhMetrics" value="#{bundle['c_dh_metrics.surveyinadditional']}" /></td>
+                                                      <td  class="trrowinadditional" align="center">
+                                                      		<ice:outputText styleClass="titleLabelDhMetricsvalue"  value="#{metricsAllSurveysChartBean.inadditional}" />
+                                                      </td>
+                                                    </tr>
+                                                    <tr >
+                                                      <td align="left"><ice:outputText styleClass="titleLabelDhMetrics" value="#{bundle['c_dh_metrics.surveyexpired']}" /></td>
+                                                      <td  class="trrowexpired" align="center">
+                                                      		<ice:outputText styleClass="titleLabelDhMetricsvalue"  value="#{metricsAllSurveysChartBean.expired}" />
+                                                      </td>
+                                                    </tr>
+                                                     <tr >
+                                                      <td align="left"><ice:outputText styleClass="titleLabelDhMetrics" value="#{bundle['c_dh_metrics.surveyinreview']}" /></td>
+                                                      <td  class="trrowinreview" align="center">
+                                                      		<ice:outputText styleClass="titleLabelDhMetricsvalue"  value="#{metricsAllSurveysChartBean.inreview}" />
+                                                      </td>
+                                                    </tr>
+                                                    <tr >
+                                                      <td align="left"><ice:outputText styleClass="titleLabelDhMetrics" value="#{bundle['c_dh_metrics.surveyclosed']}" /></td>
+                                                      <td  class="trrowclosed" align="center">
+                                                      		<ice:outputText styleClass="titleLabelDhMetricsvalue"  value="#{metricsAllSurveysChartBean.closed}" />
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                                <br/>
+                                                
+                                                 <ice:panelGroup >
+
+
+														 <div id='chartContainertwo' style=" margin: 0 auto" >Charts will load here. Please wait...</div>
+														
+															<script type="text/javascript">
+															FusionCharts.printManager.enabled(true);
+														    var myChart = new FusionCharts( "./fusioncharts/Column3D.swf", "myChartIdtwo", "530", "350", "0", "1" );
+														    myChart.setXMLUrl( "./fusioncharts/supplier/#{metricsAllSurveysChartBean.idSupplier}/dh/complete_surveys.xml" );
+														    myChart.render( "chartContainertwo" );
+														    
+														    FusionCharts("myChartIdtwo").configureLink (
+															  {
+															    swfUrl : "./fusioncharts/SSGrid.swf",
+															    overlayButton:
+															    {    
+															      message: "close",
+															      fontColor : "880000",
+															      bgColor:"FFEEEE",
+															      borderColor: "660000"
+															    }
+															  }, 0 );
+															  
+															  FusionCharts("myChartIdtwo").configureLink (
+															  {
+															    swfUrl : "./fusioncharts/Line.swf",
+															    overlayButton:
+															    {    
+															      message: "close",
+															      fontColor : "880000",
+															      bgColor:"FFEEEE",
+															      borderColor: "660000"
+															    }
+															  }, 1 );
+															  
+			
+														  </script>
+													   
+													</ice:panelGroup>
+                                                
+                                                
+												           
+															
+															
+								                             
+								                             
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          </td>  
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                      </ice:form>
+                      
+                      	</td>
+                        </tr>
+
+                       </tbody>
+                      </table>
+                      <br/>
+                      <br/>
+                       </td>
+                   	</tr>
+                   </tbody>
+                        </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  		</td>
+                      </tr>
+					 </tbody>
+                  </table>
+                  
+				</ui:define>
+				
+
+			</ui:composition>
+
+	
+
+       </body>
+    </html>
+   </f:view>
+</jsp:root>

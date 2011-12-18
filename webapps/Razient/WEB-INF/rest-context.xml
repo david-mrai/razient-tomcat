@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	 <bean id="globalincidentService" class="rz.ws.rest.service.Globalincident_Service" />
+	 
+	 <bean id="mobileRestService" class="rz.ws.rest.service.Mobile_RestService" >
+	 	<property name="razientsystemService" ref="razientsystemService" />
+	 	<property name="reportnewsglobalincidentService" ref="reportnewsglobalincidentService" />
+	 	<property name="mobileService" ref="mobileService" />
+	 	<property name="countryService" ref="countryService" />
+	 	<property name="stateService" ref="stateService" />
+	 	<property name="cityService" ref="cityService" />
+	 	<property name="reportnewsincidenttypeService" ref="reportnewsincidenttypeService" />
+	 	
+	 </bean>  
+	 
+	  <bean id="generalRestService" class="rz.ws.rest.service.General_RestService" >
+	 	<property name="ticketstepService" ref="customerticketstepsService" />
+	 	<property name="ticketincidentService" ref="customerticketincidentsService" />
+	 	<property name="reportnewsglobalincidentService" ref="reportnewsglobalincidentService" />
+	 </bean> 
+</beans>

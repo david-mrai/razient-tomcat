@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:ice-cc="http://www.icesoft.com/icefaces-composite-comps">
+	<jsp:directive.page contentType="text/html;charset=ISO-8859-1"
+		pageEncoding="ISO-8859-1" />
+	<f:view>
+		<ice:outputDeclaration doctypeRoot="html"
+			doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN"
+			doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" />
+		<html>
+			<head>
+				<title>Index (Razient)</title>
+			</head>
+			<body>
+
+				<!-- template="#{templateBean.templateContent}"-->
+				<ui:composition
+					template="../../include/templates/pages/modeA_rz.jspx"
+					xmlns:h="http://java.sun.com/jsf/html"
+					xmlns:f="http://java.sun.com/jsf/core"
+					xmlns:c="http://java.sun.com/jstl/core"
+					xmlns:ice="http://www.icesoft.com/icefaces/component"
+					xmlns:ice-cc="http://www.icesoft.com/icefaces-composite-comps"
+					xmlns:ui="http://java.sun.com/jsf/facelets">
+
+					<!-- params for page titles-->
+					<ui:param name="pageTitle"
+						value="#{bundle['rz_compliance_surveydistribution.title']}" />
+
+					<ui:define name="header-menu-value">
+						<table cellspacing="0" cellpadding="0">
+								<tr>
+									<td>
+										
+										<ice:commandLink action="#{rz_MenuBarBean.getIconAdmin}" actionListener="#{rz_MenuBarBean.actionlistener}"   onclick="rld();">
+												<ice:graphicImage style="border:none;"
+																	styleClass="noborder"
+																	url="./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.valueIconAdmin}.png"
+																	onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.enabledAdmin}.png'"
+																	onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.disabledAdmin}.png'"
+																	onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.enabledAdmin}.png'"
+																	onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.disabledAdmin}.png'" />
+												<f:attribute name="optioonselected" value="compliance_surveydistribution"/>
+										</ice:commandLink>
+									</td>
+									<td>
+												<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/risk_black_low.png" />
+									</td>
+									<td>
+										<ice:graphicImage style="border:none;"
+																	styleClass="noborder"
+																	url="./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.valueIconCompliance}.png"
+																	onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.enabledCompliance}.png'"
+																	onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.disabledCompliance}.png'"
+																	onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.enabledCompliance}.png'"
+																	onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.disabledCompliance}.png'" />
+												
+									</td>
+	
+								</tr>
+							</table>			
+
+					</ui:define>
+					<ui:define name="page-menu-value">
+						<ice:form>
+							
+							<ice:commandLink action="#{rz_SurveyDistributionBean.actionMenu_SurveyManager}" onclick="rld();">
+								<ice:graphicImage visible="true" styleClass="menuPosA"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_surveymanager.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveymanager.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_surveymanager.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveymanager.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_surveymanager.png'" />
+							</ice:commandLink>
+							<ice:commandLink action="#{rz_SurveyDistributionBean.actionMenu_StandardsManager}" onclick="rld();">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_standardsmanager.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_standardsmanager.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_standardsmanager.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_standardsmanager.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_standardsmanager.png'" />
+							</ice:commandLink>
+							<ice:commandLink action="#{rz_SurveyDistributionBean.actionMenu_SurveyReview}" onclick="rld();">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_surveyreview.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveyreview.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_surveyreview.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveyreview.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_surveyreview.png'" />
+							</ice:commandLink>
+							<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_down_surveydistribution.png"/>
+									
+							<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_one.png"/>
+						</ice:form>
+					</ui:define>
+
+					<ui:define name="page-content-value">
+					
+					
+						
+					
+					
+
+					</ui:define>
+
+
+				</ui:composition>
+
+
+
+
+			</body>
+		</html>
+	</f:view>
+</jsp:root>

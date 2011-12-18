@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ice="http://www.icesoft.com/icefaces/component">
+   <jsp:directive.page contentType="text/html;charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+   <f:view>
+   		<ice:outputDeclaration 
+            doctypeRoot="html" 
+            doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN" 
+            doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" /> 
+    <html>
+       <head>
+         <title>Index (Razient)</title>
+       </head>
+       <body>
+       
+        	<!-- template="#{templateBean.templateContent}"-->
+			<ui:composition
+			        template="../../include/templates/pages/modeB_supplier.jspx"
+			        xmlns:h="http://java.sun.com/jsf/html"
+			        xmlns:f="http://java.sun.com/jsf/core"
+			        xmlns:c="http://java.sun.com/jstl/core"
+			        xmlns:ice="http://www.icesoft.com/icefaces/component"
+			        xmlns:ui="http://java.sun.com/jsf/facelets" >
+			
+			  <!-- params for page titles-->
+			 		 <!--<f:loadBundle basename="truckandi.view.bundle.Message" var="bundle"/>
+			        <ui:param name="pageTitle" value="#{bundle['tai_login.title']}" />-->
+					<ui:param name="pageTitle" value="&amp;nbsp&amp;nbsp#{s_MyProfileCrudBean.name} &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp #{c_SiteCrudBean.titlePage} #{bundle['c_admin_supplierprofile_parts.title']}" />
+				
+				<ui:define name="header_menu_value">
+						<table cellspacing="0" cellpadding="0">
+										<tr>
+											<!-- <td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}">		
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_dash_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_dash_2.png'" />
+														<f:attribute name="optioonselected" value="dh"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_S_Survey}">																																				
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_survey_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_survey_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_survey_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_survey_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_survey_2.png'" />
+														<f:attribute name="optioonselected" value="sv_sv"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_S_GlobalIncidents}">																																				
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_global_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_global_2.png'" />
+														<f:attribute name="optioonselected" value="gi_al"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>-->
+												<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_S_RequestForProposal}">																																				
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_request_2.png'" />
+														<f:attribute name="optioonselected" value="rp_op"/>
+												</ice:commandLink>-->
+											<!--	<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_request_3.png" />
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+											-->	<!--<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_S_PreAssessment}">																																				
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_asses_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_asses_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_asses_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_asses_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_asses_2.png'" />
+														<f:attribute name="optioonselected" value="pa_as"/>
+												</ice:commandLink>-->
+										<!--		<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_asses_3.png"/>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											<td>
+												<ice:commandLink action="#{users_MenuBarBean.actionLink}"  onclick="rld();" actionListener="#{users_MenuBarBean.actionlistener}" visible="#{users_MenuBarBean.visible_S_Reports}">																																				
+													<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_rep_1.png" 
+														onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'"
+														onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_1.png'"
+														onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/risk_rep_2.png'" />
+														<f:attribute name="optioonselected" value="rp_sv"/>
+												</ice:commandLink>
+											</td>
+											<td><ice:graphicImage style="border:none;"  styleClass="noborder" url		="./css/images/risk_black_low.png"/> </td>
+											--><td>
+												<ice:graphicImage style="border:none;"  styleClass="noborder"
+															url		="./css/images/#{folderBean.folder_menu}/risk_admin_full_2.png"/>
+														
+											</td>
+										</tr>
+									</table>			
+				</ui:define>
+			    <ui:define name="hide-show-value">
+						<ice:form>
+					    	<div style="margin-top:3px;float: left;position: absolute;">
+						    	<ice:commandLink action="#{showhideBean.action_showhide}" onclick="rld();">
+									<ice:graphicImage style="border:none;" 
+										styleClass="noborder" url="./css/images/icons/menu_#{showhideBean.url_icon}.png"/>
+								</ice:commandLink>
+							</div>
+						</ice:form>
+					</ui:define>
+			    <ui:define name="page-menu-value">
+			    	 <ice:form>
+						<ice:graphicImage visible="true"  styleClass="menuPosA"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_down_myprofile.png"/>
+									
+						<ice:graphicImage visible="true"  styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_one.png"/>
+					 </ice:form> 	
+			    </ui:define>
+			    
+				<ui:define name="page-content-value">
+
+			    	<!-- Static Tab Set -->
+
+					<h:form>
+						
+						<table cellspacing="0" cellpadding="0" style="margin-top: -7px;" width="100%" >
+								<tr  class="menubuttons">
+									<td align="left">
+										&amp;nbsp&amp;nbsp
+										<ice:commandLink action="#{c_PartServicesCrudBean.editableAction}"  onclick="rld();" visible="#{c_PartServicesCrudBean.bTypeQuery}">
+											<ice:graphicImage style="border:none;" styleClass="noborder"
+												url="./css/images/#{folderBean.folder_menu}/icons/menu_up_editable.png"
+												onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_editable.png'"
+												onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_editable.png'"
+												
+												/>
+										</ice:commandLink>
+										&amp;nbsp&amp;nbsp
+										<ice:commandLink action="#{c_PartServicesCrudBean.addAction}"  onclick="rld();" visible="#{c_PartServicesCrudBean.bTypeCreate}">
+											<ice:graphicImage style="border:none;" styleClass="noborder"
+												url="./css/images/#{folderBean.folder_menu}/icons/menu_up_save.png"
+												onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_save.png'"
+												onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_save.png'"
+												
+												/>
+										</ice:commandLink>
+										<ice:commandLink action="#{c_PartServicesCrudBean.updateAction}"  onclick="rld();" visible="#{c_PartServicesCrudBean.bTypeEdit}">
+											<ice:graphicImage style="border:none;" styleClass="noborder"
+												url="./css/images/#{folderBean.folder_menu}/icons/menu_up_save.png"
+												onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_save.png'"
+												onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_save.png'"
+												
+												/>
+										</ice:commandLink>
+										<!--&amp;nbsp&amp;nbsp
+										<ice:commandLink action="#{rz_EmployeeCrudBean.clearFormAction}"  onclick="rld();" visible="#{rz_EmployeeCrudBean.bTypeEdit}">
+											<ice:graphicImage style="border:none;" styleClass="noborder"
+												url="./css/images/#{folderBean.folder_menu}/icons/menu_up_delete.png"
+												onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_delete.png'"
+												onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_delete.png'"
+												
+												/>
+										</ice:commandLink>-->
+										&amp;nbsp&amp;nbsp
+										<ice:commandLink action="#{c_PartServicesCrudBean.returnToListAction}"  onclick="rld();" >
+											<ice:graphicImage style="border:none;" styleClass="noborder"
+												url="./css/images/#{folderBean.folder_menu}/icons/menu_up_cancel.png"
+												onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_cancel.png'"
+												onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_cancel.png'"
+												
+												/>
+										</ice:commandLink>
+										&amp;nbsp&amp;nbsp
+										<!--<ice:commandLink action="#{viewlogsPopUpBean.openPopup}"  id="logCreate" onclick="rld();" visible="false">
+											<ice:graphicImage style="border:none;" styleClass="noborder"
+												url="./css/images/#{folderBean.folder_menu}/icons/menu_up_logs_#{rz_EmployeeCrudBean.stViewLog}.png"
+												onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_logs_#{rz_EmployeeCrudBean.stViewLog}.png'"
+												onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_logs_#{rz_EmployeeCrudBean.stViewLog}.png'"
+												
+												/>
+										</ice:commandLink>
+										<ice:commandLink action="#{viewlogsPopUpBean.openPopup}"  id="logEdit" onclick="rld();" visible="false">
+											<ice:graphicImage style="border:none;" styleClass="noborder"
+												url="./css/images/#{folderBean.folder_menu}/icons/menu_up_logs_#{rz_EmployeeCrudBean.stViewLog}.png"
+												onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_logs_#{rz_EmployeeCrudBean.stViewLog}.png'"
+												onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_logs_#{rz_EmployeeCrudBean.stViewLog}.png'"
+												
+												/>
+										</ice:commandLink>-->
+									</td>
+									<td>
+										&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+										&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+										&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+									</td>
+									<td align="right">
+										<ice:commandLink action="#{c_PartServicesCrudBean.createNewAction}"  onclick="rld();" visible="#{c_PartServicesCrudBean.bTypeQuery}">
+											<ice:graphicImage style="border:none;" styleClass="noborder"
+												url="./css/images/#{folderBean.folder_menu}/icons/menu_up_createnewpartservices.png"
+												onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_createnewpartservices.png'"
+												onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_createnewpartservices.png'"
+												
+												/>
+										</ice:commandLink>
+										&amp;nbsp&amp;nbsp
+										<!--<ice:commandLink action="#{rz_EmployeeCrudBean.returnToListAction}"  onclick="rld();">
+											<ice:graphicImage style="border:none;" styleClass="noborder"
+												url="./css/images/#{folderBean.folder_menu}/icons/menu_up_tolist.png"
+												onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_tolist.png'"
+												onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_tolist.png'"
+												
+												/>
+										</ice:commandLink>
+										&amp;nbsp&amp;nbsp-->
+									</td>
+							</tr>
+							<tr>
+								<td colspan="3" class="menuline"></td>
+							</tr>
+						</table>
+						</h:form>
+						
+						<h:form>
+							
+							<ice:panelGroup id="tabSetTabCustomerProfile" styleClass="tabPanelBox panelTabSetSaleContainer">
+
+								<ice:panelTabSet>
+
+								<ice:panelTab label="#{bundle['c_admin_supplierprofile_parts.title']}">
+									<div style="height:100%;">
+										<br/>
+										<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;">
+											<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+												<tr>
+													<td width="20%"  class="tablelabeledit_#{c_PartServicesCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+															<h:outputLabel>
+																<h:outputText value="#{bundle['c_admin_supplierprofile.parts.site']}"></h:outputText>
+															</h:outputLabel>
+													</td>
+													<td align="left" class="tablelabelfieldedit_#{c_PartServicesCrudBean.stEdit_Global}" width="30%">
+														<ice:selectOneMenu id="selectedSite" visible="#{not c_PartServicesCrudBean.bEdit_Site}"
+																value="#{c_PartServicesCrudBean.idSiteSupplier}"
+																styleClass="selectedOneMenukeyBold"
+																valueChangeListener="#{c_PartServicesCrudBean.processValueChange}"
+																partialSubmit="true">
+																<f:selectItems value="#{c_PartServicesCrudBean.list_Site}" />
+														</ice:selectOneMenu>
+														<ice:inputText id="nameSite" size="30" maxlength="30" visible="#{c_PartServicesCrudBean.bEdit_Site}"
+																value="#{c_PartServicesCrudBean.nameSite}" partialSubmit="true"
+																readonly="true" styleClass="tablefieldedit_disabled">
+														</ice:inputText>
+													 </td>
+												</tr>
+			
+											</table>
+											
+										</ice:panelGroup>
+										
+										<br/><br/>
+										<ice:panelGroup styleClass="customerProfileBox" style="width:96%;margin-top:-5px;">
+											<table cellspacing="0" cellpadding="0" style="margin-top: 0px;" width="100%" >
+												<tr>
+													<td width="20%"  class="tablelabeledit_#{c_PartServicesCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+															<h:outputLabel>
+																<h:outputText value="#{bundle['c_admin_supplierprofile.parts.name']}"></h:outputText>
+															</h:outputLabel>
+													</td>
+													<td align="left" class="tablelabelfieldedit_#{c_PartServicesCrudBean.stEdit_Global}" width="30%">
+														<ice:inputText id="name" size="30" maxlength="30"
+																value="#{c_PartServicesCrudBean.name}" partialSubmit="true"
+																readonly="#{c_PartServicesCrudBean.bEdit_Global}" styleClass="tablefieldedit_#{c_PartServicesCrudBean.stEdit_Global}">
+														</ice:inputText>
+													 </td>
+													<td  width="20%" class="tablelabeledit_#{c_PartServicesCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+															<h:outputLabel>
+																<h:outputText value="#{bundle['c_admin_supplierprofile.parts.numberpartservice']}"></h:outputText>
+															</h:outputLabel>
+													</td>
+													<td align="left" class="tablelabelfieldedit_enabled" width="30%">
+														<ice:inputText id="email" size="30" maxlength="30" style="font-weight: bold;"
+																value="#{c_PartServicesCrudBean.numberpartservice}" partialSubmit="true"
+																readonly="#{c_PartServicesCrudBean.bEdit_Email}" styleClass="tablefieldedit_createnotedit_#{c_PartServicesCrudBean.stEdit_Email}">
+														</ice:inputText>
+													 </td>
+												</tr>
+												<tr><td colspan="4" class="menusep_#{c_PartServicesCrudBean.stEdit_Global}"></td></tr>
+												<tr>
+													<td width="20%"  class="tablelabeledit_#{c_PartServicesCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+															
+													</td>
+													<td align="left" class="tablelabelfieldedit_#{c_PartServicesCrudBean.stEdit_Global}" width="30%">
+														
+													 </td>
+													<td  width="20%" class="tablelabeledit_#{c_PartServicesCrudBean.stEdit_Global}">&amp;nbsp&amp;nbsp 
+															<h:outputLabel>
+																<h:outputText value="#{bundle['c_admin_supplierprofile.parts.status']}"></h:outputText>
+															</h:outputLabel>
+													</td>
+													<td align="left" class="tablelabelfieldedit_#{c_PartServicesCrudBean.stEdit_Global}" width="30%">
+														<ice:selectOneMenu id="selectedStatus" visible="#{not c_PartServicesCrudBean.bEdit_Global}"
+																value="#{c_PartServicesCrudBean.status}"
+																styleClass="selectedOneMenukeyBold"
+																valueChangeListener="#{c_PartServicesCrudBean.processValueChange}"
+																partialSubmit="true">
+																<f:selectItems value="#{c_PartServicesCrudBean.list_Status}" />
+														</ice:selectOneMenu>
+														<ice:inputText id="statusDesc" size="30" maxlength="30" visible="#{c_PartServicesCrudBean.bEdit_Global}"
+																value="#{c_PartServicesCrudBean.statusDesc}" partialSubmit="true"
+																readonly="#{c_PartServicesCrudBean.bEdit_Global}" styleClass="tablefieldedit_#{c_PartServicesCrudBean.stEdit_Global}">
+														</ice:inputText>
+													 </td>
+												</tr>
+											</table>
+											
+										</ice:panelGroup>
+										
+										<br/>
+
+									</div>
+								</ice:panelTab>
+								</ice:panelTabSet>
+
+							</ice:panelGroup>
+							
+							
+							<br/>
+	
+						</h:form>
+						
+						<ice:form>
+							<ice:panelPopup  modal="true" visible="#{viewlogsPopUpBean.visible}" style="margin-top:-90px;width:485px;" styleClass="icePanelPopupBody icePanelPopup">
+				                <f:facet name="header">
+				                   <ice:panelGrid width="485" cellpadding="0" cellspacing="1" columns="2" styleClass="trHeader" >
+				                        <ice:outputText style="color: white;" value="#{bundle['rz_log']}"/>
+				                        <ice:commandButton image="./css/images/icons/close.png" action="#{viewlogsPopUpBean.closePopup}" title="Close this draggable popup"/>
+				                    </ice:panelGrid>
+				                </f:facet>
+				                <f:facet name="body">
+				                	<ice:panelGrid width="100%">
+				                		<table style="border:none;margin-top:-10px;float:left;">
+				                			<tr>
+				                				<td rowspan="2" valign="top"><ice:graphicImage styleClass="noborder" url="./css/images/general/log#{logger.stType}.png"/></td>
+				                				<td style="color:#3A4358;font-weight:bold;">&amp;nbsp&amp;nbsp#{logger.stType}</td>
+				                			</tr>
+				                			<tr>
+				                				<td >
+					                				 <ice:panelGrid width="100%" columns="1" cellpadding="0" border="1" style="background-color: #F4F4F4;border-color:black;" >
+									                	<table align="center">
+										                       	<tr>
+											                       <td  width="410" colspan="3" class="tableflabelmaster" >
+											                       		<div style="height:200px;overflow: auto;" >
+											                       			#{logger.stLogger}
+											                       		</div>
+											                       </td>
+											                    </tr>
+											             </table>
+								                 	</ice:panelGrid>
+				                				</td>
+				                			</tr>
+				                			<tr>
+				                				<td colspan="3" align="right">
+					                				<ice:commandLink action ="#{viewlogsPopUpBean.closePopup}">
+																<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/general/logexit.png"/>
+													</ice:commandLink>
+												</td>
+				                			</tr>
+				                		</table>
+									</ice:panelGrid>
+				                </f:facet>
+				            </ice:panelPopup>   
+				       </ice:form>
+						
+			    </ui:define>
+
+			</ui:composition>
+
+	
+
+       </body>
+    </html>
+   </f:view>
+</jsp:root>

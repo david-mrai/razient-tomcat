@@ -1,0 +1,126 @@
+<?xml version='1.0'?>
+<chart bgColor='FAFAFA' caption='Report Survey' subCaption='Results of All Surveys'  numberPrefix='' sformatNumberScale='1' sNumberPrefix='' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' pieRadius='60'>
+	<set label='Survey Not Started' value='0' color='C0504D'/>
+	<set label='Survey Complete' value='0' color='63A06D'/>
+	<set label='Survey Incomplete' value='0' color='DDDD00'/>
+	<set label='Survey Add. Review' value='0' color='4F82BE'/>
+	<set label='Survey Expired' value='2' color='CF6B49' link='newchart-xml-1-expired'/>
+	<set label='Survey InReview' value='0' color='70818B'/>
+	<set label='Survey Closed' value='0' color='926955'/>
+<!-- Data for multi-series stacked and combination chart -->
+    <linkeddata id='1-closed'>
+		<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Suppliers' subCaption=''  numberPrefix='' formatNumber='1' decimals='0' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' palette='1' >
+		
+    <styles>
+       <definition>
+           <style name='myLabelsFont' type='font' font='Arial' size='12' color='666666' bold='0' underline='0'/>
+            <style name='myShadow' type='Shadow' color='999999' angle='45'/>
+       </definition>
+        <application>
+            <apply toObject='DataLabels' styles='myLabelsFont,myShadow' />
+        </application>
+     </styles>
+	</chart>
+	</linkeddata>
+
+    <linkeddata id='1-inreview'>
+		<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Suppliers' subCaption=''  numberPrefix='' formatNumber='1' decimals='0' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' palette='1' >
+		
+    <styles>
+       <definition>
+           <style name='myLabelsFont' type='font' font='Arial' size='12' color='666666' bold='0' underline='0'/>
+            <style name='myShadow' type='Shadow' color='999999' angle='45'/>
+       </definition>
+        <application>
+            <apply toObject='DataLabels' styles='myLabelsFont,myShadow' />
+        </application>
+     </styles>
+	</chart>
+	</linkeddata>
+
+    <linkeddata id='1-expired'>
+		<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Suppliers' subCaption=''  numberPrefix='' formatNumber='1' decimals='0' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' palette='1' >
+			<set label='Risk Assessment -FINv5' value='1' />
+	<set label='Foreign Corrupt Practices Act' value='2' />
+
+    <styles>
+       <definition>
+           <style name='myLabelsFont' type='font' font='Arial' size='12' color='666666' bold='0' underline='0'/>
+            <style name='myShadow' type='Shadow' color='999999' angle='45'/>
+       </definition>
+        <application>
+            <apply toObject='DataLabels' styles='myLabelsFont,myShadow' />
+        </application>
+     </styles>
+	</chart>
+	</linkeddata>
+
+    <linkeddata id='1-nonstarted'>
+		<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Suppliers' subCaption=''  numberPrefix='' formatNumber='1' decimals='0' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' palette='1' >
+		
+    <styles>
+       <definition>
+           <style name='myLabelsFont' type='font' font='Arial' size='12' color='666666' bold='0' underline='0'/>
+            <style name='myShadow' type='Shadow' color='999999' angle='45'/>
+       </definition>
+        <application>
+            <apply toObject='DataLabels' styles='myLabelsFont,myShadow' />
+        </application>
+     </styles>
+	</chart>
+	</linkeddata>
+
+    <linkeddata id='1-completed'>
+		<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Suppliers' subCaption=''  numberPrefix='' formatNumber='1' decimals='0' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' palette='1' >
+		
+    <styles>
+       <definition>
+           <style name='myLabelsFont' type='font' font='Arial' size='12' color='666666' bold='0' underline='0'/>
+            <style name='myShadow' type='Shadow' color='999999' angle='45'/>
+       </definition>
+        <application>
+            <apply toObject='DataLabels' styles='myLabelsFont,myShadow' />
+        </application>
+     </styles>
+	</chart>
+	</linkeddata>
+
+    <linkeddata id='1-incompleted'>
+		<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Suppliers' subCaption=''  numberPrefix='' formatNumber='1' decimals='0' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' palette='1' >
+		
+    <styles>
+       <definition>
+           <style name='myLabelsFont' type='font' font='Arial' size='12' color='666666' bold='0' underline='0'/>
+            <style name='myShadow' type='Shadow' color='999999' angle='45'/>
+       </definition>
+        <application>
+            <apply toObject='DataLabels' styles='myLabelsFont,myShadow' />
+        </application>
+     </styles>
+	</chart>
+	</linkeddata>
+
+    <linkeddata id='1-inadditional'>
+		<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Suppliers' subCaption=''  numberPrefix='' formatNumber='1' decimals='0' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' palette='1' >
+		
+    <styles>
+       <definition>
+           <style name='myLabelsFont' type='font' font='Arial' size='12' color='666666' bold='0' underline='0'/>
+            <style name='myShadow' type='Shadow' color='999999' angle='45'/>
+       </definition>
+        <application>
+            <apply toObject='DataLabels' styles='myLabelsFont,myShadow' />
+        </application>
+     </styles>
+	</chart>
+	</linkeddata>
+
+    <styles>
+       <definition>
+           <style name='myLabelsFont' type='font' font='Arial' size='12' color='666666' bold='0' underline='0'/>
+       </definition>
+        <application>
+            <apply toObject='DataLabels' styles='myLabelsFont,myShadow' />
+        </application>
+     </styles>
+</chart>

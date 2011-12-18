@@ -1,0 +1,17 @@
+<functions>
+	<version>2.0</version>
+	<countbreak>1</countbreak>
+	<counttotal>0</counttotal>
+	<countavg>0</countavg>
+	<countmin>0</countmin>
+	<countmax>0</countmax>
+	<countorder>0</countorder>
+	<break>
+		<column id="0" type="asc" showvalues="No" >country.printable_name</column>
+	</break>
+	<total></total>
+	<avg></avg>
+	<min></min>
+	<max></max>
+	<order></order>
+</functions>

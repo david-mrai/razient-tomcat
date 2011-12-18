@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Survey Rating Results' subCaption='Japan'  numberPrefix='' formatNumber='1' decimals='0' formatNumberScale='0' sNumberPrefix='' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN'  bgAlpha='10' showBorder='1'  borderColor='EFEFEF' palette='4'  maxColWidth = '50' >
+<!-- Data for single series chart -->
+	<set label='Not Imp...' value='0' color='C0504E'/>
+	<set label='Marginal' value='0' color='DDDD00'/>
+	<set label='Average' value='0' color='4F82BE'/>
+	<set label='Above Average' value='0' color='79888A'/>
+	<set label='Best Practice' value='0' color='63A06D'/>
+<!-- Data for multi-series stacked and combination chart -->
+</chart>

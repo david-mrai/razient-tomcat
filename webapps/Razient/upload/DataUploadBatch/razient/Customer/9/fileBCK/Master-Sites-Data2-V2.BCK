@@ -1,0 +1,41 @@
+M-Argentina;Dardo Rocha 2858 B1640FTP;Martinez;Buenos Aires;;Argentina;1
+M-Australia;Locked Bag 5023;PARRAMATTA ;New South Wales;2124;Australia;1
+M-Canada;500 Boul Morgan #1;Baie-d'Urfe;Quebec;H9X 3V1;Canada;1
+M-Chile;Hernando de Aguirre 268, 3rd Floor;Region Metropolitania;Santiago;;Chile;1
+M-China;291 Fumin Lu Jin Wu, Unit 1, 3A Floor;Shanghai;shanghai;200031;China;1
+M-France;29 avenue Tony Garnier;Lyon;Rhone-Alpes;;France;1
+M-Canada 2;20000 Clark Graham, Baie d`Urfé ;Quebec;Quebec;H9x 4b6;Canada;1
+M-Germany;Am Söldnermoos 6;Hallbergmoos;Bayern;85399;Germany;1
+M-Italy;Centro direzionale Milanofiori Strada 6, Palazzo E5;Milanofiori;Assago;20090;Italy;1
+M-Netherlands;Kleermakerstraat 101991 JL;Velserbroek;;101991;Netherlands;1
+M-Portugal;Av. Maria Lamas, Lte 19 - Serra das minas;Rio de Mouro ;Lisboa;2635-432;Portugal;1
+M-Russia;Novoslobodskaya Street 23;Moscow;Moscow City;;Russian Federation;1
+M-South Africa;Cnr 16 th Rd & Pharmaceutical str;Midrand ;Gauteng;;South Africa;1
+M-Spain;Tarragona, 161 ;Barcelona;Catalonia ;8014;Spain;1
+M-United Kingdom;Sandringham House Harlow Business Park;Harlow;essex;CM19 5TG ;United Kingdom;1
+M-Austria;ÔSTERREICH Webergasse 30 ;Wien;wien;1200;Austria;1
+M-Belgium;Bd Sylvain Dupuis 243;Anderlecht;Brussels Hoofdstedelijk Gewest;;Belgium;1
+M-Denmark;Mileparken 20E 2740;Skovlunde;17;;Denmark;1
+M-Finland;PL 4440 00002;Helsinki;Southern Finland;;Finland;1
+M-Norway;Postboks 462;Oslo;oslo;;Norway;1
+M-Sweden;Postbox 169 20121 Malmö ;Sverige ;;;Sweden;1
+M-Singapore;11 Biopolis Way, Helios;Singapore;Singapore;;Singapore;1
+M-New Zealand;PO Box 76-211 Manukau City 1702;Auckland;auckland;;New Zealand;1
+M-Japan;Sanno Grand Building - 8F 2-14-2 Nagatacho;Tokyo;Tokyo;;Japan;1
+M-Korea;49-5 Banpo-Dong, Seoch-Gu;Seoul;Seoul-t'ukpyolsi;;Korea. Republic of;1
+M-PHILIPPINE;25 ADB Avenue - Ortigas Centre ;Pasig City;Manilla;;PHILIPPINE;1
+M-Taiwan;3 FL., No. 51, Shingjung., Neihu Chiu;Taipei;T'ai-pei;;Taiwan. Province of China;1
+M-Thailand;3195/8 Rama IV Road;Bangkok;Krung Thep;10110;Thailand;1
+M-Brazil;Av. Carlos Grimaldi 1701;Campinas;Sao Paulo ;13901-908;Brazil;1
+M-Argintina 2;Av. Int. Tomkinson 2054 -B1642EMU San Isidro;Buenos Aires;Distrito Federal;;Argentina;1
+M-Colombia;Calle 93B N° 13-44 Piso 4;Santafe de Bogota;;;Colombia;1
+M-Mexico;Avenida de las Fuentes 66;Queretaro;Queretaro de Arteaga; 76246;Mexico;1
+M-Uruguay;Calle José Maria Penco 3427;Montevideo;Montevideo ;;Uruguay;1
+LABEL;TYPE;LENGTH;NULLS
+label1.label  = NAME;type1.type    = VARCHAR;length1.length  = 150;null1.null = no
+label2.label  = ADDRESS;type2.type    = VARCHAR;length2.length  = 150;null2.null = no
+label3.label  = CITYDESC;type3.type    = VARCHAR;length3.length  = 150;null3.null = no
+label4.label  = STATEDESc;type4.type    = VARCHAR;length4.length  = 150;null4.null = no
+label5.label  = ZIPCODE;type5.type    = VARCHAR;length5.length  = 45;null5.null = yes
+label6.label  = COUNTRYDESC;type6.type    = VARCHAR;length6.length  = 150;null6.null = no
+label7.label  = LOCATIONCRITICALITY;type7.type    = VARCHAR;length7.length  = 45;null7.null = yes

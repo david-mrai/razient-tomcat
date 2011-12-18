@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:ice-cc="http://www.icesoft.com/icefaces-composite-comps">
+	<jsp:directive.page contentType="text/html;charset=ISO-8859-1"
+		pageEncoding="ISO-8859-1" />
+	<f:view>
+		<ice:outputDeclaration doctypeRoot="html"
+			doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN"
+			doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" />
+		<html>
+			<head>
+				<title>Index (Razient)</title>
+			</head>
+			<body>
+
+				<!-- template="#{templateBean.templateContent}"-->
+				<ui:composition
+					template="../../include/templates/pages/modeA_rz.jspx"
+					xmlns:h="http://java.sun.com/jsf/html"
+					xmlns:f="http://java.sun.com/jsf/core"
+					xmlns:c="http://java.sun.com/jstl/core"
+					xmlns:ice="http://www.icesoft.com/icefaces/component"
+					xmlns:ice-cc="http://www.icesoft.com/icefaces-composite-comps"
+					xmlns:ui="http://java.sun.com/jsf/facelets">
+
+					<!-- params for page titles-->
+					<ui:param name="pageTitle"	value="#{bundle['rz_admin_compliance.standardsmanager.title']}" />
+
+					<ui:define name="header-menu-value">
+						<table cellspacing="0" cellpadding="0">
+								<tr>
+									<td>
+										
+										<ice:commandLink action="#{rz_MenuBarBean.getIconAdmin}" actionListener="#{rz_MenuBarBean.actionlistener}"   onclick="rld();">
+												<ice:graphicImage style="border:none;"
+																	styleClass="noborder"
+																	url="./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.valueIconAdmin}.png"
+																	onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.enabledAdmin}.png'"
+																	onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.disabledAdmin}.png'"
+																	onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.enabledAdmin}.png'"
+																	onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.disabledAdmin}.png'" />
+												<f:attribute name="optioonselected" value="compliance_standardsmanager"/>
+										</ice:commandLink>
+									</td>
+									<td>
+												<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/risk_black_low.png" />
+									</td>
+									<td>
+										<ice:graphicImage style="border:none;"
+																	styleClass="noborder"
+																	url="./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.valueIconCompliance}.png"
+																	onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.enabledCompliance}.png'"
+																	onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.disabledCompliance}.png'"
+																	onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.enabledCompliance}.png'"
+																	onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.disabledCompliance}.png'" />
+												
+									</td>
+	
+								</tr>
+							</table>			
+
+					</ui:define>
+					<ui:define name="page-menu-value">
+						<ice:form>
+
+							<ice:commandLink action="#{rz_StandardsManagerBean.actionMenu_SurveyManager}" onclick="rld();">
+								<ice:graphicImage visible="true" styleClass="menuPosA"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_surveymanager.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveymanager.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_surveymanager.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveymanager.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_surveymanager.png'" />
+							</ice:commandLink>
+							<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_down_standardsmanager.png"/>
+							<ice:commandLink action="#{rz_StandardsManagerBean.actionMenu_SurveyReview}" onclick="rld();">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_surveyreview.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveyreview.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_surveyreview.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveyreview.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_surveyreview.png'" />
+							</ice:commandLink>
+							<!--<ice:commandLink action="#{rz_StandardsManagerBean.actionMenu_SurveyDistribution}" onclick="rld();">
+								<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_surveydistribution.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveydistribution.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_surveydistribution.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveydistribution.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_surveydistribution.png'" />
+							</ice:commandLink>-->
+							
+							<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_one.png"/>
+						</ice:form>
+					</ui:define>
+
+					<ui:define name="page-content-value">
+						<table width="100%" border="0" cellspacing="0" cellpadding="1" class="data">
+              <tr>
+                <td><table border="1" width="100%" cellpadding="2" cellspacing="0" class="tabularView" style="border: 1px #C3DFF4 solid;">
+                  <tr bgcolor="#3C7FB1" style="color:#FFFFFF">
+                    <th width="62%" height="30" align="left">Requirement</th>
+                    <th width="26%" align="left" >Last Updated</th>
+                    <th width="12%"></th>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Health Insurance Portability and Accountability Act (HIPAA)</td>
+                    <td align="left">4/1/2010</td>
+                    <td><img width="27" height="27" src="./css/images/general/select.png" alt="Rounded Rectangle: Select "/><img width="27" height="27" src="./css/images/general/edit.png" alt="Rounded Rectangle: Select "/></td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Payment Card Industry: Self Assessment Questionnaire</td>
+                    <td align="left">4/1/2010</td>
+                    <td><img width="27" height="27" src="./css/images/general/select.png" alt="Rounded Rectangle: Select "/><img width="27" height="27" src="./css/images/general/edit.png" alt="Rounded Rectangle: Select "/></td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Federal Financial Institutions Examination Council(FFIEC)</td>
+                    <td align="left">3/1/2010</td>
+                    <td> <img width="27" height="27" src="./css/images/general/select.png" alt="Rounded Rectangle: Select "/><img width="27" height="27" src="./css/images/general/edit.png" alt="Rounded Rectangle: Select "/></td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td> International Organization for Standardization(ISO)9001:2008</td>
+                    <td align="left">6/1/2010</td>
+                    <td><img width="27" height="27" src="./css/images/general/select.png" alt="Rounded Rectangle: Select "/><img width="27" height="27" src="./css/images/general/edit.png" alt="Rounded Rectangle: Select "/></td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Sarbanes–Oxley, Sarbox(SOX)</td>
+                    <td align="left">4/1/2010</td>
+                    <td><img width="27" height="27" src="./css/images/general/select.png" alt="Rounded Rectangle: Select "/><img width="27" height="27" src="./css/images/general/edit.png" alt="Rounded Rectangle: Select "/></td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Business Continuity</td>
+                    <td align="left">6/1/2010</td>
+                    <td><img width="27" height="27" src="./css/images/general/select.png" alt="Rounded Rectangle: Select "/><img width="27" height="27" src="./css/images/general/edit.png" alt="Rounded Rectangle: Select "/></td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Custom 1: Disaster Recovery Planning Questionnaire</td>
+                    <td align="left">7/25/2010</td>
+                    <td><img width="27" height="27" src="./css/images/general/select.png" alt="Rounded Rectangle: Select "/><img width="27" height="27" src="./css/images/general/modify.jpg" alt="Rounded Rectangle: Modify"/><img width="27" height="27" src="./css/images/general/cross.jpg" alt="Rounded Rectangle: Delete"/></td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Custom 2: Privacy Requirements Questionnaire</td>
+                    <td align="left">6/15/2010</td>
+                    <td><img width="27" height="27" src="./css/images/general/select.png" alt="Rounded Rectangle: Select "/><img width="27" height="27" src="./css/images/general/modify.jpg" alt="Rounded Rectangle: Modify"/><img width="27" height="27" src="./css/images/general/cross.jpg" alt="Rounded Rectangle: Delete"/></td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>HIPAA - Custom Copy</td>
+                    <td align="left" valign="top">6/15/2010</td>
+                    <td><img width="27" height="27" src="./css/images/general/select.png" alt="Rounded Rectangle: Select "/><img width="27" height="27" src="./css/images/general/modify.jpg" alt="Rounded Rectangle: Modify"/><img width="27" height="27" src="./css/images/general/cross.jpg" alt="Rounded Rectangle: Delete"/></td>
+                    </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>PCI - Custom Copy</td>
+                    <td align="left">6/15/2010</td>
+                    <td><img width="27" height="27" src="./css/images/general/select.png" alt="Rounded Rectangle: Select "/><img width="27" height="27" src="./css/images/general/modify.jpg" alt="Rounded Rectangle: Modify"/><img width="27" height="27" src="./css/images/general/cross.jpg" alt="Rounded Rectangle: Delete"/></td>
+                    </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td colspan="3" align="center" style="padding: 20px;"><img src="./css/images/general/createQset.png" /></td>
+                    </tr>
+                </table>
+                  <br/>
+                  <span class="smallHeading" onClick="showTab('HIPAA', this)" style="cursor: pointer"><img src="./css/images/general/minus-glow.png"  align="absmiddle"/> HIPAA Compliance Questions</span><br/>
+                <table border="1" cellspacing="0" cellpadding="5" class="tabularView" style="border: 1px #C3DFF4 solid;display:none" id="HIPAA">
+                  <tr bgcolor="#3C7FB1" style="color:#FFFFFF">
+                    <th>Standard</th>
+                    <th>ID</th>
+                    <th>Status</th>
+                    <th>Date Last Updated</th>
+                    <th>Category</th>
+                    <th>Sub Category 1</th>
+                    <th>Last Update By</th>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Conduct vulnerability assessment</td>
+                    <td>HIPAA100</td>
+                    <td>Active</td>
+                    <td align="right">1-Jun</td>
+                    <td>ADMINISTRATIVE    SAFEGUARDS</td>
+                    <td>Security    Management Process</td>
+                    <td>System    Administrator</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Implement security measures to reduce risk of security br/eaches</td>
+                    <td>HIPAA101</td>
+                    <td>Active</td>
+                    <td align="right">1-Jun</td>
+                    <td>ADMINISTRATIVE    SAFEGUARD</td>
+                    <td>Security    Management Process</td>
+                    <td>System    Administrator</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Worker sanction for P&amp;P violations</td>
+                    <td>HIPAA102</td>
+                    <td>Active</td>
+                    <td align="right">1-Jun</td>
+                    <td>ADMINISTRATIVE    SAFEGUARD</td>
+                    <td>Workforce    Security</td>
+                    <td>System    Administrator</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Authorization/supervision for PHI access</td>
+                    <td>HIPAA103</td>
+                    <td>Active</td>
+                    <td align="right">1-Jun</td>
+                    <td>ADMINISTRATIVE    SAFEGUARD</td>
+                    <td>Workforce    Security</td>
+                    <td>System    Administrator</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Procedures to support emergency operations and recovery</td>
+                    <td>HIPAA104</td>
+                    <td>Active</td>
+                    <td align="right">1-Jun</td>
+                    <td>PHYSICAL    SAFEGUARDS</td>
+                    <td>Facility Access    Controls</td>
+                    <td>System    Administrator</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>P&amp;P to safeguard equipment and facilities</td>
+                    <td>HIPAA105</td>
+                    <td>Inactive</td>
+                    <td align="right">1-Jun</td>
+                    <td>PHYSICAL    SAFEGUARDS</td>
+                    <td>Facility    Access Controls</td>
+                    <td>System    Administrator</td>
+                  </tr>
+                </table>
+                <br/>
+                <span class="smallHeading" onClick="showTab('PCI', this)" style="cursor: pointer"><img src="./css/images/general/minus-glow.png"  align="absmiddle"/> PCI v1.2 Compliance Questions</span><br/>
+                <table border="1" cellspacing="0" cellpadding="5" class="tabularView" style="border: 1px #C3DFF4 solid;display:none" id="PCI">
+                  <tr bgcolor="#3C7FB1" style="color:#FFFFFF">
+                    <th>Standard</th>
+                    <th>ID</th>
+                    <th>Status</th>
+                    <th>Date Last Updated</th>
+                    <th>Category</th>
+                    <th>Sub Category 1</th>
+                    <th>Last Update By</th>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>A formal process for approving and testing all external network    connections and changes to the firewall configuration</td>
+                    <td>PCi111</td>
+                    <td>Active</td>
+                    <td align="right">5/1/2010</td>
+                    <td><a name="RANGE!F36">Build and Maintain a Secure Network</a></td>
+                    <td>Requirement    1: Install and maintain a firewall configuration to protect cardholder data</td>
+                    <td>System    Administrator</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>A current network diagram with all connections to cardholder    data, including any wireless networks</td>
+                    <td>PCI112</td>
+                    <td>Active</td>
+                    <td align="right">5/1/2010</td>
+                    <td>Build    and Maintain a Secure Network</td>
+                    <td>Requirement    1: Install and maintain a firewall configuration to protect cardholder data</td>
+                    <td>System    Administrator</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Keep cardholder data storage to a minimum. Develop a data    retention and disposal policy</td>
+                    <td>PCI31</td>
+                    <td>Active</td>
+                    <td align="right">5/1/2010</td>
+                    <td>Protect    Cardholder Data</td>
+                    <td>Requirement    3: Protect stored cardholder data</td>
+                    <td>System    Administrator</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Do    not store sensitive authentication data subsequent to authorization (even if    encrypted).</td>
+                    <td>PCI32</td>
+                    <td>Active</td>
+                    <td align="right">5/1/2010</td>
+                    <td>Protect    Cardholder Data</td>
+                    <td>Requirement    3: Protect stored cardholder data</td>
+                    <td>System    Administrator</td>
+                  </tr>
+                </table>
+                <br/>
+                <span class="smallHeading" onClick="showTab('Custom', this)" style="cursor: pointer"><img src="./css/images/general/minus-glow.png"  align="absmiddle"/> Custom Standards Set 1</span><br/>
+                <table border="1" cellspacing="0" cellpadding="5" class="tabularView" style="border: 1px #C3DFF4 solid;display:none" id="Custom">
+                  <tr bgcolor="#3C7FB1" style="color:#FFFFFF">
+                    <th>Standard</th>
+                    <th>ID</th>
+                    <th>Status</th>
+                    <th>Date Last Updated</th>
+                    <th>Category</th>
+                    <th>Sub Category 1</th>
+                    <th>Last Update By</th>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Does    your organization have an Information Security Policy?<br/>
+                      Please provide the date of implementation, date of last revision, and if    possible, include a copy for review as    supporting evidence. Also provide    evidence that this policy document has been approved by management,    published, and communicated to all employees and relevant external parties.</td>
+                    <td align="right">100</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Policy</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Does    your executive management team provide active support and guidance for the    information security programs?<br/>
+                      Please provide a br/ief description of the support provided by management    and include a copy of your organization structure as supporting evidence.</td>
+                    <td align="right">101</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Policy</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Is there a formal allocation of information security roles and    responsibilities within your organization?<br/>
+                      If so, please provide a br/ief description of these roles and their    responsibilities.</td>
+                    <td align="right">102</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Policy</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Does your organization have Confidentiality / Non-Disclosure    Agreements addressing the requirements for protecting confidential    information using legally enforceable terms for all staff (employees, temp's,    contractors, vendors, service providers, third-party, etc.) on file that can    be verified?</td>
+                    <td align="right">103</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Policy</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Does your company maintain contact with external    agencies/authorities to assist in your incident response procedure? This    would include consulting with these agencies to review, refine, and test    these procedures.</td>
+                    <td align="right">104</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Policy</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Does your organization conduct an independent review/audit of    its information security posture annually?    If so, please provide a br/ief description of the type of review/audit    performed and include copies of these reports when returning the completed    questionnaire.</td>
+                    <td align="right">105</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Policy</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Does your company require employees, contractors and third party    users to sign terms and conditions of their employment, which state their and    the organization's responsibilities for information security, and are    verifiable?</td>
+                    <td align="right">106</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Policy</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Do all employees in your organization, and where relevant,    contractors and third party users, receive appropriate security awareness    training and regular updates in organizational policies and procedures as it    pertains to their job function? Please    br/iefly describe the frequency and methods used for providing this training    and topics covered therein.</td>
+                    <td align="right">107</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Policy</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Does    your company have a formal and documented disciplinary process, up to and    including termination of employment, for employees responsible for a security    br/each?</td>
+                    <td align="right">108</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Policy</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Does    your company have documented termination procedures, covering both voluntary    and involuntary terminations, that have been communicated appropriately to    management?</td>
+                    <td align="right">109</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Policy</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Does your company have a formal procedure for the removal,    deactivation, or disabling of user access rights? Please provide the service level agreement    (SLA) for removing access rights.</td>
+                    <td align="right">110</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Policy</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Does your company maintain a physical security perimeter? Please provide a br/ief description of the    security mechanisms used as controls (barriers such as walls, card controlled    entry gates or manned reception desks) used to protect areas that contain    information and information processing facilities.</td>
+                    <td align="right">111</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Physical Security</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Does your company have controls for physical entry &amp;    exit? Please describe the physical    security devices used as controls (CCTV, badge access, etc), including any    related logging and monitoring controls, and the last time these controls    were tested.</td>
+                    <td align="right">112</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Physical Security</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Has your company implemented controls for protecting the    information processing facilities from external and environmental    threats? This should include    protecting against natural (floods, power outages, fire) &amp; human    (hacking, stealing, trespassing) threats.</td>
+                    <td align="right">113</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Vulnerability</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Does your company have a process for the secure disposal or    reuse of equipment that ensures all equipment containing storage media is    checked to ensure any sensitive data and licensed software has been removed    or securely overwritten prior to disposal or re-use? If so, please include a copy of this    process as evidence.</td>
+                    <td align="right">114</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Vulnerability</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Does your company have controls in place to prevent equipment,    information and software from being taken off-site without prior    authorization? Please provide a br/ief    description of these controls.</td>
+                    <td align="right">115</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Vulnerability</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Has your company documented all operating procedures as they    relate to the services provided to ING?    Please provide the names of some of these process documents, as they    may be requested for additional review.</td>
+                    <td align="right">116</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Vulnerability</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Are all changes to information processing facilities and systems    controlled? Please br/iefly describe    your change management process and include supporting documentation as    evidence.</td>
+                    <td align="right">117</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Vulnerability</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Does your company maintain segregation of duties based on    responsibilities and business requirements?    This would include having separate roles, such as developer and    QA/Testing Analyst, where a developer is not allowed to be a QA/Testing    Analyst and vice versa. Please br/iefly    describe how segregation is maintained within your organization.</td>
+                    <td align="right">118</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Vulnerability</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Does your company maintain separation of development, test and    operational facilities/environments?    If so, please comment as to whether your development and test    environments are using depersonalized or production data and the controls    used to achieve separation.</td>
+                    <td align="right">119</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Vulnerability</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Does your company monitor and review third party services? Please br/iefly describe the methodology for    monitoring and reviewing third party services, including the frequency in    which these reviews occur. Also    mention any service level agreements (SLA's) your company has in place with    vendors.</td>
+                    <td align="right">120</td>
+                    <td>Active</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Vulnerability</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Does your company have a process to manage changes to    third-party services to ensure those changes don't negatively impact the    services provided to ING?</td>
+                    <td align="right">121</td>
+                    <td>Inactive</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Vulnerability</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td>Does your company have controls against malicious code    (Anti-Virus, Anti-Spyware, etc)?    Please provide a brief description of the controls used.</td>
+                    <td align="right">122</td>
+                    <td>Inactive</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Vulnerability</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                  <tr class="odd" bgcolor="#EFF2FF">
+                    <td>Does your company allow mobile code (JavaScript, VBScript,    ActiveX, etc) to be used within the organization? If no, please describe the controls    implemented to prevent the usage of mobile code.</td>
+                    <td align="right">123</td>
+                    <td>Inactive</td>
+                    <td align="right">6/1/2010</td>
+                    <td>Vulnerability</td>
+                    <td></td>
+                    <td>Customer    1</td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table>
+					</ui:define>
+
+
+				</ui:composition>
+
+
+
+
+			</body>
+		</html>
+	</f:view>
+</jsp:root>

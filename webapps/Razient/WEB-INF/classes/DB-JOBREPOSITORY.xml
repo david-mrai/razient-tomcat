@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="jobRepository-dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://192.168.4.67:3306/razient" />
+		<property name="username" value="root" />  <!-- your user id. e.g. root-->
+		<property name="password" value="dev-Raz!ent" /> <!-- your password-->
+		<property name="maxIdle" value="10" />
+		<property name="maxActive" value="100" />
+		<property name="maxWait" value="10000" />
+		<property name="validationQuery" value="select 1" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testWhileIdle" value="true" />
+		<property name="timeBetweenEvictionRunsMillis" value="1200000" />
+		<property name="minEvictableIdleTimeMillis" value="1800000" />
+		<property name="numTestsPerEvictionRun" value="5" />
+		<property name="defaultAutoCommit" value="false" />
+	</bean>
+
+	<bean id="jobRepository-transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+		lazy-init="true">
+		<property name="dataSource" ref="jobRepository-dataSource" />
+	</bean>
+
+	<bean id="jobRepository"
+		class="org.springframework.batch.core.repository.support.JobRepositoryFactoryBean">
+		<property name="dataSource" ref="jobRepository-dataSource" />
+		<property name="transactionManager" ref="jobRepository-transactionManager" />
+		<property name="databaseType" value="mysql" />
+		<property name="tablePrefix" value="batch_" />
+	</bean>
+
+	<bean id="asyncTaskExecutor" class="org.springframework.core.task.SimpleAsyncTaskExecutor" />
+	<bean id="syncTaskExecutor" class="org.springframework.core.task.SyncTaskExecutor" />
+
+	<bean id="jobLauncher"
+		class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+		<property name="jobRepository" ref="jobRepository" />
+	</bean>
+	<bean id="jobExplorer"
+		class="org.springframework.batch.core.explore.support.JobExplorerFactoryBean"
+		p:dataSource-ref="jobRepository-dataSource" p:tablePrefix="batch_" />
+</beans>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<chart bgColor='FAFAFA' caption="Summary Fashion" subCaption="Results of Survey"  numberPrefix="" sformatNumberScale="1" sNumberPrefix="" syncAxisLimits="1" rotateValues="1" showSum="0"  showLegend="1"  legendPosition="DOWN">
+<!-- Data for single series chart -->
+	<set label="Survey Not Started" value="6" color="4F81BC"/>
+	<set label="Survey Complete" value="1" color="C0504E"/>
+	<set label="Survey Incomplete" value="4" color="9BBB58"/>
+<!-- Data for multi-series stacked and combination chart -->
+</chart>

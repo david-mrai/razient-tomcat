@@ -1,0 +1,208 @@
+<html><title>Menú de Ramas Expandibles</title>
+<head>
+<style>
+	<!--
+		#foldheader{
+				cursor:hand;
+				cursor:pointer;
+				font-weight:bold;
+				font-style: Plain;
+				font-size:12;
+				font-family:Arial;
+				color:#FFFFFF;
+				list-style-image:url(images/fold.gif);
+		}
+		#foldSingle{
+				cursor:hand;
+				cursor:pointer;
+				font-weight:bold;
+				font-style: Plain;
+				font-size:12;
+				font-family:Arial;
+				list-style-image:url(images/list.gif);
+		}
+		#foldinglist{
+				font-weight:bold;
+				list-style-image:url(images/list.gif);
+		}
+		A{
+				text-decoration:none;
+				color:#FFFFFF;
+		}
+		a:hover{
+				text-decoration:underline;
+				color:red;
+		}
+	-->
+
+</style>
+<script language="JavaScript1.2">
+	<!--
+	//Smart Folding Menu tree- By Dynamic Drive (rewritten 03/03/02)
+	//For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+	//This credit MUST stay intact for use
+
+	var browser=navigator.appName;
+	var head="display:''";
+	img1=new Image();
+	img1.src="fold.gif";
+	img2=new Image();
+	img2.src="open.gif";
+
+	var ns6=document.getElementById&&!document.all;
+	var ie4=document.all&&navigator.userAgent.indexOf("Opera")==-1;
+
+	function checkcontained(e){
+		var iscontained=0;
+		cur=ns6? e.target : event.srcElement;
+		i=0;
+		if (cur.id=="foldheader")
+			iscontained=1;
+		else
+			while (ns6&&cur.parentNode||(ie4&&cur.parentElement)){
+				if (cur.id=="foldheader"||cur.id=="foldinglist"){
+					iscontained=(cur.id=="foldheader")? 1 : 0;
+					break;
+				}
+				cur=ns6? cur.parentNode : cur.parentElement;
+			}
+
+			if (iscontained){
+				var foldercontent=ns6? cur.nextSibling.nextSibling : cur.all.tags("UL")[0];
+				if (foldercontent.style.display=="none"){
+					foldercontent.style.display="";
+					cur.style.listStyleImage="url(images/open.gif)";
+				}else{
+					foldercontent.style.display="none";
+					cur.style.listStyleImage="url(images/fold.gif)";
+				}
+			}
+	}
+
+	if (ie4||ns6)
+		document.onclick=checkcontained;
+
+	//-->
+	var varGlobalColsFrame = window.parent.document.getElementById("framemenu").cols; 
+	var arrayCols = varGlobalColsFrame.split(",");
+	var varColsMenu = "";
+	function extend_Contract_Menu(){
+				if (parent.indi_frame_menu == 1)
+		  		{
+		    			parent.indi_frame_menu = 0;
+						window.parent.document.getElementById("framemenu").cols  = varGlobalColsFrame;
+		 		 }
+		  		else
+		  		{
+		   			parent.indi_frame_menu = 1;
+					varColsMenu = "";
+					for(i=0;i<arrayCols.length;i++){
+						if(i==0 && arrayCols[i]!= "*"){
+							if ( browser=="Microsoft Internet Explorer" ) {
+								if(arrayCols.length > 1)
+									varColsMenu = varColsMenu +"30,";
+								else
+									varColsMenu = varColsMenu +"30";
+	
+							}else{
+								if(arrayCols.length > 1)
+									varColsMenu = varColsMenu +"25,";
+								else
+									varColsMenu = varColsMenu +"25";
+							}
+						}else{
+							if(arrayCols[i]== "*"){	
+								j = i;
+								if(j+1 == arrayCols.length)
+									varColsMenu = varColsMenu + "*";
+								else
+									varColsMenu = varColsMenu +"*,";
+							}else{
+								j = i;
+								if(j+1 == arrayCols.length){
+									if ( browser=="Microsoft Internet Explorer" ) 
+										varColsMenu = varColsMenu +"30";
+									else
+										varColsMenu = varColsMenu +"25";
+								}	
+								else
+									varColsMenu = varColsMenu +"arrayCols[i],";
+							}
+						}
+					}
+	
+					window.parent.document.getElementById("framemenu").cols  = (varColsMenu);
+				}
+	}
+	//-->
+</script>
+<body bgcolor ="#3068AA">
+<p align="Left">	<table cellspacing="0" cellpadding="0">
+	 <tr>
+	    <td>
+	       <img src="images/extendMenu.jpg" onClick="extend_Contract_Menu()"/>
+	    </td>
+	    <td>
+	    	&nbsp;&nbsp;&nbsp;
+	    </td>
+		<td>
+<b>
+<font face="Verdana" size="3" color="#FFFFFF">e-Reports</font></b>
+	    </td>
+	 </tr>
+	 </table>
+</p>	<ul>
+			<li id="foldSingle"><a href="MCMBWF210SC9.jsp" target="contenido">All Incidents by City</a></li>
+			<li id="foldSingle"><a href="MCMBWF210SC34.jsp" target="contenido">All Incidents by State</a></li>
+			<li id="foldSingle"><a href="MCMBWF210SC15.jsp" target="contenido">By Incident Type by City</a></li>
+			<li id="foldSingle"><a href="MCMBWF210SC37.jsp" target="contenido">By Incident Type by State</a></li>
+			<li id="foldSingle"><a href="MCMBWF210SC40.jsp" target="contenido">By Incident Type by Country</a></li>
+			<li id="foldSingle"><a href="MCMBWF210SC41.jsp" target="contenido">Multiple Incident Type by Country</a></li>
+			<li id="foldSingle"><a href="MCMBWF210SC22.jsp" target="contenido">Multiple Incident Type by State</a></li>
+			<li id="foldSingle"><a href="MCMBWF210SC23.jsp" target="contenido">Multiple Incident Type by City</a></li>
+	</ul>
+<script language="JavaScript1.2">
+	<!--
+		function get_cookie(Name) {
+			var search = Name + "="
+			var returnvalue = "";
+			if (document.cookie.length > 0) {
+				offset = document.cookie.indexOf(search)
+				// if cookie exists
+				if (offset != -1) { 
+					offset += search.length
+					// set index of beginning of value
+					end = document.cookie.indexOf(";", offset);
+					// set index of end of cookie value
+					if (end == -1) end = document.cookie.length;
+						returnvalue=unescape(document.cookie.substring(offset, end))
+				}
+			}
+			return returnvalue;
+		}
+		if (get_cookie(window.location.pathname) != ''){
+			var openresults=get_cookie(window.location.pathname).split(" ")
+			for (i=0 ; i < openresults.length ; i++){
+				foldinglist[openresults[i]].style.display=''
+				document.all[foldinglist[openresults[i]].sourceIndex -
+				1].style.listStyleImage="url(images/open.gif)"
+			}
+		}
+		if (document.all){
+		var nodelength = 0 //foldinglist.length-1
+		var nodes=new Array(nodelength)
+		var openones=''
+	}
+	function check(){
+		for (i=0 ; i <= nodelength ; i++){
+			if (foldinglist[i].style.display=='')
+				openones=openones + " " + i
+		}
+		document.cookie=window.location.pathname+"="+openones
+	}
+	//if (document.all)
+	//	document.body.onunload=check
+	//-->
+</script>
+</body>
+</html>

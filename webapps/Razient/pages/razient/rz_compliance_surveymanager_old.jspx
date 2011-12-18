@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:ice-cc="http://www.icesoft.com/icefaces-composite-comps">
+	<jsp:directive.page contentType="text/html;charset=ISO-8859-1"
+		pageEncoding="ISO-8859-1" />
+	<f:view>
+		<ice:outputDeclaration doctypeRoot="html"
+			doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN"
+			doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" />
+		<html>
+			<head>
+				<title>Index (Razient)</title>
+			</head>
+			<body>
+
+				<!-- template="#{templateBean.templateContent}"-->
+				<ui:composition
+					template="../../include/templates/pages/modeA_rz.jspx"
+					xmlns:h="http://java.sun.com/jsf/html"
+					xmlns:f="http://java.sun.com/jsf/core"
+					xmlns:c="http://java.sun.com/jstl/core"
+					xmlns:ice="http://www.icesoft.com/icefaces/component"
+					xmlns:ice-cc="http://www.icesoft.com/icefaces-composite-comps"
+					xmlns:ui="http://java.sun.com/jsf/facelets">
+
+					<!-- params for page titles-->
+					<ui:param name="pageTitle"
+						value="#{rz_Compliance_SM_ListTableBean.titlePage}" />
+
+					<ui:define name="header-menu-value">
+						<table cellspacing="0" cellpadding="0">
+								<tr>
+									<td>
+										
+										<ice:commandLink action="#{rz_MenuBarBean.getIconAdmin}" actionListener="#{rz_MenuBarBean.actionlistener}"   onclick="rld();">
+												<ice:graphicImage style="border:none;"
+																	styleClass="noborder"
+																	url="./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.valueIconAdmin}.png"
+																	onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.enabledAdmin}.png'"
+																	onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.disabledAdmin}.png'"
+																	onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.enabledAdmin}.png'"
+																	onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.disabledAdmin}.png'" />
+												<f:attribute name="optioonselected" value="compliance_surveymanager"/>
+										</ice:commandLink>
+									</td>
+									<td>
+												<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/risk_black_low.png" />
+									</td>
+									<td>
+										<ice:graphicImage style="border:none;"
+																	styleClass="noborder"
+																	url="./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.valueIconCompliance}.png"
+																	onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.enabledCompliance}.png'"
+																	onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.disabledCompliance}.png'"
+																	onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.enabledCompliance}.png'"
+																	onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.disabledCompliance}.png'" />
+												
+									</td>
+	
+								</tr>
+							</table>			
+
+					</ui:define>
+					<ui:define name="page-menu-value">
+						<ice:form>
+
+							<ice:graphicImage visible="true" styleClass="menuPosA"
+								url="./css/images/#{folderBean.folder_menu}/risk_menu_down_surveymanager.png" />
+							<!--<ice:graphicImage visible="true" style="border:none;"
+								styleClass="noborder"
+								url="./css/images/#{folderBean.folder_menu}/risk_menu_down_standardsmanager.png" />
+							<ice:commandLink action="#{rz_SurveyManagerBean.actionMenu_StandardsManager}" onclick="rld();">
+								<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_standardsmanager.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_standardsmanager.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_standardsmanager.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_standardsmanager.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_standardsmanager.png'" />
+							</ice:commandLink>-->
+							<ice:commandLink action="#{rz_SurveyManagerBean.actionMenu_SurveyReview}" onclick="rld();">
+								<ice:graphicImage visible="true"  styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_surveyview.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveyview.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_surveyview.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveyrview.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_surveyview.png'" />
+							</ice:commandLink>
+							<!--<ice:commandLink action="#{rz_SurveyManagerBean.actionMenu_SurveyDistribution}" onclick="rld();">
+								<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_surveydistribution.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveydistribution.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_surveydistribution.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_surveydistribution.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_surveydistribution.png'" />
+							</ice:commandLink>-->
+							
+							<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_one.png"/>
+						</ice:form>
+					</ui:define>
+
+					<ui:define name="page-content-value">
+
+
+						<h:form>
+						
+							<table cellspacing="0" cellpadding="0" style="margin-top: -7px;" width="100%">
+									<tr class="menubuttons">
+										<td align="left">
+											&amp;nbsp&amp;nbsp
+											<ice:commandLink action="#{rz_Compliance_SM_ListTableBean.findAllSurveys}" visible="#{rz_Compliance_SM_ListTableBean.visibleListSurvey}" onclick="rld();">
+																							<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+																										url="./css/images/#{folderBean.folder_menu}/icons/menu_up_all.png"
+																										onmouseout="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_all.png'"
+																										onmouseover="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_all.png'"
+																							/>
+											</ice:commandLink>
+										</td>
+										<td>
+											&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+											&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+										</td>
+										<td align="right">
+											&amp;nbsp&amp;nbsp
+										</td>
+										<td>
+											&amp;nbsp
+										</td>
+								</tr>
+								<tr>
+									<td colspan="4" class="menuline">
+									</td>
+								</tr>
+							</table>
+						</h:form>
+						
+						<ice:form>    
+							<ice:panelGrid visible="#{rz_Compliance_SM_ListTableBean.visibleListSurvey}">
+												<div class="paneTableBox"  style="height:#{utilServiceLocatorBean.heightAllTable}px;margin-top:1px;overflow:auto;width:#{utilServiceLocatorBean.widthAllTable}px;">
+												
+												<table class="tableformstot" style="margin-top:0px;" >
+														<tr>
+															<td>
+																<table class="tableformscell" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td>
+																			&amp;nbsp
+																		</td>
+																		<td class="tableflabelbuttons" width="120"  align="right">
+																		<h:outputLabel >
+																			<h:outputText value="#{bundle['rz_admin_surveymanager.survey.autofind']} :"></h:outputText>
+																			</h:outputLabel>
+																		</td>
+																		<td>
+																			<ice:selectInputText rows="7" width="200" valueChangeListener="#{rz_Compliance_SM_ListTableBean.updateParamsList}">
+															                    <f:selectItems value="#{rz_Compliance_SM_ListTableBean.list}" />
+															                </ice:selectInputText>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table> 
+													
+												<table width="85%" style="margin-left:10px;margin-top:3px;border:1px solid #C3DFF4;" cellspacing="0" cellpadding="0" border="0">
+													<tr class="trHeader"><td colspan="4" align="center">#{bundle['rz_admin_surveymanager.survey.title']}</td></tr>
+													<tr >
+														<td valign="top" class="tdcolumninfo">
+														
+														<table border="0" cellspacing="0" cellpadding="0" width="95%" >
+															<tr>
+																<td>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																
+															</tr>
+															<tr>
+																<td align="center">
+																	<ice:commandLink action="#{rz_Compliance_SM_ListTableBean.toListNewSurvey}" onclick="rld();">
+																							<ice:graphicImage style="border:none;" styleClass="noborder"
+																								url="./css/images/icons/menu_up_new.png"
+																								onmouseout="this.src='./css/images/icons/menu_up_new.png'"
+																								onmouseover="this.src='./css/images/icons/menu_up_new.png'"
+																								onmouseup="this.src='./css/images/icons/menu_up_new.png'"
+																								onmousedown="this.src='./css/images/icons/menu_up_new.png'"
+																								alt="#{bundle['rz_insert']}" />
+																							
+																					</ice:commandLink>	
+																</td>
+															</tr>
+															<tr>
+																<td align="center">
+																	<ice:outputLabel>
+																		<h:outputText styleClass="titleButtonsFixedHigh" value="#{bundle['rz_admin_surveymanager.survey.newsurvey']}"></h:outputText>
+																	</ice:outputLabel>
+																</td>
+															</tr>
+															<tr>
+																<td align="center">
+																	<br/>
+																</td>
+															</tr>
+															<tr>
+																<td align="center">
+																	<ice:commandLink  action="#{loadstandardPopUpBean.openPopup}" rendered="#{not loadstandardPopUpBean.visible}"  onclick="rld();">
+																							<ice:graphicImage style="border:none;" styleClass="noborder"
+																								url="./css/images/icons/menu_new_load.png"
+																								onmouseout="this.src='./css/images/icons/menu_new_load.png'"
+																								onmouseover="this.src='./css/images/icons/menu_new_load.png'"
+																								onmouseup="this.src='./css/images/icons/menu_new_load.png'"
+																								onmousedown="this.src='./css/images/icons/menu_new_load.png'"
+																								alt="#{bundle['rz_admin_surveymanager.sections.loadsection']}" />
+																							
+																	</ice:commandLink>	
+																	
+																	
+																		<ice:panelPopup modal="true" visible="#{loadstandardPopUpBean.visible}" style="margin-left:0px;margin-top:-55px;position:absolute; width:550px;" styleClass="icePanelPopupBody">
+															                <f:facet name="header">
+															                    <ice:panelGrid width="550" cellpadding="0" cellspacing="1" columns="2" styleClass="trHeader" >
+															                        <ice:outputText style="color: white;" value="#{bundle['rz_admin_compliance.standardsmanager.load']}"/>
+															                        <ice:commandLink  action="#{loadstandardPopUpBean.closePopup}" >
+																							<ice:graphicImage style="border:none;" styleClass="noborder"
+																								url="./css/images/icons/close.png" />
+																							
+																					</ice:commandLink>
+															                    </ice:panelGrid>
+															                </f:facet>
+															                
+															                <f:facet name="body">
+															                    <ice:panelGrid width="100%" columns="1" cellpadding="0"  style="background-color: #F0F7FB">
+																                	
+																                	
+																                	<ice:panelGroup>
+																						<ice:panelGroup>
+																							<ice:dataTable resizable="false" border="1" id="tablestd" value="#{rz_Compliance_SM_STDManager_ListRowBean.currentSTDBeans}" var="stdBean"  
+																										width="90%" 
+																										rows="#{rz_Compliance_SM_STDManager_ListRowBean.selectedDataScrollModes[rz_Compliance_SM_STDManager_ListRowBean.selectedDataScrollMode].rows}"
+																					               		scrollable="#{rz_Compliance_SM_STDManager_ListRowBean.selectedDataScrollModes[rz_Compliance_SM_STDManager_ListRowBean.selectedDataScrollMode].scrollingEnabled}"
+																					               		style="float:left"
+																						               	columnWidths="1%,9%,30%,50%,10%"
+																						               	columnClasses="columnCenter,columnCenter,columnLeft,columnLeft,columnCenter"
+																					                	rowClasses="rowOn,rowOff"
+																						               	cellpadding="0"
+																						               	binding="#{rz_Compliance_SM_STDManager_ListRowBean.htmlDataTable}">
+																								
+																								<ice:column>
+																									<f:facet name="header">
+																									</f:facet>
+																									>>	
+																								</ice:column>
+																								<ice:column>
+																									<f:facet name="header">
+																	                        				<ice:outputText value="#{bundle['rz_admin_compliance.standardsmanager.id']}"></ice:outputText>
+																								</f:facet>
+																										<ice:outputLabel>
+																											<h:outputText styleClass="titleButtonsFixedHigh" value="#{stdBean.idrazientStandardManager}"></h:outputText>
+																										</ice:outputLabel>
+																										
+																								</ice:column>
+																								<ice:column>
+																									<f:facet name="header">
+																	                        				<ice:outputText value="#{bundle['rz_admin_compliance.standardsmanager.regulationname']}"></ice:outputText>
+																									</f:facet>
+																										<ice:outputLabel>
+																											<h:outputText styleClass="titleButtonsFixedHigh" value="#{stdBean.regulationName}"></h:outputText>
+																										</ice:outputLabel>
+																								</ice:column>
+																								<ice:column>
+																									<f:facet name="header">
+																										<ice:outputText value="#{bundle['rz_admin_compliance.standardsmanager.regulationdescription']}"></ice:outputText>
+																									</f:facet>
+																									<ice:inputText styleClass="fieldsimplesalemid" readonly="true" value="#{stdBean.regulationDescription}" size="20"></ice:inputText>
+																								</ice:column>
+															
+																								
+																								<ice:column>
+																									<f:facet name="header">
+																	                        			<ice:commandLink action="#{rz_Compliance_SM_STDManager_ListRowBean.loadRow}"  onclick="if(!confirm('#{bundle['rz_info.surveyofstd']}?')) return false;">
+																											<ice:graphicImage style="border:none;" url		="./css/images/icons/save.png"/>
+																										</ice:commandLink>
+																	                        		</f:facet>
+																									<div align="center">
+																											<ice:selectBooleanCheckbox valueChangeListener="#{rz_Compliance_SM_STDManager_ListRowBean.setSelectedLoad}" immediate="true"></ice:selectBooleanCheckbox>
+																											
+																									</div>
+																								</ice:column>
+																							</ice:dataTable>
+																							<br/><br/>
+																							<ice:panelGroup style="float:left;width:420px;">
+																				            <center>
+																				            <ice:dataPaginator id="dataScroll_std"
+																				                   rendered="#{rz_Compliance_SM_STDManager_ListRowBean.selectedDataScrollModes[rz_Compliance_SM_STDManager_ListRowBean.selectedDataScrollMode].pagingEnabled}"
+																				                   for="tablestd"
+																				                   vertical="false"
+																				                   fastStep="3"
+																				                   paginator="true"
+																				                   paginatorMaxPages="4">
+																				                <f:facet name="first">
+																				                    <ice:graphicImage id="firstpage_1" url="./css/rime/css-images/arrow-first.gif" style="border:none;" title="first"/>
+																				                </f:facet>
+																				                <f:facet name="last">
+																				                    <ice:graphicImage id="lastpage_1" url="./css/rime/css-images/arrow-last.gif" style="border:none;" title="last"/>
+																				                </f:facet>
+																				                <f:facet name="previous">
+																				                    <ice:graphicImage id="previouspage_1" url="./css/rime/css-images/arrow-previous.gif"  style="border:none;" title="previous"/>
+																				                </f:facet>
+																				                <f:facet name="next">
+																				                    <ice:graphicImage id="nextpage_1" url="./css/rime/css-images/arrow-next.gif"  style="border:none;" title="next"/>
+																				                </f:facet>
+																				                <f:facet name="fastforward">
+																				                    <ice:graphicImage id="fastforward_1" url="./css/rime/css-images/arrow-ff.gif" style="border:none;" title="ff"/>
+																				                </f:facet>
+																				                <f:facet name="fastrewind">
+																				                    <ice:graphicImage id="fastrewind_1" url="./css/rime/css-images/arrow-fr.gif"  style="border:none;"  title="fr"/>
+																				                </f:facet>
+																				            </ice:dataPaginator>
+																				            </center>
+																				        </ice:panelGroup>
+																							<br/><br/>
+																							<ice:panelGroup styleClass="clearer"/>
+																						
+																							
+																						</ice:panelGroup>
+															
+																					</ice:panelGroup>
+						
+																                	
+																                	
+																                	
+																                	
+															                 	</ice:panelGrid>
+															                </f:facet>
+															                
+															            </ice:panelPopup>  
+																	
+																	
+																</td>
+															</tr>
+															<tr>
+																<td align="center">
+																	<ice:outputLabel>
+																		<h:outputText styleClass="titleButtonsFixedHigh" value="#{bundle['rz_admin_surveymanager.sections.loadsection']}"></h:outputText>
+																	</ice:outputLabel>
+																</td>
+															</tr>
+														</table>
+														
+														
+														</td>
+														<td>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+														<td>
+															<ice:panelGroup>
+															<ice:panelGroup>
+																
+																<ice:dataTable resizable="false" border="1" id="table" value="#{rz_Compliance_SM_ListTableBean.rzSurveysBean}" var="surveyBean"  
+																			width="95%" 
+																			rows="#{rz_Compliance_SM_ListTableBean.selectedDataScrollModes[rz_Compliance_SM_ListTableBean.selectedDataScrollMode].rows}"
+															               	scrollable="#{rz_Compliance_SM_ListTableBean.selectedDataScrollModes[rz_Compliance_SM_ListTableBean.selectedDataScrollMode].scrollingEnabled}"
+															               	scrollHeight="200px"
+															               	style="float:center;font-color: #FFFFFF;margin-top:2px;"
+															               	columnWidths="1%,35%,45%,19%"
+															               	columnClasses="columnCenter,columnLeft,columnLeft,columnCenter"
+															                rowClasses="rowOn,rowOff"
+															               	cellpadding="0" onclick="rld();"
+																			sortColumn="#{rz_Compliance_SM_ListTableBean.columnNameOrder}" sortAscending="#{rz_Compliance_SM_ListTableBean.descending}">
+																	
+																	<ice:column >
+																		<ice:rowSelector id="selected"
+										                                 value="#{rz_Compliance_SM_ListTableBean.itemSelected}"
+										                                 multiple="false"         
+										                                 selectionListener="#{rz_Compliance_SM_ListTableBean.rowSelectionListener}"
+										                                 selectionAction="#{rz_Compliance_SM_ListTableBean.rowSelectionAction}"/>               
+										                                 >>		
+																	</ice:column>
+																		<ice:column>
+																		<f:facet name="header">
+																			<ice:commandSortHeader id="nameId" columnName="name"  >
+										                        				<ice:outputText value="#{bundle['rz_admin_surveymanager.survey.name']}"></ice:outputText>
+										                    				</ice:commandSortHeader>
+																		</f:facet>
+																		<ice:outputText id="idname" value="#{surveyBean.name}"/>
+																	</ice:column>
+																	<ice:column>
+																		<f:facet name="header">
+																			<ice:commandSortHeader id="descriptionId" columnName="description" >
+										                        				<ice:outputText value="#{bundle['rz_admin_surveymanager.survey.description']}"></ice:outputText>
+										                    				</ice:commandSortHeader>
+																		</f:facet>
+																		
+																		<ice:inputTextarea id="iddescription"
+																		   cols="50" rows="1" maxlength="450"
+												                           value="#{surveyBean.description}"
+												                           readonly="false" styleClass="fieldtextareareadonly">
+												                         </ice:inputTextarea>
+																	</ice:column>
+																	<ice:column>
+																		<f:facet name="header">
+																			<ice:commandSortHeader id="creationdateId" columnName="creationDate" >
+										                        				<ice:outputText value="#{bundle['rz_admin_surveymanager.survey.creationDate']}"></ice:outputText>
+										                    				</ice:commandSortHeader>
+																		</f:facet>
+																		<ice:outputText id="idcreationDate" value="#{surveyBean.creationDate}"/>
+																	</ice:column>
+																	</ice:dataTable>
+													
+																	<ice:panelGroup styleClass="clearer"/>
+																	  
+											        				
+																	<!-- Set up the buttons and links for browsing through the table
+															             fastStep means No. of pages to fast forward or rewind: 3
+															             paginatorMaxPages means No. of direct links to pages: 4 -->
+															        <ice:panelGroup style="float:left;width:420px;">
+														            <center>
+														            <ice:dataPaginator id="dataScroll_1"
+														                   rendered="#{rz_Compliance_SM_ListTableBean.selectedDataScrollModes[rz_Compliance_SM_ListTableBean.selectedDataScrollMode].pagingEnabled}"
+														                   for="table"
+														                   vertical="false" fastStep="3" paginator="true" paginatorMaxPages="10">
+														                <f:facet name="first">
+														                    <ice:graphicImage id="firstpage_1" url="./css/rime/css-images/arrow-first.gif" style="border:none;" title="first"/>
+														                </f:facet>
+														                <f:facet name="last">
+														                    <ice:graphicImage id="lastpage_1" url="./css/rime/css-images/arrow-last.gif" style="border:none;" title="last"/>
+														                </f:facet>
+														                <f:facet name="previous">
+														                    <ice:graphicImage id="previouspage_1" url="./css/rime/css-images/arrow-previous.gif" style="border:none;" title="previous"/>
+														                </f:facet>
+														                <f:facet name="next">
+														                    <ice:graphicImage id="nextpage_1" url="./css/rime/css-images/arrow-next.gif" style="border:none;" title="next"/>
+														                </f:facet>
+														                <f:facet name="fastforward">
+														                    <ice:graphicImage id="fastforward_1" url="./css/rime/css-images/arrow-ff.gif" style="border:none;" title="ff"/>
+														                </f:facet>
+														                <f:facet name="fastrewind">
+														                    <ice:graphicImage id="fastrewind_1" url="./css/rime/css-images/arrow-fr.gif" style="border:none;" title="fr"/>
+														                </f:facet>
+														            </ice:dataPaginator>
+														            </center>
+														        </ice:panelGroup>
+																
+																
+															</ice:panelGroup>
+															
+														</ice:panelGroup>
+														</td>
+														<td>&amp;nbsp</td>
+													</tr>
+												</table>
+											 		
+													    <br/>
+												</div>
+									</ice:panelGrid>
+									</ice:form>
+									
+<!-- SECTIONS -->
+							
+									<ice:form>
+									<ice:panelGrid visible="#{rz_Compliance_SM_ListTableBean.visibleCrudSurvey}">
+										<div class="paneTableBox"  style="height:100%;margin-top:1px;overflow:auto;width:#{utilServiceLocatorBean.widthSurveyTable}px;">
+										
+										
+											<table cellspacing="0" cellpadding="0" style="margin-top: 2px;">
+												<tr>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														<ice:commandLink action="#{rz_Compliance_SMBean.findAllAction}">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/icons/menu_up_find-records.png"
+																onmouseout="this.src='./css/images/icons/menu_up_find-records.png'"
+																onmouseover="this.src='./css/images/icons/menu_up_find-records.png'"
+																onmouseup="this.src='./css/images/icons/menu_up_find-records.png'"
+																onmousedown="this.src='./css/images/icons/menu_up_find-records.png'"
+																alt="#{bundle['rz_all']}" />
+															<ice:outputLabel>
+																<h:outputText styleClass="titleButtonsCrud" value="#{bundle['rz_all']}"></h:outputText>
+															</ice:outputLabel>
+														</ice:commandLink>
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														&amp;nbsp&amp;nbsp
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														<ice:commandLink action="#{rz_Compliance_SMBean.insertAction}">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/icons/menu_up_insert.png"
+																onmouseout="this.src='./css/images/icons/menu_up_insert.png'"
+																onmouseover="this.src='./css/images/icons/menu_up_insert.png'"
+																onmouseup="this.src='./css/images/icons/menu_up_insert.png'"
+																onmousedown="this.src='./css/images/icons/menu_up_insert.png'"
+																alt="#{bundle['rz_insert']}" />
+															<ice:outputLabel>
+																<h:outputText styleClass="titleButtonsCrud" value="#{bundle['rz_insert']}"></h:outputText>
+															</ice:outputLabel>
+														</ice:commandLink>
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														<ice:commandLink action="#{rz_Compliance_SMBean.updateAction}" panelConfirmation="confirmupdateSurvey">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/icons/menu_up_update.png"
+																onmouseout="this.src='./css/images/icons/menu_up_update.png'"
+																onmouseover="this.src='./css/images/icons/menu_up_update.png'"
+																onmouseup="this.src='./css/images/icons/menu_up_update.png'"
+																onmousedown="this.src='./css/images/icons/menu_up_update.png'"
+																alt="#{bundle['rz_update']}" />
+															<ice:outputLabel>
+																<h:outputText styleClass="titleButtonsCrud" value="#{bundle['rz_update']}" ></h:outputText>
+															</ice:outputLabel>
+														</ice:commandLink>
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														<ice:commandLink action="#{rz_Compliance_SMBean.deleteAction}" panelConfirmation="confirmdeleteSurvey">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/icons/menu_up_delete.png"
+																onmouseout="this.src='./css/images/icons/menu_up_delete.png'"
+																onmouseover="this.src='./css/images/icons/menu_up_delete.png'"
+																onmouseup="this.src='./css/images/icons/menu_up_delete.png'"
+																onmousedown="this.src='./css/images/icons/menu_up_delete.png'"
+																alt="#{bundle['rz_delete']}" />
+															<ice:outputLabel>
+																<h:outputText styleClass="titleButtonsCrud"
+																	value="#{bundle['rz_delete']}"></h:outputText>
+															</ice:outputLabel>
+														</ice:commandLink>
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														<ice:commandLink action="#{rz_Compliance_SMBean.clearFormAction}"
+															onclick="rld();">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/icons/menu_up_clear.png"
+																onmouseout="this.src='./css/images/icons/menu_up_clear.png'"
+																onmouseover="this.src='./css/images/icons/menu_up_clear.png'"
+																onmouseup="this.src='./css/images/icons/menu_up_clear.png'"
+																onmousedown="this.src='./css/images/icons/menu_up_clear.png'"
+																alt="#{bundle['rz_reload']}" />
+															<ice:outputLabel>
+																<h:outputText styleClass="titleButtonsCrud"
+																	value="#{bundle['rz_reload']}"></h:outputText>
+															</ice:outputLabel>
+														</ice:commandLink>
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														&amp;nbsp&amp;nbsp
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														<ice:commandLink action="#{rz_Compliance_SMBean.firtsAction}">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/icons/menu_up_first.png"
+																onmouseout="this.src='./css/images/icons/menu_up_first.png'"
+																onmouseover="this.src='./css/images/icons/menu_up_first.png'"
+																onmouseup="this.src='./css/images/icons/menu_up_first.png'"
+																onmousedown="this.src='./css/images/icons/menu_up_first.png'"
+																alt="#{bundle['rz_first']}" />
+															<ice:outputLabel>
+																<h:outputText styleClass="titleButtonsCrud"
+																	value="#{bundle['rz_first']}"></h:outputText>
+															</ice:outputLabel>
+														</ice:commandLink>
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														<ice:commandLink action="#{rz_Compliance_SMBean.backAction}">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/icons/menu_up_back.png"
+																onmouseout="this.src='./css/images/icons/menu_up_back.png'"
+																onmouseover="this.src='./css/images/icons/menu_up_back.png'"
+																onmouseup="this.src='./css/images/icons/menu_up_back.png'"
+																onmousedown="this.src='./css/images/icons/menu_up_back.png'"
+																alt="#{bundle['rz_back']}" />
+															<ice:outputLabel>
+																<h:outputText styleClass="titleButtonsCrud"
+																	value="#{bundle['rz_back']}"></h:outputText>
+															</ice:outputLabel>
+														</ice:commandLink>
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														<ice:inputText maxlength="6" size="6"
+															value="#{rz_Compliance_SMBean.indexAttb}"
+															styleClass="fieldmenuindex" readonly="true"></ice:inputText>
+													</td>
+													<td>
+														<ice:graphicImage url="./css/images/icons/menu_up_of.png"
+															style="border:none;" />
+													</td>
+													<td>
+														<ice:inputText maxlength="6" size="6"
+															value="#{rz_Compliance_SMBean.amountAttb}"
+															styleClass="fieldmenuamount" readonly="true"></ice:inputText>
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														<ice:commandLink action="#{rz_Compliance_SMBean.nextAction}">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/icons/menu_up_next.png"
+																onmouseout="this.src='./css/images/icons/menu_up_next.png'"
+																onmouseover="this.src='./css/images/icons/menu_up_next.png'"
+																onmouseup="this.src='./css/images/icons/menu_up_next.png'"
+																onmousedown="this.src='./css/images/icons/menu_up_next.png'"
+																alt="#{bundle['rz_next']}" />
+															<ice:outputLabel>
+																<h:outputText styleClass="titleButtonsCrud"
+																	value="#{bundle['rz_next']}"></h:outputText>
+															</ice:outputLabel>
+														</ice:commandLink>
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														<ice:commandLink action="#{rz_Compliance_SMBean.lastAction}">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/icons/menu_up_last.png"
+																onmouseout="this.src='./css/images/icons/menu_up_last.png'"
+																onmouseover="this.src='./css/images/icons/menu_up_last.png'"
+																onmouseup="this.src='./css/images/icons/menu_up_last.png'"
+																onmousedown="this.src='./css/images/icons/menu_up_last.png'"
+																alt="#{bundle['rz_last']}" />
+															<ice:outputLabel>
+																<h:outputText styleClass="titleButtonsCrud"
+																	value="#{bundle['rz_last']}"></h:outputText>
+															</ice:outputLabel>
+														</ice:commandLink>
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														&amp;nbsp&amp;nbsp
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td>
+														<ice:commandLink action="#{rz_Compliance_SM_ListTableBean.toListSurvey}"
+															onclick="rld();">
+															<ice:graphicImage style="border:none;" styleClass="noborder"
+																url="./css/images/icons/menu_up_grid.png"
+																onmouseout="this.src='./css/images/icons/menu_up_grid.png'"
+																onmouseover="this.src='./css/images/icons/menu_up_grid.png'"
+																onmouseup="this.src='./css/images/icons/menu_up_grid.png'"
+																onmousedown="this.src='./css/images/icons/menu_up_grid.png'"
+																alt="#{bundle['rz_admin_surveymanager.survey.title']}" />
+															<ice:outputLabel>
+																<h:outputText styleClass="titleButtonsCrud"
+																	value="#{bundle['rz_admin_surveymanager.survey.title']}"></h:outputText>
+															</ice:outputLabel>
+														</ice:commandLink>
+													</td>
+													<td>&amp;nbsp&amp;nbsp&amp;nbsp</td>
+													<td><ice:graphicImage url="./css/images/icons/menu_sep.png" style="border:none;" /></td>
+												</tr>
+											</table>
+										
+										
+										
+										
+										
+										
+										<table width="95%" class="tableformsmasterlow" style="margin-top: 20px;" cellspacing="0" cellpadding="0" >
+										<tr class="trrow1">
+											<td>
+												&amp;nbsp
+											</td>
+											<td class="tableflabelmasterbold" align="right">
+												<h:outputLabel>
+													<h:outputText
+														value="#{bundle['rz_admin_surveymanager.survey.name']}"></h:outputText>
+												</h:outputLabel>
+											</td>
+											<td>
+												&amp;nbsp
+											</td>
+											<td class="tableffieldleft" >
+												<ice:inputText id="namesurvey" size="30" maxlength="32"
+													value="#{rz_Compliance_SMBean.name}" partialSubmit="true"
+													readonly="false" styleClass="fieldkeymasterbg">
+												</ice:inputText>
+											</td>
+											
+											<td>
+												&amp;nbsp
+											</td>
+											<td>
+												&amp;nbsp
+											</td>
+											<td class="tableflabelmasterbold">
+												<h:outputLabel>
+													<h:outputText
+														value="#{bundle['rz_admin_surveymanager.survey.creationDate']}"></h:outputText>
+												</h:outputLabel>
+											</td>
+											<td>
+												&amp;nbsp
+											</td>
+											<td class="tableffield" align="left">
+												<ice:inputText id="creationdatesurvey" size="20" maxlength="30"
+													value="#{rz_Compliance_SMBean.dtCreationDate}" partialSubmit="true"
+													readonly="true" styleClass="fieldkeymasterbgwhite">
+												</ice:inputText>
+											</td>
+											<td>
+												&amp;nbsp
+											</td>
+											
+										</tr>
+										<tr class="trrow2">
+											<td>
+												&amp;nbsp
+											</td>
+											<td class="tableflabelmasterbold" >
+												<h:outputLabel>
+													<h:outputText value="#{bundle['rz_admin_surveymanager.survey.titles']}"></h:outputText>
+												</h:outputLabel>
+												&amp;nbsp
+											</td>
+											<td>
+												&amp;nbsp
+											</td>
+											<td class="tableffieldleft" colspan="6" >
+												<ice:inputTextarea id="titlesurvey"
+												   cols="110"
+												   rows="2"
+						                           maxlength="480"
+						                           value="#{rz_Compliance_SMBean.title}"
+						                           partialSubmit="true"
+						                           styleClass="fieldsimple">
+						                         </ice:inputTextarea>
+											</td>
+											<td>
+												&amp;nbsp
+											</td>
+											
+										</tr>
+										<tr class="trrow1">
+											<td>
+												&amp;nbsp
+											</td>
+											<td class="tableflabelmasterbold" >
+												<h:outputLabel>
+													<h:outputText value="#{bundle['rz_admin_surveymanager.survey.description']}"></h:outputText>
+												</h:outputLabel>
+												&amp;nbsp
+											</td>
+											<td>
+												&amp;nbsp
+											</td>
+											<td class="tableffieldleft" colspan="6" >
+												<ice:inputTextarea id="description"
+												   cols="110"
+												   rows="4"
+						                           maxlength="480"
+						                           value="#{rz_Compliance_SMBean.description}"
+						                           partialSubmit="true"
+						                           styleClass="fieldsimple">
+						                         </ice:inputTextarea>
+											</td>
+											<td>
+												&amp;nbsp
+											</td>
+											
+										</tr>
+								</table>
+										
+								<table width="95%" style="margin-left:10px;border:1px solid #C3DFF4;" cellspacing="0" cellpadding="0" border="0" >
+									<tr  class="trSubHeader"><td colspan="5" align="center">#{bundle['rz_admin_surveymanager.sections.title']}</td></tr>
+									<tr>
+									<td valign="top"  rowspan="2" class="tdcolumninfo">
+														
+														<table border="0" cellspacing="0" cellpadding="0" width="95%" >
+															<tr>
+																<td>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+																
+															</tr>
+															<tr>
+																<td align="center">
+																	<ice:commandLink action="#{rz_Compliance_SM_ListTableBean.toListNewSection}"  onclick="rld();">
+																							<ice:graphicImage style="border:none;" styleClass="noborder"
+																								url="./css/images/icons/menu_up_new.png"
+																								onmouseout="this.src='./css/images/icons/menu_up_new.png'"
+																								onmouseover="this.src='./css/images/icons/menu_up_new.png'"
+																								onmouseup="this.src='./css/images/icons/menu_up_new.png'"
+																								onmousedown="this.src='./css/images/icons/menu_up_new.png'"
+																								alt="#{bundle['rz_admin_surveymanager.sections.newsection']}" />
+																							
+																					</ice:commandLink>	
+																</td>
+															</tr>
+															<tr>
+																<td align="center">
+																	<ice:outputLabel>
+																		<h:outputText styleClass="titleButtonsFixedHigh" value="#{bundle['rz_admin_surveymanager.sections.newsection']}"></h:outputText>
+																	</ice:outputLabel>
+																</td>
+															</tr>
+															<tr>
+																<td align="center">
+																	<br/>
+																</td>
+															</tr>
+														</table>
+														
+														
+									</td>
+									<td  rowspan="2">&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+									<td  rowspan="2" valign="top">
+										<ice:panelGroup>
+														<ice:panelGroup>
+															
+															<ice:dataTable resizable="false" border="1" id="tablesession" value="#{rz_Compliance_SM_Sections_ListTableBean.rzSectionsBean}" var="sectionBean"  
+																		width="92%" 
+																		rows="#{rz_Compliance_SM_Sections_ListTableBean.selectedDataScrollModes[rz_Compliance_SM_Sections_ListTableBean.selectedDataScrollMode].rows}"
+														               	scrollable="#{rz_Compliance_SM_Sections_ListTableBean.selectedDataScrollModes[rz_Compliance_SM_Sections_ListTableBean.selectedDataScrollMode].scrollingEnabled}"
+														               	scrollHeight="200px"
+														               	style="float:center;font-color: #FFFFFF;margin-top:7px;"
+														               	columnWidths="1%,40%,50%,10%"
+														               	columnClasses="columnCenter,columnLeft,columnLeft,columnCenter"
+														                rowClasses="rowOn,rowOff"
+														               	cellpadding="0"  onclick="rld();"
+																		sortColumn="#{rz_Compliance_SM_Sections_ListTableBean.columnNameOrder}" sortAscending="#{rz_Compliance_SM_Sections_ListTableBean.descending}">
+																
+																<ice:column >
+																	<ice:rowSelector id="selected" 
+									                                 value="#{rz_Compliance_SM_Sections_ListTableBean.itemSelected}"
+									                                 multiple="false"         
+									                                 selectionListener="#{rz_Compliance_SM_Sections_ListTableBean.rowSelectionListener}"
+									                                 selectionAction="#{rz_Compliance_SM_Sections_ListTableBean.rowSelectionAction}"/>               
+									                                 >>		
+																</ice:column>
+																	<ice:column>
+																	<f:facet name="header">
+									                        				<ice:outputText value="#{bundle['rz_admin_surveymanager.sections.name']}"></ice:outputText>
+																	</f:facet>
+																	<ice:outputText id="idnameSections" value="#{sectionBean.name}"/>
+																</ice:column>
+																<ice:column>
+																	<f:facet name="header">
+																		<ice:outputText value="#{bundle['rz_admin_surveymanager.sections.titles']}"></ice:outputText>
+																	</f:facet>
+																	<ice:inputTextarea id="idtitle"
+																	   cols="45" rows="2" maxlength="300"
+											                           value="#{sectionBean.title}"
+											                           readonly="false" styleClass="fieldtextareareadonly">
+											                         </ice:inputTextarea>
+																</ice:column>
+																<ice:column>
+																	<f:facet name="header">
+									                        				<ice:outputText value="#{bundle['rz_admin_surveymanager.sections.position']}"></ice:outputText>
+																	</f:facet>
+																	<ice:outputText id="idposition" value="#{sectionBean.position}"/>
+																</ice:column>
+																</ice:dataTable>
+												
+																<ice:panelGroup styleClass="clearer"/>
+																  
+										        				
+																<!-- Set up the buttons and links for browsing through the table
+														             fastStep means No. of pages to fast forward or rewind: 3
+														             paginatorMaxPages means No. of direct links to pages: 4 -->
+														        <ice:panelGroup style="float:left;width:420px;">
+													            <center>
+													            <ice:dataPaginator id="dataScroll_2"
+													                   rendered="#{rz_Compliance_SM_Sections_ListTableBean.selectedDataScrollModes[rz_Compliance_SM_Sections_ListTableBean.selectedDataScrollMode].pagingEnabled}"
+													                   for="tablesession"
+													                   vertical="false" fastStep="3" paginator="true" paginatorMaxPages="10">
+													                <f:facet name="first">
+													                    <ice:graphicImage id="firstpage_1" url="./css/rime/css-images/arrow-first.gif" style="border:none;" title="first"/>
+													                </f:facet>
+													                <f:facet name="last">
+													                    <ice:graphicImage id="lastpage_1" url="./css/rime/css-images/arrow-last.gif" style="border:none;" title="last"/>
+													                </f:facet>
+													                <f:facet name="previous">
+													                    <ice:graphicImage id="previouspage_1" url="./css/rime/css-images/arrow-previous.gif" style="border:none;" title="previous"/>
+													                </f:facet>
+													                <f:facet name="next">
+													                    <ice:graphicImage id="nextpage_1" url="./css/rime/css-images/arrow-next.gif" style="border:none;" title="next"/>
+													                </f:facet>
+													                <f:facet name="fastforward">
+													                    <ice:graphicImage id="fastforward_1" url="./css/rime/css-images/arrow-ff.gif" style="border:none;" title="ff"/>
+													                </f:facet>
+													                <f:facet name="fastrewind">
+													                    <ice:graphicImage id="fastrewind_1" url="./css/rime/css-images/arrow-fr.gif" style="border:none;" title="fr"/>
+													                </f:facet>
+													            </ice:dataPaginator>
+													            </center>
+													        </ice:panelGroup>
+															
+															
+														</ice:panelGroup>
+														
+													</ice:panelGroup>
+											</td >
+											<td  rowspan="2">&amp;nbsp</td>
+											<td valign="top" align="center"  class="tdSubHeader">
+												&amp;nbsp&amp;nbsp
+												<ice:commandLink action="#{rz_Compliance_SM_Sections_ListTableBean.loadPositionAction}" onclick="rld();">
+														<ice:graphicImage style="border:none;" styleClass="noborder"
+																					url="./css/images/icons/menu_up_save.png"
+																					onmouseout="this.src='./css/images/icons/menu_up_save.png'"
+																					onmouseover="this.src='./css/images/icons/menu_up_save.png'"
+																					onmouseup="this.src='./css/images/icons/menu_up_save.png'"
+																					onmousedown="this.src='./css/images/icons/menu_up_save.png'"
+																					/>
+												</ice:commandLink>
+										
+												
+												<h:outputText value="#{bundle['rz_admin_surveymanager.sections.possections']}"></h:outputText>
+																				
+											bv
+											</td>
+										</tr>
+										<tr>
+											<td class="tdcolumninfo" valign="top"><br/>
+												<ice:panelGroup style="float:left;margin-top:0px;margin-left:8px;">
+										            <ice:panelPositioned id="positions" var="sectionpos"
+										                                 value="#{rz_Compliance_SM_Sections_ListTableBean.positions}"
+										                                 styleClass="positionPanelContainer"
+										                                 listener="#{rz_Compliance_SM_Sections_ListTableBean.changed}"
+										                                 constraint="vertical">
+										                <ice:panelGroup style="cursor:move;" styleClass="container">
+										                    <ice:panelGroup styleClass="moveLabel"
+										                                    style="border: 4px red;">
+										                        <ice:outputText id="name"  style="color:#334F4E" value="#{sectionpos.name}"/>
+										                    </ice:panelGroup>
+										                </ice:panelGroup>
+										            </ice:panelPositioned>
+										        </ice:panelGroup>
+											</td>
+										</tr>
+										</table>
+										<br/>
+												
+										<ice:messages style="margin-top:-5px;color:#1D115E; font-size: 11px;" globalOnly="true" />
+										
+										</div>	
+									</ice:panelGrid>
+									
+									<style type="text/css">
+                                          .cnfSurvey {
+											    width: 500px;
+											}
+										</style>
+										
+									<ice:panelConfirmation id="confirmupdateSurvey"  styleClass="cnfSurvey"
+									  acceptLabel="#{bundle['ice_confirmation.ok']}"  
+									  cancelLabel="#{bundle['ice_confirmation.cancel']}"  
+									  message="#{bundle['ice_confirmation.update.message']} [#{rz_Compliance_SMBean.name}]"  
+									  title="#{bundle['ice_confirmation.update.title']}"  
+									  draggable="false"  
+									 />
+									 <ice:panelConfirmation id="confirmdeleteSurvey"  styleClass="cnfSurvey"
+									  acceptLabel="#{bundle['ice_confirmation.ok']}"  
+									  cancelLabel="#{bundle['ice_confirmation.cancel']}"  
+									  message="#{bundle['ice_confirmation.delete.message']} [#{rz_Compliance_SMBean.name}]"  
+									  title="#{bundle['ice_confirmation.delete.title']}"  
+									  draggable="false"  
+									 />
+						</ice:form>		
+					</ui:define>
+
+
+				</ui:composition>
+
+
+
+
+			</body>
+		</html>
+	</f:view>
+</jsp:root>

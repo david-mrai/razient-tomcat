@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<jsp:root version="1.2"
+   xmlns:jsp="http://java.sun.com/JSP/Page"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ice="http://www.icesoft.com/icefaces/component">
+   <jsp:directive.page contentType="text/html;charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+   <f:view>
+   		<ice:outputDeclaration 
+            doctypeRoot="html" 
+            doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN" 
+            doctypeSystem="http://www.w3.o./html4/loose.dtd" /> 
+    <html>
+       	<head>
+         <title>(Razient) Header Top</title>
+       </head>
+       <body style="background-color: #6A747A;">
+        <div>		
+   			<div class="header_container">
+   				<div class="header_content_#{utilServiceLocatorBean.dimension_header}">
+        		<div>
+               	<ice:form>    
+					
+						<!-- main menu declaration  -->
+						<ice:panelGroup styleClass="componentBoxHeader menuBarTopContainer">
+							<span>
+							<div style="margin-left:10%;margin-top:0px;">
+								 <span class="titlecontent" style="color:white; ">#{loginUsersBean.company}</span>
+								 &amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+								<ice:graphicImage style="border:none;"  styleClass="noborder"
+												url		="./css/images/button/plus-glow.png"/>
+												&amp;nbsp
+								 
+								 <span class="titlecontent" style="color:white; ">#{bundle['rz_admin_login']}  #{loginUsersBean.typeName} </span>
+								 &amp;nbsp&amp;nbsp-&amp;nbsp&amp;nbsp
+								 <!-- <span class="titlecontent" style="color:white;">#{bundle['rz_login.user']} </span>-->
+								 <span class="titlecontent" style="color:white;">[ #{loginUsersBean.userLogin} ]</span>
+							 </div>
+							 <br/>
+							<ice:graphicImage url		="./css/images/risk_black_medium.png"/>
+							
+							<ice:commandLink action="#{changepasswordPopUpBean.openPopup}" rendered="#{not changepasswordPopUpBean.visible}">										
+								<ice:graphicImage style="border:none;"  styleClass="noborder"
+										url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_password.png" 
+									onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_password.png'"
+									onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_password.png'"
+									onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_password.png'"
+									onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_password.png'" />
+							</ice:commandLink>
+							
+							<ice:commandLink action="#{loginUsersBean.loginLogout}" >										
+								<ice:graphicImage style="border:none;"  styleClass="noborder"
+										url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_logout.png" 
+									onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_logout.png'"
+									onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_logout.png'"
+									onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_logout.png'"
+									onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_logout.png'" />
+							</ice:commandLink>
+							
+							
+							
+							</span>
+							
+							
+							
+          				</ice:panelGroup>
+		               	
+
+				</ice:form>
+				
+				<ice:form>
+				
+					<ice:panelPopup autoPosition="200,100" autoCentre="true" modal="true" visible="#{changepasswordPopUpBean.visible}" style="width:435px;" styleClass="icePanelPopupBody icePanelPopup">
+				                <f:facet name="header">
+				                   <ice:panelGrid width="435" cellpadding="0" cellspacing="1" columns="2" styleClass="trHeader" >
+				                        <ice:outputText style="color: white;" value="#{bundle['rz_pwd_change']}"/>
+				                        <ice:commandButton image="./css/images/icons/close.png" action="#{changepasswordPopUpBean.closePopup}" title="Close this draggable popup"/>
+				                    </ice:panelGrid>
+				                </f:facet>
+				                
+				                <f:facet name="body">
+				                    <ice:panelGrid width="100%" columns="1" cellpadding="0"  style="background-color: #F0F7FB">
+					                	<table align="center">
+						                       	<tr>
+							                       <td  width="200" class="tableflabelmasterbold" ><ice:outputText style="font-weight:bold;color:#3E4F53;"  value="#{bundle['rz_pwd.user']}"/></td>
+							                       <td width="200" colspan="3">
+							                       				<ice:inputText id="userlogin" size="40" maxlength="40"
+																	value="#{changePwdUsersBean.userLogin}"
+																	readonly="true" styleClass="fieldkeymasterbgblue">
+																</ice:inputText>
+													</td>
+							                    </tr>
+							                    <tr>
+							                       <td  width="200"  class="tableflabelmasterbold" ><ice:outputText  style="font-weight:bold;color:#3E4F53;" value="#{bundle['rz_pwd.oldpwd']}"/></td>
+							                       <td width="200" colspan="3">
+							                       				<ice:inputSecret id="oldPwd" size="20" maxlength="30"
+																	value="#{changePwdUsersBean.oldPassword}"
+																	styleClass="fieldkeymasterbgleft">
+																</ice:inputSecret>
+													</td>
+							                    </tr>
+							                     <tr>
+							                       <td width="200"  class="tableflabelmasterbold"><ice:outputText  style="font-weight:bold;color:#3E4F53;" value="#{bundle['rz_pwd.newpwd']}"/></td>
+							                       <td width="200" colspan="3">
+							                       				<ice:inputSecret id="newPwd" size="20" maxlength="30"
+																	value="#{changePwdUsersBean.newPassword}"  styleClass="fieldkeymasterbgleft">
+																</ice:inputSecret>
+													</td>
+							                    </tr>
+							                     <tr>
+							                       <td width="200"  class="tableflabelmasterbold"><ice:outputText  style="font-weight:bold;color:#3E4F53;" value="#{bundle['rz_pwd.repwd']}"/></td>
+							                       <td width="200" colspan="3"><ice:inputSecret styleClass="fieldkeymasterbgleft" size="20" value="#{changePwdUsersBean.rePassword}"/></td>
+							                    </tr>
+							                    <tr>
+							                    <td></td>
+							                    <td  colspan="2" width="350">
+							                    	<ice:commandLink actionListener ="#{changePwdUsersBean.changePassword}">
+														<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_up_changepwd.png"/>
+													</ice:commandLink>
+												</td>
+												<td></td>
+												</tr>
+							                    <tr>
+													<td colspan="4"><ice:messages style="margin-top:-5px;color:#1D115E; font-size: 11px;" globalOnly="false" /></td>	
+							                    </tr>
+							                    </table>
+				                 	</ice:panelGrid>
+				                </f:facet>
+				                
+				            </ice:panelPopup>   
+				            
+				       </ice:form>
+				            
+               		</div>
+      			</div>
+    		</div>
+		</div>
+
+       </body>
+    </html>
+   </f:view>
+</jsp:root>

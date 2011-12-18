@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Document_CRUD>
+    <Nomenclature>110QV18</Nomenclature>
+    <FrameSize>136</FrameSize>
+    <PageStyle>
+        <Background>
+            <Color>#FFFFFF</Color>
+        </Background>
+        <Screen_Title></Screen_Title>
+        <Title>
+            <Label>Global Incidents Inquiry by Date Posted</Label>
+            <Size>3</Size>
+            <Color>#000000</Color>
+            <Face>Arial</Face>
+            <Style>bold</Style>
+            <Align>Center</Align>
+        </Title>
+        <Columns>2</Columns>
+        <SubmitButton visible="yes" location="under" align="Center">
+            <Label>Ok</Label>
+        </SubmitButton>
+        <ResetButton visible="yes" location="under" align="Center">
+            <Label>Cancel</Label>
+        </ResetButton>
+        <locale>
+            <language>en</language>
+            <country>US</country>
+            <dateFormat>yyyy-MM-dd</dateFormat>
+            <timeFormat>hh:mm:ss</timeFormat>
+        </locale>
+    </PageStyle>
+    <XSQLData>
+        <ComponentNames>
+            <ApplicationName>globalincidents</ApplicationName>
+            <XBRFSource>11011015brf</XBRFSource>
+            <Function>XBRFResolver</Function>
+            <XSLName>10BWF110SC20</XSLName>
+            <JSPName>BWF110QV18DE110SC20</JSPName>
+            <BODYName>110QV18</BODYName>
+            <BeanName>beanTable110LT1</BeanName>
+        </ComponentNames>
+        <Connection>
+            <NameCx>cx1</NameCx>
+            <DataBaseId>5</DataBaseId>
+        </Connection>
+        <Data>
+            <Name>110SQL25</Name>
+            <Sentence>SELECT reportnewsglobalincident.idrazienGlobalIncident,&apos;_&apos;,reportnewsglobalincident.datePosted,reportnewsglobalincident.title,reportnewsglobalincident.city,reportnewsglobalincident.state,reportnewsglobalincident.country FROM razient.reportnewsglobalincident AS reportnewsglobalincident WHERE (reportnewsglobalincident.datePosted&gt;=@fromdate) AND (reportnewsglobalincident.datePosted&lt;=@todate) ORDER BY reportnewsglobalincident.datePosted ASC</Sentence>
+            <Out_Fields>
+                <Out_Field>
+                    <Code>1</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>datePosted</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.datePosted</KeyName>
+                    <VariableName>@fromdate</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>true</Nullable>
+                    <Type>java.sql.Date</Type>
+                    <Label>From Date</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>10</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align="Center"  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color="#000000"  bgcolor="#000000"  size="10"  maxlength=""  readonly="yes"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="2" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "false" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>2</Code>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>datePosted</Name>
+                    <Value></Value>
+                    <KeyName>reportnewsglobalincident.datePosted</KeyName>
+                    <VariableName>@todate</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>true</Nullable>
+                    <Type>java.sql.Date</Type>
+                    <Label>To Date</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>10</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align="Center"  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color="#000000"  bgcolor="#000000"  size="10"  maxlength=""  readonly="yes"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="2" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "false" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+            </Out_Fields>
+        </Data>
+            <LookUpFields>
+                <LookUpField>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>datePosted</Name>
+                    <KeyName>reportnewsglobalincident.datePosted</KeyName>
+                    <VariableName>fromdate</VariableName>
+                    <Label>From Date</Label>
+                    <LookUpType>LookUpCalendar</LookUpType>
+                    <ReadOnly>yes</ReadOnly>
+                    <LookUpId>110QV18fromdate</LookUpId>
+                    <JavaScriptFile>js/110QV18fromdate.js</JavaScriptFile>
+                </LookUpField>
+                <LookUpField>
+                    <TableName>reportnewsglobalincident</TableName>
+                    <Name>datePosted</Name>
+                    <KeyName>reportnewsglobalincident.datePosted</KeyName>
+                    <VariableName>todate</VariableName>
+                    <Label>To Date</Label>
+                    <LookUpType>LookUpCalendar</LookUpType>
+                    <ReadOnly>yes</ReadOnly>
+                    <LookUpId>110QV18todate</LookUpId>
+                    <JavaScriptFile>js/110QV18todate.js</JavaScriptFile>
+                </LookUpField>
+            </LookUpFields>
+            <JsrsFields>
+            </JsrsFields>
+            <JsrsDropBoxes>
+            </JsrsDropBoxes>
+    </XSQLData>
+</Document_CRUD>

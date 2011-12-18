@@ -1,0 +1,540 @@
+<span xmlns:ice="http://www.icesoft.com/icefaces/component" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:c="http://java.sun.com/jstl/core" xmlns:ft="http://www.mcmsoftware.com">
+	
+	<param name="builtquestions" value="#{value}"/>
+	
+	<table class="tablebuiltquestions" width="100%" border="0">
+		<tr>
+			<td align="left" width="210" valign="top">
+				<c:if test="${builtquestions.isQuestion != 'F'}">
+					<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_up_question_#{builtquestions.icon}.png"/>
+					<h:outputLabel>
+						<h:outputText styleClass="titlebuiltquestionsname" value="#{builtquestions.name}"></h:outputText>
+					</h:outputLabel>
+					<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_up_question.png"/>
+				</c:if>
+				<c:if test="${builtquestions.isQuestion == 'F'}">
+					<ice:graphicImage style="border:none;" styleClass="noborder" url="./css/images/icons/menu_up_point.png"/>
+					<h:outputLabel>
+						<h:outputText styleClass="titlebuiltquestionsname" style="font-size:14px;font-weight: bold;" value="#{builtquestions.name}"></h:outputText>
+					</h:outputLabel>
+				</c:if>
+			</td>
+			<td align="left">
+				<c:if test="${builtquestions.isQuestion != 'F'}">
+					<h:outputLabel>
+						<h:outputText styleClass="titlebuiltquestionslabel" value="#{builtquestions.label}"></h:outputText>
+					</h:outputLabel>
+					
+					<c:if test="${builtquestions.supportingInformation != null}">
+						<c:if test="${builtquestions.supportingInformation != ''}">
+							<br/><br/>
+							<div style="float: left; margin-top: 0px; font-size:10px;color:#491011;">
+								&lt;&lt; ${builtquestions.supportingInformation} &gt;&gt;
+							</div>				
+							<br/>
+							<br/>
+						</c:if>
+					</c:if>
+				</c:if>
+				<c:if test="${builtquestions.isQuestion == 'F'}">
+					<h:outputLabel>
+						<h:outputText styleClass="titlebuiltquestionslabel"  style="font-size:14px;font-weight: bold;font-variant: small-caps;" value="#{builtquestions.label}"></h:outputText>
+					</h:outputLabel>
+				</c:if>
+			</td>
+		</tr>
+		<c:if test="${builtquestions.isQuestion != null}">
+			<c:if test="${builtquestions.isQuestion != 'F'}">
+				<tr >
+					<td align="left" width="210" valign="top">
+					</td>
+					<td align="left">
+					
+					
+						<c:if test="${builtquestions.razientQuestionTypeIdrazientQuestionType == 2}">
+								<ice:panelGroup styleClass="paneBuiltQuestionBox">
+										<ice:selectOneRadio id="q_rb_#{builtquestions.id}"
+															value="#{builtquestions.response}"
+															styleClass="selectedOneRadioMultiplekey"
+															valueChangeListener="#{builtquestions.processValueChange}"
+															partialSubmit="true">
+															<f:selectItems value="#{builtquestions.list_radiobutton}" />
+										</ice:selectOneRadio>
+								</ice:panelGroup>
+								<br/><br/><br/>
+						</c:if>
+						<c:if test="${builtquestions.razientQuestionTypeIdrazientQuestionType == 3}">
+									
+								<ice:panelGroup styleClass="paneBuiltQuestionBox">	
+									<ice:inputTextarea id="q_txt_#{builtquestions.id}"
+															   cols="85" rows="5"
+									                           maxlength="480"
+									                           value="#{builtquestions.response}"
+									                           partialSubmit="true"
+									                           styleClass="fieldtextareabuilt">
+								    </ice:inputTextarea>
+								</ice:panelGroup>								
+						</c:if>
+						<c:if test="${builtquestions.razientQuestionTypeIdrazientQuestionType == 4}">
+									
+								<ice:panelGroup styleClass="paneBuiltQuestionBox">	
+								
+									<ice:inputFile id="q_fupload_#{builtquestions.id}" width="540" 
+											uploadDirectory="./upload/supplier/#{builtquestions.idSupplier}/survey/q_#{builtquestions.id}/temp/" 
+											progressListener="#{builtquestions.fileUploadProgress}" 
+											actionListener="#{builtquestions.uploadFile}" 
+											submitOnUpload="preUpload"/>
+									<ice:outputProgress
+											value="#{builtquestions.fileProgress}"
+											styleClass="uploadProgressBar" />
+								   <ice:inputText  id="q_txtupload_#{builtquestions.id}"
+															   size="54"
+															   maxlength="100"
+									                           value="#{builtquestions.response}"
+									                           readonly="true"
+									                           styleClass="fieldtextareabuilt">
+								    </ice:inputText>
+								    
+								    					<ice:dataTable resizable="false" border="1" id="tableticketsteps_#{builtquestions.id}"
+															value="#{builtquestions.allCrudBeans}"
+															var="fupBean"
+															width="98%"
+															style="float:center;font-color: #FFFFFF;"
+															columnWidths="1%,70%,29%"
+															columnClasses="columnCenter,columnLeft,columnLeft"
+															rowClasses="rowOn,rowOff" cellpadding="0"
+															>
+			
+															
+															<ice:column>
+																	<ice:outputText value="">>></ice:outputText>
+															</ice:column>
+															<ice:column style="background-color:#F7F4F5;">
+																<f:facet name="header">
+																	<ice:outputText value="">#{bundle['rz_document']}&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</ice:outputText>
+																</f:facet>
+																<ice:outputText  id="fu_path_#{builtquestions.id}" value="#{fupBean.path}" />
+															</ice:column>
+															
+															<ice:column style="background-color:#F7F4F5;">
+																<f:facet name="header">
+																			<ice:outputText value=""></ice:outputText>
+																</f:facet>
+																<ice:commandLink action="#{builtquestions.deleteFile}" actionListener="#{builtquestions.actionFuploadlistener}" onclick="javascript:if(!confirm('#{bundle['rz_areyousure']} #{bundle['rz_delete_document']}?')) return false;rld();">
+																						<ice:graphicImage style="border:none;"  styleClass="noborder"
+																							url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png" 
+																							onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png'"
+																							onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_deletelow.png'"
+																							onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png'"
+																							onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_deletelow.png'"/>
+																						<f:attribute name="optionFuId" value="#{fupBean.id}" />		
+																						<f:attribute name="optionQuestionId" value="#{builtquestions.id}" />
+																						<f:attribute name="optionSupplierId" value="#{builtquestions.idSupplier}" />																		
+																</ice:commandLink>
+															</ice:column>
+															
+														</ice:dataTable>
+														<ice:panelGroup styleClass="clearer" />
+								    
+								</ice:panelGroup>
+								<br/><br/><br/><br/><br/><br/><br/>					
+						</c:if>
+						<c:if test="${builtquestions.razientQuestionTypeIdrazientQuestionType == 5}">
+								<ice:panelGroup styleClass="paneBuiltQuestionBox">
+									<ice:selectManyCheckbox id="q_cb_#{builtquestions.id}"
+															value="#{builtquestions.cb_response}"
+															styleClass="selectedOneRadioMultiplekey"
+															valueChangeListener="#{builtquestions.processValueChange}"
+															partialSubmit="true">
+															<f:selectItems value="#{builtquestions.list_checkbox}" />
+									</ice:selectManyCheckbox>
+								</ice:panelGroup>
+								<br/><br/><br/>
+						</c:if>
+
+						
+						
+						<c:if test="${builtquestions.razientQuestionTypeIdrazientQuestionType == 7}">
+								<ice:panelGroup styleClass="paneBuiltQuestionBox">
+										<ice:selectOneRadio id="q_rb_#{builtquestions.id}"
+															value="#{builtquestions.response}"
+															styleClass="selectedOneRadioMultiplekey"
+															valueChangeListener="#{builtquestions.processValueChange}"
+															partialSubmit="true">
+															<f:selectItems value="#{builtquestions.list_radiobutton}" />
+										</ice:selectOneRadio>
+								</ice:panelGroup>
+								<br/><br/><br/>
+								
+								<ice:panelGroup styleClass="paneBuiltQuestionBox">	
+								
+									<ice:inputFile id="q_fupload_#{builtquestions.id}" width="540" 
+											uploadDirectory="./upload/supplier/#{builtquestions.idSupplier}/survey/q_#{builtquestions.id}/temp/" 
+											progressListener="#{builtquestions.fileUploadProgress}" 
+											actionListener="#{builtquestions.uploadFileAdditional}" 
+											submitOnUpload="preUpload"/>
+									<ice:outputProgress
+											value="#{builtquestions.fileProgress}"
+											styleClass="uploadProgressBar" />
+								   <ice:inputText  id="q_txtupload_#{builtquestions.id}"
+															   size="54"
+															   maxlength="100"
+									                           value="#{builtquestions.pathnameUpload}"
+									                           readonly="true"
+									                           styleClass="fieldtextareabuilt">
+								    </ice:inputText>
+								    
+								    
+								    					<ice:dataTable resizable="false" border="1" id="tableticketsteps_#{builtquestions.id}"
+															value="#{builtquestions.allCrudBeans}"
+															var="fupBean"
+															width="98%"
+															style="float:center;font-color: #FFFFFF;"
+															columnWidths="1%,70%,29%"
+															columnClasses="columnCenter,columnLeft,columnLeft"
+															rowClasses="rowOn,rowOff" cellpadding="0"
+															>
+			
+															
+															<ice:column>
+																	<ice:outputText value="">>></ice:outputText>
+															</ice:column>
+															<ice:column style="background-color:#F7F4F5;">
+																<f:facet name="header">
+																	<ice:outputText value="">#{bundle['rz_document']}&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</ice:outputText>
+																</f:facet>
+																<ice:outputText  id="fu_path_#{builtquestions.id}" value="#{fupBean.path}" />
+															</ice:column>
+															
+															<ice:column style="background-color:#F7F4F5;">
+																<f:facet name="header">
+																			<ice:outputText value=""></ice:outputText>
+																</f:facet>
+																<ice:commandLink action="#{builtquestions.deleteFileAdditional}" actionListener="#{builtquestions.actionFuploadlistener}" onclick="javascript:if(!confirm('#{bundle['rz_areyousure']} #{bundle['rz_delete_document']}?')) return false;rld();">
+																						<ice:graphicImage style="border:none;"  styleClass="noborder"
+																							url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png" 
+																							onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png'"
+																							onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_deletelow.png'"
+																							onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png'"
+																							onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_deletelow.png'"/>
+																						<f:attribute name="optionFuId" value="#{fupBean.id}" />		
+																						<f:attribute name="optionQuestionId" value="#{builtquestions.id}" />
+																						<f:attribute name="optionSupplierId" value="#{builtquestions.idSupplier}" />																		
+																</ice:commandLink>
+															</ice:column>
+															
+														</ice:dataTable>
+														<ice:panelGroup styleClass="clearer" />
+								    
+								    
+								</ice:panelGroup>
+								<br/><br/><br/><br/><br/><br/><br/>		
+						</c:if>
+						<c:if test="${builtquestions.razientQuestionTypeIdrazientQuestionType == 8}">
+									
+								<ice:panelGroup styleClass="paneBuiltQuestionBox">	
+									<ice:inputTextarea id="q_txt_#{builtquestions.id}"
+															   cols="85" rows="5"
+									                           maxlength="480"
+									                           value="#{builtquestions.response}"
+									                           partialSubmit="true"
+									                           styleClass="fieldtextareabuilt">
+								    </ice:inputTextarea>
+								</ice:panelGroup>	
+								
+								<br/><br/><br/><br/><br/><br/><br/>
+								
+								<ice:panelGroup styleClass="paneBuiltQuestionBox">	
+								
+									<ice:inputFile id="q_fupload_#{builtquestions.id}" width="540" 
+											uploadDirectory="./upload/supplier/#{builtquestions.idSupplier}/survey/q_#{builtquestions.id}/temp/" 
+											progressListener="#{builtquestions.fileUploadProgress}" 
+											actionListener="#{builtquestions.uploadFileAdditional}" 
+											submitOnUpload="preUpload"/>
+									<ice:outputProgress
+											value="#{builtquestions.fileProgress}"
+											styleClass="uploadProgressBar" />
+								   <ice:inputText  id="q_txtupload_#{builtquestions.id}"
+															   size="54"
+															   maxlength="100"
+									                           value="#{builtquestions.pathnameUpload}"
+									                           readonly="true"
+									                           styleClass="fieldtextareabuilt">
+								    </ice:inputText>
+								    
+								    
+								    					<ice:dataTable resizable="false" border="1" id="tableticketsteps_#{builtquestions.id}"
+															value="#{builtquestions.allCrudBeans}"
+															var="fupBean"
+															width="98%"
+															style="float:center;font-color: #FFFFFF;"
+															columnWidths="1%,70%,29%"
+															columnClasses="columnCenter,columnLeft,columnLeft"
+															rowClasses="rowOn,rowOff" cellpadding="0"
+															>
+			
+															
+															<ice:column>
+																	<ice:outputText value="">>></ice:outputText>
+															</ice:column>
+															<ice:column style="background-color:#F7F4F5;">
+																<f:facet name="header">
+																	<ice:outputText value="">#{bundle['rz_document']}&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</ice:outputText>
+																</f:facet>
+																<ice:outputText  id="fu_path_#{builtquestions.id}" value="#{fupBean.path}" />
+															</ice:column>
+															
+															<ice:column style="background-color:#F7F4F5;">
+																<f:facet name="header">
+																			<ice:outputText value=""></ice:outputText>
+																</f:facet>
+																<ice:commandLink action="#{builtquestions.deleteFileAdditional}" actionListener="#{builtquestions.actionFuploadlistener}" onclick="javascript:if(!confirm('#{bundle['rz_areyousure']} #{bundle['rz_delete_document']}?')) return false;rld();">
+																						<ice:graphicImage style="border:none;"  styleClass="noborder"
+																							url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png" 
+																							onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png'"
+																							onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_deletelow.png'"
+																							onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png'"
+																							onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_deletelow.png'"/>
+																						<f:attribute name="optionFuId" value="#{fupBean.id}" />		
+																						<f:attribute name="optionQuestionId" value="#{builtquestions.id}" />
+																						<f:attribute name="optionSupplierId" value="#{builtquestions.idSupplier}" />																		
+																</ice:commandLink>
+															</ice:column>
+															
+														</ice:dataTable>
+														<ice:panelGroup styleClass="clearer" />
+														
+								    
+								</ice:panelGroup>
+								<br/><br/><br/><br/><br/><br/><br/>								
+						</c:if>
+						<c:if test="${builtquestions.razientQuestionTypeIdrazientQuestionType == 9}">
+								<ice:panelGroup styleClass="paneBuiltQuestionBox">
+									<ice:selectManyCheckbox id="q_cb_#{builtquestions.id}"
+															value="#{builtquestions.cb_response}"
+															styleClass="selectedOneRadioMultiplekey"
+															valueChangeListener="#{builtquestions.processValueChange}"
+															partialSubmit="true">
+															<f:selectItems value="#{builtquestions.list_checkbox}" />
+									</ice:selectManyCheckbox>
+								</ice:panelGroup>
+								<br/><br/><br/>
+								
+								<ice:panelGroup styleClass="paneBuiltQuestionBox">	
+								
+									<ice:inputFile id="q_fupload_#{builtquestions.id}" width="540" 
+											uploadDirectory="./upload/supplier/#{builtquestions.idSupplier}/survey/q_#{builtquestions.id}/temp/" 
+											progressListener="#{builtquestions.fileUploadProgress}" 
+											actionListener="#{builtquestions.uploadFileAdditional}" 
+											submitOnUpload="preUpload"/>
+									<ice:outputProgress
+											value="#{builtquestions.fileProgress}"
+											styleClass="uploadProgressBar" />
+								   <ice:inputText  id="q_txtupload_#{builtquestions.id}"
+															   size="54"
+															   maxlength="100"
+									                           value="#{builtquestions.pathnameUpload}"
+									                           readonly="true"
+									                           styleClass="fieldtextareabuilt">
+								    </ice:inputText>
+								    
+								    					<ice:dataTable resizable="false" border="1" id="tableticketsteps_#{builtquestions.id}"
+															value="#{builtquestions.allCrudBeans}"
+															var="fupBean"
+															width="98%"
+															style="float:center;font-color: #FFFFFF;"
+															columnWidths="1%,70%,29%"
+															columnClasses="columnCenter,columnLeft,columnLeft"
+															rowClasses="rowOn,rowOff" cellpadding="0"
+															>
+			
+															
+															<ice:column>
+																	<ice:outputText value="">>></ice:outputText>
+															</ice:column>
+															<ice:column style="background-color:#F7F4F5;">
+																<f:facet name="header">
+																	<ice:outputText value="">#{bundle['rz_document']}&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</ice:outputText>
+																</f:facet>
+																<ice:outputText  id="fu_path_#{builtquestions.id}" value="#{fupBean.path}" />
+															</ice:column>
+															
+															<ice:column style="background-color:#F7F4F5;">
+																<f:facet name="header">
+																			<ice:outputText value=""></ice:outputText>
+																</f:facet>
+																<ice:commandLink action="#{builtquestions.deleteFileAdditional}" actionListener="#{builtquestions.actionFuploadlistener}" onclick="javascript:if(!confirm('#{bundle['rz_areyousure']} #{bundle['rz_delete_document']}?')) return false;rld();">
+																						<ice:graphicImage style="border:none;"  styleClass="noborder"
+																							url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png" 
+																							onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png'"
+																							onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_deletelow.png'"
+																							onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png'"
+																							onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_deletelow.png'"/>
+																						<f:attribute name="optionFuId" value="#{fupBean.id}" />		
+																						<f:attribute name="optionQuestionId" value="#{builtquestions.id}" />
+																						<f:attribute name="optionSupplierId" value="#{builtquestions.idSupplier}" />																		
+																</ice:commandLink>
+															</ice:column>
+															
+														</ice:dataTable>
+														<ice:panelGroup styleClass="clearer" />
+								</ice:panelGroup>
+								<br/><br/><br/><br/><br/><br/><br/>		
+						</c:if>
+						<c:if test="${builtquestions.razientQuestionTypeIdrazientQuestionType == 10}">
+									
+								<ice:panelGroup styleClass="paneBuiltQuestionBox">	
+									<ice:selectInputDate id="q_date_#{builtquestions.id}e" renderMonthAsDropdown="true" renderYearAsDropdown="true" required="false"  
+												value="#{builtquestions.answerDate}" title="answerDate"
+												renderAsPopup="true" styleClass="fieldsimpledates">
+											<f:convertDateTime pattern="#{bundle['rz_calendar.format.a']}" timeZone="default"/>
+											</ice:selectInputDate>
+								</ice:panelGroup>	
+								<br/><br/><br/>							
+						</c:if>
+						<c:if test="${builtquestions.razientQuestionTypeIdrazientQuestionType == 11}">
+								<ice:panelGroup styleClass="paneBuiltQuestionBox">	
+									<ice:selectInputDate id="q_date_#{builtquestions.id}e" renderMonthAsDropdown="true" renderYearAsDropdown="true" required="false"  
+												value="#{builtquestions.answerDate}" title="answerDate"
+												renderAsPopup="true" styleClass="fieldsimpledates">
+											<f:convertDateTime pattern="#{bundle['rz_calendar.format.a']}" timeZone="default"/>
+											</ice:selectInputDate>
+								</ice:panelGroup>	
+								<br/><br/><br/>	
+								
+								<ice:panelGroup styleClass="paneBuiltQuestionBox">	
+								
+									<ice:inputFile id="q_fupload_#{builtquestions.id}" width="540" 
+											uploadDirectory="./upload/supplier/#{builtquestions.idSupplier}/survey/q_#{builtquestions.id}/temp/" 
+											progressListener="#{builtquestions.fileUploadProgress}" 
+											actionListener="#{builtquestions.uploadFileAdditional}" 
+											submitOnUpload="preUpload"/>
+									<ice:outputProgress
+											value="#{builtquestions.fileProgress}"
+											styleClass="uploadProgressBar" />
+								   <ice:inputText  id="q_txtupload_#{builtquestions.id}"
+															   size="54"
+															   maxlength="100"
+									                           value="#{builtquestions.pathnameUpload}"
+									                           readonly="true"
+									                           styleClass="fieldtextareabuilt">
+								    </ice:inputText>
+								    
+								    					<ice:dataTable resizable="false" border="1" id="tableticketsteps_#{builtquestions.id}"
+															value="#{builtquestions.allCrudBeans}"
+															var="fupBean"
+															width="98%"
+															style="float:center;font-color: #FFFFFF;"
+															columnWidths="1%,70%,29%"
+															columnClasses="columnCenter,columnLeft,columnLeft"
+															rowClasses="rowOn,rowOff" cellpadding="0"
+															>
+			
+															
+															<ice:column>
+																	<ice:outputText value="">>></ice:outputText>
+															</ice:column>
+															<ice:column style="background-color:#F7F4F5;">
+																<f:facet name="header">
+																	<ice:outputText value="">#{bundle['rz_document']}&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</ice:outputText>
+																</f:facet>
+																<ice:outputText  id="fu_path_#{builtquestions.id}" value="#{fupBean.path}" />
+															</ice:column>
+															
+															<ice:column style="background-color:#F7F4F5;">
+																<f:facet name="header">
+																			<ice:outputText value=""></ice:outputText>
+																</f:facet>
+																<ice:commandLink action="#{builtquestions.deleteFileAdditional}" actionListener="#{builtquestions.actionFuploadlistener}" onclick="javascript:if(!confirm('#{bundle['rz_areyousure']} #{bundle['rz_delete_document']}?')) return false;rld();">
+																						<ice:graphicImage style="border:none;"  styleClass="noborder"
+																							url		="./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png" 
+																							onmouseup	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png'"
+																							onmousedown	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_deletelow.png'"
+																							onmouseout	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_up_deletelow.png'"
+																							onmouseover	="this.src='./css/images/#{folderBean.folder_menu}/icons/menu_down_deletelow.png'"/>
+																						<f:attribute name="optionFuId" value="#{fupBean.id}" />		
+																						<f:attribute name="optionQuestionId" value="#{builtquestions.id}" />
+																						<f:attribute name="optionSupplierId" value="#{builtquestions.idSupplier}" />																		
+																</ice:commandLink>
+															</ice:column>
+															
+														</ice:dataTable>
+														<ice:panelGroup styleClass="clearer" />
+								</ice:panelGroup>
+								<br/><br/><br/><br/><br/><br/><br/>		
+						</c:if>
+						
+						<!-- COMMENTS -->
+						<c:if test="${builtquestions.isRequiredComment != 'F'}">
+							<table>
+									<c:if test="${builtquestions.isRequiredFollowup == 'F'}">
+										<tr>
+											<td>
+													<div style="float: left; margin-top: 2px; font-size:10px;color:#545138">#{bundle['rz_buildsurvey.addinfo']} :</div>
+											</td>
+											<td>
+													<ice:panelGroup styleClass="paneBuiltQuestionCommentBox">	
+														<ice:inputTextarea id="q_comment_#{builtquestions.id}"
+																   cols="86" rows="5"
+										                           maxlength="480"
+										                           value="#{builtquestions.comment}"
+										                           partialSubmit="true"
+										                           styleClass="fieldtextareacommentbuilt">
+									   					 </ice:inputTextarea>
+													</ice:panelGroup>	
+											</td>
+										</tr>
+									</c:if>
+									<c:if test="${builtquestions.isRequiredFollowup != 'F'}">
+										<tr>
+											<td>
+													<div style="float: left; margin-top: 2px; font-size:10px;color:#545138">#{bundle['rz_buildsurvey.comment']} :</div>
+											</td>
+											<td>
+													<ice:panelGroup styleClass="paneBuiltQuestionCommentBox">	
+														<ice:inputTextarea id="q_comment_#{builtquestions.id}"
+																   cols="92" rows="5"
+										                           maxlength="480"
+										                           value="#{builtquestions.comment}"
+										                           partialSubmit="true"
+										                           styleClass="fieldtextareacommentbuilt">
+									   					 </ice:inputTextarea>
+													</ice:panelGroup>	
+											</td>
+										</tr>
+										<tr>
+											<td>
+													<div style="float: left; margin-top: 2px; font-size:10px;color:#545138">#{bundle['rz_buildsurvey.commentresponse']} :</div>
+											</td>
+											<td>
+													<ice:panelGroup styleClass="paneBuiltQuestionCommentBox">	
+														<ice:inputTextarea id="q_commentrp_#{builtquestions.id}"
+																	cols="92" rows="5"
+														            maxlength="480"
+														            value="#{builtquestions.commentResponse}"
+														            partialSubmit="true"
+														            readonly="true"
+														            styleClass="fieldtextareacommentresponsebuilt">
+													    </ice:inputTextarea>
+													</ice:panelGroup>	
+											</td>
+										</tr>
+									</c:if>
+									
+							</table>
+						</c:if>
+						
+						
+					</td>
+				</tr>
+				<tr><td><br/></td></tr>
+			</c:if>
+		</c:if>
+		
+
+	</table>
+	
+	
+	<br/><br/>
+</span>
+	

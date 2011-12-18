@@ -1,0 +1,51 @@
+RIM One;175 Columbia St. W.;Waterloo;Ontario;N2L 5Z5;Canada;1
+RIM Three;185 Columbia St. W.;Waterloo;Ontario;N2L 5Z5;Canada;1
+RIM Four;305 Phillip St.;Waterloo;Ontario;N2L 3W8;Canada;1
+RIM Five;156 Columbia St. W.;Waterloo;Ontario;N2L 3L3;Canada;1
+RIM Six;170 Columbia St. W.;Waterloo;Ontario;N2L 3L3;Canada;1
+RIM Seven;180 Columbia St. W.;Waterloo;Ontario;N2L 3L3;Canada;1
+RIM Eight (Plant);451 Phillip St.;Waterloo;Ontario;N2L 3X2;Canada;1
+RIM Nine;455 Phillip St.;Waterloo;Ontario;N2L 3X2;Canada;1
+RIM Ten;176 Columbia St. W.;Waterloo;Ontario;N2L 3X2;Canada;1
+RIM Eleven;415 Phillip St.;Waterloo;Ontario;N2L 3X2;Canada;1
+RIM Twelve;419 Phillip St. W.;Waterloo;Ontario;N2L 3X2;Canada;1
+RIM Thirteen;450 Phillip St.;Waterloo;Ontario;N2L 5J2;Canada;1
+RIM Fourteen;440 Phillip St.;Waterloo;Ontario;N2L 5R9;Canada;1
+RIM Fifteen;412 Albert St. ;Waterloo;Ontario;N2L 3V2;Canada;1
+RIM Sixteen;195 Columbia St. W.;Waterloo;Ontario;N2L 5Z5;Canada;1
+RIM Seventeen;460 Phillip St.;Waterloo;Ontario;N2L 5J2;Canada;1
+RIM Eighteen;50 Bathurst Dr.;Waterloo;Ontario;N2V 2C5;Canada;1
+RIM Nineteen;560 Parkside Dr.;Waterloo;Ontario;N2L 5Z4;Canada;1
+RIM Twenty;300 Hagey Blvd.;Waterloo;Ontario;N2L 0A4;Canada;1
+RIM Twenty-Two;619 Kumpf Dr.;Waterloo;Ontario;N2V 1K2;Canada;1
+RIM Twenty-Three;141 Weber St. South;Waterloo;Ontario;N2J 2A9;Canada;1
+RIM A;2300 University Ave. E;Waterloo;Ontario;N2K 0A2;Canada;1
+RIM B;2200 University Ave. E;Waterloo;Ontario;N2K 0A2;Canada;1
+Slough;200 Bath Road;Slough;Berkshire;SL1 3XE;United Kingdom ;1
+Thames Valley Court;183-187 Bath Road;Slough;Berkshire;SL1 4AA;United Kingdom;1
+Centrum House;36 Station Road;Egham;Surrey;TW20 9LF;United Kingdom;1
+Harston Mill;Royston Road;Harston;Cambridgeshire;CB22 7GG;United Kingdom;1
+M-Stack;92-93 Edward Street;Birmingham;West Midlands;B1 2RA;United Kingdom;1
+Torus Building;Scottish Enterprise Technology Park Rankine Avenue;East Kilbride;Glasgow;G75 0QF;Scotland;1
+Immeuble Le Colisée;12 avenue de l`Arche;Courbevoie;Ile-de-France;92400;France;1
+Uni Tech Centre;Universitatsstrasse 140;Bochum;Nordrhein-Westfalen;44799;Germany;1
+Frankfurter Straße 63-69;D-65760 Eschborn;Frankfurt;Brandenburg;;Germany;1
+Niederkasseler Lohweg 18;;Düsseldorf;Nordrhein-Westfalen;40547;Germany;1
+Milan;Via Moscova 3;Milan;Lombardia;20121;Italy;1
+Rome;Via Luca Gaurico 9/11;Rome;Lazio;143;Italy;1
+Smolensky Passage;Smolenskaya Square 3, Office 708 ;Moscow;Moscow City;121099;Russian Federation;1
+Edificio Ofipinar 10th Floor;Calle Caleruega 102-104;Madrid;madrid;28033;Spain;1
+Regus Business Centre LLC;Levent Kanyon Ofis Binasi Kat.6 WBuyukdere Cad No. 185;Istanbul;Istanbul;34394;Turkey;1
+RIM Australia;Level 6 100 Pacific Highway;North Sydney;New South Wales ;2060;Australia;1
+RIM Hong Kong;14 Taikoo Wan Road;Island East;hong kong;;Hong Kong;1
+RIM Singapore;1 International Business Park The Synergy, #02-12;Singapore;Singapore;609917;Singapore;1
+PT Research in Motion Indonesia;Menara KADIN Indonesia JI. H.R. Rasuna Said Block X-5 Kav. 2-3;Jakarta ;Jawa Barat;12950;Indonesia;1
+Research In Motion South Africa Proprietary Limited;Palazzo Towers West Monte Casino William Nicol Drive;Johannesburg;Gauteng;2086;South Africa;1
+LABEL;TYPE;LENGTH;NULLS
+label1.label  = NAME;type1.type    = VARCHAR;length1.length  = 150;null1.null = no
+label2.label  = ADDRESS;type2.type    = VARCHAR;length2.length  = 150;null2.null = no
+label3.label  = CITYDESC;type3.type    = VARCHAR;length3.length  = 150;null3.null = no
+label4.label  = STATEDESc;type4.type    = VARCHAR;length4.length  = 150;null4.null = no
+label5.label  = ZIPCODE;type5.type    = VARCHAR;length5.length  = 45;null5.null = yes
+label6.label  = COUNTRYDESC;type6.type    = VARCHAR;length6.length  = 150;null6.null = no
+label7.label  = LOCATIONCRITICALITY;type7.type    = VARCHAR;length7.length  = 45;null7.null = yes

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root version="1.2" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:ice-cc="http://www.icesoft.com/icefaces-composite-comps">
+	<jsp:directive.page contentType="text/html;charset=ISO-8859-1"
+		pageEncoding="ISO-8859-1" />
+	<f:view>
+		<ice:outputDeclaration doctypeRoot="html"
+			doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN"
+			doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" />
+		<html>
+			<head>
+				<title>Index (Razient)</title>
+			</head>
+			<body>
+
+				<!-- template="#{templateBean.templateContent}"-->
+				<ui:composition
+					template="../../include/templates/pages/modeA_rz.jspx"
+					xmlns:h="http://java.sun.com/jsf/html"
+					xmlns:f="http://java.sun.com/jsf/core"
+					xmlns:c="http://java.sun.com/jstl/core"
+					xmlns:ice="http://www.icesoft.com/icefaces/component"
+					xmlns:ui="http://java.sun.com/jsf/facelets">
+
+					<ui:param name="pageTitle"
+						value="#{bundle['a_admin_auditlog.title']}" />
+
+					<ui:define name="header-menu-value">
+						<table cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+
+
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+										url="./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.valueIconAdmin}.png"
+										onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.enabledAdmin}.png'"
+										onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.disabledAdmin}.png'"
+										onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.enabledAdmin}.png'"
+										onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_admin_#{rz_MenuBarBean.disabledAdmin}.png'" />
+
+								</td>
+								<td>
+									<ice:graphicImage style="border:none;" styleClass="noborder"
+										url="./css/images/risk_black_low.png" />
+								</td>
+								<td>
+									<ice:commandLink action="#{rz_MenuBarBean.getIconCompliance}"
+										onclick="rld();"
+										actionListener="#{rz_MenuBarBean.actionlistener}">
+										<ice:graphicImage style="border:none;" styleClass="noborder"
+											url="./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.valueIconCompliance}.png"
+											onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.enabledCompliance}.png'"
+											onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.disabledCompliance}.png'"
+											onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.enabledCompliance}.png'"
+											onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_comp_#{rz_MenuBarBean.disabledCompliance}.png'" />
+										<f:attribute name="optioonselected" value="admin_auditlogs" />
+									</ice:commandLink>
+								</td>
+
+							</tr>
+						</table>
+
+					</ui:define>
+					<ui:define name="page-menu-value">
+						<ice:form>
+							<ice:commandLink
+								action="#{rz_AuditLogsBean.actionMenu_UserManager}"
+								onclick="rld();">
+								<ice:graphicImage visible="true"  styleClass="menuPosA"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_usermanager.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_usermanager.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_usermanager.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_usermanager.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_usermanager.png'" />
+							</ice:commandLink>
+							<ice:commandLink
+								action="#{rz_AuditLogsBean.actionMenu_CustomerProfileGrid}"
+								onclick="rld();">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_customerprofile.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_customerprofile.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_customerprofile.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_customerprofile.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_customerprofile.png'" />
+							</ice:commandLink>
+							<ice:commandLink
+								action="#{rz_AuditLogsBean.actionMenu_Template}"
+								onclick="rld();">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_template.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_template.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_template.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_template.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_template.png'" />
+							</ice:commandLink>
+							<ice:commandLink
+								action="#{rz_AuditLogsBean.actionMenu_DataUpload}"
+								onclick="rld();">
+								<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_up_dataupload.png"
+									onmouseout="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_dataupload.png'"
+									onmouseover="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_over_dataupload.png'"
+									onmouseup="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_up_dataupload.png'"
+									onmousedown="this.src='./css/images/#{folderBean.folder_menu}/risk_menu_down_dataupload.png'" />
+							</ice:commandLink>
+							<ice:graphicImage visible="true"  styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_down_auditlog.png"/>
+									
+							<ice:graphicImage visible="true" styleClass="menuPosB"
+									url="./css/images/#{folderBean.folder_menu}/risk_menu_one.png"/>
+						
+						</ice:form>
+					</ui:define>
+
+					<ui:define name="page-content-value">
+
+						
+					<ice:form>    
+							<ice:panelGrid>
+												<div class="paneTableBox"  style="height:#{utilServiceLocatorBean.heightAllTable}px;margin-top:1px;overflow:auto;width:#{utilServiceLocatorBean.widthAllTable}px;">
+												
+												<table class="tableformstot" style="margin-top:0px;" >
+														<tr>
+															<td>
+																<table class="tableformscell" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td >
+																			&amp;nbsp&amp;nbsp
+																		</td>
+																		<td>
+																			<ice:commandLink action="#{a_AuditLogBean.findAllAuditlog}" onclick="rld();" >
+																				<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+																					url="./css/images/icons/menu_up_find-all.png"
+																					onmouseout="this.src='./css/images/icons/menu_up_find-all.png'"
+																					onmouseover="this.src='./css/images/icons/menu_up_find-all.png'"
+																					onmouseup="this.src='./css/images/icons/menu_up_find-all.png'"
+																					onmousedown="this.src='./css/images/icons/menu_up_find-all.png'" />
+																					<ice:outputLabel >
+																							<h:outputText styleClass="titleButtons" value="#{bundle['rz_info.allitems']}"></h:outputText>
+																					</ice:outputLabel>
+																			</ice:commandLink>
+																		</td>
+																		<td>
+																			&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																			&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																		</td>
+																		<td>
+																			&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																			&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																		</td>
+																		<td class="tableflabel">
+																			<ice:selectOneMenu id="selectedtype" value="#{a_AuditLogBean.type}" styleClass="selectedOneMenukeyBold"  required="false">
+																				<f:selectItems value="#{a_AuditLogBean.list_type}" />
+																		    </ice:selectOneMenu>
+																		</td>
+																		<td>
+																			&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																		</td>
+																		<td class="tableflabel">
+																			<ice:selectOneMenu id="selectedactivity" value="#{a_AuditLogBean.activity}" styleClass="selectedOneMenukeyBold"  required="false">
+																				<f:selectItems value="#{a_AuditLogBean.list_activity}" />
+																		    </ice:selectOneMenu>
+																		</td>
+																		<td >
+																			&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp
+																		</td>
+																		<td>
+																			<ice:commandLink action="#{a_AuditLogBean.find_x_Item}">
+																				<ice:graphicImage visible="true" style="border:none;" styleClass="noborder"
+																					url="./css/images/icons/menu_up_load.png"
+																					onmouseout="this.src='./css/images/icons/menu_up_load.png'"
+																					onmouseover="this.src='./css/images/icons/menu_up_load.png'"
+																					onmouseup="this.src='./css/images/icons/menu_up_load.png'"
+																					onmousedown="this.src='./css/images/icons/menu_up_load.png'" />
+																			</ice:commandLink>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table> 
+													
+												<table width="97%" style="margin-left:10px;margin-top:3px;border:1px solid #C3DFF4;" cellspacing="0" cellpadding="0" border="0">
+													<tr class="trHeader"><td colspan="4" align="center">#{bundle['a_admin_auditlog.title']}</td></tr>
+													<tr >
+														<td valign="top" class="tdcolumninfo">
+														</td>
+														<td>&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp</td>
+														<td>
+															<ice:panelGroup>
+															<ice:panelGroup>
+																
+																<ice:dataTable resizable="false" border="1" id="stable" value="#{a_AuditLogBean.auditlogsBean}" var="auditlogBean"  
+																			width="98%" 
+																			rows="#{a_AuditLogBean.selectedDataScrollModes[a_AuditLogBean.selectedDataScrollMode].rows}"
+															               	scrollable="#{a_AuditLogBean.selectedDataScrollModes[a_AuditLogBean.selectedDataScrollMode].scrollingEnabled}"
+															               	scrollHeight="200px"
+															               	style="float:center;font-color: #FFFFFF;margin-top:2px;"
+															               	columnWidths="1%,20%,30%,20%,10%,10%"
+															               	columnClasses="columnCenter,columnLeft,columnLeft,columnLeft,columnCenter,columnCenter"
+															                rowClasses="rowOn,rowOff"
+															               	cellpadding="0"
+																			sortColumn="#{a_AuditLogBean.columnNameOrder}" sortAscending="#{a_AuditLogBean.descending}">
+																	
+																	<ice:column >             
+										                                 >>		
+																	</ice:column>
+																		<ice:column>
+																		
+																		<f:facet name="header">
+																			<ice:commandSortHeader id="typeidsort" columnName="type">
+																				<ice:outputText  value="#{bundle['a_admin_auditlog.type']}"></ice:outputText>
+																			</ice:commandSortHeader>
+																		</f:facet>
+																		<ice:outputText id="idtype" value="#{auditlogBean.type}"/>
+																	</ice:column>
+																	<ice:column>
+																		<f:facet name="header">
+																			<ice:commandSortHeader id="useridsort" columnName="user">
+																				<ice:outputText value="#{bundle['a_admin_auditlog.user']}"></ice:outputText>
+																			</ice:commandSortHeader>
+																		</f:facet>
+																		
+																		<ice:outputText styleClass="fontred" id="idusers" value="#{auditlogBean.user}"/>
+																	</ice:column>
+																	<ice:column>
+																		<f:facet name="header">
+																			<ice:commandSortHeader id="activityidsort" columnName="activity">
+																				<ice:outputText value="#{bundle['a_admin_auditlog.activity']}"></ice:outputText>
+																			</ice:commandSortHeader>
+																		</f:facet>
+																		<ice:outputText id="idactivitys" value="#{auditlogBean.activity}"/>
+																	</ice:column>
+																	<ice:column>
+																		<f:facet name="header">
+																			<ice:commandSortHeader id="dateidsort" columnName="date">
+																				<ice:outputText value="#{bundle['a_admin_auditlog.date']}"></ice:outputText>
+																			</ice:commandSortHeader>
+																		</f:facet>
+																		<ice:outputText id="iddates" value="#{auditlogBean.date}"/>
+																	</ice:column>
+																	<ice:column>
+																		<f:facet name="header">
+																			<ice:commandSortHeader id="timeidsort" columnName="time">
+																				<ice:outputText value="#{bundle['a_admin_auditlog.time']}"></ice:outputText>
+																			</ice:commandSortHeader>
+																		</f:facet>
+																		<ice:outputText id="idtimes" value="#{auditlogBean.time}"/>
+																	</ice:column>
+																	</ice:dataTable>
+													
+																	<ice:panelGroup styleClass="clearer"/>
+																	  
+											        				
+																	<!-- Set up the buttons and links for browsing through the table
+															             fastStep means No. of pages to fast forward or rewind: 3
+															             paginatorMaxPages means No. of direct links to pages: 4 -->
+															        <ice:panelGroup style="float:left;width:420px;">
+														            <center>
+														            <ice:dataPaginator id="dataScroll_xaudit"
+														                   rendered="#{a_AuditLogBean.selectedDataScrollModes[a_AuditLogBean.selectedDataScrollMode].pagingEnabled}"
+														                   for="stable"
+														                   vertical="false" fastStep="3" paginator="true" paginatorMaxPages="10">
+														                <f:facet name="first">
+														                    <ice:graphicImage id="firstpage_1" url="./css/rime/css-images/arrow-first.gif" style="border:none;" title="first"/>
+														                </f:facet>
+														                <f:facet name="last">
+														                    <ice:graphicImage id="lastpage_1" url="./css/rime/css-images/arrow-last.gif" style="border:none;" title="last"/>
+														                </f:facet>
+														                <f:facet name="previous">
+														                    <ice:graphicImage id="previouspage_1" url="./css/rime/css-images/arrow-previous.gif" style="border:none;" title="previous"/>
+														                </f:facet>
+														                <f:facet name="next">
+														                    <ice:graphicImage id="nextpage_1" url="./css/rime/css-images/arrow-next.gif" style="border:none;" title="next"/>
+														                </f:facet>
+														                <f:facet name="fastforward">
+														                    <ice:graphicImage id="fastforward_1" url="./css/rime/css-images/arrow-ff.gif" style="border:none;" title="ff"/>
+														                </f:facet>
+														                <f:facet name="fastrewind">
+														                    <ice:graphicImage id="fastrewind_1" url="./css/rime/css-images/arrow-fr.gif" style="border:none;" title="fr"/>
+														                </f:facet>
+														            </ice:dataPaginator>
+														            </center>
+														        </ice:panelGroup>
+																
+																
+															</ice:panelGroup>
+															
+														</ice:panelGroup>
+														</td>
+														<td>&amp;nbsp</td>
+													</tr>
+												</table>
+												</div>
+									</ice:panelGrid>
+									
+									
+						</ice:form>
+					
+
+					</ui:define>
+				</ui:composition>
+			</body>
+		</html>
+	</f:view>
+</jsp:root>

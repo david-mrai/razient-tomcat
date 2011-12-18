@@ -1,0 +1,1676 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
+    <Document>
+        <Style id="style0x70000">
+            <IconStyle>
+                <scale>2.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/customer.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style0x80000">
+            <IconStyle>
+                <scale>2.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/supplier.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style0x83300">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/airplane-accident.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style0x93300">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/airplane-accident-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style1x83301">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/gun.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style1x93301">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/gun-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style2x83302">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/bomb.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style2x93302">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/bomb-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style3x83303">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/explosion.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style4x83304">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/train.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style4x93304">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/train-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style5x83305">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/political.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style5x93305">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/political-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style6x83306">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/torn.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style6x93306">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/torn-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style7x83307">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/protest.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style7x93307">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/protest-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style8x83308">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/flood.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style8x93308">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/flood-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style9x83309">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/fire.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style9x93309">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/fire-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style10x83310">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/ship.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style10x93310">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/ship.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style11x83311">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/freeze.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style11x93311">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/freeze-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style12x83312">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/storm.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style12x93312">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/storm-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style13x83313">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/buildingcollapse.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style13x93313">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/buildingcollapse-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style14x83314">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/buildingfire.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style14x93314">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/buildingfire-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style15x83315">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/chemical.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style15x93315">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/chemical-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style16x83316">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/airplane-closed.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style16x93316">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/airplane-closed-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style17x83317">
+            <IconStyle>
+                <scale>5.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/earthquake.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style17x93317">
+            <IconStyle>
+                <scale>5.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/earthquake-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style18x83318">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/evacuated.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style18x93318">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/evacuated-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style19x83319">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/hazardous.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style19x93319">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/hazardous-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style20x83320">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/volcano.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style20x93320">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/volcano-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style21x83321">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/terrorism.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style21x93321">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/terrorism-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style23x83323">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/armed.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style23x93323">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/armed-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style24x83324">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/hazmat.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style24x93324">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/hazmat-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style25x83325">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/poweroutage.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style25x93325">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/poweroutage-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style26x83326">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/pirate.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style26x93326">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/pirate-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style27x83327">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/mudslide.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style27x93327">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/mudslide-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style28x83328">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/roadflooded.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style28x93328">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/roadflooded-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style29x83329">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/collision.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style29x93329">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/collision-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style30x83330">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/gasmask.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style30x93330">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/gasmask-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style31x83331">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/hurricane.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style31x93331">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/hurricane-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style32x83332">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/tsunami.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style32x93332">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/tsunami-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style33x83333">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/roadsclosed.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style33x93333">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/roadsclosed-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style9999x8339999">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/nosymbol.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style9999x9339999">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/nosymbol-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Folder>
+            <name>www.kraazient.com</name>
+            <description>Maps events, incidents and other suspicious activity by kraazient</description>
+            <Placemark>
+                <name>Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>200 Se 1st Street #601,Miami,Florida,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Headquarters&amp;nbsp;&lt;br&gt; Address: 200 Se 1st Street #601 - Miami - Florida - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.18992,25.773214</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : One man dies in Liberty City drive-by shooting&#xD;
+</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Headquarters&amp;nbsp;
+200 Se 1st Street #601&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;One man dies in Liberty City drive-by shooting&#xD;
+&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Florida&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Shooting&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Miami&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-06-16&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;1&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.miamiherald.com/2011/06/16/2269340/one-person-died-in-liberty-city.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;After a drive-by shooting in Liberty City one man is dead and another is in critical condition early Thursday morning,&#xD;
+About 1:30 a.m., six people were standing outside of City Market, which is open 24 hours, on 62nd Street between Northwest 12th and 13th Avenue, police said. &#xD;
+&#xD;
+&#xD;
+&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style1x93301</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.2269071,25.8317043</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>200 Se 1st Street #601,Miami,Florida,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Headquarters&amp;nbsp;&lt;br&gt; Address: 200 Se 1st Street #601 - Miami - Florida - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.18992,25.773214</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : One man dies in Liberty City drive-by shooting&#xD;
+</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Headquarters&amp;nbsp;
+200 Se 1st Street #601&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;One man dies in Liberty City drive-by shooting&#xD;
+&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Florida&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Shooting&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Miami&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-06-16&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;1&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.miamiherald.com/2011/06/16/2269340/one-person-died-in-liberty-city.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;After a drive-by shooting in Liberty City one man is dead and another is in critical condition early Thursday morning,&#xD;
+About 1:30 a.m., six people were standing outside of City Market, which is open 24 hours, on 62nd Street between Northwest 12th and 13th Avenue, police said. &#xD;
+&#xD;
+&#xD;
+&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style1x93301</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.2269071,25.8317043</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>200 Se 1st Street #601,Miami,Florida,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Headquarters&amp;nbsp;&lt;br&gt; Address: 200 Se 1st Street #601 - Miami - Florida - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.18992,25.773214</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : Burned Bodies Mystery in Miami-Dade</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Headquarters&amp;nbsp;
+200 Se 1st Street #601&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Burned Bodies Mystery in Miami-Dade&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Florida&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Bodies Found&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Miami&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-06-03&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;2&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.nbcmiami.com/news/local/Burned-Bodies-Mystery-in-Miami-Dade-123089733.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;The first body was found late Friday night off Southwest 197th Avenue as firefighters were responding to a call of a brush fire in rural Miami-Dade. The victim, 25-year-old Erik Comesana, was found burning within the flames&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style9999x9339999</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.5124649,25.6533398</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>200 Se 1st Street #601,Miami,Florida,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Headquarters&amp;nbsp;&lt;br&gt; Address: 200 Se 1st Street #601 - Miami - Florida - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.18992,25.773214</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : Two Wounded, One Killed In Assault Rifle Ambush in Liberty City</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Headquarters&amp;nbsp;
+200 Se 1st Street #601&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Two Wounded, One Killed In Assault Rifle Ambush in Liberty City&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Florida&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Assault Shooting&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Miami&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-05-11&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;1&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://blogs.miaminewtimes.com/riptide/2011/05/two_wounded_one_killed_in_assa.php'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;Miami police are looking for multiple gunmen with assault rifles who attacked a group in Liberty City early this morning, leaving one man dead and two seriously wounded.&#xD;
+&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style1x93301</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.1894,25.7784</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>200 Se 1st Street #601,miami,Florida,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Headquarters&amp;nbsp;&lt;br&gt; Address: 200 Se 1st Street #601 - miami - Florida - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.18992,25.773214</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : Twin-engine plane crashes into house outside Miami&#xD;
+</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Headquarters&amp;nbsp;
+200 Se 1st Street #601&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Twin-engine plane crashes into house outside Miami&#xD;
+&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Florida&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Airplane Crash&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;miami&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-05-02&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.foxnews.com/us/2011/05/02/twin-engine-plane-crashes-house-outside-miami/'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;A twin-engine plane crashed into two vehicles and a house and caught fire a short distance from an airport in the Miami area.&#xD;
+&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x93300</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.1894,25.7739</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>200 Se 1st Street #601,Miami,Florida,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Headquarters&amp;nbsp;&lt;br&gt; Address: 200 Se 1st Street #601 - Miami - Florida - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.18992,25.773214</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : &#xD;
+Passengers still delayed at Miami International Airport following fire&#xD;
+&#xD;
+</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Headquarters&amp;nbsp;
+200 Se 1st Street #601&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&#xD;
+Passengers still delayed at Miami International Airport following fire&#xD;
+&#xD;
+&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;High&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Florida&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Fire&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Miami&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-03-25&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.allheadlinenews.com/briefs/articles/90042057?Passengers%20still%20delayed%20at%20Miami%20International%20Airport%20following%20fire'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;&#xD;
+Some passengers remain stranded amidst delays at Miami International Airport after nearly 90 flights were canceled due to a massive fire at the facility&#xD;
+&#xD;
+&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style9x93309</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.1894,25.7694</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>200 Se 1st Street #601,miami,Florida,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Headquarters&amp;nbsp;&lt;br&gt; Address: 200 Se 1st Street #601 - miami - Florida - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.18992,25.773214</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : Fire, false bomb scare disrupt Miami airport&#xD;
+</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Headquarters&amp;nbsp;
+200 Se 1st Street #601&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Fire, false bomb scare disrupt Miami airport&#xD;
+&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Florida&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Fire&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;miami&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-03-24&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.reuters.com/article/2011/03/24/us-miami-airport-idUSTRE72N3DL20110324'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;A false bomb scare and a fuel tank fire disrupted operations at Miami International Airport on Thursday and dozens of flights were canceled or delayed.&#xD;
+&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style9x93309</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.1939,25.7694</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>200 Se 1st Street #601,miami,Florida,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Headquarters&amp;nbsp;&lt;br&gt; Address: 200 Se 1st Street #601 - miami - Florida - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.18992,25.773214</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : More flights cancelled at MIA due to fire damage</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Headquarters&amp;nbsp;
+200 Se 1st Street #601&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;More flights cancelled at MIA due to fire damage&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Florida&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Fire&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;miami&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-03-24&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.miamiherald.com/2011/03/25/2133725/more-flights-cancelled-at-mia.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;&#xD;
+Flight disruptions continued Friday at Miami International Airport, likely to strand thousands more travelers at the start of a busy tourism weekend.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style9x93309</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.19839999999999,25.7694</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>200 Se 1st Street #601,Miami,Florida,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Headquarters&amp;nbsp;&lt;br&gt; Address: 200 Se 1st Street #601 - Miami - Florida - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.18992,25.773214</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : Man Killed in Miami-Dade Shooting</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Headquarters&amp;nbsp;
+200 Se 1st Street #601&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Man Killed in Miami-Dade Shooting&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Florida&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Shooting&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Miami&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-02-25&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;1&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.nbcmiami.com/news/local/116916343.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;One person was killed and another injured after gunmen opened fire on the streets of south Miami-Dade Friday morning, officials said&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style1x93301</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.2019,25.7739</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>200 Se 1st Street #601,miami,florida,United States</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\customer.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: Headquarters&amp;nbsp;&lt;br&gt; Address: 200 Se 1st Street #601 - miami - florida - United States&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x70000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.18992,25.773214</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : Miami-Dade Police are investigating a shooting that killed one woman and wounded five men.</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Headquarters&amp;nbsp;
+200 Se 1st Street #601&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Miami-Dade Police are investigating a shooting that killed one woman and wounded five men.&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;United States&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;florida&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Shooting&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;miami&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-02-13&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.bradenton.com/2011/01/17/2880489/2-suspects-sought-in-shooting.html'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;Detective Alvaro Zabaleta says officers responded to a 911 call about shots fired in front of a Miami home late Sunday.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style1x93301</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>-80.2019,25.7819</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+    </Document>
+</kml>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Document_CRUD>
+    <Nomenclature>110QV7</Nomenclature>
+    <FrameSize>136</FrameSize>
+    <PageStyle>
+        <Background>
+            <Color>#FFFFFF</Color>
+        </Background>
+        <Screen_Title></Screen_Title>
+        <Title>
+            <Label>Search for State</Label>
+            <Size>3</Size>
+            <Color>#000000</Color>
+            <Face>Arial</Face>
+            <Style>bold</Style>
+            <Align>Center</Align>
+        </Title>
+        <Columns>2</Columns>
+        <SubmitButton visible="yes" location="under" align="Center">
+            <Label>Ok</Label>
+        </SubmitButton>
+        <ResetButton visible="yes" location="under" align="Center">
+            <Label>Cancel</Label>
+        </ResetButton>
+        <locale>
+            <language>en</language>
+            <country>US</country>
+            <dateFormat>yyyy-MM-dd</dateFormat>
+            <timeFormat>hh:mm:ss</timeFormat>
+        </locale>
+    </PageStyle>
+    <XSQLData>
+        <ComponentNames>
+            <ApplicationName>globalincidents</ApplicationName>
+            <XBRFSource>11011010brf</XBRFSource>
+            <Function>XBRFResolver</Function>
+            <XSLName>110QV7</XSLName>
+            <JSPName>MCM110QV7DE110SC8</JSPName>
+            <BODYName>110QV7</BODYName>
+            <BeanName>beanTable110LT1</BeanName>
+        </ComponentNames>
+        <Connection>
+            <NameCx>cx1</NameCx>
+            <DataBaseId>5</DataBaseId>
+        </Connection>
+        <Data>
+            <Name>110SQL17</Name>
+            <Sentence>SELECT country.printable_name,city.city,city.state FROM razient.city AS city,razient.country AS country WHERE (country.printable_name LIKE @country) 
+ AND (country.iso=city.country) AND(city.city LIKE @city) ORDER BY country.printable_name ASC,city.city ASC,city.state ASC</Sentence>
+            <Out_Fields>
+                <Out_Field>
+                    <Code>1</Code>
+                    <TableName>country</TableName>
+                    <Name>printable_name</Name>
+                    <Value></Value>
+                    <KeyName>country.printable_name</KeyName>
+                    <VariableName>@country</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>Country</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>80</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align="Center"  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color="#000000"  bgcolor="#000000"  size="50"  maxlength=""  readonly="false"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="2" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+                <Out_Field>
+                    <Code>2</Code>
+                    <TableName>city</TableName>
+                    <Name>city</Name>
+                    <Value></Value>
+                    <KeyName>city.city</KeyName>
+                    <VariableName>@city</VariableName>
+                    <FillFunction></FillFunction>
+                    <Nullable>false</Nullable>
+                    <Type>java.lang.String</Type>
+                    <Label>City</Label>
+                    <Primary_Key>NO</Primary_Key>
+                    <Precision>100</Precision>
+                    <Scale>0</Scale>
+                    <ReadFromSession>No</ReadFromSession>
+                    <WriteInSession>No</WriteInSession>
+                    <SessionVariableName></SessionVariableName>
+                    <!-- GRAPHIC STYLE -->
+                    <Style type="Text"  align="Center"  rows =""  cols =""  wrap ="on"  multiple="" 
+                             checked=""  color="#000000"  bgcolor="#000000"  size="50"  maxlength=""  readonly="false"  disabled="false"  jsrs=""  font="Arial"  fontstyle="0"  fontsize="2" >
+                        <StaticValues> 
+                            <Values>
+                            </Values> 
+                        </StaticValues>
+                        <format input_type = "TX" validate_fx = "false" obligatory = "true" range_type = "0" low_range = "0" 
+                            right_range = "0" precision = "0" display_fx = "false">yes</format>
+                    </Style>
+                </Out_Field>
+            </Out_Fields>
+        </Data>
+            <LookUpFields>
+            </LookUpFields>
+            <JsrsFields>
+            </JsrsFields>
+            <JsrsDropBoxes>
+            </JsrsDropBoxes>
+    </XSQLData>
+</Document_CRUD>

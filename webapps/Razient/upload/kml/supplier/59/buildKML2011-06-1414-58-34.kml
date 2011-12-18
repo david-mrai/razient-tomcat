@@ -1,0 +1,1579 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
+    <Document>
+        <Style id="style0x70000">
+            <IconStyle>
+                <scale>2.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/customer.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style0x80000">
+            <IconStyle>
+                <scale>2.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/supplier.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style0x83300">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/airplane-accident.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style0x93300">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/airplane-accident-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style1x83301">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/gun.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style1x93301">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/gun-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style2x83302">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/bomb.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style2x93302">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/bomb-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style3x83303">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/explosion.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style4x83304">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/train.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style4x93304">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/train-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style5x83305">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/political.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style5x93305">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/political-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style6x83306">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/torn.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style6x93306">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/torn-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style7x83307">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/protest.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style7x93307">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/protest-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style8x83308">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/flood.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style8x93308">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/flood-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style9x83309">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/fire.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style9x93309">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/fire-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style10x83310">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/ship.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style10x93310">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/ship.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style11x83311">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/freeze.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style11x93311">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/freeze-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style12x83312">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/storm.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style12x93312">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/storm-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style13x83313">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/buildingcollapse.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style13x93313">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/buildingcollapse-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style14x83314">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/buildingfire.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style14x93314">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/buildingfire-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style15x83315">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/chemical.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style15x93315">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/chemical-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style16x83316">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/airplane-closed.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style16x93316">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/airplane-closed-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style17x83317">
+            <IconStyle>
+                <scale>5.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/earthquake.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style17x93317">
+            <IconStyle>
+                <scale>5.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/earthquake-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style18x83318">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/evacuated.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style18x93318">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/evacuated-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style19x83319">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/hazardous.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style19x93319">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/hazardous-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style20x83320">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/volcano.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style20x93320">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/volcano-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style21x83321">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/terrorism.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style21x93321">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/terrorism-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style23x83323">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/armed.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style23x93323">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/armed-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style24x83324">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/hazmat.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style24x93324">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/hazmat-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style25x83325">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/poweroutage.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style25x93325">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/poweroutage-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style26x83326">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/pirate.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style26x93326">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/pirate-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style27x83327">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/mudslide.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style27x93327">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/mudslide-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style28x83328">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/roadflooded.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style28x93328">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/roadflooded-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style29x83329">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/collision.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style29x93329">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/collision-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style30x83330">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/gasmask.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style30x93330">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/gasmask-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style31x83331">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/hurricane.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style31x93331">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/hurricane-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style32x83332">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/tsunami.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style32x93332">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/tsunami-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style33x83333">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/roadsclosed.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style33x93333">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/roadsclosed-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style9999x8339999">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/nosymbol.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Style id="style9999x9339999">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>http://66.216.18.155/Razient/iconsgi/nosymbol-min.gif</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Folder>
+            <name>www.kraazient.com</name>
+            <description>Maps events, incidents and other suspicious activity by kraazient</description>
+            <Placemark>
+                <name>McClellan - Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District,Beijing,Beijing,China</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\supplier.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: McClellan - Headquarters&amp;nbsp;&lt;br&gt; Address: 1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District - Beijing - Beijing - China&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Parts:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Emmer &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x80000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.40741,39.904213</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : China chemical spill cuts off water supply, shuts schools</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;McClellan - Headquarters&amp;nbsp;
+1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;China chemical spill cuts off water supply, shuts schools&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;China&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;High&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Chemical Spill&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-06-08&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://in.reuters.com/article/2011/06/08/idINIndia-57571720110608'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;Thousands of people in eastern China are without tap water after a spill from a factory may have dumped toxic chemicals into a river, state media said on Wednesday.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style15x93315</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.407413,39.904214</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>McClellan - Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District,Beijing,Beijing,China</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\supplier.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: McClellan - Headquarters&amp;nbsp;&lt;br&gt; Address: 1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District - Beijing - Beijing - China&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Parts:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Emmer &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x80000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.40741,39.904213</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : China chemical spill cuts off water supply, shuts schools</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;McClellan - Headquarters&amp;nbsp;
+1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;China chemical spill cuts off water supply, shuts schools&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;China&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;High&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Chemical Spill&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-06-08&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://in.reuters.com/article/2011/06/08/idINIndia-57571720110608'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;Thousands of people in eastern China are without tap water after a spill from a factory may have dumped toxic chemicals into a river, state media said on Wednesday.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style15x93315</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.407413,39.904214</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>McClellan - Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District,Beijing,Beijing,China</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\supplier.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: McClellan - Headquarters&amp;nbsp;&lt;br&gt; Address: 1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District - Beijing - Beijing - China&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Parts:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Emmer &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x80000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.40741,39.904213</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : Sixteen feared dead, 90,000 evacuated in south China floods</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;McClellan - Headquarters&amp;nbsp;
+1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Sixteen feared dead, 90,000 evacuated in south China floods&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;China&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;High&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Flood&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-06-06&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.monstersandcritics.com/news/asiapacific/news/article_1643765.php/Sixteen-feared-dead-90-000-evacuated-in-south-China-floods'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;Torrential rain caused floods that left at least one person dead and 15 missing, and forced the evacuation of nearly 90,000 in southern China, the government and state media reported on Monday.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style8x93308</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.407413,39.908714</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>McClellan - Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District,Beijing,Beijing,China</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\supplier.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: McClellan - Headquarters&amp;nbsp;&lt;br&gt; Address: 1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District - Beijing - Beijing - China&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Parts:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Emmer &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x80000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.40741,39.904213</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : China Factory Blast Kills 4, Hurts 16; 2 Missing</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;McClellan - Headquarters&amp;nbsp;
+1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;China Factory Blast Kills 4, Hurts 16; 2 Missing&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;China&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;High&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Explosion&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-06-02&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;4&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://abcnews.go.com/Technology/wireStory?id=13741145'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;Authorities say an explosion at a factory making aluminum products in northwestern China has killed at least four people and injured 16. Two more workers were listed as missing.&#xD;
+&#xD;
+&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style2x93302</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.411913,39.908714</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>McClellan - Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District,Beijing,Beijing,China</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\supplier.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: McClellan - Headquarters&amp;nbsp;&lt;br&gt; Address: 1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District - Beijing - Beijing - China&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Parts:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Emmer &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x80000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.40741,39.904213</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : Fatal Beijing factory fire sparked by electric bike</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;McClellan - Headquarters&amp;nbsp;
+1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Fatal Beijing factory fire sparked by electric bike&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;China&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Fire&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-04-25&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.google.com/hostednews/afp/article/ALeqM5iF-7jgDMXj8hJ46VPSpRHoodgJ1Q?docId=CNG.ce5e2e67a61454295cd54a08b0ebf3f2.8c1'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;Another 25 people were hurt in the fire that broke out in the early hours of Monday morning in the four-storey building in the capitals southern Daxing district, the state-run Xinhua news agency said.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style9x93309</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.3925,39.9289</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>McClellan - Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District,Beijing,Beijing,China</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\supplier.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: McClellan - Headquarters&amp;nbsp;&lt;br&gt; Address: 1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District - Beijing - Beijing - China&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Parts:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Emmer &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x80000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.40741,39.904213</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : Police protesters clash over China dam</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;McClellan - Headquarters&amp;nbsp;
+1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Police protesters clash over China dam&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;China&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Protests&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-03-30&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.google.com/hostednews/afp/article/ALeqM5ioAH7U1wEyDeq3BDFEXDpQV_BGzw?docId=CNG.583450bebb349b36f3b01e5eb1000e5f.391'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;At least 2,000 villagers protesting the building of a hydroelectric dam on the upper Yangtze river have clashed with police in southwest China the government and a rights group said Wednesday.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style7x93307</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.3925,39.9244</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>McClellan - Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District,Beijing,Beijing,China</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\supplier.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: McClellan - Headquarters&amp;nbsp;&lt;br&gt; Address: 1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District - Beijing - Beijing - China&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Parts:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Emmer &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x80000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.40741,39.904213</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : Report: China Blocks Gmail to Stop Protests</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;McClellan - Headquarters&amp;nbsp;
+1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Report: China Blocks Gmail to Stop Protests&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;China&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Protests&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-03-21&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.pcmag.com/article2/0,2817,2382310,00.asp'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;Reports emerged today that Gmail in the country has been intermittently blocked or crippled - users can't send e-mails or messages are marked as unread.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style7x93307</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.388,39.9244</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>McClellan - Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District,beijing,Beijing,China</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\supplier.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: McClellan - Headquarters&amp;nbsp;&lt;br&gt; Address: 1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District - beijing - Beijing - China&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Parts:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Emmer &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x80000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.40741,39.904213</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : 22 killed as China quake topples buildings &#xD;
+</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;McClellan - Headquarters&amp;nbsp;
+1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;22 killed as China quake topples buildings &#xD;
+&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;China&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;High&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Earthquake&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-03-10&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;22&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://www.msnbc.msn.com/id/42002746/ns/world_news-asiapacific/'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;An earthquake struck China's extreme southwest near the border with Myanmar Thursday, killing at least 22 people and injuring more than 200&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style17x93317</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.38350000000001,39.9244</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>McClellan - Headquarters</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</open>
+                <address>1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District,Beijing,Beijing,China</address>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\supplier.png'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;Name: McClellan - Headquarters&amp;nbsp;&lt;br&gt; Address: 1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District - Beijing - Beijing - China&amp;nbsp;&lt;br&gt; Phone Number: &amp;nbsp;&lt;br&gt; Email: &amp;nbsp;&lt;br&gt; Primary Contact: &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Parts:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Emmer &amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style0x80000</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.40741,39.904213</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name> Incident : Villages in Philippine flee after ash explosionm</name>
+                <visibility xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">true</visibility>
+                <open xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</open>
+                <description>&lt;table style='text-align: left; width: 480px; height: 240px;' border='1' border-color='gray' border-style='solid' cellpadding='2' cellspacing='2'&gt;
+&lt;tbody&gt;
+    &lt;tr style='font-weight: bold;'&gt;
+		&lt;td style='height: 78px; width: 184px;' align='undefined' valign='undefined'&gt;&lt;span style='font-weight: normal;'&gt;&lt;img src='http:\\66.216.18.155\Razient\iconsgi\suppliers.gif'/&gt;&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan='3' rowspan='1' style='height: 78px; width: 291px;' align='undefined' valign='undefined'&gt;McClellan - Headquarters&amp;nbsp;
+1202 Building A, Tianyuan Mansion, #1 Jiangongxili, Xuanwu District&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='height: 0px; width: 184px; text-align: left;' valign='undefined'&gt;&lt;span style='font-weight: bold;'&gt;Summary:&lt;/span&gt;&lt;/td&gt;
+	   &lt;td colspan='3' rowspan='1' style='height: 0px; width: 291px;' align='undefined' valign='undefined'&gt;Villages in Philippine flee after ash explosionm&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Country&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;China&amp;nbsp;&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Severity	&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;Medium&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 30px; font-weight: bold;' align='undefined' valign='undefined'&gt;State&lt;/td&gt;
+      &lt;td style='width: 292px; height: 30px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 30px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Type&lt;/td&gt;
+      &lt;td style='height: 30px; width: 291px;' align='undefined' valign='undefined'&gt;Volcano&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 24px; font-weight: bold;' align='undefined' valign='undefined'&gt;City&lt;/td&gt;
+      &lt;td style='width: 292px; height: 24px;' align='undefined' valign='undefined'&gt;Beijing&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 24px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Date&lt;/td&gt;
+      &lt;td style='height: 24px; width: 291px;' align='undefined' valign='undefined'&gt;2011-02-22&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 26px; font-weight: bold;' align='undefined' valign='undefined'&gt;Deaths&lt;/td&gt;
+      &lt;td style='width: 292px; height: 26px;' align='undefined' valign='undefined'&gt;0&amp;nbsp;
+&lt;/td&gt;
+      &lt;td style='height: 26px; width: 184px; font-weight: bold;' align='undefined' valign='undefined'&gt;Url&lt;/td&gt;
+      &lt;td style='height: 26px; width: 291px;' align='undefined' valign='undefined'&gt;&lt;A href='http://news.xinhuanet.com/english2010/video/2011-02/22/c_13744043.htm'&gt;Link to News&amp;nbsp;&lt;/A&gt;
+&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style='width: 184px; height: 90px; font-weight: bold;' align='undefined' valign='undefined'&gt;Description&lt;/td&gt;
+      &lt;td colspan='3' rowspan='1' style='height: 90px; width: 291px;' align='undefined' valign='undefined'&gt;Hundreds of people fled villages around a central Philippine volcano, that spewed burning ashes on Monday morning. Disaster officials have imposed a 4-kilometer danger zone around the crater.&amp;nbsp;
+&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+                <styleUrl>#style20x93320</styleUrl>
+                <Point>
+                    <extrude xmlns:ns5="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns6="http://www.w3.org/2001/XMLSchema" ns5:type="ns6:boolean">false</extrude>
+                    <altitudeMode>clampToGround</altitudeMode>
+                    <coordinates>116.38000000000001,39.9289</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+    </Document>
+</kml>
