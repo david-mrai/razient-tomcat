@@ -1,9 +1,0 @@
-<?xml version='1.0'?>
-<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Risk Level' subCaption='BOBALSAN'  numberPrefix='' formatNumber='1' decimals='0' formatNumberScale='0' sNumberPrefix='' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN'  bgAlpha='10' showBorder='1'  borderColor='EFEFEF' palette='4'  maxColWidth = '50' >
-<!-- Data for single series chart -->
-	<set label='Critical' value='0' color='C0504E'/>
-	<set label='High' value='0' color='DDDD00'/>
-	<set label='Medium' value='2' color='4F82BE'/>
-	<set label='Low' value='1' color='79888A'/>
-<!-- Data for multi-series stacked and combination chart -->
-</chart>
