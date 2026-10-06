@@ -1,7 +1,0 @@
-<?xml version='1.0'?>
-<chart canvasBgColor='FFFFFF' bgColor='FDFDFD' caption='Report Survey' subCaption=''  numberPrefix='' formatNumber='1' decimals='0' syncAxisLimits='1' rotateValues='1' showSum='0'  showLegend='1'  legendPosition='DOWN' showBorder='1'  borderColor='EFEFEF' palette='4' >
-<!-- Data for single series chart -->
-	<set label='Questions Complete' value='0' color='63A06D'		/>
-	<set label='Questions Incomplete' value='0' color='C0504D'	/>
-<!-- Data for multi-series stacked and combination chart -->
-</chart>

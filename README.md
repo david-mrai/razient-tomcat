@@ -1,36 +1,57 @@
-Repository: https://github.com/david-mrai/razient-tomcat.git
-
 # razient-tomcat
 
-A mixed-type project repository.
+Container image that runs Razient on Tomcat 11 (Java 25, Jakarta EE 11), together with the three
+JEvolution report apps it embeds.
 
-## Overview
+| Path | What it is |
+| --- | --- |
+| `Dockerfile` | Builds the image: Tomcat 11, MySQL Connector/J (pinned by SHA-256), the Razient WAR, the report apps. |
+| `conf/server.xml` | Hardened server config: HTTP 8080 only (TLS ends at the front proxy), no AJP, no shutdown port, no manager apps, error pages without stack traces or version. |
+| `conf/jELogicServer.conf`, `conf/LSLicense.lic`, `conf/media.properties` | JEvolution LogicServer settings and license, read by the report apps. |
+| `webapps-javaee/` | The report apps `razresearch`, `RepSurveys`, `globalincidents` (closed-source JEvolution 3.6, Java EE / `javax.*`). Tomcat converts them to Jakarta EE into `webapps/` at startup (`legacyAppBase`). |
+| `docker/gjt-driver-alias/` | `org.gjt.mm.mysql.Driver`, the old MySQL driver class name the report apps are configured with, delegating to Connector/J. |
+| `docker-entrypoint.sh` | Writes the report apps' `objectPool.xml` from the `RAZIENT_DB_*` variables, then starts Tomcat. |
+| `data/upload/` | Customer uploads carried over from the old server. Not part of the image: copy them into the `/data` volume. |
 
-This repository contains multiple types of content or code.
+## Build
 
-## Contents
+The Razient WAR comes from the `razient-java` repo:
 
-Explore the directory structure to understand the project layout.
+```sh
+(cd ../razient-java/Razient && mvn package)
+docker build --build-context razient=../razient-java/Razient/target -t razient-tomcat .
+```
 
-## Description
+## Run
 
-This project may contain:
-- Source code
-- Documentation
-- Configuration files
-- Resources
-- Tools and utilities
+```sh
+docker run -d --name razient -p 127.0.0.1:8080:8080 \
+  -e RAZIENT_DB_URL=jdbc:mysql://db:3306/razient \
+  -e RAZIENT_DB_USERNAME=razient \
+  -e RAZIENT_DB_PASSWORD=... \
+  -v razient-data:/data \
+  razient-tomcat
+```
 
-## Getting Started
+Apps: `/Razient/`, and the report apps under `/razresearch/jsp/`, `/RepSurveys/jsp/`, `/globalincidents/jsp/`
+(Razient frames them from the same origin).
 
-1. Review the directory structure
-2. Check individual subdirectories for specific projects or components
-3. Look for existing documentation files
+MySQL 8 must run with `lower_case_table_names=1` (the code mixes table-name case).
 
-## License
+### Settings
 
-See repository for license information.
+| Variable | Used by | Purpose |
+| --- | --- | --- |
+| `RAZIENT_DB_URL`, `RAZIENT_DB_USERNAME`, `RAZIENT_DB_PASSWORD` | all apps | Database connection (required). |
+| `RAZIENT_DATA_DIR` | Razient | Uploads, charts, KML files; `/data` in the image. |
+| `RAZIENT_DB_SCHEMA_ACTION` | Razient | Hibernate schema action, default `none`. |
+| `RAZIENT_SMTP_*` | Razient | Outgoing mail. |
+| `RAZIENT_*_JOB` | Razient | Turn the scheduled jobs on or off. |
+| `RAZIENT_OPENWEATHERMAP_APPID`, `RAZIENT_GOOGLE_MAPS_KEY` | Razient | External API keys. |
+| `RAZIENT_PUBLIC_UPLOAD_URL` | Razient | Public URL of the upload area, if not `/Razient/upload/`. |
 
-## Status
+## Behind the front proxy
 
-Active/Archived - Check git history for latest updates.
+The container speaks plain HTTP. The proxy terminates TLS and must send `X-Forwarded-For` and
+`X-Forwarded-Proto` (Tomcat's `RemoteIpValve` trusts them from private addresses), so Razient
+knows the request was HTTPS (HSTS, secure cookies).
