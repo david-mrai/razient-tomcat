@@ -36,13 +36,17 @@ docker run -d --name razient -p 127.0.0.1:8080:8080 \
 Apps: `/Razient/`, and the report apps under `/razresearch/jsp/`, `/RepSurveys/jsp/`, `/globalincidents/jsp/`
 (Razient frames them from the same origin).
 
-MySQL 8 must run with `lower_case_table_names=1` (the code mixes table-name case).
+MySQL 8 must run with `lower_case_table_names=1` (the code mixes table-name case). The production database is
+MariaDB 11.8 with the 2012 schema; upgrade it with `razient-java/migration-tools` (see its README) before
+pointing Razient at it.
 
 ### Settings
 
 | Variable | Used by | Purpose |
 | --- | --- | --- |
 | `RAZIENT_DB_URL`, `RAZIENT_DB_USERNAME`, `RAZIENT_DB_PASSWORD` | all apps | Database connection (required). |
+| `RAZIENT_DB_DRIVER` | Razient | `org.mariadb.jdbc.Driver` for a MariaDB server (with a `jdbc:mariadb://` URL); default MySQL Connector/J. The report apps always use Connector/J, with the URL in `jdbc:mysql://` form. |
+| `RAZIENT_PUBLIC_BASE_URL` | Razient | Public site address, e.g. `https://www.razient.com`, for absolute links such as the map icons in KML files. |
 | `RAZIENT_DATA_DIR` | Razient | Uploads, charts, KML files; `/data` in the image. |
 | `RAZIENT_DB_SCHEMA_ACTION` | Razient | Hibernate schema action, default `none`. |
 | `RAZIENT_SMTP_*` | Razient | Outgoing mail. |

@@ -7,10 +7,13 @@ set -eu
 : "${RAZIENT_DB_PASSWORD:?RAZIENT_DB_PASSWORD is required}"
 
 cd "$CATALINA_HOME"
+# The report apps load MySQL Connector/J (as org.gjt.mm.mysql.Driver), which takes jdbc:mysql:// URLs; it also
+# works with MariaDB servers, so a jdbc:mariadb:// URL for Razient is handed to them in jdbc:mysql:// form.
+legacy_url=$(printf '%s' "$RAZIENT_DB_URL" | sed 's#^jdbc:mariadb:#jdbc:mysql:#')
 for template in webapps-javaee/*/WEB-INF/classes/Connection/objectPool.xml.template; do
 	app=${template#webapps-javaee/}
 	app=${app%%/*}
-	perl -pe '
+	RAZIENT_DB_URL="$legacy_url" perl -pe '
 		sub xml { my $v = shift; $v =~ s/&/&amp;/g; $v =~ s/</&lt;/g; $v =~ s/>/&gt;/g; $v =~ s/"/&quot;/g; $v }
 		s/\$\{(RAZIENT_DB_[A-Z_]+)\}/defined $ENV{$1} ? xml($ENV{$1}) : die "$1 is not set\n"/ge
 	' "$template" > "${template%.template}"
