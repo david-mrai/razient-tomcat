@@ -1,0 +1,45 @@
+version: '3.9'
+
+services:
+  razient:
+    image: razient:latest
+    container_name: razient
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      RAZIENT_DB_URL: ${RAZIENT_DB_URL}
+      RAZIENT_DB_USERNAME: ${RAZIENT_DB_USERNAME}
+      RAZIENT_DB_PASSWORD: ${RAZIENT_DB_PASSWORD}
+      RAZIENT_DB_DRIVER: ${RAZIENT_DB_DRIVER:-org.mariadb.jdbc.Driver}
+      RAZIENT_DB_SCHEMA_ACTION: "none"
+      RAZIENT_PUBLIC_BASE_URL: "https://rz.digicrew.com"
+      RAZIENT_DATA_DIR: /data
+      RAZIENT_LOG_LEVEL: INFO
+      # Optional: Add other Razient settings as needed
+      # RAZIENT_SMTP_HOST: smtp.example.com
+      # RAZIENT_MAIL_FROM: noreply@rz.digicrew.com
+    volumes:
+      - razient-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8080/Razient/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - razient-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  razient-data:
+    name: razient-data
+
+networks:
+  razient-network:
+    name: razient-network
+    driver: bridge
